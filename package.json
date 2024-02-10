@@ -1,0 +1,19 @@
+{
+  "name": "infra_jo_viz",
+  "version": "1.0.0",
+  "description": "app for jo dataviz",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1"
+  },
+  "dependencies": {
+    "d3": "^7.8.5"
+  }
+}
