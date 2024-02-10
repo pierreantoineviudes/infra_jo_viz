@@ -32,7 +32,7 @@ async function main () {
 const parseDate = d3.timeParse('%Y-%m-%d')
 
 async function loadCovidData () {
-  const covidData = await (d3.csv('data/covid-06-11-2021.csv').then(function (data) {
+  const covidData = await (d3.csv('covid-06-11-2021.csv').then(function (data) {
     // console.log('data : ', data)
     data.forEach(d => {
       d.hosp = +d.hosp
