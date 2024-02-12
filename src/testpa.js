@@ -2,85 +2,51 @@
 /* eslint-disable no-unused-vars */
 
 /**
- * Cartographie qui trace les POI sur un fond de carte Openstreetmap avec slider de sélection
+ * Cartographie qui trace les POI sur un fond de carte de l'Île de France
  * @returns none
  */
 async function main () {
-  const width = 800
-  const height = 300
   console.log('hello world')
   const idfArr = await loadArr()
   console.log(idfArr)
   const planningParsed = await loadJOData()
   console.log('planningParsed : ', planningParsed)
 
-  // You'll often see Leaflet examples initializing a map like L.map('map'),
-  // which tells the library to look for a div with the id 'map' on the page.
-  // In Observable, we instead create a div from scratch in this cell (called "map")
-  //   const container = d3.select('body').element('div', { style: `width:${width}px;height:${width / 1.6}px` })
+  const height = 350
+  const width = 900
+  const marginTop = 30
+  const marginRight = width / 6
+  const marginBottom = 50
+  const marginLeft = 50
 
-  // This component utilizes "yield" which pauses the execution of this code block
-  // returns the value of container back to the notebook which allows the
-  // div to be placed on the page. This is important, because Leaflet uses
-  // the div's .offsetWidth and .offsetHeight (used to get current size of the div)
-  // to size the map. If I were to only return the container at the end of this method,
-  // Leaflet might get the wrong idea about the map's size.
-  // yield container;
-  d3.select('body').append('div')
-    .attr('style', `width:${width}px;height:${width / 1.6}px`)
-    .attr('id', 'map')
-  const map = L.map('map')// Did not set view because we are using "fit bounds" to get the polygons to determine this
-  const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map)
+  // choix de la projection
+  const projection = d3.geoConicConformal().fitSize([width, height], idfArr)
 
-  const idfLayer = L.geoJson(idfArr, { // instantiates a new geoJson layer using built in geoJson handling
-    weight: 2, // Attributes of polygons including the weight of boundaries and colors of map.
-    color: '#432',
-    opacity: 0.2
-  }).bindPopup(function (Layer) { // binds a popup when clicking on each polygon to access underlying data
-    return Layer.feature.properties.NAME
-  }).addTo(map) // Adds the layer to the map.
+  const svg = d3.select('body').append('svg')
+    .attr('width', width)
+    .attr('height', height)
 
-  map.fitBounds(idfLayer.getBounds()) // finds bounds of polygon and automatically gets map view to fit (useful for interaction and not having to 'cook' the map zoom and coordinates as in map instantiation
+  const path = d3.geoPath().projection(projection)
+  // Carte de l'IdF
+  svg.append('g')
+    .selectAll('path')
+    .data(idfArr.features)
+    .join('path')
+    .attr('d', path)
+    .attr('stroke', 'black')
+    .attr('fill', 'white')
+    .attr('stroke-width', 0.5)
 
-  L.svg().addTo(map)
-  const overlay = d3.select(map.getPanes().overlayPane)
-  const svg = overlay.select('svg')
+  const coo = [2.39007, 48.8257]
 
-  const tooltip = d3.select('body').append('div')
-    .attr('class', 'hidden tooltip')
-
-  const input = d3.select('body').append('input')
-    .attr('type', 'range')
-
-  const Dots = svg.selectAll('points')
+  svg.selectAll('points')
     .data(planningParsed)
     .join('circle')
-    .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
-    .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
-    // .attr("cx", d=> projection([d.longitude, d.latitude])[0])
-    // .attr("cy", d => projection([d.longitude, d.latitude])[1])
+    .attr('cx', d => projection([d.longitude, d.latitude])[0])
+    .attr('cy', d => projection([d.longitude, d.latitude])[1])
     .attr('r', 4)
-    .style('fill', 'steelblue')
-    .style('stroke', 'black')
-    .style('opacity', 0.2)
-
-    // tentative de Tootltip non fructueuse
-    .on('mouseover', function () { // function to add mouseover event
-      d3.select(this).transition() // D3 selects the object we have moused over in order to perform operations on it
-        .duration('150') // how long we are transitioning between the two states (works like keyframes)
-        .attr('fill', 'red') // change the fill
-        .attr('r', 10) // change radius
-    })
-
-    .on('mouseout', d => { return tooltip.classed('hidden', true) })
-
-  const update = () => Dots
-    .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
-    .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
-
-  map.on('zoomend', update)
+    .style('fill', 'red')
+    .style('opacity', 0.1)
 }
 
 async function loadArr () {
