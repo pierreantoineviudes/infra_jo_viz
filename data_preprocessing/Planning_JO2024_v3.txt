@@ -45,17 +45,17 @@ Lancer de marteau - femmes, qualifications 200 m - femmes, 1er tour
 Saut en longueur - hommes, qualifications 110 m haies - hommes, 1er tour
 400 m haies - femmes, 1er tour 110 m haies - hommes, 1er tour
  
-Session
+Session ATH07
  
 Début :	18:30 Fin :	22:00 Stade de France
 Nom de l'épreuve/des épreuves
-400 m - hommes, 1er tour
- 
-
- 
+400 m - hommes, 1er tour 
 100 m - hommes, demi-finales
 800 m - femmes, demi-finales
 1 500 m - hommes, demi-finales
+Saut en hauteur - femmes, finale
+Lancer de marteau - hommes, finale
+100 m - hommes, finale
 
 JOUR	10		Lundi	5	Août	
 Session		ATH08	Début :	10:00	Fin :	13:15 Stade de France
@@ -807,13 +807,13 @@ BMX FREESTYLE
 Calendrier par épreuves
 	Version :	1	
 JOUR	4			Mardi	30	Juillet	
-Session		BMF01		Début :
-Nom de l'épreuve/des épreuves	13:25	Fin :	16:30	La Concorde
+Session		BMF01		Début : 13:25	Fin :	16:30	La Concorde
+Nom de l'épreuve/des épreuves	
 				Park - femmes, qualification			
 				Park - hommes, qualification			
 JOUR	5			Mercredi	31	Juillet	
-Session		 BMF02			Début :
-Nom de l'épreuve/des épreuves	13:10	Fin :	16:30	La Concorde
+Session		 BMF02		Début : 13:10	Fin :	16:30	La Concorde
+Nom de l'épreuve/des épreuves	
 				Park - femmes, finale			
 				Park - hommes, finale			
  
@@ -1259,6 +1259,7 @@ Keirin - femmes, repêchages
 Vitesse - hommes, 32e finale - repêchages
 
 Session	 CTR04	 Début :	17:30 Fin :	20:25	Vélodrome National de Saint-Quentin-en-Yvelines
+Nom de l'épreuve/des épreuves
 Vitesse - hommes, 16e finale
  Poursuite par équipes - hommes, finales	
 Vitesse - hommes, 16e finale - repêchages
@@ -1281,9 +1282,10 @@ Nom de l'épreuve/des épreuves Vitesse - femmes, qualifications Vitesse - homme
 Vitesse - femmes, 32e finale - repêchages
 
 Session	 CTR07	 Début :	18:00 Fin :	20:15	Vélodrome National de Saint-Quentin-en-Yvelines
- Madison - femmes, finale	
+Nom de l'épreuve/des épreuves
+Madison - femmes, finale	
 Vitesse - femmes, 16e finale
- Vitesse - hommes, finales	
+Vitesse - hommes, finales	
 Vitesse - femmes, 16e finale - repêchages
  
 JOUR	15	Samedi	10	Août	
@@ -4901,10 +4903,12 @@ Demi-finales - Femmes et hommes (2 matchs)
 
 JOUR	14	Vendredi	9	Août	
 Session		 VBV39	 Début :	21:00	Fin :	00:00	Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
 Match pour la médaille de bronze - Femmes
- Match pour la médaille d'or - Femmes	
+Match pour la médaille d'or - Femmes	
 
 Session	 VBV40	 Début :	21:00 Fin :	00:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
 Match pour la médaille de bronze - Hommes
  Match pour la médaille d'or - Hommes	
  
