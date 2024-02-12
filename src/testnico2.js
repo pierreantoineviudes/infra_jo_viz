@@ -79,7 +79,7 @@ async function main() {
         .html(d["lieu_epreuve"])
 
       d3.select(this).transition() // D3 selects the object we have moused over in order to perform operations on it
-        .duration('150') // how long we are transitioning between the two states (works like keyframes)
+        .duration('100') // how long we are transitioning between the two states (works like keyframes)
         .style('fill', 'red') // change the fill
         .attr('r', 7)
         .style('opacity', 1);
@@ -89,7 +89,7 @@ async function main() {
       Tooltip
         .style('opacity', 0);
       d3.select(this).transition()
-        .duration('150')
+        .duration('100')
         .style('fill', 'steelblue')
         .style('opacity', 0.05)
         .attr('r', 5)
@@ -100,6 +100,11 @@ async function main() {
     .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
 
   map.on('zoomend', update)
+
+  d3.select('body')
+    .append('input')
+    .attr("type", 'range')
+
 }
 
 async function loadArr() {
@@ -108,6 +113,18 @@ async function loadArr() {
 }
 
 async function loadJOData() {
+  const frFR = d3.timeFormatDefaultLocale({
+    "dateTime": "%A %e %B %Y à %X",
+    "date": "%d/%m/%Y",
+    "time": "%H:%M:%S",
+    "periods": ["AM", "PM"],
+    "days": ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"],
+    "shortDays": ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."],
+    "months": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
+    "shortMonths": ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
+  });
+  const parseDateHour = d3.utcParse('%A %e %B %Y %H:%M');// https://d3js.org/d3-time-format
+
   const planningParsed = await (d3.csv('session_planning_with_loc_v2.csv')
     .then(data => {
       return data.map((d, i) => {
@@ -121,5 +138,3 @@ async function loadJOData() {
     }))
   return planningParsed
 }
-
-parseDateHour = d3.utcParse('%A %e %B %Y %H:%M') // https://d3js.org/d3-time-format
