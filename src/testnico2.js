@@ -1,6 +1,8 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
+const d3Slider = require("./d3.slider")
+
 /**
  * Cartographie qui trace les POI sur un fond de carte Openstreetmap
  * @returns none
@@ -8,24 +10,24 @@
 async function main() {
   const width = 800
   const height = 300
-  console.log('hello world')
   const idfArr = await loadArr()
-  console.log(idfArr)
   const planningParsed = await loadJOData()
-  console.log('planningParsed : ', planningParsed)
+  // variables de Dates
+  const start = d3.min(planningParsed, d => d.time)
+  const end = d3.max(planningParsed, d => d.time)
+  const numberOfDays = d3.timeDay.count(start, end)
+  const date_domain = [start, end] // étendue des dates
+  console.log(numberOfDays)
 
-  // You'll often see Leaflet examples initializing a map like L.map('map'),
-  // which tells the library to look for a div with the id 'map' on the page.
-  // In Observable, we instead create a div from scratch in this cell (called "map")
-  //   const container = d3.select('body').element('div', { style: `width:${width}px;height:${width / 1.6}px` })
 
-  // This component utilizes "yield" which pauses the execution of this code block
-  // returns the value of container back to the notebook which allows the
-  // div to be placed on the page. This is important, because Leaflet uses
-  // the div's .offsetWidth and .offsetHeight (used to get current size of the div)
-  // to size the map. If I were to only return the container at the end of this method,
-  // Leaflet might get the wrong idea about the map's size.
-  // yield container;
+  //Echelles
+
+  const timeScale = d3.scaleTime()
+    .domain(date_domain)
+    .range([0, numberOfDays])
+
+  //Main()
+
   d3.select('body').append('div')
     .attr('style', `width:${width}px;height:${width / 1.6}px`)
     .attr('id', 'map')
@@ -101,9 +103,11 @@ async function main() {
 
   map.on('zoomend', update)
 
-  d3.select('body')
-    .append('input')
-    .attr("type", 'range')
+  const slider1 = d3.select('body')
+    .append('div')
+    .attr("id", 'slider1')
+    .call(d3.slider().value([10, 25]));
+
 
 }
 
