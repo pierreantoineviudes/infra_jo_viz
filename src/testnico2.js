@@ -5,7 +5,7 @@
  * Cartographie qui trace les POI sur un fond de carte Openstreetmap
  * @returns none
  */
-async function main () {
+async function main() {
   const width = 800
   const height = 300
   console.log('hello world')
@@ -44,34 +44,56 @@ async function main () {
 
   map.fitBounds(idfLayer.getBounds()) // finds bounds of polygon and automatically gets map view to fit (useful for interaction and not having to 'cook' the map zoom and coordinates as in map instantiation
 
-  L.svg().addTo(map)
+  L.svg({ clickable: true }).addTo(map)
   const overlay = d3.select(map.getPanes().overlayPane)
-  const svg = overlay.select('svg')
+  const svg = overlay.select('svg').attr("pointer-events", "auto")
 
-  const tooltip = d3.select('body').append('div')
-    .attr('class', 'hidden tooltip')
+  const Tooltip = d3.select('body')
+    .append("div")
+    .style('z-index', 3000)
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
 
   const Dots = svg.selectAll('points')
     .data(planningParsed)
     .join('circle')
     .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
     .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
-  // .attr("cx", d=> projection([d.longitude, d.latitude])[0])
-  // .attr("cy", d => projection([d.longitude, d.latitude])[1])
-    .attr('r', 4)
+    // .attr("cx", d=> projection([d.longitude, d.latitude])[0])
+    // .attr("cy", d => projection([d.longitude, d.latitude])[1])
+    .attr('r', 5)
     .style('fill', 'steelblue')
     .style('stroke', 'black')
-    .style('opacity', 0.2)
+    .style('opacity', 0.05)
 
-  // tentative de Tootltip non fructueuse
-    .on('mouseover', function () { // function to add mouseover event
+    .on('mousemove', function (e, d) { // function to add mouseover event
+      Tooltip
+        .style('opacity', 0.9)
+        .style("top", (e.pageY - 40) + "px")
+        .style("left", (e.pageX + 30) + "px")
+        .html(d["lieu_epreuve"])
+
       d3.select(this).transition() // D3 selects the object we have moused over in order to perform operations on it
         .duration('150') // how long we are transitioning between the two states (works like keyframes)
-        .attr('fill', 'red') // change the fill
-        .attr('r', 10) // change radius
+        .style('fill', 'red') // change the fill
+        .attr('r', 7)
+        .style('opacity', 1);
     })
 
-    .on('mouseout', d => { return tooltip.classed('hidden', true) })
+    .on('mouseleave', function () {
+      Tooltip
+        .style('opacity', 0);
+      d3.select(this).transition()
+        .duration('150')
+        .style('fill', 'steelblue')
+        .style('opacity', 0.05)
+        .attr('r', 5)
+    })
 
   const update = () => Dots
     .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
@@ -80,12 +102,12 @@ async function main () {
   map.on('zoomend', update)
 }
 
-async function loadArr () {
+async function loadArr() {
   const idfArr = (await fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/ile-de-france/arrondissements-ile-de-france.geojson')).json()
   return idfArr
 }
 
-async function loadJOData () {
+async function loadJOData() {
   const planningParsed = await (d3.csv('session_planning_with_loc_v2.csv')
     .then(data => {
       return data.map((d, i) => {
