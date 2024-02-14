@@ -19,27 +19,124 @@ async function main() {
   const locParsed = await loadLoc()
 
   //Variables de Dates
-  const start = d3.min(planningParsed, d => d.date)
-  const end = d3.max(planningParsed, d => d.date)
-  const numberOfDays = d3.timeDay.count(start, end)
-  const DateDomain = [start, end] // étendue des dates
-  const dates = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates unique sans formatter bizarre !
-  const datefilteredplanning = d3.filter(planningParsed, d => d3.utcFormat('%A %e %B %Y')(d.date) == dates[2])
+  const dates_str = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates uniques sans formatter en str bizarre !
+  const dates = d3.sort(d3.map(dates_str, d => d3.utcParse('%A %e %B %Y')(d)))
+  const SelectedDates = [dates[0], dates[dates.length - 1]]
+  //_______________________________________________________________________________//
 
-  console.log(locParsed)
+  // SLIDER DE DATES
 
-  //Echelles
-  const timeScale = d3.scaleTime()
-    .domain(DateDomain)
-    .range([0, numberOfDays])
+  // Couleurs et dimensions
+  const colours = {
+    top: "#37474f",
+    bottom: "#546e7a",
+    accent: "#263238"
+  }
+  const sliderWidth = 400
+  const sliderHeight = 50
 
+  // Echelles dediees
+  const scaleBand = d3.scaleBand()
+    .domain(dates)
+    .range([0, sliderWidth])
+    .paddingInner(0.17)
+    .paddingOuter(1)
+
+  const scaleBalls = d3.scaleQuantize()
+    .domain([0 + scaleBand.bandwidth(), sliderWidth - scaleBand.bandwidth()])
+    .range(dates)
+
+  // Creation du slider
+  const dateBalls = // Elements date
+    d3.extent(dates, d => d)
+      .map((d) => ({ x: scaleBand(d), y: sliderHeight - 30 }));
+
+  const g = d3.select('body').append("svg")
+    .attr("width", sliderWidth)
+    .attr("height", sliderHeight)
+    .attr("class", "slider")
+
+  const grayLine = g
+    .append("path")
+    .attr(
+      "d",
+      d3.line()([
+        [scaleBand(dates[0]), sliderHeight - 30],
+        [scaleBand(dates[dates.length - 1]), sliderHeight - 30]
+      ])
+    )
+    .attr("stroke-width", 2)
+    .attr("opacity", 1)
+    .attr("stroke", "#C1C5C7");
+
+  const darkLine = g
+    .append("path")
+    .attr("class", "darkline")
+    .attr("d", d3.line()(dateBalls.map((d) => [d.x, d.y])))
+    .attr("stroke-width", 2)
+    .attr("stroke", colours.accent);
+
+  const datePicker = g.selectAll("g").data(dateBalls).join("g");
+
+  datePicker.call(
+    d3.drag()
+      .on("drag", function dragged(event, d) {
+        const date = scaleBalls(event.x);
+
+        const xAxisValue = scaleBand(date);
+        // move the circle
+        d3.select(this)
+          .select("circle")
+          .attr("cx", (d.x = xAxisValue));
+        // move the blue line
+        g.select(".darkline")
+          .attr("d", d3.line()(dateBalls.map((d) => [d.x, d.y])));
+        // change the text
+        d3.select(this)
+          .select("text")
+          .attr("x", (d) => xAxisValue)
+          .text((d) => d3.utcFormat("%a %e %b")(date));
+      })
+
+      .on("end", () => {
+        const SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)));
+        console.log(SelectedDates)
+      })
+  );
+
+  datePicker
+    .append("circle")
+    .attr("cx", (d) => d.x)
+    .attr("cy", (d) => d.y)
+    .attr("r", 9)
+    .attr("fill", "white")
+    .attr("stroke-width", 2)
+    .attr("stroke", colours.accent)
+    .attr("style", "cursor: pointer");
+
+  datePicker
+    .attr("text-anchor", "middle")
+    .attr("font-family", "Roboto, Arial, sans-serif")
+    .attr("font-size", "12px")
+    .append("text")
+    .attr("y", (d) => d.y + 20)
+    .attr("x", (d) => d.x)
+    .attr("fill", colours.accent)
+    .text((d) => d3.utcFormat("%a %e %b")(scaleBalls(d.x)));
+
+  // Donnees filtrees par la date selectionnee
+
+  const datefilteredplanning = d3.filter(planningParsed, d => d3.utcFormat('%A %e %B %Y')(d.date) == d3.utcFormat('%A %e %B %Y')(SelectedDates[0]))
+
+  //______________________________________________________________________________//
 
   //CARTE INTERACTIVE
-  const width = window_width * 0.75;
-
+  const map_width = window_width * 0.75;
+  const map_height = map_width / 1.6
   d3.select('body').append('div')
-    .attr('style', `width:${width}px; height:${width / 1.6}px`)
+    .attr('style', `width:${map_width}px; height:${map_height}px`)
     .attr('id', 'map')
+
   const map = L.map('map')// Did not set view because we are using "fit bounds" to get the polygons to determine this
   const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -57,7 +154,7 @@ async function main() {
 
   L.svg({ clickable: true }).addTo(map)
   const overlay = d3.select(map.getPanes().overlayPane)
-  const svg = overlay.select('svg').attr("pointer-events", "auto")
+  const svg_map = overlay.select('svg').attr("pointer-events", "auto")
 
   const Tooltip = d3.select('body')
     .append("div")
@@ -70,13 +167,11 @@ async function main() {
     .style("border-radius", "5px")
     .style("padding", "5px")
 
-  const Dots = svg.selectAll('points')
+  const Dots = svg_map.selectAll('points')
     .data(datefilteredplanning)
     .join('circle')
     .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
     .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
-    // .attr("cx", d=> projection([d.longitude, d.latitude])[0])
-    // .attr("cy", d => projection([d.longitude, d.latitude])[1])
     .attr('r', 5)
     .style('fill', 'steelblue')
     .style('stroke', 'black')
@@ -111,19 +206,7 @@ async function main() {
     .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
 
   map.on('zoomend', update)
-
-
-  // Création d'un sélecteur de dates
-
-  scaleBand = d3.scaleBand()
-    .domain(DateDomain)
-    .range([0, window_width / 4])
-    .paddingInner(0.17)
-    .paddingOuter(1)
-
-  scaleBalls = d3.scaleQuantize()
-    .domain([0 + scaleBand.bandwidth(), width - scaleBand.bandwidth()])
-    .range(planningParsed)
+  //_____________________________________________________________________________//
 
 
 }
