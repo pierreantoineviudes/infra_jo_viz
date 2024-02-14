@@ -1,13 +1,13 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
-const d3Slider = require("./d3.slider")
+// const d3Slider = require('./d3.slider')
 
 /**
  * Cartographie qui trace les POI sur un fond de carte Openstreetmap
  * @returns none
  */
-async function main() {
+async function main () {
   const width = 800
   const height = 300
   const idfArr = await loadArr()
@@ -16,17 +16,16 @@ async function main() {
   const start = d3.min(planningParsed, d => d.time)
   const end = d3.max(planningParsed, d => d.time)
   const numberOfDays = d3.timeDay.count(start, end)
-  const date_domain = [start, end] // étendue des dates
+  const dateDomain = [start, end] // étendue des dates
   console.log(numberOfDays)
 
-
-  //Echelles
+  // Echelles
 
   const timeScale = d3.scaleTime()
-    .domain(date_domain)
+    .domain(dateDomain)
     .range([0, numberOfDays])
 
-  //Main()
+  // Main()
 
   d3.select('body').append('div')
     .attr('style', `width:${width}px;height:${width / 1.6}px`)
@@ -48,18 +47,18 @@ async function main() {
 
   L.svg({ clickable: true }).addTo(map)
   const overlay = d3.select(map.getPanes().overlayPane)
-  const svg = overlay.select('svg').attr("pointer-events", "auto")
+  const svg = overlay.select('svg').attr('pointer-events', 'auto')
 
   const Tooltip = d3.select('body')
-    .append("div")
+    .append('div')
     .style('z-index', 3000)
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "2px")
-    .style("border-radius", "5px")
-    .style("padding", "5px")
+    .style('opacity', 0)
+    .attr('class', 'tooltip')
+    .style('background-color', 'white')
+    .style('border', 'solid')
+    .style('border-width', '2px')
+    .style('border-radius', '5px')
+    .style('padding', '5px')
 
   const Dots = svg.selectAll('points')
     .data(planningParsed)
@@ -76,20 +75,20 @@ async function main() {
     .on('mousemove', function (e, d) { // function to add mouseover event
       Tooltip
         .style('opacity', 0.9)
-        .style("top", (e.pageY - 40) + "px")
-        .style("left", (e.pageX + 30) + "px")
-        .html(d["lieu_epreuve"])
+        .style('top', (e.pageY - 40) + 'px')
+        .style('left', (e.pageX + 30) + 'px')
+        .html(d.lieu_epreuve)
 
       d3.select(this).transition() // D3 selects the object we have moused over in order to perform operations on it
         .duration('100') // how long we are transitioning between the two states (works like keyframes)
         .style('fill', 'red') // change the fill
         .attr('r', 7)
-        .style('opacity', 1);
+        .style('opacity', 1)
     })
 
     .on('mouseleave', function () {
       Tooltip
-        .style('opacity', 0);
+        .style('opacity', 0)
       d3.select(this).transition()
         .duration('100')
         .style('fill', 'steelblue')
@@ -105,29 +104,28 @@ async function main() {
 
   const slider1 = d3.select('body')
     .append('div')
-    .attr("id", 'slider1')
-    .call(d3.slider().value([10, 25]));
-
-
+    .attr('id', 'slider1')
+    // .call(d3.slider().value([10, 25]))
+    .call(d3.slider())
 }
 
-async function loadArr() {
+async function loadArr () {
   const idfArr = (await fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/ile-de-france/arrondissements-ile-de-france.geojson')).json()
   return idfArr
 }
 
-async function loadJOData() {
+async function loadJOData () {
   const frFR = d3.timeFormatDefaultLocale({
-    "dateTime": "%A %e %B %Y à %X",
-    "date": "%d/%m/%Y",
-    "time": "%H:%M:%S",
-    "periods": ["AM", "PM"],
-    "days": ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"],
-    "shortDays": ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."],
-    "months": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
-    "shortMonths": ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
-  });
-  const parseDateHour = d3.utcParse('%A %e %B %Y %H:%M');// https://d3js.org/d3-time-format
+    dateTime: '%A %e %B %Y à %X',
+    date: '%d/%m/%Y',
+    time: '%H:%M:%S',
+    periods: ['AM', 'PM'],
+    days: ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'],
+    shortDays: ['dim.', 'lun.', 'mar.', 'mer.', 'jeu.', 'ven.', 'sam.'],
+    months: ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
+    shortMonths: ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.']
+  })
+  const parseDateHour = d3.utcParse('%A %e %B %Y %H:%M')// https://d3js.org/d3-time-format
 
   const planningParsed = await (d3.csv('session_planning_with_loc_v2.csv')
     .then(data => {
