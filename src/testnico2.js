@@ -1,35 +1,44 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
-const d3Slider = require("./d3.slider")
-
 /**
  * Cartographie qui trace les POI sur un fond de carte Openstreetmap
  * @returns none
  */
+
 async function main() {
-  const width = 800
-  const height = 300
+
+  // Set the dimensions and margins
+  const margin = { top: 10, right: 10, bottom: 45, left: 10 }
+  const window_width = window.innerWidth - margin.left - margin.right
+  const window_height = window.innerHeight - margin.top - margin.bottom
+
+  // Data
   const idfArr = await loadArr()
   const planningParsed = await loadJOData()
-  // variables de Dates
-  const start = d3.min(planningParsed, d => d.time)
-  const end = d3.max(planningParsed, d => d.time)
-  const numberOfDays = d3.timeDay.count(start, end)
-  const date_domain = [start, end] // étendue des dates
-  console.log(numberOfDays)
+  const locParsed = await loadLoc()
 
+  //Variables de Dates
+  const start = d3.min(planningParsed, d => d.date)
+  const end = d3.max(planningParsed, d => d.date)
+  const numberOfDays = d3.timeDay.count(start, end)
+  const DateDomain = [start, end] // étendue des dates
+  const dates = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates unique sans formatter bizarre !
+  const datefilteredplanning = d3.filter(planningParsed, d => d3.utcFormat('%A %e %B %Y')(d.date) == dates[2])
+
+  console.log(locParsed)
 
   //Echelles
-
   const timeScale = d3.scaleTime()
-    .domain(date_domain)
+    .domain(DateDomain)
     .range([0, numberOfDays])
 
-  //Main()
+
+  //CARTE INTERACTIVE
+  const width = window_width * 0.75;
 
   d3.select('body').append('div')
-    .attr('style', `width:${width}px;height:${width / 1.6}px`)
+    .attr('style', `width:${width}px; height:${width / 1.6}px`)
     .attr('id', 'map')
   const map = L.map('map')// Did not set view because we are using "fit bounds" to get the polygons to determine this
   const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -62,7 +71,7 @@ async function main() {
     .style("padding", "5px")
 
   const Dots = svg.selectAll('points')
-    .data(planningParsed)
+    .data(datefilteredplanning)
     .join('circle')
     .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
     .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
@@ -71,7 +80,7 @@ async function main() {
     .attr('r', 5)
     .style('fill', 'steelblue')
     .style('stroke', 'black')
-    .style('opacity', 0.05)
+    .style('opacity', 0.8)
 
     .on('mousemove', function (e, d) { // function to add mouseover event
       Tooltip
@@ -103,17 +112,41 @@ async function main() {
 
   map.on('zoomend', update)
 
-  const slider1 = d3.select('body')
-    .append('div')
-    .attr("id", 'slider1')
-    .call(d3.slider().value([10, 25]));
+
+  // Création d'un sélecteur de dates
+
+  scaleBand = d3.scaleBand()
+    .domain(DateDomain)
+    .range([0, window_width / 4])
+    .paddingInner(0.17)
+    .paddingOuter(1)
+
+  scaleBalls = d3.scaleQuantize()
+    .domain([0 + scaleBand.bandwidth(), width - scaleBand.bandwidth()])
+    .range(planningParsed)
 
 
 }
 
+
+
+// Fonctions de chargement et parsing des données
 async function loadArr() {
   const idfArr = (await fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/ile-de-france/arrondissements-ile-de-france.geojson')).json()
   return idfArr
+}
+
+async function loadLoc() {
+  const locParsed = await (d3.csv('../data/raw/loc_epreuves.csv')
+    .then(data => {
+      return data.map((d, i) => {
+        const r = d
+        r.latitude = +d.latitude
+        r.longitude = +d.longitude
+        return r
+      })
+    }))
+  return locParsed
 }
 
 async function loadJOData() {
@@ -127,16 +160,19 @@ async function loadJOData() {
     "months": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
     "shortMonths": ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
   });
-  const parseDateHour = d3.utcParse('%A %e %B %Y %H:%M');// https://d3js.org/d3-time-format
+  const parseDateHour = d3.timeParse('%A %e %B %Y %H:%M');// https://d3js.org/d3-time-format
+  const parseDate = d3.utcParse('%A %e %B %Y');
 
-  const planningParsed = await (d3.csv('session_planning_with_loc_v2.csv')
+  const planningParsed = await (d3.csv('../data/raw/session_planning_with_loc_v3.csv')
     .then(data => {
       return data.map((d, i) => {
         const r = d
         r.time = parseDateHour(d.date + ' ' + '2024' + ' ' + d.debut_epreuve)
+        r.date = parseDate(d.date + " " + "2024")
         r.num_jour = +r.num_jour
         r.latitude = +r.latitude
         r.longitude = +r.longitude
+        r.index = i
         return r
       })
     }))
