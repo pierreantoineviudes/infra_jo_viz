@@ -6,7 +6,7 @@
  * @returns none
  */
 
-async function main () {
+async function main() {
   // Set the dimensions and margins
   const margin = { top: 10, right: 10, bottom: 45, left: 10 }
   const window_width = window.innerWidth - margin.left - margin.right
@@ -79,7 +79,7 @@ async function main () {
 
   datePicker.call(
     d3.drag()
-      .on('drag', function dragged (event, d) {
+      .on('drag', function dragged(event, d) {
         const date = scaleBalls(event.x)
 
         const xAxisValue = scaleBand(date)
@@ -125,7 +125,7 @@ async function main () {
 
   // Donnees filtrees par la date selectionnee
 
-  const datefilteredplanning = d3.filter(planningParsed, d => d3.utcFormat('%A %e %B %Y')(d.date) == d3.utcFormat('%A %e %B %Y')(SelectedDates[0]))
+
 
   // ______________________________________________________________________________//
 
@@ -210,12 +210,12 @@ async function main () {
 }
 
 // Fonctions de chargement et parsing des données
-async function loadArr () {
+async function loadArr() {
   const idfArr = (await fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/ile-de-france/arrondissements-ile-de-france.geojson')).json()
   return idfArr
 }
 
-async function loadLoc () {
+async function loadLoc() {
   const locParsed = await (d3.csv('../data/raw/loc_epreuves.csv')
     .then(data => {
       return data.map((d, i) => {
@@ -228,7 +228,7 @@ async function loadLoc () {
   return locParsed
 }
 
-async function loadJOData () {
+async function loadJOData() {
   const frFR = d3.timeFormatDefaultLocale({
     dateTime: '%A %e %B %Y à %X',
     date: '%d/%m/%Y',
