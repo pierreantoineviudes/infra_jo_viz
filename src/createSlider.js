@@ -36,4 +36,3 @@ function main () {
     .attr('transform', 'translate(30,30)')
     .call(slider)
 }
-
