@@ -15,7 +15,7 @@ async function main() {
   // Data
   const idfArr = await loadArr()
   const planningParsed = await loadJOData()
-  const locParsed = await loadLoc()
+  // const locParsed = await loadLoc()
 
   // Variables de Dates
   const dates_str = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates uniques sans formatter en str bizarre !
@@ -223,7 +223,7 @@ async function loadArr() {
 }
 
 async function loadLoc() {
-  const locParsed = await (d3.csv('../data/raw/loc_epreuves.csv')
+  const locParsed = await (d3.csv('../loc_epreuves.csv')
     .then(data => {
       return data.map((d, i) => {
         const r = d
@@ -249,7 +249,7 @@ async function loadJOData() {
   const parseDateHour = d3.timeParse('%A %e %B %Y %H:%M')// https://d3js.org/d3-time-format
   const parseDate = d3.utcParse('%A %e %B %Y')
 
-  const planningParsed = await (d3.csv('../data/raw/session_planning_with_loc_v3.csv')
+  const planningParsed = await (d3.csv('../session_planning_with_loc_v3.csv')
     .then(data => {
       return data.map((d, i) => {
         const r = d
