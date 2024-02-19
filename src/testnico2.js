@@ -139,7 +139,7 @@ async function main() {
   const map_width = window_width * 0.75
   const map_height = map_width / 1.6
   d3.select('body').append('div')
-    .attr('style', `width:${map_width}px; height:${map_height}px`)
+    // .attr('style', `width:${map_width}px; height:${map_height}px`)
     .attr('id', 'map')
 
   const map = L.map('map')// Did not set view because we are using "fit bounds" to get the polygons to determine this

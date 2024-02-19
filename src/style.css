@@ -1,3 +1,7 @@
+
+body {
+    margin: 0;
+}
 p {
     font-family: 'Courier New', Courier, monospace;
 }
@@ -18,4 +22,18 @@ div.tooltip {
 
 .leaflet-overlay-pane svg path {
     pointer-events: auto;
+}
+
+#map {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+}
+
+.slider {
+    z-index: 10000;
+    position: absolute;
+    bottom: 0;    
 }
