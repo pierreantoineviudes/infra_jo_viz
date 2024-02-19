@@ -100,6 +100,12 @@ async function main() {
       .on('end', () => {
         const SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
         console.log(SelectedDates)
+        // Filter data based in slider value
+        const planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
+        console.log(planningfiltered)
+        // Update the map with the new domain
+        // svg_map.select('#circle')
+        //   .attr('d', )
       })
   )
 
@@ -168,8 +174,9 @@ async function main() {
     .style('padding', '5px')
 
   const Dots = svg_map.selectAll('points')
-    .data(datefilteredplanning)
+    .data(planningParsed)
     .join('circle')
+    .attr('class', 'circle')
     .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
     .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
     .attr('r', 5)
