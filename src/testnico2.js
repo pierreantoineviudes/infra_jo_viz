@@ -5,18 +5,16 @@
  * Cartographie qui trace les POI sur un fond de carte Openstreetmap
  * @returns none
  */
+// Set the dimensions and margins
+
+const margin = { top: 10, right: 10, bottom: 45, left: 10 }
+const window_width = window.innerWidth - margin.left - margin.right
+const window_height = window.innerHeight - margin.top - margin.bottom
 
 async function main() {
-  // Set the dimensions and margins
-  const margin = { top: 10, right: 10, bottom: 45, left: 10 }
-  const window_width = window.innerWidth - margin.left - margin.right
-  const window_height = window.innerHeight - margin.top - margin.bottom
-
-  // Data
-  const idfArr = await loadArr()
-  const planningParsed = await loadJOData()
   // const locParsed = await loadLoc()
-
+  // Data
+  const planningParsed = await loadJOData()
   // Variables de Dates
   const dates_str = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates uniques sans formatter en str bizarre !
   const dates = d3.sort(d3.map(dates_str, d => d3.utcParse('%A %e %B %Y')(d)))
@@ -104,8 +102,6 @@ async function main() {
         const planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
         console.log(planningfiltered)
         // Update the map with the new domain
-        // svg_map.select('#circle')
-        //   .attr('d', )
       })
   )
 
@@ -131,11 +127,15 @@ async function main() {
 
   // Donnees filtrees par la date selectionnee
 
-
-
   // ______________________________________________________________________________//
+  await interactive_map()
+  // _____________________________________________________________________________//
+}
 
+async function interactive_map() {
   // CARTE INTERACTIVE
+  const planningParsed = await loadJOData()
+  const idfArr = await loadArr()
   const map_width = window_width * 0.75
   const map_height = map_width / 1.6
   d3.select('body').append('div')
@@ -213,7 +213,6 @@ async function main() {
     .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
 
   map.on('zoomend', update)
-  // _____________________________________________________________________________//
 }
 
 // Fonctions de chargement et parsing des données
