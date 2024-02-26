@@ -5,16 +5,18 @@
  * Cartographie qui trace les POI sur un fond de carte Openstreetmap
  * @returns none
  */
-// Set the dimensions and margins
-
-const margin = { top: 10, right: 10, bottom: 45, left: 10 }
-const window_width = window.innerWidth - margin.left - margin.right
-const window_height = window.innerHeight - margin.top - margin.bottom
 
 async function main() {
-  // const locParsed = await loadLoc()
+  // Set the dimensions and margins
+  const margin = { top: 10, right: 10, bottom: 45, left: 10 }
+  const window_width = window.innerWidth - margin.left - margin.right
+  const window_height = window.innerHeight - margin.top - margin.bottom
+
   // Data
+  const idfArr = await loadArr()
   const planningParsed = await loadJOData()
+  // const locParsed = await loadLoc()
+
   // Variables de Dates
   const dates_str = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates uniques sans formatter en str bizarre !
   const dates = d3.sort(d3.map(dates_str, d => d3.utcParse('%A %e %B %Y')(d)))
@@ -102,6 +104,8 @@ async function main() {
         const planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
         console.log(planningfiltered)
         // Update the map with the new domain
+        // svg_map.select('#circle')
+        //   .attr('d', )
       })
   )
 
@@ -127,19 +131,15 @@ async function main() {
 
   // Donnees filtrees par la date selectionnee
 
-  // ______________________________________________________________________________//
-  await interactive_map()
-  // _____________________________________________________________________________//
-}
 
-async function interactive_map() {
+
+  // ______________________________________________________________________________//
+
   // CARTE INTERACTIVE
-  const planningParsed = await loadJOData()
-  const idfArr = await loadArr()
   const map_width = window_width * 0.75
   const map_height = map_width / 1.6
   d3.select('body').append('div')
-    // .attr('style', `width:${map_width}px; height:${map_height}px`)
+    .attr('style', `width:${map_width}px; height:${map_height}px`)
     .attr('id', 'map')
 
   const map = L.map('map')// Did not set view because we are using "fit bounds" to get the polygons to determine this
@@ -208,12 +208,73 @@ async function interactive_map() {
         .attr('r', 5)
     })
 
+    .on('click', function (e, d) { 
+      console.log('click')
+    })
+
   const update = () => Dots
     .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
     .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
 
   map.on('zoomend', update)
+  // _____________________________________________________________________________//
+  // Planning infras
+  const timeTableHeight =  map_height / 2
+  const timeTableWidth = window_width - map_width
+  const xInitTT = map_width + margin.left
+  const yInitTT = map_height/2
+
+  // create svg element:
+  const timeTable = d3.select('body')
+    .append("svg")
+    .attr("width", timeTableWidth)
+    .attr("height", timeTableHeight)
+    .attr('x', xInitTT)
+    .attr('y', yInitTT)
+
+  // Add the path using this helper function
+  timeTable.append('rect')
+    .attr('x', 0)
+    .attr('y', 0)
+    .attr('width', timeTableWidth)
+    .attr('height', timeTableHeight)
+    .attr('stroke', 'black')
+    .attr('fill', '#69a3b2');
+
+  // const timeTable = d3.select('body')
+  //   .append('div')
+  //   .attr('class', 'rect')
+    // .attr("x", x_init)
+    // .attr("y", y_init)
+    // .attr("width", timeTableWidth)
+    // .attr("height", timeTableHeight)
+    // .attr("fill", "red")
+    // .attr("stroke-width", 3)
+    // .attr("stroke", "black")
 }
+
+
+
+// const timeTable = d3.select('body')
+// .append('div')
+// .style('z-index', 3000)
+// .style('opacity', 0)
+// .attr('class', 'rect')
+// .style('background-color', 'white')
+// .style('border', 'solid')
+// .style('border-width', '2px')
+// .style('border-radius', '5px')
+// .style('padding', '5px')
+
+
+// d3.select('body').append("div")
+// .attr("x", x_init)
+// .attr("y", y_init)
+// .attr("width", timeTableWidth)
+// .attr("height", timeTableHeight)
+// .attr("fill", "black")
+// .attr("stroke-width", 3)
+// .attr("stroke", "black")
 
 // Fonctions de chargement et parsing des données
 async function loadArr() {
@@ -248,7 +309,7 @@ async function loadJOData() {
   const parseDateHour = d3.timeParse('%A %e %B %Y %H:%M')// https://d3js.org/d3-time-format
   const parseDate = d3.utcParse('%A %e %B %Y')
 
-  const planningParsed = await (d3.csv('../session_planning_with_loc_v3.csv')
+  const planningParsed = await (d3.csv('../session_planning_pars_with_loc.csv')
     .then(data => {
       return data.map((d, i) => {
         const r = d
