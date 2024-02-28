@@ -5,6 +5,8 @@ Version  2
 JOUR	6		Jeudi	1	Août
 Session	 ATH01	 Début :	07:30 Fin :	11:05 Trocadéro
 Nom de l'épreuve/des épreuves
+20 km marche - hommes, finale
+20 km marche - femmes, finale
 
 JOUR	7		Vendredi	2	Août	
 Session		ATH02	Début :	10:00	Fin :	13:00 Stade de France
