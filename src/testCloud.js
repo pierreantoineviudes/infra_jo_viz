@@ -56,6 +56,7 @@ async function main () {
       }
     }))
     .padding(10)
+    .rotate(0)
     .fontSize(function (d) {
       console.log('d : fontsize', d)
       return d.size
@@ -73,6 +74,7 @@ async function main () {
       .data(words)
       .enter().append('text')
       .style('font-size', function (d) { return d.size + 'px' })
+      .style('font-family', 'Roboto')
       .attr('text-anchor', 'middle')
       .attr('transform', function (d) {
         return 'translate(' + [d.x, d.y] + ')rotate(' + d.rotate + ')'

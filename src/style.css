@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
     margin: 0;
 }
+
 p {
     font-family: 'Courier New', Courier, monospace;
 }
@@ -36,4 +38,36 @@ div.tooltip {
     z-index: 10000;
     position: absolute;
     bottom: 0;    
+}
+
+#dayTimeTable {
+    z-index: 9000;
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+#timeTable {
+    z-index: 9000;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* top: 0; */
+    /* bottom: 200; */
+    /* z-index: 10000;
+    position: absolute; */
+    /* color: #222;
+    background-color: #fff;
+    padding: .5em;
+    text-shadow: #f5f5f5 0 1px 0;
+    border-radius: 2px;
+    opacity: 0.9;
+    position: absolute; */
+}
+
+#infoSession {
+    z-index: 9000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
