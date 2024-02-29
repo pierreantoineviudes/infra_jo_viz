@@ -208,7 +208,7 @@ async function main() {
         .attr('r', 5)
     })
 
-    .on('click', function (e, d) { 
+    .on('click', function (e, d) {
       console.log('click')
     })
 
@@ -219,10 +219,10 @@ async function main() {
   map.on('zoomend', update)
   // _____________________________________________________________________________//
   // Planning infras
-  const timeTableHeight =  map_height / 2
+  const timeTableHeight = map_height / 2
   const timeTableWidth = window_width - map_width
   const xInitTT = map_width + margin.left
-  const yInitTT = map_height/2
+  const yInitTT = map_height / 2
 
   // create svg element:
   const timeTable = d3.select('body')
@@ -244,13 +244,13 @@ async function main() {
   // const timeTable = d3.select('body')
   //   .append('div')
   //   .attr('class', 'rect')
-    // .attr("x", x_init)
-    // .attr("y", y_init)
-    // .attr("width", timeTableWidth)
-    // .attr("height", timeTableHeight)
-    // .attr("fill", "red")
-    // .attr("stroke-width", 3)
-    // .attr("stroke", "black")
+  // .attr("x", x_init)
+  // .attr("y", y_init)
+  // .attr("width", timeTableWidth)
+  // .attr("height", timeTableHeight)
+  // .attr("fill", "red")
+  // .attr("stroke-width", 3)
+  // .attr("stroke", "black")
 }
 
 

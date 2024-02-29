@@ -12,11 +12,12 @@ const window_width = window.innerWidth - margin.left - margin.right
 const window_height = window.innerHeight - margin.top - margin.bottom
 
 async function main() {
-  // const locParsed = await loadLoc()
+  const locParsed = await loadLoc()
   // Data
   const planningParsed = await loadJOData()
   // Variables de Dates
   const dates_str = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates uniques sans formatter en str bizarre !
+  console.log(planningParsed)
   const dates = d3.sort(d3.map(dates_str, d => d3.utcParse('%A %e %B %Y')(d)))
   const SelectedDates = [dates[0], dates[dates.length - 1]]
   // _______________________________________________________________________________//
@@ -100,8 +101,9 @@ async function main() {
         console.log(SelectedDates)
         // Filter data based in slider value
         const planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
-        console.log(planningfiltered)
+        console.log(planningfiltered);
         // Update the map with the new domain
+        // interactive_map()
       })
   )
 
@@ -124,8 +126,6 @@ async function main() {
     .attr('x', (d) => d.x)
     .attr('fill', colours.accent)
     .text((d) => d3.utcFormat('%a %e %b')(scaleBalls(d.x)))
-
-  // Donnees filtrees par la date selectionnee
 
   // ______________________________________________________________________________//
   await interactive_map()
@@ -159,8 +159,9 @@ async function interactive_map() {
 
   L.svg({ clickable: true }).addTo(map)
   const overlay = d3.select(map.getPanes().overlayPane)
-  const svg = overlay.select('svg').attr('pointer-events', 'auto')
   const svg_map = overlay.select('svg').attr('pointer-events', 'auto')
+  const bigg = d3.select("#map").select("svg").select("g")
+  bigg.attr("class", "leaflet-zoom-hide")
 
   const Tooltip = d3.select('body')
     .append('div')
