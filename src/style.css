@@ -37,5 +37,37 @@ div.tooltip {
 .slider {
     z-index: 10000;
     position: absolute;
+    bottom: 0;    
+}
+
+#dayTimeTable {
+    z-index: 9000;
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+#timeTable {
+    z-index: 9000;
+    position: absolute;
     bottom: 0;
+    right: 0;
+    /* top: 0; */
+    /* bottom: 200; */
+    /* z-index: 10000;
+    position: absolute; */
+    /* color: #222;
+    background-color: #fff;
+    padding: .5em;
+    text-shadow: #f5f5f5 0 1px 0;
+    border-radius: 2px;
+    opacity: 0.9;
+    position: absolute; */
+}
+
+#infoSession {
+    z-index: 9000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }

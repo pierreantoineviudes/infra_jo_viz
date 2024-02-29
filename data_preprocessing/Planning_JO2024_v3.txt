@@ -1,0 +1,5532 @@
+ATHLETISME
+Calendrier par épreuves
+Version  2
+
+JOUR	6		Jeudi	1	Août
+Session	 ATH01	 Début :	07:30 Fin :	11:05 Trocadéro
+Nom de l'épreuve/des épreuves
+20 km marche - hommes, finale
+20 km marche - femmes, finale
+
+JOUR	7		Vendredi	2	Août	
+Session		ATH02	Début :	10:00	Fin :	13:00 Stade de France
+Nom de l'épreuve/des épreuves
+Décathlon - 100 m, hommes
+Lancer de marteau - hommes, qualifications Saut en hauteur - femmes, qualifications 100 m - femmes, tour préliminaire Décathlon - saut en longueur, hommes
+1 500 m - hommes, 1er tour 100 m - femmes, 1er tour
+Décathlon - lancer de poids, hommes
+
+Session	 ATH03	 Début :	17:40 Fin :	22:00 Stade de France
+Nom de l'épreuve/des épreuves Décathlon - saut en hauteur, hommes 5 000 m - femmes, 1er tour
+Triple saut - femmes, qualifications Lancer de disque - femmes, qualifications Relais 4 x 400 m - mixte, 1er tour
+800 m - femmes, 1er tour
+Lancer de poids - hommes, qualifications Décathlon - 400 m, hommes
+10 000 m - hommes, finale	
+
+JOUR	8		Samedi	3	Août	
+Session		ATH04	Début :	10:00	Fin :	16:00 Stade de France
+Nom de l'épreuve/des épreuves
+Décathlon - 110 m haies, hommes
+Saut à la perche - hommes, qualifications 100 m - hommes, tour préliminaire
+Décathlon - lancer de disque, hommes 800 m - femmes, Repêchages
+100 m - hommes, 1er tour
+Décathlon - saut à la perche, hommes
+
+Session	 ATH05	 Début :	19:00 Fin :	22:00 Stade de France
+Nom de l'épreuve/des épreuves
+1 500 m - hommes, Repêchages
+ Lancer de poids - hommes, finale	 100 m - femmes, demi-finales
+Décathlon - lancer de javelot, hommes
+ Décathlon - 1 500 m, hommes	
+
+JOUR	9		Dimanch	4	Août	
+Session		ATH06	Début :	10:00	Fin :	13:15 Stade de France
+Nom de l'épreuve/des épreuves
+3 000 m steeple - femmes, 1er tour
+Lancer de marteau - femmes, qualifications 200 m - femmes, 1er tour
+Saut en longueur - hommes, qualifications 110 m haies - hommes, 1er tour
+400 m haies - femmes, 1er tour 110 m haies - hommes, 1er tour
+ 
+Session ATH07
+ 
+Début :	18:30 Fin :	22:00 Stade de France
+Nom de l'épreuve/des épreuves
+400 m - hommes, 1er tour 
+100 m - hommes, demi-finales
+800 m - femmes, demi-finales
+1 500 m - hommes, demi-finales
+Saut en hauteur - femmes, finale
+Lancer de marteau - hommes, finale
+100 m - hommes, finale
+
+JOUR	10		Lundi	5	Août	
+Session		ATH08	Début :	10:00	Fin :	13:15 Stade de France
+Nom de l'épreuve/des épreuves
+400 m haies - hommes, 1er tour
+Lancer de disque - hommes, qualifications Saut à la perche - femmes, qualifications 400 m haies - femmes, Repêchages
+400 m - hommes, Repêchages 400 m - femmes, 1er tour
+200 m - femmes, Repechages
+
+ 
+Session ATH09
+ 
+Début :	18:30 Fin :	22:00 Stade de France
+Nom de l'épreuve/des épreuves
+ 
+
+ 
+3 000 m steeple - hommes, 1er tour 200 m - hommes, 1er tour
+
+200 m - femmes, demi-finales
+
+JOUR	11		Mardi	6	Août	
+Session		ATH10	Début :	10:00	Fin :	13:00 Stade de France
+Nom de l'épreuve/des épreuves
+1 500 m - femmes, 1er tour
+Lancer de javelot - hommes, qualifications 110 m haies - hommes, Repêchages Saut en longueur - femmes, qualifications 400 m - femmes, Repêchages
+400 m haies - hommes, Repêchages 200 m - hommes, Repêchages
+
+ 
+Session ATH11
+ 
+Début :	19:00 Fin :	22:00 Stade de France
+Nom de l'épreuve/des épreuves
+400 m - hommes, demi-finales
+ 
+
+ 
+400 m haies - femmes, demi-finales
+
+JOUR	12		Mercredi	7	Août	
+Session		ATH12	Début :	07:30	Fin :	10:50 Trocadéro
+Nom de l'épreuve/des épreuves
+
+ 
+Session	ATH13 
+
+
+ 
+Début :	10:00 Fin :	13:05 Stade de France
+Nom de l'épreuve/des épreuves
+Saut en hauteur - hommes, qualifications 100 m haies - femmes, 1er tour
+Lancer de javelot - femmes, qualifications 5 000 m - hommes, 1er tour
+800 m - hommes, 1er tour 1 500 m - femmes, R
+
+
+Session ATH14
+Début :	18:30 Fin :	22:00 Stade de France
+Nom de l'épreuve/des épreuves
+ 
+
+ 
+110 m haies - hommes, demi-finales Triple saut - hommes, qualifications 400 m haies - hommes, demi-finales 200 m - hommes, demi-finales
+
+400 m - femmes, demi-finales
+ 
+3 000 m steeple - hommes, finale	
+
+JOUR	13		Jeudi	8	Août	
+Session		ATH15	Début :	10:00	Fin :	13:00 Stade de France
+Nom de l'épreuve/des épreuves Heptathlon - 100 m haies, femmes Lancer de poids - femmes, qualifications 100 m haies - femmes, Repêchages Heptathlon - saut en hauteur, femmes Relais 4 x 100 m - femmes, 1er tour Relais 4 x 100 m - hommes, 1er tour 800 m - hommes, Repêchages
+
+Session	 ATH16	 Début :	19:00 Fin :	22:00 Stade de France
+Nom de l'épreuve/des épreuves Heptathlon - lancer de poids, femmes 1 500 m - femmes, demi-finales
+ 
+Heptathlon - 200 m, femmes
+
+JOUR	14		Vendredi	9	Août	
+Session		ATH17	Début :	10:00	Fin :	13:15 Stade de France
+Nom de l'épreuve/des épreuves Heptathlon - saut en longueur, femmes Relais 4 x 400 m - femmes, 1er tour Relais 4 x 400 m - hommes, 1er tour Heptathlon - lancer de javelot, femmes 800 m - hommes, demi-finales
+100 m haies - femmes, demi-finales
+
+Session	 ATH18	 Début :	19:00 Fin :	22:30 Stade de France
+Nom de l'épreuve/des épreuves
+Relais 4 x 100 m - femmes, finale
+Lancer de poids - femmes, finale
+Relais 4 x 100 m - hommes, finale
+400 m - femmes, finale
+Triple saut - hommes, finale
+Heptathlon - 800 m, femmes
+10 000 m - femmes, finale
+400 m haies - hommes, finale
+
+JOUR	15		Samedi	10	Août	
+Session		ATH19	Début :	08:00	Fin :	11:00 Hôtel de Ville (site de départ) - Invalides (site d'arrivée)
+Nom de l'épreuve/des épreuves
+ Marathon - hommes, finale
+
+Session	 ATH20	 Début :	18:30 Fin :	22:30 Stade de France
+Nom de l'épreuve/des épreuves
+Saut en hauteur - hommes, finale
+800 m - hommes, finale
+Lancer de javelot - femmes, finale
+100 m haies - femmes, finale
+5 000 m - hommes, finale
+1 500 m - femmes, finale
+Relais 4 x 400 m - hommes, finale
+Relais 4 x 400 m - femmes, finale
+
+Session	 ATH21	 Début :	08:00 Fin :	11:15 Hôtel de Ville (site de départ) - Invalides (site d'arrivée)
+Nom de l'épreuve/des épreuves
+ Marathon - femmes, finale	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+AVIRON
+Calendrier par épreuves
+ 
+Version : 1
+
+JOUR 1 Sam 27 Juillet
+
+Session	ROW01
+
+
+Début :	09:00 Fin :	13:10	Stade nautique de Vaires-sur-Marne - Bassin eaux calmes
+Nom de l'épreuve/des épreuves Skiff - hommes, éliminatoires Skiff - femmes, éliminatoires
+Deux de couple - hommes, éliminatoires Deux de couple - femmes, éliminatoires Quatre de couple - hommes, éliminatoires Quatre de couple - femmes, éliminatoires
+ 
+
+JOUR	2		Dim	28	Juillet	
+Session		ROW02	Début :	09:00 Fin :	13:10	Stade nautique de Vaires-sur-Marne - Bassin eaux calmes
+Nom de l'épreuve/des épreuves
+Skiff - femmes, repêchages Skiff - hommes, repêchages
+Deux de couple - femmes, repêchage Deux de couple - hommes, repêchage
+Deux de pointe sans barreur - femmes, éliminatoires Deux de pointe sans barreur - hommes, éliminatoires Deux de couple poids léger - femmes, éliminatoires Deux de couple poids léger - hommes, éliminatoires Quatre de pointe sans barreur - femmes, éliminatoires Quatre de pointe sans barreur - hommes, éliminatoires
+
+JOUR	3		Lun	29	Juillet	
+Session		ROW03	Début :	09:30 Fin :	12:20	Stade nautique de Vaires-sur-Marne - Bassin eaux calmes
+Nom de l'épreuve/des épreuves Skiff - hommes, demi-finales E/F Skiff - femmes, demi-finales E/F
+Deux de pointe sans barreur - hommes, repêchage Deux de pointe sans barreur - femmes, repêchage Deux de couple poids léger - hommes, repêchages Deux de couple poids léger - femmes, repêchages Quatre de couple - hommes, repêchage
+Quatre de couple - femmes, repêchage
+Huit de pointe avec barreur - hommes, éliminatoires Huit de pointe avec barreur - femmes, éliminatoires
+
+JOUR	4		Mar	30	Juillet	
+Session		ROW04	Début :	09:30 Fin :	11:50	Stade nautique de Vaires-sur-Marne - Bassin eaux calmes
+Nom de l'épreuve/des épreuves Skiff - femmes, quarts de finale Skiff - hommes, quarts de finale
+Deux de couple - femmes, demi-finales
+Deux de couple - hommes, demi-finales
+Quatre de pointe sans barreur - femmes, repêchage Quatre de pointe sans barreur - hommes, repêchage
+
+JOUR	5	Mer	31	Juillet	
+Session		 ROW05	 Début :	09:30 Fin :	13:10	Stade nautique de Vaires-sur-Marne - Bassin eaux calmes
+Nom de l'épreuve/des épreuves
+Deux de couple poids léger - femmes, finale C Deux de couple poids léger - hommes, finale C Skiff - hommes, demi-finales C/D
+Skiff - femmes, demi-finales C/D
+Deux de pointe sans barreur - hommes, demi-finales Deux de pointe sans barreur - femmes, demi-finales Deux de couple poids léger - hommes, demi-finales Deux de couple poids léger - femmes, demi-finales Quatre de couple - hommes, finale B
+Quatre de couple - femmes, finale B
+ 
+JOUR	6	Jeu	1	Août	
+Session		 ROW06	 Début :	09:30 Fin :	12:40	Stade nautique de Vaires-sur-Marne - Bassin eaux calmes
+Nom de l'épreuve/des épreuves Skiff - femmes, demi-finales A/B Skiff - hommes, demi-finales A/B
+Huit de pointe avec barreur - femmes, repêchage Huit de pointe avec barreur - hommes, repêchage Deux de couple - femmes, finale B
+Deux de couple - hommes, finale B
+Quatre de pointe sans barreur - femmes, finale B Quatre de pointe sans barreur - hommes, finale B
+ 
+
+JOUR	7	Ven	2	Août	
+Session		 ROW07	 Début :	09:30 Fin :	12:50	Stade nautique de Vaires-sur-Marne - Bassin eaux calmes
+Nom de l'épreuve/des épreuves
+Skiff - hommes, finale F Skiff - femmes, finale F Skiff - hommes, finale E Skiff - femmes, finale E Skiff - hommes, finale D Skiff - femmes, finale D
+Deux de pointe sans barreur - hommes, finale B Deux de pointe sans barreur - femmes, finale B Deux de couple poids léger - hommes, finale B Deux de couple poids léger - femmes, finale B
+
+
+
+
+
+JOUR	8	Sam	3	Août	
+Session		 ROW08	 Début :	09:30 Fin :	11:40	Stade nautique de Vaires-sur-Marne - Bassin eaux calmes
+Nom de l'épreuve/des épreuves
+Skiff - femmes, finale C Skiff - hommes, finale C Skiff - femmes, finale B Skiff - hommes, finale B
+ 
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+A noter que l'ordre des matchs sera déterminé pendant les Jeux en fonction du temps de repos des athlètes, des demandes des diffuseurs et d'autres paramètres qu'il n'est pas possible d'anticip
+
+BADMINTON		
+Calendrier par épreuves Version :	
+1	
+JOUR	1		Samedi	27	Juillet
+ 
+Session	BDM01
+ 
+Début :	08:30 Fin :	12:00 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Double mixte, poules préliminaires Simple femmes, poules préliminaires Double hommes, poules préliminaires Double femmes, poules préliminaires Simple hommes, poules préliminaires
+ 
+
+ 
+Session	BDM02
+ 
+Début :	14:00 Fin :	17:30 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Double mixte, poules préliminaires Simple femmes, poules préliminaires Double hommes, poules préliminaires Double femmes, poules préliminaires Simple hommes, poules préliminaires
+ 
+
+ 
+Session	BDM03
+ 
+Début :	19:30 Fin :	23:00 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Simple femmes, poules préliminaires Double hommes, poules préliminaires Double femmes, poules préliminaires Simple hommes, poules préliminaires
+ 
+
+JOUR	2		Dimanch	28	Juillet	
+Session		BDM04	Début :	08:30	Fin :	12:00 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Double mixte, poules préliminaires Simple femmes, poules préliminaires Double hommes, poules préliminaires Double femmes, poules préliminaires Simple hommes, poules préliminaires
+
+ 
+Session	BDM05
+ 
+Début :	14:00 Fin :	17:30 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Double mixte, poules préliminaires Double femmes, poules préliminaires Double hommes, poules préliminaires Simple femmes, poules préliminaires Simple hommes, poules préliminaires
+ 
+
+ 
+Session	BDM06
+ 
+Début :	19:30 Fin :	23:00 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Double mixte, poules préliminaires Double hommes, poules préliminaires Simple femmes, poules préliminaires Double femmes, poules préliminaires Simple hommes, poules préliminaires
+ 
+
+JOUR	3		Lundi	29	Juillet	
+Session		BDM07	Début :	08:30	Fin :	12:00 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Double mixte, poules préliminaires Double hommes, poules préliminaires Simple femmes, poules préliminaires Double femmes, poules préliminaires Simple hommes, poules préliminaires
+
+ 
+Session	BDM08
+ 
+Début :	14:00 Fin :	17:30 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Double mixte, poules préliminaires Double femmes, poules préliminaires Double hommes, poules préliminaires Simple femmes, poules préliminaires Simple hommes, poules préliminaires
+ 
+
+ 
+Session	BDM09
+ 
+Début :	19:30 Fin :	23:00 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Double mixte, poules préliminaires Simple femmes, poules préliminaires Double hommes, poules préliminaires Double femmes, poules préliminaires Simple hommes, poules préliminaires
+ 
+JOUR	4		Mardi	30	Juillet	
+Session		BDM10	Début :	08:30	Fin :	12:00	Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Simple femmes, poules préliminaires Double hommes, poules préliminaires Double femmes, poules préliminaires Simple hommes, poules préliminaires
+
+ 
+Session	BDM11
+ 
+Début :	14:00 Fin :	17:30 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Double hommes, poules préliminaires Double femmes, poules préliminaires Simple femmes, poules préliminaires Simple hommes, poules préliminaires
+ 
+
+ 
+Session	BDM12
+ 
+Début :	19:30 Fin :	23:00 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Simple femmes, poules préliminaires Double hommes, poules préliminaires Double femmes, poules préliminaires Simple hommes, poules préliminaires
+ 
+
+JOUR	5		Mercredi	31	Juillet	
+Session		BDM13	Début :	08:30	Fin :	12:00	Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Simple femmes, poules préliminaires Simple hommes, poules préliminaires
+
+ 
+Session	BDM14
+ 
+Début :	14:00 Fin :	17:30 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Simple femmes, poules préliminaires Simple hommes, poules préliminaires
+ 
+
+ 
+Session	BDM15
+ 
+Début :	19:30 Fin :	23:00 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Simple femmes, poules préliminaires Simple hommes, poules préliminaires Double mixte, quarts de finale
+ 
+
+JOUR	6		Jeudi	1	Août	
+Session		BDM16	Début :	08:30	Fin :	11:00	Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Double femmes, quarts de finale Simple hommes, 8e de finale
+
+ 
+Session	BDM17
+ 
+Début :	13:00 Fin :	16:30 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Double hommes, quarts de finale Simple hommes, 8e de finale
+ 
+
+ 
+Session	BDM18
+ 
+Début :	18:30 Fin :	22:00 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Simple femmes, 8e de finale Double mixte, demi-finale
+ 
+
+JOUR	7		Vendredi	2	Août	
+Session		BDM19	Début :	08:30	Fin :	13:00	Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Double femmes, demi-finale Double hommes, demi-finale
+
+ 
+Session BDM20
+ 
+Début :	15:00 Fin :	22:30 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves
+Double mixte, match bronze
+ 
+
+ 
+Simple hommes, quarts de finale
+
+JOUR	8		Samedi	3	Août	
+Session		BDM21	Début :	08:30	Fin :	13:00	Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves
+Simple femmes, quarts de finale
+
+ 
+Session BDM22
+ 
+Début :	15:00 Fin :	17:30 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves
+Double femmes, match bronze
+ 
+
+ 
+
+JOUR	9		Dimanch	4	Août	
+Session		BDM23	Début :	08:30	Fin :	13:00	Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves Simple femmes, demi-finales Simple hommes, demi-finales
+
+Session	 BDM24	 Début :	15:00 Fin :	17:30 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves
+Double hommes, match bronze
+ 
+ Double hommes, match or	
+
+JOUR	10	Lundi	5	Août	
+Session		 BDM25	 Début :	09:45	Fin :	12:30 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves
+Simple femmes, match bronze
+ Simple femmes, match or	
+
+Session	 BDM26	 Début :	14:30 Fin :	17:30 Arena Porte de La Chapelle
+Nom de l'épreuve/des épreuves
+Simple hommes, match bronze
+ Simple hommes, match or	
+ 
+*En attente de la décision finale
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+BASKETBALL
+Calendrier par épreuves
+	Version :	1.1	
+JOUR	1		Samedi	27	Juillet		
+Session		BKB01	Début :	11:00	Fin :	15:15	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+
+ 
+Session
+ 
+BKB02	Début :	17:15	Fin :	19:00	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire
+ 
+
+ 
+Session
+ 
+BKB03	Début :	21:00	Fin :	22:45	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire
+ 
+
+JOUR	2		Dimanch	28	J illet	
+Session		BKB04	Début :	11:00	Fin :	15:15	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes ou Femmes, tour préliminaire (2 matchs)
+
+ 
+Session
+ 
+BKB05	Début :	17:15	Fin :	19:00	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes ou Femmes, tour préliminaire
+ 
+
+ 
+Session
+ 
+BKB06	Début :	21:00	Fin :	22:45	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes ou Femmes, tour préliminaire
+ 
+
+JOUR	3		L ndi	29	J illet	
+Session		BKB07	Début :	11:00	Fin :	15:15	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+
+ 
+Session
+ 
+BKB08	Début :	17:15	Fin :	19:00	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire
+ 
+
+ 
+Session
+ 
+BKB09	Début :	21:00	Fin :	22:45	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire
+ 
+
+JOUR	4		Mardi	30	Juillet	
+Session		BKB10	Début :	11:00	Fin :	15:15	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+
+ 
+Session
+ 
+BKB11	Début :	17:15	Fin :	19:00	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire
+ 
+
+ 
+Session
+ 
+BKB12	Début :	21:00	Fin :	22:45	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire
+ 
+
+JOUR	5		Mercredi	31	Juillet	
+Session		BKB13	Début :	11:00	Fin :	15:15	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes ou Femmes, tour préliminaire (2 matchs)
+
+ 
+Session
+ 
+BKB14	Début :	17:15	Fin :	19:00	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes ou Femmes, tour préliminaire
+ 
+Session
+ 
+BKB15	Début :	21:00	Fin :	22:45	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes ou Femmes, tour préliminaire
+ 
+
+JOUR	6		Jeudi	1	Août		
+Session		BKB16	Début :	11:00	Fin :	15:15	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+
+ 
+Session
+ 
+BKB17	Début :	17:15	Fin :	19:00	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire
+ 
+
+ 
+Session
+ 
+BKB18	Début :	21:00	Fin :	22:45	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire
+ 
+
+JOUR	7		Vendredi	2	Août	
+Session		BKB19	Début :	11:00	Fin :	15:15	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+
+ 
+Session
+ 
+BKB20	Début :	17:15	Fin :	19:00	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire
+ 
+
+ 
+Session
+ 
+BKB21	Début :	21:00	Fin :	22:45	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire
+ 
+
+JOUR	8		Samedi	3	Août	
+Session		BKB22	Début :	11:00	Fin :	15:15	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes ou Femmes, tour préliminaire (2 matchs)
+
+ 
+Session
+ 
+BKB23	Début :	17:15	Fin :	19:00	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire
+ 
+
+ 
+Session
+ 
+BKB24	Début :	21:00	Fin :	22:45	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Hommes ou Femmes, tour préliminaire
+ 
+
+JOUR	9		Dimanch	4	Août	
+Session		BKB25	Début :	11:00	Fin :	15:15	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+
+ 
+Session
+ 
+BKB26	Début :	17:15	Fin :	19:00	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire
+ 
+
+ 
+Session
+ 
+BKB27	Début :	21:00	Fin :	22:45	Stade Pierre Mauroy*
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire
+ 
+
+
+JOUR		Mard	6	Août	
+Session	BKB28	Début :	11:00	Fin :	13:00	Arena Bercy
+Nom de l'épreuve/des épreuves
+Hommes, quart de finale
+
+ 
+Session	BKB29
+
+ 
+Début :	14:30	Fin :	16:30	Arena Bercy
+Nom de l'épreuve/des épreuves
+Hommes, quart de finale
+
+Session	BKB30
+
+Début :	18:00	Fin :	20:00	Arena Bercy
+Nom de l'épreuve/des épreuves
+ 
+Hommes, quart de finale
+ 
+Session	BKB31
+ 
+Début :	21:30	Fin :	23:30	Arena Bercy
+Nom de l'épreuve/des épreuves
+Hommes, quart de finale
+ 
+
+JOUR	12		Mercredi	7	Août	
+Session		BKB32	Début :	11:00	Fin :	13:00	Arena Bercy
+Nom de l'épreuve/des épreuves
+Femmes, quart de finale
+
+ 
+Session	BKB33
+
+Début :	14:30	Fin :	16:30	Arena Bercy
+Nom de l'épreuve/des épreuves
+Femmes, quart de finale
+
+Session	BKB34
+
+Début :	18:00	Fin :	20:00	Arena Bercy
+Nom de l'épreuve/des épreuves
+Femmes, quart de finale
+
+Session	BKB35
+
+Début :	21:30	Fin :	23:30	Arena Bercy
+Nom de l'épreuve/des épreuves
+Femmes, quart de finale
+
+ 
+
+JOUR	13		Jeudi	8	Août	
+Session		BKB36	Début :	17:30	Fin :	19:30	Arena Bercy
+Nom de l'épreuve/des épreuves
+Hommes, demi-finale
+
+ 
+Session	BKB37
+ 
+Début :	21:00	Fin :	23:00	Arena Bercy
+Nom de l'épreuve/des épreuves
+Hommes, demi-finale
+ 
+
+JOUR	14		Vendredi	9	Août	
+Session		BKB38	Début :	17:30	Fin :	19:30	Arena Bercy
+Nom de l'épreuve/des épreuves
+Femmes, demi-finale
+
+ 
+Session	BKB39
+ 
+Début :	21:00	Fin :	23:00	Arena Bercy
+Nom de l'épreuve/des épreuves
+Femmes, demi-finale
+ 
+
+JOUR	15		Samedi	10	Août	
+Session		BKB40	Début :	11:00	Fin :	13:00	Arena Bercy
+Nom de l'épreuve/des épreuves
+Hommes, match pour la médaille de bronze
+
+Session	 BKB41	 Début :	21:30	Fin :	00:00	Arena Bercy
+Nom de l'épreuve/des épreuves
+ Hommes, match pour la médaille d'or	
+
+JOUR	16		Dimanch	11	Août	
+Session		BKB42	Début :	11:30	Fin :	13:30	Arena Bercy
+Nom de l'épreuve/des épreuves
+Femmes, match pour la médaille de bronze
+
+Session	 BKB43	 Début :	15:30	Fin :	18:00	Arena Bercy
+Nom de l'épreuve/des épreuves
+ Femmes, match pour la médaille d'or	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+
+BASKETBALL 3x3
+Calendrier par épreuves
+Version : 1
+
+JOUR	4		Mardi	30	Juillet	
+Session		BK301	Début :	17:30 Fin :	19:30	La Concorde 1
+Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+
+ 
+Session	BK302
+ 
+Début :	21:00 Fin :	23:00	La Concorde 1
+Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+ 
+
+JOUR	5		Mercredi	31	Juillet	
+Session		BK303	Début :	17:30 Fin :	19:30	La Concorde 1
+Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+
+ 
+Session	BK304
+ 
+Début :	21:00 Fin :	23:00	La Concorde 1
+Nom de l'épreuve/des épreuves
+Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+ 
+
+Jour	6		Jeudi	1	Août	
+Session		BK305	Début :	09:00	Fin :	11:00	La Concorde 1
+Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+
+ 
+Session	BK306
+ 
+Début :	12:30 Fin :	14:30	La Concorde 1
+Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+ 
+
+ 
+Session	BK307
+ 
+Début :	18:00 Fin :	20:00	La Concorde 1
+Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+ 
+
+ 
+Session	BK308
+ 
+Début :	21:30 Fin :	23:30	La Concorde 1
+Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+ 
+Jour	7		Vendredi	2	Août	
+Session		BK309	Début :	09:00	Fin :	11:00	La Concorde 1
+Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+
+ 
+Session	BK310
+ 
+Début :	12:30 Fin :	14:30	La Concorde 1
+Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+ 
+
+ 
+Session	BK311
+ 
+Début :	17:30 Fin :	19:30	La Concorde 1
+Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+ 
+
+ 
+Session	BK312
+ 
+Début :	21:00 Fin :	23:00	La Concorde 1
+Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+ 
+
+Jour	8		Samedi	3	Août	
+Session		BK313	Début :	17:30	Fin :	19:30	La Concorde 1
+Nom de l'épreuve/des épreuves
+Femmes, matches de poule (4 matchs)
+
+ 
+Session	BK314
+ 
+Début :	21:30 Fin :	22:30	La Concorde 1
+Nom de l'épreuve/des épreuves
+Femmes, play in (2 matchs)
+ 
+
+Jour	9		Dimanche	4	Août	
+Session		BK315	Début :	17:30	Fin :	19:30	La Concorde 1
+Nom de l'épreuve/des épreuves
+Hommes, matches de poule (4 matches)
+
+ 
+Session	BK316
+ 
+Début :	21:30 Fin :	22:30	La Concorde 1
+Nom de l'épreuve/des épreuves
+Hommes, play in (2 matchs)
+ 
+
+Jour	10		Lundi	5	Août	
+Session		BK317	Début :	17:30	Fin :	19:30	La Concorde 1
+Nom de l'épreuve/des épreuves
+Femmes et hommes, demi-finales
+
+Session	 BK318	 Début :	21:00 Fin :	23:20	La Concorde 1
+Nom de l'épreuve/des épreuves Femmes, match pour la médaille de bronze Hommes, match pour la médaille de bronze
+ 
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+BMX FREESTYLE
+Calendrier par épreuves
+	Version :	1	
+JOUR	4			Mardi	30	Juillet	
+Session		BMF01		Début : 13:25	Fin :	16:30	La Concorde
+Nom de l'épreuve/des épreuves	
+				Park - femmes, qualification			
+				Park - hommes, qualification			
+JOUR	5			Mercredi	31	Juillet	
+Session		 BMF02		Début : 13:10	Fin :	16:30	La Concorde
+Nom de l'épreuve/des épreuves	
+				Park - femmes, finale			
+				Park - hommes, finale			
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+BMX RACING
+Calendrier par épreuves
+ 
+Version :  1
+
+JOUR 6 Jeudi 1 Août
+Session	BMX01
+
+
+Début :	20:00 Fin :	22:20	Stade BMX de Saint-Quentin-en-Yvelines
+Nom de l'épreuve/des épreuves Hommes, quarts de finale Femmes, quarts de finale
+Hommes, tour de la dernière chance
+
+
+Femmes, tour de la dernière chance
+ 
+
+
+JOUR	7		Vendredi	2	Août	
+Session		 BMX02		Début :	20:00 Fin :	22:30	Stade BMX de Saint-Quentin-en-Yvelines
+Nom de l'épreuve/des épreuves
+Hommes, demi-finales Femmes, demi-finales
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+Breaking
+Calendrier par épreuves
+ 
+Version :	1
+JOUR	14		Vendredi	9	Août
+Session	BKG01
+
+Début :	16:00	Fin :	18:00	La Concorde 1
+Nom de l'épreuve/des épreuves
+Femmes, qualifications
+ 
+
+Session	 BKG02	 Début :	20:00	Fin :	22:00	La Concorde 1
+Nom de l'épreuve/des épreuves
+ Femmes, finale	
+
+JOUR	15		Samedi	10	Août	
+Session		BKG03	Début :	16:00	Fin :	18:00	La Concorde 1
+Nom de l'épreuve/des épreuves
+Hommes, qualifications
+
+Session	 BKG04	 Début :	20:00	Fin :	22:00	La Concorde 1
+Nom de l'épreuve/des épreuves
+ Hommes, finale	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+
+BOXE
+Calendrier par épreuves
+ 
+Version :
+
+JOUR 1 Samedi 27 Juillet
+Session	BOX01
+
+Début :	15:30 Fin :	17:55 Arena Paris Nord
+Nom de l'épreuve/des épreuves 54kg - Femmes, 1/32 finale combat 1 54kg - Femmes, 1/32 finale combat 2 54kg - Femmes, 1/32 finale combat 3 60kg - Femmes, 1/32 finale combat 1 60kg - Femmes, 1/32 finale combat 2 60kg - Femmes, 1/32 finale combat 3
+63.5kg - Hommes, 1/32 finale combat 1
+63.5kg - Hommes, 1/32 finale combat 2 80kg - Hommes, 1/32 finale combat 1
+ 
+
+ 
+Session	BOX02
+ 
+Début :	20:00 Fin :	22:25 Arena Paris Nord
+Nom de l'épreuve/des épreuves 54kg - Femmes, 1/32 finale combat 4 54kg - Femmes, 1/32 finale combat 5 54kg - Femmes, 1/32 finale combat 6 60kg - Femmes, 1/32 finale combat 4 60kg - Femmes, 1/32 finale combat 5 60kg - Femmes, 1/32 finale combat 6
+63.5kg - Hommes, 1/32 finale combat 3
+63.5kg - Hommes, 1/32 finale combat 4 80kg - Hommes, 1/32 finale combat 2
+ 
+
+JOUR	2		Dimanch	28	Juillet	
+Session		BOX03	Début :	11:00	Fin :	13:10 Arena Paris Nord
+Nom de l'épreuve/des épreuves 57kg - Hommes, 1/32 finale combat 1 71kg - Hommes, 1/32 finale, combat 1 71kg - Hommes, 1/32 finale, combat 2 92kg - Hommes, 1/16 finale, combat 1 92kg - Hommes, 1/16 finale, combat 2 50kg - Femmes, 1/32 finale combat 1 50kg - Femmes, 1/32 finale combat 2 66kg - Femmes, 1/32 finale combat 3
+
+ 
+Session	BOX04
+ 
+Début :	15:30 Fin :	17:40 Arena Paris Nord
+Nom de l'épreuve/des épreuves 57kg - Hommes, 1/32 finale combat 2 71kg - Hommes, 1/32 finale, combat 3 92kg - Hommes, 1/16 finale, combat 3 92kg - Hommes, 1/16 finale, combat 4 92kg - Hommes, 1/16 finale, combat 4 50kg - Femmes, 1/32 finale combat 3 50kg - Femmes, 1/32 finale combat 4 66kg - Femmes, 1/32 finale combat 2
+ 
+
+ 
+Session	BOX05
+ 
+Début :	20:00 Fin :	22:10 Arena Paris Nord
+Nom de l'épreuve/des épreuves 71kg - Hommes, 1/32 finale combat 4 92kg - Hommes, 1/16 finale, combat 6 92kg - Hommes, 1/16 finale, combat 7 92kg - Hommes, 1/16 finale, combat 8 50kg - Femmes, 1/32 finale combat 5 50kg - Femmes, 1/32 finale combat 6 66kg - Femmes, 1/32 finale combat 3 66kg - Femmes, 1/32 finale combat 4
+ 
+
+JOUR	3		Lundi	29	Juillet	
+Session		BOX06	Début :	11:00	Fin :	13:10 Arena Paris Nord
+Nom de l'épreuve/des épreuves 60kg - Femmes, 1/16 finale combat 7 60kg - Femmes, 1/16 finale combat 8 60kg - Femmes, 1/16 finale combat 9 63,5kg - Hommes, 1/16 finale combat 5 63,5kg - Hommes, 1/16 finale combat 6 63,5kg - Hommes, 1/16 finale combat 7
++92kg - Hommes, 1/16 finale combat 1
++92kg - Hommes, 1/16 finale combat 2
+ 
+Session	BOX07
+ 
+Début :	15:30 Fin :	17:40 Arena Paris Nord
+Nom de l'épreuve/des épreuves 60kg - Femmes, 1/16 finale combat 10 60kg - Femmes, 1/16 finale combat 11 63,5kg - Hommes, 1/16 finale combat 8 63,5kg - Hommes, 1/16 finale combat 9
+63,5kg - Hommes, 1/16 finale combat 10
++92kg - Hommes, 1/16 finale combat 3
++92kg - Hommes, 1/16 finale combat 4
++92kg - Hommes, 1/16 finale combat 5
+ 
+
+ 
+Session	BOX08
+ 
+Début :	20:00 Fin :	22:10 Arena Paris Nord
+Nom de l'épreuve/des épreuves 60kg - Femmes, 1/16 finale combat 12 60kg - Femmes, 1/16 finale combat 13 60kg - Femmes, 1/16 finale combat 14
+63,5kg - Hommes, 1/16 finale combat 11 63,5kg - Hommes, 1/16 finale combat 12
++92kg - Hommes, 1/16 finale combat 6
++92kg - Hommes, 1/16 finale combat 7
++92kg - Hommes, 1/16 finale combat 8
+ 
+
+JOUR	4		Mardi	30	Juillet	
+Session		BOX09	Début :	11:00	Fin :	13:40 Arena Paris Nord
+Nom de l'épreuve/des épreuves 51kg - Hommes, 1/16 finale combat 1 51kg - Hommes, 1/16 finale combat 2 51kg - Hommes, 1/16 finale combat 3 80kg - Hommes, 1/16 finale combat 3 80kg - Hommes, 1/16 finale combat 4 54kg - Femmes, 1/16 finale combat 7 54kg - Femmes, 1/16 finale combat 8 54kg - Femmes, 1/16 finale combat 9 57kg - Femmes, 1/32 finale combat 1 57kg - Femmes, 1/32 finale combat 2
+
+ 
+Session	BOX10
+ 
+Début :	15:30 Fin :	18:10 Arena Paris Nord
+Nom de l'épreuve/des épreuves 51kg - Hommes, 1/16 finale combat 4 51kg - Hommes, 1/16 finale combat 5 51kg - Hommes, 1/16 finale combat 6 80kg - Hommes, 1/16 finale combat 5 80kg - Hommes, 1/16 finale combat 6 54kg - Femmes, 1/16 finale combat 10 54kg - Femmes, 1/16 finale combat 11 54kg - Femmes, 1/16 finale combat 12 57kg - Femmes, 1/32 finale combat 3 57kg - Femmes, 1/32 finale combat 4
+ 
+
+ 
+Session	BOX11
+ 
+Début :	20:00 Fin :	22:40 Arena Paris Nord
+Nom de l'épreuve/des épreuves 51kg - Hommes, 1/16 finale combat 7 51kg - Hommes, 1/16 finale combat 8 80kg - Hommes, 1/16 finale combat 7 80kg - Hommes, 1/16 finale combat 8 80kg - Hommes, 1/16 finale combat 9 80kg - Hommes, 1/16 finale combat 10 54kg - Femmes, 1/16 finale combat 13 54kg - Femmes, 1/32 finale combat 5 54kg - Femmes, 1/32 finale combat 6
+ 
+
+JOUR	5		Mercredi	31	Juillet	
+Session		BOX12	Début :	11:00	Fin :	13:25 Arena Paris Nord
+Nom de l'épreuve/des épreuves 57kg - Hommes, 1/16 finale combat 3 57kg - Hommes, 1/16 finale combat 4 71kg - Hommes, 1/16 finale combat 5 71kg - Hommes, 1/16 finale combat 6 75kg - Femmes, 1/16 finale combat 1 75kg - Femmes, 1/16 finale combat 2 75kg - Femmes, 1/16 finale combat 3 75kg - Femmes, 1/16 finale combat 4
+60kg - Femmes, quart de finale combat 15
+ 
+Session	BOX13
+ 
+Début :	15:30 Fin :	18:10 Arena Paris Nord
+Nom de l'épreuve/des épreuves 57kg - Hommes, 1/16 finale combat 5 57kg - Hommes, 1/16 finale combat 6 57kg - Hommes, 1/16 finale combat 7 71kg - Hommes, 1/16 finale combat 7 71kg - Hommes, 1/16 finale combat 8 71kg - Hommes, 1/16 finale combat 9 75kg - Femmes, 1/16 finale combat 5 75kg - Femmes, 1/16 finale combat 6
+60kg - Femmes, quart de finale combat 16 60kg - Femmes, quart de finale combat 17
+ 
+
+ 
+Session	BOX14
+ 
+Début :	20:00 Fin :	22:25 Arena Paris Nord
+Nom de l'épreuve/des épreuves 57kg - Hommes, 1/16 finale combat 8 57kg - Hommes, 1/16 finale combat 9 57kg - Hommes, 1/16 finale combat 10 71kg - Hommes, 1/16 finale combat 10 71kg - Hommes, 1/16 finale combat 11 71kg - Hommes, 1/16 finale combat 12 75kg - Femmes, 1/16 finale combat 9 75kg - Femmes, 1/16 finale combat 10
+60kg - Hommes quart de finale combat 18
+ 
+
+JOUR	6		Jeudi	1	Août	
+Session		BOX15	Début :	11:00	Fin :	13:25 Arena Paris Nord
+Nom de l'épreuve/des épreuves 50kg - Femmes, 1/16 finale combat 7 50kg - Femmes, 1/16 finale combat 8 50kg - Femmes, 1/16 finale combat 9 66kg - Femmes, 1/16 finale combat 5 66kg - Femmes, 1/16 finale combat 6 66kg - Femmes, 1/16 finale combat 7
+54kg - Femmes, quart de finale combat 15 63,5kg - Hommes quart de finale combat 13 92kg - Hommes quart de finale combat 9
+
+ 
+Session	BOX16
+ 
+Début :	15:30 Fin :	18:10 Arena Paris Nord
+Nom de l'épreuve/des épreuves 50kg - Femmes, 1/16 finale combat 10 50kg - Femmes, 1/16 finale combat 11 50kg - Femmes, 1/16 finale combat 12 66kg - Femmes, 1/16 finale combat 8 66kg - Femmes, 1/16 finale combat 9 66kg - Femmes, 1/16 finale combat 10
+54kg - Femmes, quart de finale combat 16 54kg - Femmes, quart de finale combat 17 92kg - Hommes quart de finale combat 11 63,5kg - Hommes quart de finale combat 14 92kg - Hommes quart de finale combat 10
+ 
+
+ 
+Session	BOX17
+ 
+Début :	20:00 Fin :	22:25 Arena Paris Nord
+Nom de l'épreuve/des épreuves 50kg - Femmes, 1/16 finale combat 13 50kg - Femmes, 1/16 finale combat 14 66kg - Femmes, 1/16 finale combat 11 66kg - Femmes, 1/16 finale combat 12
+54kg - Femmes, quart de finale combat 18
+63,5kg - Hommes quart de finale combat 15 63,5kg - Hommes quart de finale combat 16 92kg - Hommes quart de finale combat 11 92kg - Hommes quart de finale combat 12
+ 
+
+JOUR	7		Vendredi	2	Août	
+Session		BOX18	Début :	15:30	Fin :	18:10 Arena Paris Nord
+Nom de l'épreuve/des épreuves 57kg - Femmes, 1/16 finale combat 7 57kg - Femmes, 1/16 finale combat 8 57kg - Femmes, 1/16 finale combat 9 57kg - Femmes, 1/16 finale combat 10
+51kg - Hommes quart de finale combat 9 51kg - Hommes quart de finale combat 10 80kg - Hommes quart de finale combat 11 80kg - Hommes quart de finale combat 12
++92 kg- Hommes, quart de finale combat 9
++92 kg- Hommes, quart de finale combat 10
+ 
+Session	BOX19
+ 
+Début :	20:00 Fin :	22:40 Arena Paris Nord
+Nom de l'épreuve/des épreuves 57kg - Femmes, 1/16 finale combat 11 57kg - Femmes, 1/16 finale combat 12 57kg - Femmes, 1/16 finale combat 13 57kg - Femmes, 1/16 finale combat 14
+51kg - Hommes quart de finale combat 11 51kg - Hommes quart de finale combat 12 80kg - Hommes quart de finale combat 13 80kg - Hommes quart de finale combat 14
++92 kg- Hommes, quart de finale combat 11
++92 kg- Hommes, quart de finale combat 12
+ 
+
+JOUR	8		Samedi	3	Août	
+Session		BOX20	Début :	15:30	Fin :	17:55 Arena Paris Nord
+ 
+
+ 
+Nom de l'épreuve/des épreuves
+57kg - Hommes, quart de finale, combat 11 57kg - Hommes, quart de finale, combat 12 71kg - Hommes, quart de finale, combat 13 71kg - Hommes, quart de finale, combat 14 50kg - Femmes, quart de finale, combat 15 50kg - Femmes, quart de finale, combat 16 66kg - femmes, quart de finale, combat 13 66kg - femmes, quart de finale, combat 14 60kg - femmes, demi-finale, combat 19
+ 
+
+ 
+Session	BOX21
+ 
+Début :	20:00 Fin :	22:25 Arena Paris Nord
+Nom de l'épreuve/des épreuves
+57kg - Hommes, quart de finale, combat 13 57kg - Hommes, quart de finale, combat 14 71kg - Hommes, quart de finale, combat 15
+71kg - Hommes, quart de finale, combat 16 50kg - Femmes, quart de finale, combat 17 50kg - Femmes, quart de finale, combat 18
+66kg - femmes, quart de finale, combat 15 66kg - femmes, quart de finale, combat 16 60kg - femmes, demi-finale, combat 20
+ 
+
+JOUR	9		Dimanch	4	Août	
+Session		BOX22	Début :	11:00	Fin :	13:25 Arena Paris Nord
+ 
+ 
+Nom de l'épreuve/des épreuves
+57kg - femmes, quart de finale combat 15 57kg - femmes, quart de finale combat 16 75kg - femmes, quart de finale combat 9 75kg - femmes, quart de finale combat 10 54kg - femmes, demi-finale combat 19
+51kg - hommes, demi-finale combat 13 63,5kg - hommes, demi-finale combat 17 80kg - hommes, demi-finale combat 15 92kg - hommes, demi-finale combat 13
+ 
+
+ 
+Session	BOX23
+ 
+Début :	15:30 Fin :	17:55 Arena Paris Nord
+Nom de l'épreuve/des épreuves
+57kg - femmes, quart de finale combat 17 57kg - femmes, quart de finale combat 18 75kg - femmes, quart de finale combat 11
+75kg - femmes, quart de finale combat 12 54kg - femmes, demi-finale combat 20
+51kg - hommes, demi-finale combat 14 63,5kg - hommes, demi-finale combat 18 80kg - hommes, demi-finale combat 16 92kg - hommes, demi-finale combat 14
+ 
+
+JOUR	11		Mardi	6	Août	
+Session		BOX24	Début :	21:30	Fin :	23:30 Stade Roland-Garros - P.Chatrier
+Nom de l'épreuve/des épreuves
+71kg - Hommes, demi-finale, combat 17 71kg - Hommes, demi-finale, combat 18 50 kg - Femmes, demi-finale, combat 19 50 kg - Femmes, demi-finale, combat 20 66 kg - Femmes, demi-finale, combat 17 66 kg - Femmes, demi-finale, combat 18
+ 
+60kg - Femmes, cérémonie
+ 
+
+JOUR	12	Mercredi	7	Août	
+Session		 BOX25	 Début :	21:30	Fin :	23:30 Stade Roland-Garros - P.Chatrier
+Nom de l'épreuve/des épreuves 57kg - femmes, demi-finale combat 19 57kg - femmes, demi-finale combat 20
++92kg - hommes, demi-finale combat 13
++92kg - hommes, demi-finale combat 14
+63,5kg - hommes, cérémonie 80kg - hommes, cérémonie
+
+JOUR	13	Jeudi	8	Août	
+Session		 BOX26	 Début :	21:30	Fin :	23:30 Stade Roland-Garros - P.Chatrier
+Nom de l'épreuve/des épreuves 57kg - hommes, demi-finale combat 15 57kg - hommes, demi-finale combat 16 75kg - femmes, demi-finale combat 13 75kg - femmes, demi-finale combat 14
+
+
+
+
+JOUR	14	Vendredi	9	Août	
+Session		 BOX27	 Début :	21:30	Fin :	23:30 Stade Roland-Garros - P.Chatrier
+Nom de l'épreuve/des épreuves
+71kg - hommes, cérémonie
+ 92kg - hommes, finale combat 15	 50kg - femmes, cérémonie
+ 66kg - femmes, finale combat 19	 92kg - hommes, cérémonie
+66kg - femmes, cérémonie
+
+Session	 BOX28	 Début :	21:30 Fin :	23:30 Stade Roland-Garros - P.Chatrier
+Nom de l'épreuve/des épreuves
+57kg - femmes, cérémonie
+ 75kg - femmes, finale combat 15	 57kg - hommes, cérémonie
+ +92kg - hommes, finale combat 15	 75kg - femmes, cérémonie
++92kg - femmes, cérémonie
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+CANOE SLALOM
+Calendrier par épreuves
+ 
+Version :	2
+
+JOUR	1		Samedi	27	Juillet
+Session	CSL01
+
+
+Début :	15:00 Fin :	19:10	Stade nautique de Vaires-sur-Marne - Bassin eaux vives
+Nom de l'épreuve/des épreuves
+Canoë - hommes, éliminatoires - manches 1 et 2 Kayak - femmes, éliminatoires - manches 1 et 2
+ 
+
+JOUR	2		Dimanche	28	Juillet	
+Session	CSL02	Début :	15:30 Fin :	18:50	Stade nautique de Vaires-sur-Marne - Bassin eaux vives
+Nom de l'épreuve/des épreuves
+Kayak - femmes, demi-finale
+ Kayak - femmes, finale	
+
+JOUR	3	Lundi	29	Juillet	
+Session	 CSL03	 Début :	15:30 Fin :	18:30	Stade nautique de Vaires-sur-Marne - Bassin eaux vives
+Nom de l'épreuve/des épreuves
+Canoë - hommes, demi-finale
+ Canoë - hommes, finale	
+
+JOUR	4		Mardi	30	Juillet	
+Session	CSL04	Début :	15:00 Fin :	19:10	Stade nautique de Vaires-sur-Marne - Bassin eaux vives
+Nom de l'épreuve/des épreuves
+Canoë - femmes, éliminatoires - manches 1 et 2 Kayak - hommes, éliminatoires - manches 1 et 2
+
+JOUR	5	Mercredi	31	Juillet	
+Session	 CSL05	 Début :	15:30 Fin :	18:30	Stade nautique de Vaires-sur-Marne - Bassin eaux vives
+Nom de l'épreuve/des épreuves
+Canoë - femmes, demi-finale
+ Canoë - femmes, finale	
+
+JOUR	6	Jeudi	1	Août	
+Session	 CSL06	 Début :	15:30 Fin :	18:35	Stade nautique de Vaires-sur-Marne - Bassin eaux vives
+Nom de l'épreuve/des épreuves
+Kayak - hommes, demi-finale
+ Kayak - hommes, finale	
+
+JOUR	8		Samedi	3	Août	
+Session	CSL07	Début :	15:30 Fin :	19:15	Stade nautique de Vaires-sur-Marne - Bassin eaux vives
+Nom de l'épreuve/des épreuves
+Kayak Cross - femmes, contre-la-montre Kayak Cross - hommes, contre-la-montre Kayak Cross - femmes, Repêchage 1 Kayak Cross - hommes, Repêchage 1 Kayak Cross - femmes, Repêchage 2 Kayak Cross - hommes, Repêchage 2
+
+JOUR	9		Dimanche	4	Août	
+Session	CSL08	Début :	15:30 Fin :	17:25	Stade nautique de Vaires-sur-Marne - Bassin eaux vives
+Nom de l'épreuve/des épreuves Kayak Cross - hommes, Eliminatoires Kayak Cross - femmes, Eliminatoires
+
+JOUR	10	Lundi	5	Août	
+Session	 CSL09	 Début :	15:30 Fin :	17:30	Stade nautique de Vaires-sur-Marne - Bassin eaux vives
+Nom de l'épreuve/des épreuves Kayak Cross - femmes, quarts de finale Kayak Cross - hommes, quarts de finale Kayak Cross - femmes, demi-finales
+Kayak Cross - hommes, demi-finales Kayak Cross - femmes, petite finale Kayak Cross - hommes, petite finale
+ 
+ 
+
+
+
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+CANOË, COURSE EN LIGNE
+Calendrier par épreuves
+Version :	1.1
+
+JOUR	11		Mardi	6	Août	
+Session		CSP01	Début :	09:30	Fin :	14:50	Stade nautique de Vaires-sur-Marne - Bassin eaux calmes
+Nom de l'épreuve/des épreuves
+Kayak à quatre (K4) 500 m - femmes, éliminatoires Kayak à quatre (K4) 500 m - hommes, éliminatoires Canoë biplace (C2) 500 m - hommes, éliminatoires Canoë biplace (C2) 500 m - femmes, éliminatoires Kayak biplace (K2) 500 m - femmes, éliminatoires Kayak biplace (K2) 500 m - hommes, éliminatoires Canoë biplace (C2) 500 m - hommes, quarts de finale Canoë biplace (C2) 500 m - femmes, quarts de finale Kayak biplace (K2) 500 m - femmes, quarts de finale Kayak biplace (K2) 500 m - hommes, quarts de finale
+
+JOUR	12		Mercredi	7	Août	
+Session		CSP02	Début :	09:30	Fin :	15:10	Stade nautique de Vaires-sur-Marne - Bassin eaux calmes
+Nom de l'épreuve/des épreuves
+Kayak monoplace (K1) 500 m - femmes, éliminatoires Kayak monoplace (K1) 1 000 m - hommes, éliminatoires Canoë monoplace (C1) 1 000 m - hommes, éliminatoires Kayak monoplace (K1) 500m - femmes, quarts de finale Kayak monoplace (K1) 1 000 m - hommes, quarts de finale Canoë monoplace (C1) 1 000 m - hommes, quarts de finale
+
+JOUR	13	Jeudi	8	Août	
+Session		 CSP03	 Début :	10:30	Fin :	14:30	Stade nautique de Vaires-sur-Marne - Bassin eaux calmes
+Nom de l'épreuve/des épreuves
+Canoë monoplace (C1) 200 m - femmes, éliminatoires Canoë biplace (C2) 500 m - hommes, demi-finales Kayak à quatre (K4) 500 m - femmes, demi-finales Kayak à quatre (K4) 500 m - hommes, demi-finales
+Canoë monoplace (C1) 200 m - femmes, quarts de finale Canoë biplace (C2) 500 m - hommes, finale B
+
+
+
+JOUR	14	Vendredi	9	Août	
+Session		 CSP04	 Début :	10:30	Fin :	14:40	Stade nautique de Vaires-sur-Marne - Bassin eaux calmes
+Nom de l'épreuve/des épreuves
+Canoë biplace (C2) 500 m - femmes, demi-finales Kayak biplace (K2) 500 m - femmes, demi-finales Kayak biplace (K2) 500 m - hommes, demi-finales
+Canoë monoplace (C1) 1 000 m - hommes, demi-finales Canoë biplace (C2) 500 m - femmes, finale B
+ 
+Kayak biplace (K2) 500 m - femmes, finale B
+Kayak biplace (K2) 500 m - hommes, finale B
+ 
+Canoë monoplace (C1) 1 000 m - hommes,finale B
+
+JOUR	15	Samedi	10	Août	
+Session		 CSP05	 Début :	10:30	Fin :	14:20	Stade nautique de Vaires-sur-Marne - Bassin eaux calmes
+Nom de l'épreuve/des épreuves
+Kayak monoplace (K1) 500 m - femmes, demi-finales Kayak monoplace (K1) 1 000 m - hommes, demi-finales Canoë monoplace (C1) 200 m - femmes, demi-finales Kayak monoplace (K1) 500 m - femmes, finale C
+Kayak monoplace (K1) 500 m - femmes, finale B
+Kayak monoplace (K1) 1 000 m - hommes, finale B
+ 
+Canoë monoplace (C1) 200 m - femmes, finale B
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+CYCLISME SUR PISTE
+Calendrier par épreuves
+Version :	1
+
+
+JOUR	10	Lundi	5	Août	
+Session		 CTR01
+ 
+Début :	17:00 Fin :	20:20	Vélodrome National de Saint-Quentin-en-Yvelines
+Nom de l'épreuve/des épreuves
+Vitesse par équipes - femmes, qualifications Poursuite équipes - hommes, qualifications Vitesse par équipes - femmes, 1er tour Vitesse par équipes - hommes, qualifications
+ Vitesse par équipes - femmes, finales	
+ 
+
+JOUR	11	Mardi	6	Août	
+Session		 CTR02	 Début :	17:30 Fin :	20:30	Vélodrome National de Saint-Quentin-en-Yvelines
+Nom de l'épreuve/des épreuves
+Poursuite par équipes - femmes, qualifications Vitesse par équipes - hommes, 1er tour Poursuite par équipes - hommes, 1er tour
+ Vitesse par équipes - hommes, finales	
+
+JOUR	12		Mercredi	7	Août
+Session		CTR03	Début :	12:45 Fin :	15:45	Vélodrome National de Saint-Quentin-en-Yvelines
+Nom de l'épreuve/des épreuves Vitesse - hommes, qualifications Keirin - femmes, 1er tour
+Poursuite par équipes - femmes, 1er tour Vitesse - hommes, 32e finale
+Keirin - femmes, repêchages
+Vitesse - hommes, 32e finale - repêchages
+
+Session	 CTR04	 Début :	17:30 Fin :	20:25	Vélodrome National de Saint-Quentin-en-Yvelines
+Nom de l'épreuve/des épreuves
+Vitesse - hommes, 16e finale
+ Poursuite par équipes - hommes, finales	
+Vitesse - hommes, 16e finale - repêchages
+ Poursuite par équipes - femmes, finales	
+Vitesse - hommes, 8e finale
+Vitesse - hommes, 8e finale - repêchages
+
+JOUR	13	Jeudi	8	Août	
+Session		 CTR05	 Début :	17:00 Fin :	20:25	Vélodrome National de Saint-Quentin-en-Yvelines
+Nom de l'épreuve/des épreuves Omnium - hommes, scratch 1/4 Keirin - femmes, 1/4 finale
+Omnium - hommes, course tempo 2/4 Vitesse - hommes, 1/4 finale
+Keirin - femmes, 1/2 finales
+Omnium - hommes, course à l'élimination Keirin - femmes, finale 7-12
+ 
+Vitesse - hommes, places 5-8
+
+JOUR	14		Vendredi	9	Août
+Session		CTR06	Début :	14:00 Fin :	16:00	Vélodrome National de Saint-Quentin-en-Yvelines
+Nom de l'épreuve/des épreuves Vitesse - femmes, qualifications Vitesse - hommes, 1/2 finales Vitesse - femmes, 32e finale
+Vitesse - femmes, 32e finale - repêchages
+
+Session	 CTR07	 Début :	18:00 Fin :	20:15	Vélodrome National de Saint-Quentin-en-Yvelines
+Nom de l'épreuve/des épreuves
+Madison - femmes, finale	
+Vitesse - femmes, 16e finale
+Vitesse - hommes, finales	
+Vitesse - femmes, 16e finale - repêchages
+ 
+JOUR	15	Samedi	10	Août	
+Session		 CTR08	 Début :	17:00 Fin :	20:20	Vélodrome National de Saint-Quentin-en-Yvelines
+Nom de l'épreuve/des épreuves
+Vitesse - femmes, 8e finale Keirin - hommes, 1er tour
+Vitesse - femmes, 8e finale - repêchages
+ Madison - hommes, finale	
+Vitesse - femmes, 1/4 finale Keirin - hommes, repêchages
+
+JOUR	16	Dimanche	11	Août	
+Session		 CTR09	 Début :	11:00 Fin :	14:40	Vélodrome National de Saint-Quentin-en-Yvelines
+Nom de l'épreuve/des épreuves Omnium - femmes, scratch 1/4 Vitesse - femmes, 1/2 finales Keirin - hommes, 1/4 finale
+Omnium - femmes, course tempo 2/4 Vitesse - femmes, places 5-8
+Keirin - hommes, 1/2 finales
+Omnium - femmes, course à l'élimination Keirin - hommes, finale 7-12
+ 
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+CYCLISME SUR ROUTE
+Calendrier par épreuves
+Version :	1
+
+JOUR	7	Vendredi	2	Août
+Session	 CRD01	 Début :	14:30 Fin :	18:30	Départ Invalides - Arrivée Pont Alexandre III
+Nom de l'épreuve/des épreuves
+
+JOUR	8	Samedi	3	Août
+Session		 CRD02	 Début :	11:00 Fin :	18:15	Trocadéro
+		Nom de l'épreuve/des épreuves
+		 Course en ligne - hommes	
+JOUR	9	Dimanche	4	Août
+Session		 CRD03	 Début :	14:00 Fin :	18:45	Trocadéro
+Nom de l'épreuve/des épreuves
+ Course en ligne - femmes	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+Escalade
+Calendrier par épreuves
+ 
+Version :	1
+
+JOUR  10		Lundi	5	Août	
+Session	CLB01
+ 
+
+
+
+Début :	10:00 Fin :	14:00	Site d'escalade du Bourget
+Nom de l'épreuve/des épreuves Bloc - hommes, demi-finale Vitesse - femmes, qualifications
+ 
+
+JOUR  11		Mardi	6	Août	
+Session	CLB02	Début :	10:00 Fin :	14:00	Site d'escalade du Bourget
+Nom de l'épreuve/des épreuves Bloc - femmes, demi-finale Vitesse - hommes, qualifications
+
+JOUR  12		Mercredi	7	Août	
+Session	CLB03	Début :	10:00 Fin :	13:15	Site d'escalade du Bourget
+Nom de l'épreuve/des épreuves
+Difficulté - hommes, demi-finale
+ Vitesse - femmes, finale	
+
+JOUR  13		Jeudi	8	Août	
+Session	 CLB04		Début :	10:00 Fin :	13:15	Site d'escalade du Bourget
+Nom de l'épreuve/des épreuves
+Difficulté - femmes, demi-finale
+ Vitesse - hommes, finale	
+
+JOUR  14		Vendredi	9	Août	
+Session	 CLB05		Début :	10:15 Fin :	13:20	Site d'escalade du Bourget
+Nom de l'épreuve/des épreuves
+ Bloc & Difficulté - hommes, finale	
+
+JOUR  15		Samedi	10	Août	
+Session	 CLB06		Début :	10:15 Fin :	13:20	Site d'escalade du Bourget
+Nom de l'épreuve/des épreuves
+ Bloc & Difficulté - femmes, finale	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+ESCRIME
+Calendrier par épreuves
+ 
+Version :
+
+JOUR	1		Samedi	27	Juillet	
+
+Session	FEN01
+
+
+Début : 10:00	Fin : 16:40	Grand Palais
+Nom de l'épreuve/des épreuves
+Épée individuelle - femmes, tableau de 64 Sabre individuel - hommes, tableau de 64 Épée individuelle - femmes, tableau de 32 Sabre individuel - hommes, tableau de 32 Épée individuelle - femmes, tableau de 16 Sabre individuel - hommes, tableau de 16 Épée individuelle - femmes, 1/4 finale Sabre individuel - hommes, 1/4 finale
+ 
+
+ 
+Session	 FEN02	
+ 
+Début : 19:00	Fin : 22:50	Grand Palais
+Nom de l'épreuve/des épreuves Épée individuelle - femmes, 1/2 finales Sabre individuel - hommes, 1/2 finales
+Épée individuelle - femmes, match de bronze Sabre individuel - hommes, match bronze
+ 
+	Épée individuelle - femmes, match d'or Sabre individuel - hommes, match d'or	
+		
+JOUR	2		Dimanche	28	Juillet	
+Session		FEN03	Début :	09:30	Fin : 16:50	Grand Palais
+Nom de l'épreuve/des épreuves
+Fleuret individuel - femmes, tableau de 64 Épée individuelle - hommes, tableau de 64 Fleuret individuel - femmes, tableau de 32 Épée individuelle - hommes, tableau de 32 Fleuret individuel - femmes, tableau de 16 Épée individuelle - hommes, tableau de 16 Fleuret individuel - femmes, 1/4 finale Épée individuelle - hommes, 1/4 finale
+
+ 
+Session	 FEN04	
+ 
+Début : 19:00	Fin : 23:10	Grand Palais
+Nom de l'épreuve/des épreuves Fleuret individuel - femmes, 1/2 finales Épée individuelle - hommes, 1/2 finales Fleuret individuel- femmes, match bronze
+Épée individuelle - hommes, match bronze
+ 
+
+	Fleuret individuel - femmes, match d'or
+Épée individuelle - hommes, match d'or	
+		
+JOUR	3		Lundi	29	Juillet	
+Session		FEN05	Début :	09:30	Fin : 16:50	Grand Palais
+Nom de l'épreuve/des épreuves
+Sabre individuel - femmes, tableau de 64 Fleuret individuel - hommes, tableau de 64 Sabre individuel - femmes, tableau de 32 Fleuret individuel - hommes, tableau de 32 Sabre individuel - femmes, tableau de 16 Fleuret individuel - hommes, tableau de 16 Sabre individuel - femmes, 1/4 finale Fleuret individuel - hommes, 1/4 finale
+
+ 
+Session	 FEN06	
+ 
+Début : 19:00	Fin : 23:10	Grand Palais
+Nom de l'épreuve/des épreuves Sabre individuel - femmes, 1/2 finales Fleuret individuel - hommes, 1/2 finales
+Sabre individuel - femmes, match bronze Fleuret individuel - hommes, match bronze
+ 
+
+JOUR	4		Mardi	30	Juillet	
+Session		FEN07		Début : 12:00	Fin : 17:30	Grand Palais
+Nom de l'épreuve/des épreuves
+Épée par équipes - femmes, tableau de 16 Épée par équipes - femmes, 1/4 finale
+Épée par équipes - femmes, classement 5-8 Épée par équipes - femmes, 1/2 finales
+Épée par équipes - femmes, placement 5-6, 7-8
+
+ 
+Session FEN08
+ 
+Début : 19:30	Fin : 21:40	Grand Palais
+Nom de l'épreuve/des épreuves
+Épée par équipes - femmes, match bronze
+ Épée par équipes - femmes, match d'or 
+ 
+
+ 
+ 
+Session	FEN09
+
+ 
+Début : 12:00	Fin : 17:30	Grand Palais
+Nom de l'épreuve/des épreuves
+Sabre par équipes - hommes, tableau de 16 Sabre par équipes - hommes, 1/4 finale Sabre par équipes - hommes, classement 5-8 Sabre par équipes - hommes, 1/2 finales
+Sabre par équipes - hommes, placement 5-6, 7-8
+
+Session FEN10
+
+Début : 19:30	Fin : 21:40	Grand Palais
+Nom de l'épreuve/des épreuves
+Sabre par équipes - hommes, match bronze
+ Sabre par équipes - hommes, match d'or	
+ 
+
+JOUR	6		Jeudi	1	Août	
+Session		FEN11		Début : 10:00	Fin : 17:10	Grand Palais
+Nom de l'épreuve/des épreuves
+Fleuret par équipes - femmes, tableau de 16 Fleuret par équipes - femmes, 1/4 finale Fleuret par équipes - femmes, classement 5-8 Fleuret par équipes - femmes, 1/2 finales
+Fleuret par équipes - femmes, placement 5-6, 7-8
+
+ 
+Session FEN12
+ 
+Début : 19:10	Fin : 22:00	Grand Palais
+Nom de l'épreuve/des épreuves
+Fleuret par équipes - femmes, match bronze
+ Fleuret par équipes - femmes, match d'or
+ 
+
+JOUR	7		Vendredi	2	Août	
+Session		FEN13		Début : 12:00	Fin : 17:30	Grand Palais
+Nom de l'épreuve/des épreuves
+Épée par équipes - hommes, tableau de 16 Épée par équipes - hommes, 1/4 finale
+Épée par équipes - hommes, classement 5-8 Épée par équipes - hommes, 1/2 finales
+Épée par équipes - hommes, placement 5-6, 7-8
+
+ 
+Session FEN14
+ 
+Début : 19:30	Fin : 21:40	Grand Palais
+Nom de l'épreuve/des épreuves
+Épée par équipes - hommes, match bronze
+ Épée par équipes - hommes, match d'or
+ 
+
+ 
+ 
+Session	FEN15
+
+
+ 
+Début : 11:30	Fin : 17:00	Grand Palais
+Nom de l'épreuve/des épreuves
+Sabre par équipes - femmes, tableau de 16 Sabre par équipes - femmes, 1/4 finale Sabre par équipes - femmes, classement 5-8 Sabre par équipes - femmes, 1/2 finales
+Sabre par équipes - femmes, placement 5-6, 7-8
+
+Session FEN16
+
+Début : 19:00	Fin : 21:10	Grand Palais
+Nom de l'épreuve/des épreuves
+Sabre par équipes - femmes, match bronze
+ Sabre par équipes - femmes, match d'or
+ 
+
+JOUR	9		Dimanche	4	Août	
+Session		FEN17		Début : 10:00	Fin : 17:10	Grand Palais
+Nom de l'épreuve/des épreuves
+Fleuret par équipes - hommes, tableau de 16 Fleuret par équipes - hommes, 1/4 finale Fleuret par équipes - hommes, classement 5-8 Fleuret par équipes - hommes, 1/2 finales
+Fleuret par équipes - hommes, placement 5-6, 7-8
+
+ 
+Session	 FEN18	
+ 
+Début : 19:10	Fin : 22:00	Grand Palais
+Nom de l'épreuve/des épreuves
+Fleuret par équipes - hommes, match bronze
+ 
+ Fleuret par équipes - hommes, match d'or	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+FOOTBALL
+Calendrier par épreuves
+Version : 2
+
+JOUR	-2		Mercredi	24	Juillet
+Session		FBL01	Début :	15:00 Fin :	17:00 Parc des Princes
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe C (C1vsC2) Match N°5
+
+ 
+Session	FBL02
+ 
+Début :	15:00 Fin :	17:00 Stade Geoffroy-Guichard
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe B (B1vsB2) Match N°3
+ 
+
+ 
+Session	FBL03
+ 
+Début :	17:00 Fin :	19:00 Stade de la Beaujoire
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe C (C3vsC4) Match N°6
+ 
+
+ 
+Session	FBL04
+ 
+Début :	17:00 Fin :	19:00 Stade de Nice
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe A (A3vsA4) Match N°2
+ 
+
+ 
+Session	FBL05
+ 
+Début :	19:00 Fin :	21:00 Stade de Bordeaux
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe D (D1vsD2) Match N°8
+ 
+
+ 
+Session	FBL06
+ 
+Début :	19:00 Fin :	21:00 Stade de Lyon
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe B (B3vsB4) Match N°4
+ 
+
+ 
+Session	FBL07
+ 
+Début :	21:00 Fin :	23:00 Parc des Princes
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe D (D3vsD4) Match N°7
+ 
+
+ 
+Session	FBL08
+ 
+Début :	21:00 Fin :	23:00 Stade de Marseille
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe A (A1vsA2) Match N°1
+ 
+
+JOUR	-1		Jeudi	25	Juillet
+Session		FBL09	Début :	17:00 Fin :	19:00 Stade de la Beaujoire
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe C (C1vsC2) Match N°5
+ 
+Session	FBL10
+ 
+Début :	17:00 Fin :	19:00 Stade Geoffroy-Guichard
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe A (A3vsA4) Match N°2
+ 
+
+ 
+Session	FBL11
+ 
+Début :	19:00 Fin :	21:00 Stade de Bordeaux
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe C (C3vsC4) Match N°6
+ 
+
+ 
+Session	FBL12
+ 
+Début :	19:00 Fin :	21:00 Stade de Marseille
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe B (B3vsB4) Match N°4
+ 
+
+ 
+Session	FBL13
+ 
+Début :	21:00 Fin :	23:00 Stade de Lyon
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe A (A1vsA2) Match N°1
+ 
+
+ 
+Session	FBL14
+ 
+Début :	21:00 Fin :	23:00 Stade de Nice
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe B (B1vsB2) Match N°3
+ 
+
+JOUR	1		Samedi	27	Juillet
+Session		FBL15	Début :	15:00 Fin :	17:00 Stade de Bordeaux
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe C (C4vsC2) Match N°14
+
+ 
+Session	FBL16
+ 
+Début :	15:00 Fin :	17:00 Stade de Lyon
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe B (B1vsB3) Match N°11
+ 
+
+ 
+Session	FBL17
+ 
+Début :	17:00 Fin :	19:00 Stade de la Beaujoire
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe C (C1vsC3) Match N°13
+ 
+
+ 
+Session	FBL18
+ 
+Début :	17:00 Fin :	19:00 Stade Geoffroy-Guichard
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe B (B4vsB2) Match N°12
+ 
+
+ 
+Session	FBL19
+ 
+Début :	19:00 Fin :	21:00 Parc des Princes
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe D (D2vsD4) Match N°15
+ 
+
+ 
+Session	FBL20
+ 
+Début :	19:00 Fin :	21:00 Stade de Marseille
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe A (A4vsA2) Match N°10
+ 
+Session	FBL21
+ 
+Début :	21:00 Fin :	23:00 Stade de Bordeaux
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe D (D1vsD3) Match N°16
+ 
+
+ 
+Session	FBL22
+ 
+Début :	21:00 Fin :	23:00 Stade de Nice
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe A (A1vsA3) Match N°9
+ 
+
+JOUR	2		Dimanche	28	Juillet
+Session		FBL23	Début :	17:00 Fin :	19:00 Parc des Princes
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe C (C4vsC2) Match N°12
+
+ 
+Session	FBL24
+ 
+Début :	17:00 Fin :	19:00 Stade de Lyon
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe A (A4vsA2) Match N°8
+ 
+
+ 
+Session	FBL25
+ 
+Début :	19:00 Fin :	21:00 Stade de la Beaujoire
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe C (C1vsC3) Match N°11
+ 
+
+ 
+Session	FBL26
+ 
+Début :	19:00 Fin :	21:00 Stade de Nice
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe B (B4vsB2) Match N°10
+ 
+
+ 
+Session	FBL27
+ 
+Début :	21:00 Fin :	23:00 Stade Geoffroy-Guichard
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe A (A1vsA3) Match N°7
+ 
+
+ 
+Session	FBL28
+ 
+Début :	21:00 Fin :	23:00 Stade de Marseille
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe B (B1vsB3) Match N°9
+ 
+
+JOUR	4		Mardi	30	Juillet
+Session		FBL29	Début :	15:00 Fin :	17:00 Parc des Princes
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe C (C4vsC1) Match N°21
+
+ 
+Session	FBL30
+ 
+Début :	15:00 Fin :	17:00 Stade de Bordeaux
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe C (C2vsC3) Match N°22
+ 
+Session	FBL31
+ 
+Début :	17:00 Fin :	19:00 Stade de Lyon
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe B (B4vsB1) Match N°19
+ 
+
+ 
+Session	FBL32
+ 
+Début :	17:00 Fin :	19:00 Stade de Nice
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe B (B2vsB3) Match N°20
+ 
+
+ 
+Session	FBL33
+ 
+Début :	19:00 Fin :	21:00 Stade Geoffroy-Guichard
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe A (A2vsA3) Match N°18
+ 
+
+ 
+Session	FBL34
+ 
+Début :	19:00 Fin :	21:00 Stade de Marseille
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe A (A4vsA1) Match N°17
+ 
+
+ 
+Session	FBL35
+ 
+Début :	21:00 Fin :	23:00 Parc des Princes
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe D (D2vsD3) Match N°24
+ 
+
+ 
+Session	FBL36
+ 
+Début :	21:00 Fin :	23:00 Stade de la Beaujoire
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (1 match) - groupe D (D4vsD1) Match N°23
+ 
+
+JOUR	5		Mercredi	31	Juillet
+Session		FBL37	Début :	17:00 Fin :	19:00 Stade de la Beaujoire
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe C (C2vsC3) Match N°18
+
+ 
+Session	FBL38
+ 
+Début :	17:00 Fin :	19:00 Stade de Bordeaux
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe C (C4vsC1) Match N°17
+ 
+
+ 
+Session	FBL39
+ 
+Début :	19:00 Fin :	21:00 Stade Geoffroy-Guichard
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe B (B2vsB3) Match N°16
+ 
+
+ 
+Session	FBL40
+ 
+Début :	19:00 Fin :	21:00 Stade de Marseille
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe B (B4vsB1) Match N°15
+ 
+
+ 
+Session	FBL41
+ 
+Début :	21:00 Fin :	23:00 Stade de Lyon
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe A (A4vsA1) Match N°13
+ 
+Session	FBL42
+ 
+Début :	21:00 Fin :	23:00 Stade de Nice
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (1 match) - groupe A (A2vsA3) Match N°14
+ 
+
+JOUR	7		Vendredi	2	Août	
+Session		FBL43	Début :	15:00 Fin :	18:00	Parc des Princes
+Nom de l'épreuve/des épreuves Hommes, quart de finale (1Bvs2A) Match N°26
+
+ 
+Session	FBL44
+ 
+Début :	17:00 Fin :	20:00 Stade de Lyon
+Nom de l'épreuve/des épreuves Hommes, quart de finale (1Dvs2C) Match N°28
+ 
+
+ 
+Session	FBL45
+ 
+Début :	19:00 Fin :	22:00 Stade de Marseille
+Nom de l'épreuve/des épreuves Hommes, quart de finale (1Cvs2D) Match N°27
+ 
+
+ 
+Session	FBL46
+ 
+Début :	21:00 Fin :	00:00 Stade de Bordeaux
+Nom de l'épreuve/des épreuves Hommes, quart de finale (1Avs2B) Match N°25
+ 
+
+JOUR	8		Samedi	3	Août	
+Session		FBL47	Début :	15:00 Fin :	18:00	Parc des Princes
+Nom de l'épreuve/des épreuves Femmes, quart de finale (1Bvs2C) Match N°20
+
+ 
+Session	FBL48
+ 
+Début :	17:00 Fin :	20:00 Stade de Lyon
+Nom de l'épreuve/des épreuves Femmes, quart de finale (1Cvs3A/B) Match N°21
+ 
+
+ 
+Session	FBL49
+ 
+Début :	19:00 Fin :	22:00 Stade de Marseille
+Nom de l'épreuve/des épreuves Femmes, quart de finale (2Avs2B) Match N°22
+ 
+
+ 
+Session	FBL50
+ 
+Début :	21:00 Fin :	00:00 Stade de la Beaujoire
+Nom de l'épreuve/des épreuves Femmes, quart de finale (A1vs3B/C) Match N°19
+ 
+
+JOUR	10		Lundi	5	Août	
+Session		FBL51	Début :	18:00 Fin :	21:00	Stade de Marseille
+Nom de l'épreuve/des épreuves Hommes, demi-finale (V26vsV28) Match N°30
+ 
+Session	FBL52
+ 
+Début :	21:00 Fin :	00:00 Stade de Lyon
+Nom de l'épreuve/des épreuves Hommes, demi-finale (V25vsV27) Match N°29
+ 
+
+JOUR	11		Mardi	6	Août	
+Session		FBL53	Début :	18:00 Fin :	21:00	Stade de Lyon
+Nom de l'épreuve/des épreuves Femmes, demi-finale (V20vsV22) Match N°24
+
+ 
+Session	FBL54
+ 
+Début :	21:00 Fin :	00:00 Stade de Marseille
+Nom de l'épreuve/des épreuves Femmes, demi-finale (V19vsV21) Match N°23
+ 
+
+JOUR	13		Jeudi	8	Août	
+Session		FBL55	Début :	17:00 Fin :	20:00	Stade de la Beaujoire
+Nom de l'épreuve/des épreuves
+Hommes, médaille de bronze (RU29vsRU30)
+Match N°31
+
+JOUR	14		Vendredi	9	Août
+Session		FBL56	Début :	15:00 Fin :	18:00 Stade de Lyon
+Nom de l'épreuve/des épreuves
+Femmes, médaille de bronze (RU23vsRU24)
+Match N°25
+
+ 
+Session
+ 
+ FBL57	 Début :	18:00 Fin :	21:30 Parc des Princes
+Nom de l'épreuve/des épreuves Hommes, médaille d'or (V29vsV30) Match N°32
+ 
+
+JOUR	15	Samedi	10	Août
+Session		 FBL58	 Début :	17:00 Fin :	20:30 Parc des Princes
+Nom de l'épreuve/des épreuves Femmes, médaille d'or (V23vs24) Match N°26
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+GOLF
+Calendrier par épreuves
+ 
+Version :
+
+JOUR	6		Jeudi	1	Août
+Session	GLF01
+
+
+Début :	09:00 Fin :	18:00	Golf National
+Nom de l'épreuve/des épreuves
+Stroke Play individuel - hommes 1er tour
+ 
+
+JOUR	7		Vendredi	2	Août	
+Session		GLF02	Début :	09:00 Fin :	18:00	Golf National
+Nom de l'épreuve/des épreuves
+Stroke Play individuel - hommes 2e tour
+
+JOUR	8		Samedi	3	Août	
+Session		GLF03	Début :	09:00 Fin :	18:00	Golf National
+Nom de l'épreuve/des épreuves
+Stroke Play individuel - hommes 3e tour
+
+JOUR	9	Dimanche	4	Août	
+Session		 GLF04	 Début :	09:00 Fin :	18:30	Golf National
+Nom de l'épreuve/des épreuves
+ Stroke Play individuel - hommes 4e tour	
+
+JOUR	12		Mercredi	7	Août	
+Session		GLF05	Début :	09:00 Fin :	18:00	Golf National
+Nom de l'épreuve/des épreuves
+Stroke Play individuel - femmes 1er tour
+
+JOUR	13		Jeudi	8	Août	
+Session		GLF06	Début :	09:00 Fin :	18:00	Golf National
+Nom de l'épreuve/des épreuves
+Stroke Play individuel - femmes 2e tour
+
+JOUR	14		Vendredi	9	Août	
+Session		GLF07	Début :	09:00 Fin :	18:00	Golf National
+Nom de l'épreuve/des épreuves
+Stroke Play individuel - femmes 3e tour
+
+JOUR	15	Samedi	10	Août	
+Session		 GLF08	 Début :	09:00 Fin :	18:30	Golf National
+Nom de l'épreuve/des épreuves
+ Stroke Play individuel - femmes 4e tour	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+GYMNASTIQUE ARTISTIQUE
+Calendrier par épreuves
+ 
+JOUR 1 Samedi 27 Juillet
+Session	GAR01
+ 
+
+Début :	11:00 Fin :	13:30 Arena Bercy
+Nom de l'épreuve/des épreuves
+Qualification - hommes
+ 
+ 
+Session	GAR02
+ 
+Début :	15:30 Fin :	18:00 Arena Bercy
+Nom de l'épreuve/des épreuves
+Qualification - hommes
+ 
+
+ 
+Session	GAR03
+ 
+Début :	20:00 Fin :	22:30 Arena Bercy
+Nom de l'épreuve/des épreuves
+Qualification - hommes
+ 
+
+JOUR	2		Dimanche	28	Juillet	
+Session		GAR04	Début :	09:30	Fin :	13:20	Arena Bercy
+Nom de l'épreuve/des épreuves
+Qualification - femmes
+
+ 
+Session	GAR05
+ 
+Début :	14:50 Fin :	16:30 Arena Bercy
+Nom de l'épreuve/des épreuves
+Qualification - femmes
+ 
+
+ 
+Session	GAR06
+ 
+Début :	18:00 Fin :	19:40 Arena Bercy
+Nom de l'épreuve/des épreuves
+Qualification - femmes
+ 
+
+ 
+Session	GAR07
+ 
+Début :	21:10 Fin :	22:50 Arena Bercy
+Nom de l'épreuve/des épreuves
+Qualification - femmes
+ 
+
+JOUR	3		Lundi	29	Juillet	
+Session		GAR08	Début :	17:30	Fin :	20:30	Arena Bercy
+Nom de l'épreuve/des épreuves
+
+JOUR	4		Mardi	30	Juillet	
+Session		GAR09	Début :	18:15	Fin :	20:30	Arena Bercy
+Nom de l'épreuve/des épreuves
+
+JOUR	5		Mercredi	31	Juillet	
+Session		GAR10	Début :	17:30	Fin :	20:15	Arena Bercy
+Nom de l'épreuve/des épreuves
+
+JOUR	6		Jeudi	1	Août	
+Session		GAR11	Début :	18:15	Fin :	20:25	Arena Bercy
+Nom de l'épreuve/des épreuves
+
+JOUR	8		Samedi	3	Août	
+Session		GAR12	Début :	15:30	Fin :	18:00	Arena Bercy
+Nom de l'épreuve/des épreuves
+
+JOUR	9		Dimanche	4	Août	
+Session		GAR13	Début :	15:00	Fin :	17:25	Arena Bercy
+Nom de l'épreuve/des épreuves
+
+JOUR	10		Lundi	5	Août	
+Session		GAR14	Début :	12:00	Fin :	15:15	Arena Bercy
+Nom de l'épreuve/des épreuves
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+GYMNASTIQUE TRAMPOLINE
+Calendrier par épreuves
+Version :	1
+JOUR 7 Vendredi 2 Août
+
+Session	 GTR01	 Début :	12:00 Fin :	14:30	Arena Bercy
+Nom de l'épreuve/des épreuves
+Femmes, qualifications
+ Femmes, finale	
+
+Session	 GTR02	 Début :	18:00 Fin :	20:30	Arena Bercy
+Nom de l'épreuve/des épreuves
+Hommes, qualifications
+ Hommes, finale	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+Gymnastique rythmique
+Calendrier par épreuves
+ 
+Version :
+
+JOUR	13		Jeudi 8	Août
+Session	GRY01
+ 
+
+
+Début :	10:00 Fin :	13:00	Porte de La Chapelle Arena
+Nom de l'épreuve/des épreuves
+Concours multiple individuel, qualifications - rotation 1 sur 2
+ 
+
+ 
+Session	GRY02
+ 
+Début :	15:00 Fin :	18:00	Porte de La Chapelle Arena
+Nom de l'épreuve/des épreuves
+Concours multiple individuel, qualifications - rotation 2 sur 2
+ 
+
+JOUR	14		Vendredi	9	Août	
+Session		GRY03	Début :	10:00	Fin :	12:30	Porte de La Chapelle Arena
+Nom de l'épreuve/des épreuves
+Concours général des ensembles, qualifications
+
+Session	 GRY04	 Début :	14:30 Fin :	17:00	Porte de La Chapelle Arena
+Nom de l'épreuve/des épreuves
+ Concours multiple individuel, finale	
+
+JOUR	15	Samedi	10	Août	
+Session		 GRY05	 Début :	14:00 Fin :	15:45	Porte de La Chapelle Arena
+Nom de l'épreuve/des épreuves
+ Concours général des ensembles, finale	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+HALTEROPHILIE
+Calendrier par épreuves
+Version :	1
+
+
+
+JOUR 12 Mer 7 Août
+ 
+Session WLF01
+ 
+Début :	15:00 Fin :	17:30 Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+61 kg - hommes
+
+ 
+
+ 
+Session WLF02
+ 
+Début :	19:30 Fin :	22:00 Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+49 kg - femmes 
+
+ 
+
+JOUR	13		Jeu	8	Août	
+Session		WLF03	Début :	15:00	Fin :	17:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+59 kg - femmes
+ 
+Session WLF04
+ 
+Début :	19:30 Fin :	22:00 Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+73 kg - hommes
+
+ 
+
+JOUR	14		Ven	9	Août	
+Session		WLF05	Début :	15:00	Fin :	17:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+89 kg - hommes
+ 
+Session WLF06
+ 
+Début :	19:30 Fin :	22:00 Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+71 kg - femmes
+
+ 
+
+JOUR	15		Sam	10	Août	
+Session		WLF07	Début :	11:30	Fin :	14:00	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+102 kg - hommes
+ 
+Session WLF08
+ 
+Début :	16:00 Fin :	18:30 Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+81 kg - femmes
+
+ 
+
+ 
+Session WLF09
+ 
+Début :	20:30 Fin :	23:00 Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
++102 kg - hommes
+ 
+
+ 
+
+JOUR	16		Dim	11	Août	
+Session		WLF10	Début :	11:30 Fin :	14:00	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
++81 kg - femmes
+
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+HANDBALL
+Calendrier par épreuves
+	Version :	1	
+JOUR	-1			Jeudi	25	Juillet		
+Session		HBL01		Début :	09:00	Fin :	12:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+
+ 
+Session	HBL02
+ 
+Début :	14:00	Fin :	17:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+
+ 
+Session	HBL03
+ 
+Début :	19:00	Fin :	22:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+
+							
+JOUR	1		Samedi	27	Juillet		
+Session		HBL04	Début :	09:00	Fin :	12:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+
+ 
+Session	HBL05
+ 
+Début :	14:00	Fin :	17:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+ 
+Session	HBL06
+ 
+Début :	19:00	Fin :	22:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+JOUR	2		Dimanche	28	Juillet	
+Session		HBL07	Début :	09:00	Fin :	12:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+
+ 
+Session	HBL08
+ 
+Début :	14:00	Fin :	17:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+
+ 
+Session	HBL09
+ 
+Début :	19:00	Fin :	22:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+
+JOUR	3		Lundi	29	Juillet	
+Session		HBL10	Début :	09:00	Fin :	12:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+
+ 
+Session	HBL11
+ 
+Début :	14:00	Fin :	17:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+ 
+Session	HBL12
+ 
+Début :	19:00	Fin :	22:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+JOUR	4		Mardi	30	Juillet	
+Session		HBL13	Début :	09:00	Fin :	12:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+
+ 
+Session	HBL14
+ 
+Début :	14:00	Fin :	17:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+
+ 
+Session	HBL15
+ 
+Début :	19:00	Fin :	22:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+JOUR	5		Mercredi	31	Juillet		
+Session		HBL16	Début :	09:00	Fin :	12:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+
+ 
+Session	HBL17
+ 
+Début :	14:00	Fin :	17:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+ 
+Session	HBL18
+ 
+Début :	19:00	Fin :	22:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+JOUR	6		Jeudi	1	Août	
+Session		HBL19	Début :	09:00	Fin :	12:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+
+ 
+Session	HBL20
+ 
+Début :	14:00	Fin :	17:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+
+ 
+Session	HBL21
+ 
+Début :	19:00	Fin :	22:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+
+JOUR	7		Vendredi	2	Août	
+Session		HBL22	Début :	09:00	Fin :	12:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+
+ 
+Session	HBL23
+ 
+Début :	14:00	Fin :	17:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+ 
+Session	HBL24
+ 
+Début :	19:00	Fin :	22:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+JOUR	8		Samedi	3	Août	
+Session		HBL25	Début :	09:00	Fin :	12:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+
+ 
+Session	HBL26
+ 
+Début :	14:00	Fin :	17:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+
+ 
+Session	HBL27
+ 
+Début :	19:00	Fin :	22:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+
+JOUR	9		Dimanche	4	Août	
+Session		HBL28	Début :	09:00	Fin :	12:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+
+ 
+Session	HBL29
+ 
+Début :	14:00	Fin :	17:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+ 
+Session	HBL30
+ 
+Début :	19:00	Fin :	22:30	Arena Paris Sud 6
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+							
+JOUR	11		Mardi	6	Août		
+Session		HBL31	Début :	09:30	Fin :	11:30	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+ 
+Femmes, quart de finale
+
+ 
+Session	HBL32
+ 
+Début :	13:30	Fin :	15:30	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+Femmes, quart de finale
+ 
+
+ 
+Session	HBL33
+ 
+Début :	17:30	Fin :	19:30	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+Femmes, quart de finale
+ 
+
+ 
+Session	HBL34
+ 
+Début :	21:30	Fin :	23:30	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+Femmes, quart de finale
+ 
+
+JOUR	12		Mercredi	7	Août		
+Session		HBL35	Début :	09:30	Fin :	11:30	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+Hommes, quart de finale
+
+ 
+Session	HBL36
+ 
+Début :	13:30	Fin :	15:30	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+Hommes, quart de finale
+ 
+
+ 
+Session	HBL37
+ 
+Début :	17:30	Fin :	19:30	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+Hommes, quart de finale
+ 
+
+ 
+Session	HBL38
+ 
+Début :	21:30	Fin :	23:30	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+Hommes, quart de finale
+ 
+
+JOUR	13		Jeudi	8	Août	
+Session		HBL39	Début :	16:30	Fin :	18:30	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+Femmes, demi-finale
+
+ 
+Session	HBL40
+ 
+Début :	21:30	Fin :	23:30	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+Femmes, demi-finale
+ 
+
+JOUR	14		Vendredi	9	Août	
+Session		HBL41	Début :	16:30	Fin :	18:30	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+Hommes, demi-finale
+
+ 
+Session	HBL42
+ 
+Début :	21:30	Fin :	23:30	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+Hommes, demi-finale
+ 
+
+JOUR	15		Samedi	10	Août	
+Session		HBL43	Début :	10:00	Fin :	12:00	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+Femmes, match pour la médaille de bronze
+
+Session	 HBL44	 Début :	15:00	Fin :	17:30	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+ Femmes, match pour la médaille d'or	
+
+JOUR	16		Dimanche	11	Août	
+Session		HBL45	Début :	09:00	Fin :	11:00	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+Hommes, match pour la médaille de bronze
+
+Session	 HBL46	 Début :	13:30	Fin :	16:00	Stade Pierre Mauroy
+Nom de l'épreuve/des épreuves
+ Hommes, match pour la médaille d'or	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+
+HOCKEY
+Calendrier par épreuves
+Version :	1
+
+JOUR	1		Samedi	27 Juillet	
+Session HOC01
+Début : 10:00 Fin : 15:00 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (2 matchs)
+ 
+Session	HOC02
+ 
+
+Début :	10:30 Fin :	15:30 Stade Yves-du-Manoir - Terrain 2
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (2 matchs)
+ 
+
+ 
+Session	HOC03
+ 
+Début :	17:00 Fin :	22:00 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves Hommes, éliminatoires (1 match) Femmes, éliminatoires (1 match)
+ 
+
+ 
+Session	HOC04
+ 
+Début :	17:30 Fin :	22:30 Stade Yves-du-Manoir - Terrain 2
+Nom de l'épreuve/des épreuves Hommes, éliminatoires (1 match) Femmes, éliminatoires (1 match)
+ 
+
+JOUR	2		Dimanche	28 Juillet	
+Session		HOC05	Début :	10:00 Fin :	15:00	Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (2 matchs)
+
+ 
+Session	HOC06
+ 
+Début :	10:30 Fin :	15:30 Stade Yves-du-Manoir - Terrain 2
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (2 matchs)
+ 
+
+ 
+Session	HOC07
+ 
+Début :	17:00 Fin :	22:00 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (2 matchs)
+ 
+
+ 
+Session	HOC08
+ 
+Début :	17:30 Fin :	22:30 Stade Yves-du-Manoir - Terrain 2
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (2 matchs)
+ 
+
+JOUR	3		Lundi	29 Juillet	
+Session		HOC09	Début :	10:00 Fin :	15:00	Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (2 matchs)
+
+ 
+Session	HOC10
+ 
+Début :	10:30 Fin :	15:30 Stade Yves-du-Manoir - Terrain 2
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (2 matchs)
+ 
+
+ 
+Session	HOC11
+ 
+Début :	17:00 Fin :	22:00 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (2 matchs)
+ 
+
+ 
+Session	HOC12
+ 
+Début :	17:30 Fin :	22:30 Stade Yves-du-Manoir - Terrain 2
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (2 matchs)
+ 
+
+JOUR	4		Mardi	30 Juillet	
+Session		HOC13	Début :	10:00 Fin :	15:00	Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (2 matchs)
+
+ 
+Session	HOC14
+ 
+Début :	10:30 Fin :	15:30 Stade Yves-du-Manoir - Terrain 2
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (2 matchs)
+ 
+
+ 
+Session	HOC15
+ 
+Début :	17:00 Fin :	22:00 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (2 matchs)
+ 
+
+JOUR	5		Mercredi	31 Juillet	
+Session		HOC16	Début :	10:00 Fin :	15:00	Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (2 matchs)
+ 
+Session	HOC17
+ 
+Début :	10:30 Fin :	15:30 Stade Yves-du-Manoir - Terrain 2
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (2 matchs)
+ 
+
+ 
+Session	HOC18
+ 
+Début :	17:00 Fin :	22:00 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves Hommes, éliminatoires (1 match) Femmes, éliminatoires (1 match)
+ 
+
+ 
+Session	HOC19
+ 
+Début :	17:30 Fin :	22:30 Stade Yves-du-Manoir - Terrain 2
+Nom de l'épreuve/des épreuves Hommes, éliminatoires (1 match) Femmes, éliminatoires (1 match)
+ 
+
+JOUR	6		Jeudi	1 Août		
+Session		HOC20	Début :	10:00 Fin :	15:00	Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (2 matchs)
+
+ 
+Session	HOC21
+ 
+Début :	10:30 Fin :	15:30 Stade Yves-du-Manoir - Terrain 2
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (2 matchs)
+ 
+
+ 
+Session	HOC22
+ 
+Début :	17:00 Fin :	22:00 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (2 matchs)
+ 
+
+ 
+Session	HOC23
+ 
+Début :	17:30 Fin :	22:30 Stade Yves-du-Manoir - Terrain 2
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (2 matchs)
+ 
+
+JOUR	7		Vendredi	2 Août	
+Session		HOC24	Début :	10:00 Fin :	15:00	Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (2 matchs)
+
+ 
+Session	HOC25
+ 
+Début :	10:30 Fin :	15:30 Stade Yves-du-Manoir - Terrain 2
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (2 matchs)
+ 
+
+ 
+Session	HOC26
+ 
+Début :	17:00 Fin :	22:00 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (2 matchs)
+ 
+
+ 
+Session	HOC27
+ 
+Début :	17:30 Fin :	22:30 Stade Yves-du-Manoir - Terrain 2
+Nom de l'épreuve/des épreuves
+Hommes, éliminatoires (2 matchs)
+ 
+
+JOUR	8		Samedi	3 Août	
+Session		HOC28	Début :	10:00 Fin :	15:00	Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (2 matchs)
+
+ 
+Session	HOC29
+ 
+Début :	10:30 Fin :	15:30 Stade Yves-du-Manoir - Terrain 2
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (2 matchs)
+ 
+
+ 
+Session	HOC30
+ 
+Début :	17:00 Fin :	22:00 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Femmes, éliminatoires (2 matchs)
+ 
+
+JOUR	9		Dimanche	4 Août	
+Session		HOC31	Début :	10:00 Fin :	15:00	Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Hommes, quarts de finale (2 matchs)
+
+ 
+Session	HOC32
+ 
+Début :	17:30 Fin :	22:30 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Hommes, quarts de finale (2 matchs)
+ 
+
+JOUR	10		Lundi	5 Août	
+Session		HOC33	Début :	10:00 Fin :	15:00	Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Femmes, quarts de finale (2 matchs)
+
+ 
+Session	HOC34
+ 
+Début :	17:30 Fin :	22:30 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Femmes, quarts de finale (2 matchs)
+ 
+JOUR	11		Mardi	6 Août	
+Session		HOC35	Début :	14:00 Fin :	16:00 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Hommes, demi-finale
+
+ 
+Session	HOC36
+ 
+Début :	19:00 Fin :	21:00 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Hommes, demi-finale
+ 
+
+JOUR	12		Mercredi	7 Août	
+Session		HOC37	Début :	14:00 Fin :	16:00 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Femmes, demi-finale
+
+ 
+Session	HOC38
+ 
+Début :	19:00 Fin :	21:00 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Femmes, demi-finale
+ 
+
+JOUR	13		Jeudi	8 Août	
+Session		HOC39	Début :	14:00 Fin :	16:00 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Hommes, match pour la médaille de bronze
+
+ 
+Session HOC40
+ 
+Début :	19:00 Fin :	21:30 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Hommes, match pour la médaille d'or
+
+ 
+
+JOUR	14		Vendredi	9 Août	
+Session		HOC41	Début :	14:00 Fin :	16:00 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Femmes, match pour la médaille de bronze
+
+ 
+Session HOC42
+ 
+Début :	20:00 Fin :	22:30 Stade Yves-du-Manoir - Terrain 1
+Nom de l'épreuve/des épreuves
+Hommes, match pour la médaille d'or
+ 
+
+ 
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+JUDO
+Calendrier par épreuves Version : 1
+
+JOUR	1		Samedi	27	Juillet	
+Session		JUD01	Début :	10:00 Fin :	14:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves
+-48 kg - femmes, éliminatoires
+-60 kg - hommes, éliminatoires
+
+ 
+Session JUD02
+ 
+Début :	16:00 Fin :	19:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves
+-48 kg - femmes, repêchages
+-48 kg - femmes, demi-finales
+-60 kg - hommes, repêchages
+-60 kg - hommes, demi-finales
+-48 kg - femmes, combats bronze
+ 
+
+ 
+-60 kg - hommes, combats bronze
+
+JOUR	2		Dimanche	28	Juillet	
+Session		JUD03	Début :	10:00	Fin :	14:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves
+-52 kg - femmes, éliminatoires
+-66 kg - hommes, éliminatoires
+
+ 
+Session JUD04
+ 
+Début :	16:00 Fin :	19:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves
+-66 kg - hommes, repêchages
+-66 kg - hommes, demi-finales
+-52 kg - femmes, repêchage
+-52 kg - femmes, demi-finales
+-66 kg - hommes, combats bronze
+ 
+
+ 
+-52 kg - femmes, combats bronze
+
+JOUR	3		Lundi	29	Juillet	
+Session		JUD05	Début :	10:00 Fin :	14:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves
+-57 kg - femmes, éliminatoires
+-73 kg - hommes, éliminatoires
+
+ 
+Session JUD06
+ 
+Début :	16:00 Fin :	19:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves
+-57 kg - femmes, repêchages
+-57 kg - femmes, demi-finales
+-73 kg - hommes, repêchages
+-73 kg - hommes, demi-finales
+-57 kg - femmes, combats bronze
+ 
+
+ 
+-73 kg - hommes, combats bronze
+
+JOUR	4		Mardi	30	Juillet	
+Session		JUD07	Début :	10:00 Fin :	14:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves
+-63 kg - femmes, éliminatoires
+-81 kg - hommes, éliminatoires
+
+ 
+Session JUD08
+ 
+Début :	16:00 Fin :	19:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves
+-81 kg - hommes, repêchages
+-81 kg - hommes, demi-finales
+-63 kg - femmes, repêchage
+-63 kg - femmes, demi-finales
+-81 kg - hommes, combats bronze
+ 
+
+ 
+-63 kg - femmes, combats bronze
+ 
+
+JOUR	5		Mercredi	31	Juillet	
+Session		JUD09	Début :	10:00 Fin :	14:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves
+-70 kg - femmes, éliminatoires
+-90 kg - hommes, éliminatoires
+
+ 
+Session JUD10
+ 
+Début :	16:00 Fin :	19:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves
+-70 kg - femmes, repêchages
+-70 kg - femmes, demi-finales
+-90 kg - hommes, repêchages
+-90 kg - hommes, demi-finales
+-70 kg - femmes, combats bronze
+ 
+
+ 
+-90 kg - hommes, combats bronze
+ -90 kg - hommes, finale	
+
+JOUR	6		Jeudi	Août	
+Session		JUD11	Début :	10:00 Fin :	14:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves
+-78 kg - femmes, éliminatoires
+-100 kg - hommes, éliminatoires
+
+Session	 JUD12	 Début :	16:00 Fin :	19:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves
+-100 kg - hommes, repêchages
+-100 kg - hommes, demi-finales
+-78 kg - femmes, repêchage
+-78 kg - femmes, demi-finales
+-100 kg - hommes, combats bronze
+ -100 kg - hommes, finale	
+-78 kg - femmes, combats bronze
+ -78 kg - femmes, finale	
+
+JOUR	7		Vendredi	2	Août	
+Session		JUD13	Début :	10:00	Fin :	14:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves
++78 kg - femmes, éliminatoires
++100 kg - hommes, éliminatoires
+
+Session	 JUD14	 Début :	16:00 Fin :	19:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves
++78 kg - femmes, repêchages
++78 kg - femmes, demi-finales
++100 kg - hommes, repêchages
++100 kg - hommes, demi-finales
++78 kg - femmes, combats bronze
+ +78 kg - femmes, finale	
++100 kg - hommes, combats bronze
+ +100 kg - hommes, finale	
+
+JOUR	8		SAMEDI	3	Août	
+Session		JUD15	Début :	08:00	Fin :	14:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves Equipe mixte, éliminatoires Equipe mixte, repêchages Equipe mixte, demi-finales
+
+Session	 JUD16	 Début :	16:00 Fin :	19:00	Arena Champ-de-Mars
+Nom de l'épreuve/des épreuves
+Equipe mixte, combats bronze
+ Equipe mixte, finale	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+LUTTE
+Calendrier par épreuves
+ 
+Version :	1
+
+
+JOUR 10 Lun 5 Août
+Session	WRE01
+
+Début	15:00 Fin :	17:00 Arena Champs de Mars
+Nom de l'épreuve/des épreuves
+Lutte gréco-romaine, 60 kg - hommes, 8e de finale Libre, 68 kg - femmes, 8e de finale
+Lutte gréco-romaine, 130 kg - hommes,8e de finale Lutte gréco-romaine, 60 kg - hommes, quarts de finale Libre, 68 kg - femmes, quarts de finale
+Lutte gréco-romaine, 130 kg - hommes, quarts de finale
+ 
+
+ 
+Session	WRE02
+ 
+Début	21:00 Fin :	22:00 Arena Champs de Mars
+Nom de l'épreuve/des épreuves
+Lutte gréco-romaine, 60 kg - hommes, demi-finales Lutte gréco-romaine, 130 kg - hommes, demi-finales Libre, 68 kg - femmes, demi-finales
+ 
+
+JOUR	11		Mar	6	Août	
+Session		WRE03	Début	11:00	Fin :	13:30 Arena Champs de Mars
+Nom de l'épreuve/des épreuves
+Lutte gréco-romaine, 60 kg - hommes, repêchages Libre, 68 kg - femmes, repêchages
+Lutte gréco-romaine, 130 kg - hommes, repêchages Lutte gréco-romaine, 77 kg - hommes, 8e de finale Libre, 50 kg - femmes, 8e de finale
+Lutte gréco-romaine, 97 kg - hommes,8e de finale Lutte gréco-romaine, 77 kg - hommes, quarts de finale Libre, 50 kg - femmes, quarts de finale
+Lutte gréco-romaine, 97 kg - hommes, quarts de finale
+
+ 
+Session WRE04
+ 
+Début  18:15 Fin :   22:00 Arena Champs de Mars
+Nom de l'épreuve/des épreuves
+Lutte gréco-romaine, 77 kg - hommes, demi-finales Lutte gréco-romaine, 97 kg - hommes, demi-finales Libre, 50 kg - femmes, demi-finales
+Lutte gréco-romaine, 60 kg - hommes, match pour les médailles de bronze
+ 
+
+ 
+Lutte gréco-romaine, 130 kg - hommes, match pour les médailles de bronze
+ Lutte gréco-romaine, 130 kg - hommes, match pour la médaille d'or	 Libre, 68 kg - femmes, match pour les médailles de bronze
+ Libre, 68 kg - femmes, match pour la médaille d'or	
+ 
+JOUR	12		Mer	7	Août	
+Session		WRE05	Début	11:00	Fin :	13:30 Arena Champs de Mars
+Nom de l'épreuve/des épreuves
+Lutte gréco-romaine, 77 kg - hommes, repêchages Libre, 50 kg - femmes, repêchages
+Lutte gréco-romaine, 97 kg - repêchages
+Lutte gréco-romaine, 67 kg - hommes, 8e de finale Libre, 53 kg - femmes, 8e de finale
+Lutte gréco-romaine, 87 kg - hommes,8e de finale Lutte gréco-romaine, 67 kg - hommes, quarts de finale Libre, 53 kg - femmes, quarts de finale
+Lutte gréco-romaine, 87 kg - hommes, quarts de finale
+
+ 
+Session WRE06
+ 
+Début  18:15 Fin :   22:00 Arena Champs de Mars
+Nom de l'épreuve/des épreuves
+Lutte gréco-romaine, 67 kg - hommes, demi-finales Lutte gréco-romaine, 87 kg - hommes, demi-finales Libre, 53 kg - femmes, demi-finales
+Lutte gréco-romaine, 77 kg - hommes, match pour les médailles de bronze
+ 
+
+ 
+Lutte gréco-romaine, 97 kg - hommes, match pour les médailles de bronze
+ Lutte gréco-romaine, 97 kg - hommes, match pour la médaille d'or	 Libre, 50 kg - femmes, match pour les médailles de bronze
+ Libre, 50 kg - femmes, match pour la médaille d'or	
+
+
+JOUR	13		Jeu	8	Août	
+Session		WRE07	Début	11:00	Fin :	13:30 Arena Champs de Mars
+Nom de l'épreuve/des épreuves
+Lutte gréco-romaine, 67 kg - hommes, repêchages Libre, 53 kg - femmes, repêchages
+Lutte gréco-romaine, 87 kg - repêchages Libre, 57 kg - hommes, 8e de finale Libre, 57 kg - femmes, 8e de finale Libre, 86 kg - hommes,8e de finale Libre, 57 kg - hommes, quarts de finale Libre, 57 kg - femmes, quarts de finale Libre, 86 kg - hommes, quarts de finale
+
+Session	 WRE08	 Début	18:15 Fin :	22:00 Arena Champs de Mars
+Nom de l'épreuve/des épreuves Libre, 57 kg - hommes, demi-finales Libre, 86 kg - hommes, demi-finales Libre, 57 kg - femmes, demi-finales
+Lutte gréco-romaine, 67 kg - hommes, match pour les médailles de bronze
+ Lutte gréco-romaine, 67 kg - hommes, match pour la médaille d'or	 Lutte gréco-romaine, 87 kg - hommes, match pour les médailles de bronze
+ Lutte gréco-romaine, 87 kg - hommes, match pour la médaille d'or	 Libre, 53 kg - femmes, match pour les médailles de bronze
+ Libre, 53 kg - femmes, match pour la médaille d'or	
+ 
+ 
+ 
+Session	WRE09
+ 
+Début	11:00 Fin :	13:30 Arena Champs de Mars
+Nom de l'épreuve/des épreuves Libre, 57 kg - hommes, repêchages Libre, 57 kg - femmes, repêchages Libre, 86 kg - hommes, repêchages Libre, 74 kg - hommes, 8e de finale Libre, 62 kg - femmes, 8e de finale Libre, 125 kg - hommes,8e de finale Libre, 74 kg - hommes, quarts de finale Libre, 62 kg - femmes, quarts de finale
+Libre, 125 kg - hommes, quarts de finale
+ 
+
+ 
+Session WRE10
+ 
+Début	18:15 Fin :	22:00 Arena Champs de Mars
+Nom de l'épreuve/des épreuves Libre, 74 kg - hommes, demi-finales Libre, 125 kg - hommes, demi-finales Libre, 62 kg - femmes, demi-finales
+Libre, 57 kg - hommes, match pour les médailles de bronze
+ 
+
+ 
+Libre, 86 kg - hommes, match pour les médailles de bronze
+ Libre, 86 kg - hommes, match pour la médaille d'or	 Libre, 57 kg - femmes, match pour les médailles de bronze
+ Libre, 57 kg - femmes, match pour la médaille d'or	
+
+
+
+ 
+Session	WRE11
+ 
+Début	11:00 Fin :	13:30 Arena Champs de Mars
+Libre, 74 kg - hommes, repêchages Libre, 62 kg - femmes, repêchages Libre, 125 kg - hommes, repêchages Libre, 65 kg - hommes, 8e de finale Libre, 76 kg - femmes, 8e de finale Libre, 97 kg - hommes, 8e de finale Libre, 65 kg - hommes, quarts de finale Libre, 76 kg - femmes,quarts de finale Libre, 97 kg - hommes, quarts de finale
+ 
+
+Session	 WRE12	 Début	18:15 Fin :	22:00 Arena Champs de Mars
+Nom de l'épreuve/des épreuves Libre, 65 kg - hommes, demi-finales Libre, 97 kg - hommes, demi-finales Libre, 76 kg - femmes, demi-finales
+Libre, 74 kg - hommes, match pour les médailles de bronze
+ Libre, 74 kg - hommes, match pour la médaille d'or	 Libre, 125 kg - hommes, match pour les médailles de bronze
+ Libre, 125 kg - hommes, match pour la médaille d'or	 Libre, 62 kg - femmes, match pour les médailles de bronze
+ Libre, 62 kg - femmes, match pour la médaille d'or	
+ 
+
+ 
+Session WRE13
+ 
+Début	11:00 Fin :	14:30 Arena Champs de Mars
+Nom de l'épreuve/des épreuves Libre, 65 kg - hommes, repêchages Libre, 76 kg - femmes, repêchages Libre, 97 kg - hommes, repêchages
+Libre, 65 kg - hommes, match pour les médailles de bronze
+ 
+
+ 
+Libre, 97 kg - hommes, match pour les médailles de bronze
+ Libre, 97 kg - hommes, match pour la médaille d'or	 Libre, 76 kg - femmes, match pour les médailles de bronze
+ Libre, 76 kg - femmes, match pour la médaille d'or	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+Natation
+Calendrier par épreuves Version : 1
+
+ 
+JOUR 1 Samedi 27 Juillet
+Session	SWM01
+ 
+Début :	11:00 Fin :	13:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves 100 m papillon - femmes, séries 400 m nage libre - femmes, séries 100 m brasse - hommes, séries 400 m nage libre - hommes, séries
+Relais 4x100 m nage libre - femmes, séries Relais 4x100 m nage libre - hommes, séries
+ 
+
+Session	 SWM02	 Début :	20:30 Fin :	22:30 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+100 m papillon - femmes, demi-finales
+100 m brasse - hommes - demi-finales
+ 
+
+ 
+ 
+Session	SWM03
+ 
+Début :	11:00 Fin :	13:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+200 m nage libre - hommes, séries
+400 m quatre nages individuel - hommes, séries 100 m brasse - femmes, séries
+100 m dos - hommes, séries
+200 m nage libre - femmes, séries
+ 
+
+Session	 SWM04	 Début :	20:30 Fin :	22:30 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+200 m nage libre - hommes, demi-finales 100 m brasse - femmes, demi-finales 100 m dos - hommes, demi-finales
+100 m brasse - hommes, finale	 200 m nage libre - femmes, demi-finales
+
+ 
+ 
+Session	SWM05
+ 
+Début :	11:00 Fin :	13:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+400 m quatre nages individuel - femmes, séries 100 m dos - femmes, séries
+800 m nage libre - hommes, séries
+ 
+
+Session	 SWM06	 Début :	20:30 Fin :	22:30 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+100 m dos - femmes, demi-finales
+ 
+
+ 
+ 
+Session	SWM07
+ 
+Début :	11:00 Fin :	13:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves 200 m papillon - hommes, séries 100 m nage libre - hommes, séries 1 500 m nage libre - femmes, séries 100 m nage libre - femmes, séries 200 m brasse - hommes, séries
+Relais 4x200 m nage libre - hommes, séries
+ 
+Session	 SWM08	 Début :	20:30 Fin :	22:30 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+100 m nage libre - hommes, demi-finales 200 m papillon - hommes, demi-finales
+ 
+100 m nage libre - femmes, demi-finales 200 m brasse - hommes, demi-finales
+ Relais 4x200 m nage libre - hommes, finale	
+
+ 
+ 
+Session	SWM09
+ 
+Début :	11:00 Fin :	13:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves 200 m brasse - femmes, séries 200 m dos - hommes, séries
+200 m papillon - femmes, séries
+ 
+
+Session	 SWM10	 Début :	20:30 Fin :	22:30 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+200 m dos - hommes, demi-finales 200 m brasse - femmes, demi-finales 200 m papillon - femmes, demi-finales
+100 m nage libre - hommes, finale	
+
+ 
+ 
+Session	SWM11
+ 
+Début :	11:00 Fin :	13:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+200 m dos - femmes, séries
+50 m nage libre - hommes, séries
+200 m quatre nages individuel - hommes, séries Relais 4x200 m nage libre - femmes, séries
+ 
+
+Session	 SWM12	 Début :	20:30 Fin :	22:30 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+200 m dos - femmes, demi-finales
+200 m brasse - femmes, finale	 200 m quatre nages individuel - hommes, demi-finale
+50 m nage libre - hommes, demi-finales
+ Relais 4x200 m nage libre - femmes, finale	
+
+ 
+ 
+Session	SWM13
+ 
+Début :	11:00 Fin :	13:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+100 m papillon - hommes, séries
+200 m quatre nages individuel - femmes, séries 800 m nage libre - femmes, séries
+Relais 4x100 m quatre nages - mixte, séries
+ 
+
+Session	 SWM14	 Début :	20:30 Fin :	22:30 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+100 m papillon - hommes, demi-finales
+200 m quatre nages individuel - femmes, demi-finale
+
+ 
+ 
+Session	SWM15
+ 
+Début :	11:00 Fin :	13:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+50 m nage libre - femmes, séries
+1 500 m nage libre - hommes, séries
+Relais 4x100 m quatre nages - hommes, séries Relais 4x100 m quatre nages - femmes, séries
+ 
+Session	 SWM16	 Début :	20:30 Fin :	22:30 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+100 m papillon - hommes, finale	 50 m nage libre - femmes, demi-finales
+ 
+
+Session	 SWM17	 Début :	18:30 Fin :	20:30 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+NATATION ARTISTIQUE
+Calendrier par épreuves
+ 
+Version :
+
+JOUR 10 Lundi 5 Août
+Session	SWA01
+Début :	19:30 Fin :	21:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+Épreuve d'équipe, programme technique
+ 
+
+JOUR	11		Mardi	6	Août	
+Session		SWA02	Début :	19:30	Fin :	21:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+Épreuve d'équipe, programme libre
+
+JOUR	12		Mercredi	7	Août	
+Session		SWA03	Début :	19:30	Fin :	21:15 Centre aquatique
+Nom de l'épreuve/des épreuves
+
+JOUR	14		Vendredi	9	Août	
+Session		SWA04	Début :	19:30	Fin :	21:30 Centre aquatique
+Nom de l'épreuve/des épreuves
+Épreuve de duo, programme technique
+
+JOUR	15		Samedi	10	Août	
+Session		SWA05	Début :	19:30	Fin :	22:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+NATATION MARATHON
+Calendrier par épreuves
+Version :	1
+
+JOUR 13 Jeudi 8 Août
+Session OWS01
+ 
+Début :	07:30	Fin :	10:30	Pont Alexandre III
+Nom de l'épreuve/des épreuves
+10 km - femmes
+ 
+Session OWS02
+ 
+Début :	07:30	Fin :	10:30	Pont Alexandre III
+Nom de l'épreuve/des épreuves
+10 km - hommes
+ 
+
+ 
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+Pentathlon Moderne
+Calendrier par épreuves
+Version : 1.1
+
+JOUR	13		Jeudi	8	Août	
+Session		MPN01	Début :	11:00	Fin :	17:30	Arena Paris Nord
+Nom de l'épreuve/des épreuves
+Épreuve d'escrime - hommes, tour de classement Épreuve d'escrime - femmes, tour de classement
+
+JOUR	14		Vendredi	9	Août	
+Session		MPN02	Début :	13:00	Fin :	19:00	Château de Versailles
+Nom de l'épreuve/des épreuves
+Hommes, demi-finales
+
+JOUR	15		Samedi	10	Août	
+Session		MPN03	Début :	09:30	Fin :	15:30	Château de Versailles
+Nom de l'épreuve/des épreuves
+Femmes, demi-finales
+
+ 
+Session MPN04
+ 
+Début :	17:30	Fin :	20:00	Château de Versailles
+Nom de l'épreuve/des épreuves
+Hommes, finale
+
+ 
+
+Session	 MPN05	 Début :	11:00	Fin :	13:30	Château de Versailles
+Nom de l'épreuve/des épreuves
+ Femmes, finale	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+PLONGEON
+Calendrier par épreuves
+Version : 2
+
+JOUR	1	Samedi	27	Juillet	
+Session		 DIV01	 Début :	11:00 Fin :	12:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+ Tremplin 3 m synchronisé - femmes	
+
+Session	 DIV02	 Début :	11:00 Fin :	12:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+ Haut vol 10 m synchronisé - hommes	
+
+JOUR	5	Mercredi	31	Juillet	
+Session		 DIV03	 Début :	11:00 Fin :	12:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+ Haut vol 10 m synchronisé - femmes	
+
+JOUR	7	Vendredi	2	Août	
+Session		 DIV04	 Début :	11:00 Fin :	12:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+ Tremplin 3 m synchronisé - hommes	
+
+JOUR	10	Lundi	5	Août	
+Session	DIV05	Début :	10:00 Fin :	12:10	Centre aquatique
+Nom de l'épreuve/des épreuves
+Haut vol 10m - femmes, éliminatoires
+
+ 
+Session	DIV06
+ 
+Début :	15:00 Fin :	17:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+Haut vol 10m - femmes, demi-finale
+ 
+
+JOUR	11		Mardi	6	Août	
+Session		DIV07	Début :	10:00	Fin :	12:00	Centre aquatique
+Nom de l'épreuve/des épreuves
+Tremplin 3m - hommes, éliminatoires
+
+Session	 DIV08	 Début :	15:00 Fin :	17:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+ Haut vol 10m - femmes, finale	
+
+JOUR	12		Mercredi	7	Août	
+Session		DIV09	Début :	10:00 Fin :	12:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+Tremplin 3m - hommes, demi-finale
+
+ 
+Session	DIV10
+ 
+Début :	15:00 Fin :	17:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+Tremplin 3m - femmes, éliminatoires
+ 
+JOUR	13		Jeudi	8	Août	
+Session		DIV11	Début :	10:00	Fin :	12:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+Tremplin 3m - femmes, demi-finale
+
+Session	 DIV12	 Début :	15:00 Fin :	17:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+ Tremplin 3m - hommes, finale	
+
+JOUR	14		Vendredi	9	Août	
+Session		DIV13	Début :	10:00 Fin :	12:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+Haut vol 10m - hommes, éliminatoires
+
+Session	 DIV14	 Début :	15:00 Fin :	17:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+ Tremplin 3m - femmes, finale	
+
+JOUR	15		Samedi	10	Août	
+Session		DIV15	Début :	10:00 Fin :	12:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+Haut vol 10m - hommes, demi-finale
+
+Session	 DIV16	 Début :	15:00 Fin :	17:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+ Haut vol 10m - hommes, finale	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+RUGBY
+Calendrier par épreuves
+Version : 1
+
+JOUR	-2		Mer	24	Juillet	
+Session		RU701	Début :	15:30	Fin :	22:00 Stade de France
+Nom de l'épreuve/des épreuves
+Hommes, poules (12 matchs)
+
+
+JOUR	-1		Jeu	25	Juillet	
+Session		RU702	Début :	14:00	Fin :	17:00 Stade de France
+Nom de l'épreuve/des épreuves
+Hommes, poules (6 matchs)
+
+ 
+Session	RU703
+ 
+Début :	20:00 Fin :	23:00 Stade de France
+Nom de l'épreuve/des épreuves Hommes, placement 9-12 (2 matchs) Hommes, quarts de finale (4 matchs)
+ 
+
+ 
+Session	 RU704	 Début :	14:30 Fin :	20:45 Stade de France
+Nom de l'épreuve/des épreuves Hommes, placement 5-8 (2 matchs) Hommes, demi-finales (2 matchs) Hommes, placement 11-12
+Hommes, placement 9-10
+Hommes, placement 7-8
+Hommes, placement 5-6
+Hommes, match pour la médaille de bronze
+ Hommes, match pour la médaille d'or	
+
+
+JOUR	2		Dim	28	Juillet	
+Session		RU705	Début :	15:30	Fin :	22:00 Stade de France
+Nom de l'épreuve/des épreuves
+Femmes, poules (12 matchs)
+
+
+JOUR	3		Lun	29	Juillet	
+Session		RU706	Début :	14:00	Fin :	17:00 Stade de France
+Nom de l'épreuve/des épreuves
+Femmes, poules (6 matchs)
+
+ 
+Session	RU707
+ 
+Début :	20:00 Fin :	23:00 Stade de France
+Nom de l'épreuve/des épreuves Femmes, placement 9-12 (2 matchs) Femmes, quarts de finale (4 matchs)
+ 
+ 
+Session	 RU708	 Début :	14:30 Fin :	20:45 Stade de France
+Nom de l'épreuve/des épreuves Femmes, placement 5-8 (2 matchs) Femmes, demi-finales (2 matchs) Femmes, placement 11-12
+Femmes, placement 9-10
+Femmes, placement 7-8
+Femmes, placement 5-6 Femmes, médaille de bronze
+ Femmes, médaille d'or	
+
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+SKATEBOARDING
+Calendrier par épreuves
+
+
+JOUR 1 Samedi 27 Juillet
+Session SKB01	Début :	12:00	Fin :	15:30	La Concorde 3
+Nom de l'épreuve/des épreuves
+Men's Street Prelims
+ 
+
+Session	 SKB02	 Début :	17:00	Fin :	19:00	La Concorde 3
+Nom de l'épreuve/des épreuves
+ Men's Street Final	
+
+ 
+JOUR 2 Dimanche 28 Juillet
+Session	SKB03
+ 
+Début :	12:00	Fin :	15:30	La Concorde 3
+Nom de l'épreuve/des épreuves
+Women's Street Prelims
+ 
+
+ 
+Session SKB04	Début :	17:00	Fin :	19:00	La Concorde 3
+Nom de l'épreuve/des épreuves
+ Women's Street Final	
+ 
+
+JOUR 11 Mardi 6 Août
+Session		SKB05	Début :	12:30	Fin :	16:00	La Concorde 3
+Nom de l'épreuve/des épreuves
+Women's Park Prelims
+
+Session	 SKB06	Début :	17:30	Fin :	19:00	La Concorde 3
+Nom de l'épreuve/des épreuves
+ Women's Park Final	
+
+ 
+JOUR 12 Mercredi 7 Août
+
+Session	SKB07 Début :	12:30	Fin :	16:00	La Concorde 4
+Nom de l'épreuve/des épreuves
+Men's Park Prelims
+ 
+
+Session	 SKB08	 Début :	17:30	Fin :	19:00	La Concorde 4
+Nom de l'épreuve/des épreuves
+Men's Park Final
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+SPORTS EQUESTRES
+Calendrier par épreuves
+Version :	1,2
+
+JOUR	1		Samedi	27	Juillet	
+Session		EQU01	Début :	09:30	Fin :	18:30	Château de Versailles
+Nom de l'épreuve/des épreuves
+Concours complet, dressage
+
+JOUR	2		Dimanche	28	Juillet	
+Session		EQU02	Début :	10:30	Fin :	15:30	Château de Versailles
+Nom de l'épreuve/des épreuves
+Concours complet, cross-country
+
+JOUR	3	Lundi	29	Juillet	
+Session		 EQU03	 Début :	11:00	Fin :	16:30	Château de Versailles
+Nom de l'épreuve/des épreuves
+ Concours complet, saut d'obstacles Finale individuel et par équipe	
+
+JOUR	4		Mardi	30	Juillet	
+Session		EQU04	Début :	11:00	Fin :	16:30	Château de Versailles
+Nom de l'épreuve/des épreuves
+Dressage Grand Prix équipe et individuel 1er jour
+
+JOUR	5		Mercredi	31	Juillet	
+Session		EQU05	Début :	10:00	Fin :	15:30	Château de Versailles
+Nom de l'épreuve/des épreuves
+Dressage Grand Prix équipe et individuel 2e jour
+
+JOUR	6		Jeudi	1	Août	
+Session		EQU06	Début :	11:00	Fin :	14:00	Château de Versailles
+Nom de l'épreuve/des épreuves
+Jumping Qualification par équipe
+
+JOUR	7	Vendredi	2	Août	
+Session		 EQU07	 Début :	14:00	Fin :	16:30	Château de Versailles
+Nom de l'épreuve/des épreuves
+ Jumping Finale par équipe	
+
+JOUR	8	Samedi	3	Août	
+Session		 EQU08	 Début :	10:00	Fin :	16:30	Château de Versailles
+Nom de l'épreuve/des épreuves
+ Dressage Finale Grand Prix Special par équipe	
+
+JOUR	9	Dimanche	4	Août	
+Session		 EQU09	 Début :	10:00	Fin :	14:00	Château de Versailles
+Nom de l'épreuve/des épreuves
+ Dressage Finale Individuel, Grand Prix Freestyle	
+
+JOUR	10		Lundi	5	Août	
+Session		EQU10	Début :	14:00	Fin :	18:00	Château de Versailles
+Nom de l'épreuve/des épreuves
+Jumping Qualifications Individuel
+
+
+JOUR	11	Mardi	6	Août	
+Session		 EQU11	 Début :	10:00	Fin :	12:30	Château de Versailles
+Nom de l'épreuve/des épreuves
+ Jumping Finale Individuel	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+SURFING
+Calendrier par épreuves
+Version :	1
+
+JOUR	1		Samedi	27	Juillet	
+Session		SRF01	Début :	07:00	Fin :	16:30	Teahupoo
+Nom de l'épreuve/des épreuves Hommes, 1er tour (8 séries) Femmes, 1er tour (8 séries)
+
+JOUR	2		Dimanche	28	Juillet	
+Session		SRF02	Début :	07:00	Fin :	16:30	Teahupoo
+Nom de l'épreuve/des épreuves Femmes, 2e tour (8 séries) Hommes, 2e tour (8 séries)
+
+JOUR	3		Lundi	29	Juillet	
+Session		SRF03	Début :	07:00	Fin :	16:30	Teahupoo
+Nom de l'épreuve/des épreuves Hommes, 3e tour (8 séries) Femmes, 3e tour (8 séries)
+
+JOUR	4		Mardi	30	Juillet	
+Session		SRF04	Début :	07:00	Fin :	17:15	Teahupoo
+Nom de l'épreuve/des épreuves Hommes, quarts de finale Femmes, quarts de finale Hommes, demi-finales
+Femmes, demi-finales
+Hommes, match pour la médaille de bronze Femmes, match pour la médaille de bronze
+ 
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+TAEKWONDO
+Calendrier par épreuves
+ 
+Version :	1
+
+JOUR 12 Mercredi 7 Août
+Session	TKW01
+
+Début :	09:00 Fin :	12:30 Grand Palais
+Nom de l'épreuve/des épreuves
+-49kg - femmes/-58kg - hommes, combats de qualification
+ 
+
+ 
+Session	TKW02
+ 
+Début :	14:30 Fin :	17:30 Grand Palais
+Nom de l'épreuve/des épreuves
+-49kg - femmes/-58kg - hommes, quarts de finale/demi-finales
+ 
+
+Session	 TKW03	 Début :	19:30 Fin :	23:00 Grand Palais
+Nom de l'épreuve/des épreuves
+-49kg - femmes/-58kg - hommes, repêchages
+-49kg - femmes/-58kg - hommes, médailles de bronze
+
+
+JOUR	13		Jeudi	8	Août	
+Session		TKW04	Début :	09:00	Fin :	12:30 Grand Palais
+Nom de l'épreuve/des épreuves
+-68kg - hommes / -57kg - femmes, combats de qualification
+
+ 
+Session	TKW05
+ 
+Début :	14:30 Fin :	17:30 Grand Palais
+Nom de l'épreuve/des épreuves
+-68kg - hommes / -57kg - femmes, quarts de finale/demi-finales
+ 
+
+Session	 TKW06	 Début :	19:30 Fin :	23:00 Grand Palais
+Nom de l'épreuve/des épreuves
+-68kg - hommes / -57kg femmes, repêchages
+-68kg - hommes / -57kg femmes, médailles de bronze
+
+JOUR	14		Vendredi	9	Août	
+Session		TKW07	Début :	09:00	Fin :	12:30 Grand Palais
+Nom de l'épreuve/des épreuves
+-67kg - femmes / -80kg - hommes, combats de qualification
+
+ 
+Session	TKW08
+ 
+Début :	14:30 Fin :	17:30 Grand Palais
+Nom de l'épreuve/des épreuves
+-67kg - femmes / -80kg - hommes, quarts de finale/demi-finales
+ 
+
+Session	 TKW09	 Début :	19:30 Fin :	23:00 Grand Palais
+Nom de l'épreuve/des épreuves
+-67kg - femmes / -80kg - hommes, repêchages
+-67kg - femmes / -80kg - hommes, médailles de bronze
+ 
+ 
+
+JOUR	15		Samedi	10	Août	
+Session		TKW10	Début :	09:00	Fin :	12:30 Grand Palais
+Nom de l'épreuve/des épreuves
++80kg - hommes / +67kg - femmes, combats de qualification
+
+ 
+Session	TKW11
+ 
+Début :	14:30 Fin :	17:30 Grand Palais
+Nom de l'épreuve/des épreuves
++80kg - hommes / +67kg - femmes, quarts de finale/demi-finales
+ 
+
+
+Session	 TKW12	 Début :	19:30 Fin :	23:00 Grand Palais
+Nom de l'épreuve/des épreuves
++80kg - hommes / +67kg - femmes, repêchages
++80kg - hommes / +67kg - femmes, médailles de bronze
+
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+TENNIS
+Calendrier par épreuves
+Version :	1.1
+JOUR 1 Samedi 27 Juillet
+Session	TEN01
+ 
+
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Court Suzanne-Lenglen
+Nom de l'épreuve/des épreuves
+Simple hommes, 1er tour/ Simple femmes, 1er tour
+ 
+Session	TEN02
+ 
+
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Court Suzanne-Lenglen
+Nom de l'épreuve/des épreuves
+Simple hommes, 1er tour/ Simple femmes, 1er tour/ Double hommes, 1er tour/ Double femmes, 1er tour
+ 
+
+ 
+Session	TEN03
+ 
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Court Simonne-Mathieu
+Nom de l'épreuve/des épreuves
+Simple hommes, 1er tour/ Simple femmes, 1er tour/ Double hommes, 1er tour/ Double femmes, 1er tour
+ 
+
+ 
+Session	TEN04
+ 
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Courts Annexes
+Nom de l'épreuve/des épreuves
+Simple hommes, 1er tour/ Simple femmes, 1er tour/ Double hommes, 1er tour/ Double femmes, 1er tour
+ 
+
+ 
+Session	TEN05
+ 
+Début :	19:00 Fin :	23:00 Stade Roland-Garros - Court Philippe-Chatrier
+Nom de l'épreuve/des épreuves
+Simple hommes, 1er tour/ Simple femmes, 1er tour
+ 
+
+JOUR	2		Dimanche	28	Juillet	
+Session		TEN06	Début :	12:00	Fin :	17:00 Stade Roland-Garros - Court Philippe-Chatrier
+Nom de l'épreuve/des épreuves
+Simple hommes, 1er tour/ Simple femmes, 1er tour
+
+ 
+Session	TEN07
+ 
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Court Suzanne-Lenglen
+Nom de l'épreuve/des épreuves
+Simple hommes, 1er tour/ Simple femmes, 1er tour/ Double hommes, 1er tour/ Double femmes, 1er tour
+ 
+
+ 
+Session	TEN08
+ 
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Court Simonne-Mathieu
+Nom de l'épreuve/des épreuves
+Simple hommes, 1er tour/ Simple femmes, 1er tour/ Double hommes, 1er tour/ Double femmes, 1er tour
+ 
+
+ 
+Session	TEN09
+ 
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Courts Annexes
+Nom de l'épreuve/des épreuves
+Simple hommes, 1er tour/ Simple femmes, 1er tour/ Double hommes, 1er tour/ Double femmes, 1er tour
+ 
+
+ 
+Session	TEN10
+ 
+Début :	19:00 Fin :	23:00 Stade Roland-Garros - Court Philippe-Chatrier
+Nom de l'épreuve/des épreuves
+Simple hommes, 1er tour/ Simple femmes, 1er tour
+ 
+
+JOUR	3		Lundi	29	Juillet	
+Session		TEN11	Début :	12:00	Fin :	17:00 Stade Roland-Garros - Court Philippe-Chatrier
+Nom de l'épreuve/des épreuves
+Simple hommes, 2e tour/ Simple femmes, 2e tour
+
+ 
+Session	TEN12
+ 
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Court Suzanne-Lenglen
+Nom de l'épreuve/des épreuves
+Simple hommes, 2e tour/ Simple femmes, 2e tour/ Double hommes, 2e tour/ Double femmes, 2e tour/ Double mixte 1er tour
+ 
+
+ 
+Session	TEN13
+ 
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Court Simonne-Mathieu
+Nom de l'épreuve/des épreuves
+Simple hommes, 2e tour/ Simple femmes, 2e tour/ Double hommes, 2e tour/ Double femmes, 2e tour/ Double mixte 1er tour
+ 
+
+ 
+Session	TEN14
+ 
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Courts Annexes
+Nom de l'épreuve/des épreuves
+Simple hommes, 2e tour/ Simple femmes, 2e tour/ Double hommes, 2e tour/ Double femmes, 2e tour/ Double mixte 1er tour
+ 
+
+ 
+Session	TEN15
+ 
+Début :	19:00 Fin :	23:00 Stade Roland-Garros - Court Philippe-Chatrier
+Nom de l'épreuve/des épreuves
+Simple hommes, 2e tour/ Simple femmes, 2e tour
+ 
+
+JOUR	4		Mardi	30	Juillet	
+Session		TEN16	Début :	12:00	Fin :	17:00 Stade Roland-Garros - Court Philippe-Chatrier
+Nom de l'épreuve/des épreuves
+Simple hommes, 2e tour/ Simple femmes, 3e tour
+
+ 
+Session	TEN17
+ 
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Court Suzanne-Lenglen
+Nom de l'épreuve/des épreuves
+Simple hommes, 2e tour/ Simple femmes, 3e tour/ Double hommes, 3e tour/ Double femmes, 2e tour/ Double mixte 1er tour
+ 
+
+ 
+Session	TEN18
+ 
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Court Simonne-Mathieu
+Nom de l'épreuve/des épreuves
+Simple hommes, 2e tour/ Simple femmes, 3e tour/ Double hommes, 3e tour/ Double femmes, 2e tour/ Double mixte 1er tour
+ 
+
+ 
+Session	TEN19
+ 
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Courts Annexes
+Nom de l'épreuve/des épreuves
+Simple hommes, 2e tour/ Simple femmes, 3e tour/ Double hommes, 3e tour/ Double femmes, 2e tour/ Double mixte 1er tour
+ 
+
+ 
+Session	TEN20
+ 
+Début :	19:00 Fin :	23:00 Stade Roland-Garros - Court Philippe-Chatrier
+Nom de l'épreuve/des épreuves
+Simple hommes, 2e tour/ Simple femmes, 3e tour
+ 
+
+JOUR	5		Mercredi	31	Juillet	
+Session		TEN21	Début :	12:00	Fin :	17:00 Stade Roland-Garros - Court Philippe-Chatrier
+Nom de l'épreuve/des épreuves
+Simple hommes, 3e tour/ Simple femmes, quart de finales
+
+ 
+Session	TEN22
+ 
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Court Suzanne-Lenglen
+Nom de l'épreuve/des épreuves
+Simple hommes, 3e tour/ Simple femmes, quarts de finale/ Double hommes, demi-finales/ Double femmes, quarts de finale/ Double mixte quarts de finale
+ 
+
+Session	TEN23	Début :	12:00 Fin :	19:00 Stade Roland-Garros - Court Simonne-Mathieu
+ 
+Nom de l'épreuve/des épreuves
+Simple hommes, 3e tour/ Double hommes, demi-finale/ Double femmes, quarts de finale/ Double mixte quarts de finale
+
+ 
+Session	TEN24
+ 
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Courts Annexes
+Nom de l'épreuve/des épreuves
+Simple hommes, 3e tour/ Double femmes, quarts de finale/ Double mixte quarts de finale
+ 
+
+ 
+Session	TEN25
+ 
+Début :	19:00 Fin :	23:00 Stade Roland-Garros - Court Philippe-Chatrier
+Nom de l'épreuve/des épreuves
+Simple hommes, 3e tour/ Simple femmes, quart de finale
+ 
+
+JOUR	6		Jeudi	1	Août	
+Session		TEN26	Début :	12:00	Fin :	17:00 Stade Roland-Garros - Court Philippe-Chatrier
+Nom de l'épreuve/des épreuves
+Simple hommes, quart de finale/ Simple femmes, demi-finale
+
+ 
+Session	TEN27
+ 
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Court Suzanne-Lenglen
+Nom de l'épreuve/des épreuves
+Simple hommes, quart de finale/ Double femmes, demi-finale/ Double mixtes, demi-finale
+ 
+
+ 
+Session	TEN28
+ 
+Début :	12:00 Fin :	19:00 Stade Roland-Garros - Court Simonne-Mathieu
+Nom de l'épreuve/des épreuves
+Double femmes, demi-finale/ Double mixtes, demi-finale
+ 
+
+ 
+Session	TEN29
+ 
+Début :	19:00 Fin :	23:00 Stade Roland-Garros - Court Philippe-Chatrier
+Nom de l'épreuve/des épreuves
+Simple hommes, quart de finale/ Simple femmes, demi-finale
+ 
+
+JOUR	7		Vendredi	2	Août	
+Session		TEN30	Début :	12:00	Fin :	17:00 Stade Roland-Garros - Court Philippe-Chatrier
+Nom de l'épreuve/des épreuves
+Simple hommes, demi-finale/Simple femmes, match pour la médaille de bronze.
+
+ 
+Session	TEN31
+ 
+Début :	12:00 Fin :	17:00 Stade Roland-Garros - Court Suzanne-Lenglen
+Nom de l'épreuve/des épreuves
+Double hommes, match pour la médaille de bronze/ Double mixtes, match pour la médaille de bronze
+ 
+
+ 
+Session TEN32
+ 
+Début :	19:00 Fin :	23:30 Stade Roland-Garros - Court Philippe-Chatrier
+Nom de l'épreuve/des épreuves
+Simple hommes, demi-finale
+ 
+
+ 
+
+JOUR	8	Samedi	3	Août	
+Session		 TEN33	 Début :	12:00	Fin :	19:00 Stade Roland-Garros - Court Philippe-Chatrier
+Nom de l'épreuve/des épreuves
+Simple hommes, match pour la médaille de bronze
+
+JOUR	9	Dimanche	4	Août	
+Session		 TEN34	 Début :	12:00 Fin :	19:00 Stade Roland-Garros - Court Philippe-Chatrier
+Nom de l'épreuve/des épreuves
+Double femmes, match pour la médaille de bronze
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+TENNIS DE TABLE
+Calendrier par épreuves
+Version :	1
+
+JOUR	1		Samedi	27	Juillet
+Session	TTE01
+
+
+Nom de l'épreuve/des épreuves
+Simple hommes et femmes, tour préliminaire Double mixte, 1/8e finale
+ 
+Session	TTE02
+ 
+Début :	20:00 Fin :	23:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Simple hommes et femmes, tour 1
+ 
+
+JOUR	2		Dimanche	28	Juillet	
+Session		TTE03	Début :	10:00	Fin :	14:00	Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Simple hommes et femmes, tour 1
+
+
+Session	TTE04
+ 
+Début :	16:00 Fin :	18:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Double mixte, quarts de finale
+
+Session	TTE05
+
+Début :	20:00 Fin :	23:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Simple hommes et femmes, tour 1
+ 
+
+JOUR	3		Lundi	29	Juillet	
+Session		TTE06	Début :	10:00	Fin :	14:00	Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Simple hommes et femmes, tour 1
+
+ 
+Session	TTE07
+
+Début :	16:00 Fin :	18:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Double mixte, demi-finales
+
+
+Session	TTE08
+Début :	20:00 Fin :	23:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Simple hommes et femmes, tour 2
+ 
+
+JOUR	4		Mardi	30	Juillet	
+Session		TTE09	Début :	10:00	Fin :	12:00	Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Simple hommes et femmes, tour 2
+
+Session	 TTE10	 Début :	13:30 Fin :	16:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Double mixte, match pour la médaille de bronze
+ Double mixte, match pour la médaille d'or	
+
+JOUR	5		Mercredi	31	Juillet	
+Session		TTE11	Début :	10:00	Fin :	13:00	Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Simple hommes et femmes, tour 2
+
+ 
+Session	TTE12
+
+
+
+Début :	15:00 Fin :	18:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Simple hommes et femmes, tour 3
+
+Session	TTE13
+
+Début :	20:00 Fin :	23:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Simple hommes et femmes, tour 3
+ 
+
+JOUR	6		Jeudi	1	Août	
+Session		TTE14	Début :	10:00	Fin :	13:00	Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Simple femmes, quarts de finale (2 matchs) Simple hommes, quart de finale (1 match)
+
+ 
+Session	TTE15
+ 
+Début :	15:00 Fin :	18:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Simple femmes, quart de finale (1 match) Simple hommes, quarts de finale (2 matchs)
+ 
+Session	TTE16
+ 
+Début :	20:00 Fin :	22:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Simple femmes, quart de finale (1 match) Simple hommes, quart de finale (1 match)
+ 
+
+JOUR	7		Vendredi	2	Août	
+Session		TTE17	Début :	10:00	Fin :	12:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves Simple femmes, demi-finale Simple hommes, demi-finale
+
+ 
+Session	TTE18
+ 
+Début :	13:30 Fin :	15:30 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves Simple femmes, demi-finale Simple hommes, demi-finale
+ 
+
+JOUR	8	Samedi	3	Août	
+Session		 TTE19	 Début :	13:30	Fin :	16:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Simple femmes, match pour la médaille de bronze
+ Simple femmes, match pour la médaille d'or	
+
+JOUR	9	Dimanche	4	Août	
+Session		 TTE20	 Début :	13:30	Fin :	16:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Simple hommes, match pour la médaille de bronze
+ Simple hommes, match pour la médaille d'or	
+
+JOUR	10		Lundi	5	Août	
+Session		TTE21	Début :	10:00	Fin :	13:00	Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Par équipe hommes et femmes, 1/8e finale
+
+ 
+Session	TTE22
+ 
+Début :	15:00 Fin :	18:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Par équipe hommes et femmes, 1/8e finale
+ 
+
+ 
+Session	TTE23
+ 
+Début :	20:00 Fin :	23:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Par équipe hommes et femmes, 1/8e finale
+ 
+
+JOUR	11		Mardi	6	Août	
+Session		TTE24	Début :	10:00	Fin :	13:00	Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Par équipe hommes et femmes, 1/8e finale
+
+ 
+Session	TTE25
+ 
+Début :	15:00 Fin :	18:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Par équipe hommes et femmes, quart de finale
+ 
+
+ 
+Session	TTE26
+ 
+Début :	20:00 Fin :	23:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Par équipe hommes et femmes, quart de finale
+ 
+
+JOUR	12		Mercredi	7	Août	
+Session		TTE27	Début :	10:00	Fin :	13:00	Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Par équipe hommes et femmes, quart de finale
+
+ 
+Session	TTE28
+ 
+Début :	15:00 Fin :	18:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Par équipe hommes et femmes, quart de finale
+ 
+
+ 
+Session	TTE29
+ 
+Début :	20:00 Fin :	23:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Par équipes hommes, demi-finale
+ 
+
+JOUR	13		Jeudi	8	Août	
+Session		TTE30	Début :	10:00	Fin :	13:00	Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Par équipes hommes, demi-finale
+
+ 
+Session	TTE31
+ 
+Début :	15:00 Fin :	18:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Par équipes femmes, demi-finale
+ 
+Session	TTE32
+ 
+Début :	20:00 Fin :	23:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Par équipes femmes, demi-finale
+ 
+
+JOUR	14		Vendredi	9	Août	
+Session		TTE33	Début :	10:00	Fin :	13:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Par équipes hommes, match pour la médaille de bronze
+
+ 
+Session TTE34
+ 
+Début :	15:00 Fin :	18:30 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+ 
+
+ 
+
+JOUR	15		Sat	10	Août	
+Session		TTE35	Début :	10:00	Fin :	13:00 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+Par équipes femmes, match pour la médaille de bronze
+
+ 
+Session TTE36
+ 
+Début :	15:00 Fin :	18:30 Arena Paris Sud 4
+Nom de l'épreuve/des épreuves
+ 
+
+ 
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+
+TIR A L'ARC
+Calendrier par épreuves
+ 
+Version :	1
+
+JOUR -1 Jeudi 25 Juillet
+
+Session	ARC01
+
+Début :	09:30  Fin :	12:30	Invalides
+Nom de l'épreuve/des épreuves
+Épreuve individuelle - femmes, tour de classement
+ 
+
+ 
+Session	ARC02
+ 
+Début :	14:15  Fin :	17:15	Invalides
+Nom de l'épreuve/des épreuves
+Épreuve individuelle - hommes, tour de classement
+ 
+
+
+ 
+ 
+Session	ARC03
+ 
+Début :	09:30  Fin :	11:05	Invalides
+Nom de l'épreuve/des épreuves
+Épreuve par équipes - femmes, éliminatoires (8e de finale)
+ 
+
+Session	 ARC04	 Début :	14:15  Fin :	17:55	Invalides
+Nom de l'épreuve/des épreuves
+Épreuve par équipes - femmes, quarts de finale Épreuve par équipes - femmes, demi-finales
+Épreuve par équipes - femmes, match pour la médaille de bronze
+ Épreuve par équipes - femmes, match pour la médaille d'or	
+
+ 
+ 
+Session	ARC05
+ 
+Début :	09:30  Fin :	11:05	Invalides
+Nom de l'épreuve/des épreuves
+Épreuve par équipes - hommes, éliminatoires (8e de finale)
+ 
+
+Session	 ARC06	 Début :	14:15  Fin :	17:55	Invalides
+Nom de l'épreuve/des épreuves
+Épreuve par équipes - hommes, quarts de finale Épreuve par équipes - hommes, demi-finales
+Épreuve par équipes - hommes, match pour la médaille de bronze
+ Épreuve par équipes - hommes, match pour la médaille d'or	
+
+ 
+ 
+Session	ARC07
+ 
+Début :     12:00 Fin :	15:55  Invalides
+Nom de l'épreuve/des épreuves
+Épreuve individuelle - hommes, éliminatoires (32e de finale) Épreuve individuelle - femmes, éliminatoires (32e de finale) Épreuve individuelle - hommes, éliminatoires (16e de finale) Épreuve individuelle - femmes, éliminatoires (16e de finale)
+ 
+
+ 
+Session	ARC08
+ 
+Début :     17:45 Fin :	20:25  Invalides
+Nom de l'épreuve/des épreuves
+Épreuve individuelle - hommes, éliminatoires (32e de finale) Épreuve individuelle - femmes, éliminatoires (32e de finale) Épreuve individuelle - hommes, éliminatoires (16e de finale) Épreuve individuelle - femmes, éliminatoires (16e de finale)
+ 
+ 
+ 
+Session	ARC09
+ 
+Début :     12:00 Fin :	15:55  Invalides
+Nom de l'épreuve/des épreuves
+Épreuve individuelle - hommes, éliminatoires (32e de finale) Épreuve individuelle - femmes, éliminatoires (32e de finale) Épreuve individuelle - hommes, éliminatoires (16e de finale) Épreuve individuelle - femmes, éliminatoires (16e de finale)
+ 
+
+ 
+Session	ARC10
+ 
+Début :     17:45 Fin :	20:25  Invalides
+Nom de l'épreuve/des épreuves
+Épreuve individuelle - hommes, éliminatoires (32e de finale) Épreuve individuelle - femmes, éliminatoires (32e de finale) Épreuve individuelle - hommes, éliminatoires (16e de finale) Épreuve individuelle - femmes, éliminatoires (16e de finale)
+ 
+
+ 
+ 
+Session	ARC11
+ 
+Début :     09:30 Fin :	13:25  Invalides
+Nom de l'épreuve/des épreuves
+Épreuve individuelle - hommes, éliminatoires (32e de finale) Épreuve individuelle - femmes, éliminatoires (32e de finale) Épreuve individuelle - hommes, éliminatoires (16e de finale) Épreuve individuelle - femmes, éliminatoires (16e de finale)
+ 
+
+ 
+Session	ARC12
+ 
+Début :     15:30 Fin :	19:25  Invalides
+Nom de l'épreuve/des épreuves
+Épreuve individuelle - hommes, éliminatoires (32e de finale) Épreuve individuelle - femmes, éliminatoires (32e de finale) Épreuve individuelle - hommes, éliminatoires (16e de finale) Épreuve individuelle - femmes, éliminatoires (16e de finale)
+ 
+
+ 
+ 
+Session	ARC13
+ 
+Début :	09:30  Fin :	12:05	Invalides
+Nom de l'épreuve/des épreuves
+Épreuve par équipes mixte, éliminatoires (8e de finale)
+ 
+
+Session	 ARC14	 Début :	14:15  Fin :	17:25	Invalides
+Nom de l'épreuve/des épreuves
+Épreuve par équipes mixte, quarts de finale Épreuve par équipes mixte, demi-finales
+Épreuve par équipes mixte, match pour la médaille de bronze
+ Épreuve par équipes mixte, match pour la médaille d'or	
+
+ 
+ 
+Session	ARC15
+ 
+Début :	09:30  Fin :	11:15	Invalides
+Nom de l'épreuve/des épreuves
+Épreuve individuelle - femmes, éliminatoires (8e de finale)
+ 
+
+Session	 ARC16	 Début :	13:00  Fin :	15:20	Invalides
+Nom de l'épreuve/des épreuves
+Épreuve individuelle - femmes, quarts de finale Épreuve individuelle - femmes, demi-finales
+Épreuve individuelle - femmes, match pour la médaille de bronze
+ Épreuve individuelle - femmes, match pour la médaille d'or	
+ 
+ 
+ 
+Session	ARC17
+ 
+Début :	09:30  Fin :	11:15	Invalides
+Nom de l'épreuve/des épreuves
+Épreuve individuelle - hommes, éliminatoires (8e de finale)
+ 
+
+Session	 ARC18	 Début :	13:00  Fin :	15:20	Invalides
+Nom de l'épreuve/des épreuves
+Épreuve individuelle - hommes, quarts de finale Épreuve individuelle - hommes, demi-finales
+Épreuve individuelle - hommes, match pour la médaille de bronze
+ Épreuve individuelle - hommes, match pour la médaille d'or	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+TIR
+Calendrier par épreuves
+ 
+Version :
+
+
+JOUR 1 Samedi 27 Juillet
+
+Session	SHO01
+
+
+Début :	09:00	Fin :	13:45	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+Carabine à air comprimé 10 m - équipe mixte, qualification
+10 m pistolet à air - hommes, qualification	10 m pistolet à air - femmes, qualification
+ 
+
+ 
+Session SHO02
+ 
+Début :	10:30	Fin :	11:50	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+Carabine à air comprimé 10 m - équipe mixte, finale
+ 
+
+ 
+ 
+Session	SHO03
+ 
+Début :	09:15	Fin :	12:30	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+10 m rifle à air - femmes, qualification	10 m rifle à air - hommes, qualification
+ 
+
+ 
+Session SHO04
+ 
+Début :	09:30	Fin :	13:05	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves 
+ 
+Session	SHO05
+
+
+ 
+Début :	09:15	Fin :	13:05	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+Pistolet à air comprimé 10 m - équipe mixte, qualification
+
+
+Session	SHO06 
+
+Début :	09:00	Fin :	16:00	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+Fosse olympique - hommes, qualification - jour 1
+ 
+
+JOUR	4	Mardi	30	Juillet
+ 
+Session	SHO07
+
+ 
+Début :	09:00  Fin :    17:05   Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+Fosse olympique - hommes, qualification - jour 2 Fosse olympique - femmes, qualification - jour 1 Fosse olympique - hommes, finale
+Fosse olympique - hommes, finale
+
+Session SHO08
+
+Début :	09:30  Fin :    10:50   Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+Pistolet à air comprimé 10 m - équipe mixte, finale
+ 
+ 
+ 
+Session	SHO09
+ 
+Début :	09:00	Fin :	10:30	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+50 m rifle 3 positions - hommes, qualification
+ 
+
+ 
+Session SHO10
+ 
+Début :	09:00	Fin :	17:05	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+Fosse olympique - femmes, qualification - jour 2 Fosse olympique - femmes, finale
+ 
+JOUR	6	Jeudi	1	Août
+ 
+Session	SHO11
+ 
+Début :	09:30	Fin :	10:50	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+ 
+ 
+
+ 
+Session	SHO12
+ 
+Début :	12:00	Fin :	13:30	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+50 m rifle 3 positions - femmes, qualification
+ 
+
+ 
+ 
+Session	SHO13
+ 
+Début :	09:00	Fin :	14:30	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+Skeet - hommes, qualification - jour 1
+ 
+
+ 
+Session	SHO14
+
+
+
+ 
+Début :	09:00	Fin :	14:00	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+25 m pistolet - femmes, qualification
+
+Session SHO15
+
+
+Début :	09:30	Fin :	10:50	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+50 m rifle 3 positions - femmes, finale
+ 
+JOUR	8	Samedi	3	Août
+ 
+Session	SHO16
+
+
+ 
+Début :	09:00	Fin :	17:05	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves Skeet - hommes, qualification - jour 2 Skeet - femmes, qualification - jour 1 Skeet - hommes, finale
+
+Session	SHO17
+
+Début :	09:30	Fin :	10:50	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+25 m pistolet - femmes, finale
+ 
+ 
+Session	SHO18
+ 
+Début :	09:00	Fin :	17:00	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+25 m pistolet feu rapide - hommes, qualification
+ 
+
+ 
+Session SHO19
+ 
+Début :	09:30	Fin :	17:05	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves Skeet - femmes, qualification - jour 2 Skeet - femmes, finale
+ 
+JOUR	10	Lundi	5	Août
+ 
+Session	SHO20
+ 
+Début :	09:00	Fin :	16:35	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+
+Skeet - équipe mixte, qualification
+Skeet - équipe mixte, finale 
+
+ 
+ 
+Session SHO21
+ 
+Début :	09:30	Fin :	10:50	Centre National de Tir de Châteauroux*
+Nom de l'épreuve/des épreuves
+25 m pistolet feu rapide - hommes, finale
+ 
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+TRIATHLON
+Calendrier par épreuves
+Version : 1
+
+JOUR	4	Mardi	30	Juillet	
+Session		 TRI01	 Début :	08:00 Fin :	10:30	Pont Alexandre III
+Nom de l'épreuve/des épreuves
+ Hommes	
+
+JOUR	5	Mercredi	31	Juillet	
+Session		 TRI02	 Début :	08:00 Fin :	10:40	Pont Alexandre III
+Nom de l'épreuve/des épreuves
+ Femmes	
+
+JOUR	10	Lundi	5	Août	
+Session		 TRI03	 Début :	08:00	Fin :	10:10	Pont Alexandre III
+Nom de l'épreuve/des épreuves
+ Relais mixte	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+VOILE
+Calendrier par épreuves
+ 
+Version :	1
+
+
+JOUR 2 Dim 28 Juillet
+Session	SAL01
+
+Début  11:00 Fin :  19:00	Marina de Marseille
+Nom de l'épreuve/des épreuves
+Planche à voile hommes - Série d'ouverture Planche à voile femmes - Série d'ouverture Skiff hommes - Série d'ouverture
+Skiff femmes - Série d'ouverture
+ 
+
+JOUR	3		Lun	29	Juillet	
+Session		SAL02	Début	11:00 Fin :	19:00	Marina de Marseille
+Nom de l'épreuve/des épreuves
+Planche à voile hommes - Série d'ouverture Planche à voile femmes - Série d'ouverture Skiff hommes - Série d'ouverture
+Skiff femmes - Série d'ouverture
+
+JOUR	4		Mar	30	Juillet	
+Session		SAL03	Début	11:00 Fin :	19:00	Marina de Marseille
+Nom de l'épreuve/des épreuves
+Planche à voile hommes - Série d'ouverture Planche à voile femmes - Série d'ouverture Skiff hommes - Série d'ouverture
+Skiff femmes - Série d'ouverture
+
+JOUR	5		Mer	31	Juillet	
+Session		SAL04	Début	11:00 Fin :	19:00	Marina de Marseille
+Nom de l'épreuve/des épreuves Skiff hommes - Série d'ouverture Skiff femmes - Série d'ouverture
+
+JOUR	6	Jeu	1	Août	
+Session		 SAL05	 Début	11:00 Fin :	19:00	Marina de Marseille
+Nom de l'épreuve/des épreuves
+Planche à voile hommes - Série d'ouverture Marathon Planche à voile femmes - Série d'ouverture Marathon
+Skiff hommes - Course pour les médailles
+Skiff femmes - Course pour les médailles
+Dériveur - hommes - Série d'ouverture Dériveur femmes - Série d'ouverture
+ 
+JOUR	7		Ven	2	Août	
+Session	 SAL06	 Début	11:00 Fin :	19:00	Marina de Marseille
+Nom de l'épreuve/des épreuves
+Planche à voile hommes - Course pour les médailles
+Planche à voile femmes - Course pour les médailles
+Dériveur hommes - Série d'ouverture Dériveur femmes - Série d'ouverture Dériveur mixte - Série d'ouverture
+
+JOUR	8		Sam	3	Août	
+Session		SAL07	Début	11:00	Fin :	19:00	Marina de Marseille
+Nom de l'épreuve/des épreuves Dériveur hommes - Série d'ouverture Dériveur femmes - Série d'ouverture Dériveur mixte - Série d'ouverture Multicoque mixte - Série d'ouverture
+
+ 
+JOUR	9		Dim	4	Août 
+Session	SAL08
+ 
+Début	11:00 Fin :	19:00	Marina de Marseille
+Nom de l'épreuve/des épreuves Dériveur hommes - Série d'ouverture Dériveur femmes - Série d'ouverture Dériveur mixte - Série d'ouverture Multicoque mixte - Série d'ouverture Kite hommes - Série d'ouverture
+Kite femmes - Série d'ouverture
+ 
+
+
+JOUR	10		Lun	5	Août	
+Session		SAL09	Début	11:00 Fin :	19:00	Marina de Marseille
+Nom de l'épreuve/des épreuves Dériveur hommes - Série d'ouverture Dériveur femmes - Série d'ouverture Dériveur mixte - Série d'ouverture Multicoque mixte - Série d'ouverture Kite hommes - Série d'ouverture
+Kite femmes - Série d'ouverture
+
+
+JOUR	11	Mar	6	Août	
+Session		 SAL10	 Début	11:00	Fin :	19:00	Marina de Marseille
+Nom de l'épreuve/des épreuves
+Dériveur hommes - Course pour les médailles
+Dériveur femmes - Course pour les médailles
+Dériveur mixte - Série d'ouverture Multicoque mixte - Série d'ouverture Kite hommes - Série d'ouverture Kite femmes - Série d'ouverture
+
+JOUR	12	Mer	7	Août	
+Session		 SAL11	 Début	11:00 Fin :	19:00	Marina de Marseille
+Nom de l'épreuve/des épreuves
+Dériveur mixte - Course pour les médailles
+Multicoque mixte - Course pour les médailles
+Kite hommes - Série d'ouverture Kite femmes - Série d'ouverture
+ 
+
+JOUR	13	Jeu	8	Août	
+Session		 SAL12	 Début	11:00 Fin :	19:00	Marina de Marseille
+Nom de l'épreuve/des épreuves
+Kite hommes - Course pour les médailles
+Kite femmes - Course pour les médailles
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+BEACH VOLLEYBALL
+Calendrier par épreuves
+Version :	1,1
+
+JOUR	1		Samedi	27	Juillet	
+Session		VBV01	Début :	14:00	Fin :	16:00	Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (2 matchs)
+
+ 
+Session	VBV02
+ 
+Début :	18:00 Fin :	20:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (2 matchs)
+ 
+
+ 
+Session	VBV03
+ 
+Début :	22:00 Fin :	00:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (2 matchs)
+ 
+
+JOUR	2		Dimanch	28	Juillet	
+Session		VBV04	Début :	09:00	Fin :	13:00	Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (4 matchs)
+
+ 
+Session	VBV05
+ 
+Début :	15:00 Fin :	18:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (3 matchs)
+ 
+
+ 
+Session	VBV06
+ 
+Début :	20:00 Fin :	23:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (3 matchs)
+ 
+
+JOUR	3		Lundi	29	Juillet	
+Session		VBV07	Début :	09:00	Fin :	13:00	Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (4 matchs)
+
+ 
+Session	VBV08
+ 
+Début :	15:00 Fin :	18:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (3 matchs)
+ 
+
+ 
+Session	VBV09
+ 
+Début :	20:00 Fin :	23:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (3 matchs)
+ 
+
+JOUR	4		Mardi	30	Juillet	
+Session		VBV10	Début :	09:00	Fin :	13:00	Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (4 matchs)
+
+ 
+Session	VBV11
+ 
+Début :	15:00 Fin :	18:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (3 matchs)
+ 
+
+ 
+Session	VBV12
+ 
+Début :	20:00 Fin :	23:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (3 matchs)
+ 
+
+JOUR	5		Mercredi	31	Juillet	
+Session		VBV13	Début :	09:00	Fin :	13:00	Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (4 matchs)
+ 
+Session	VBV14
+ 
+Début :	15:00 Fin :	18:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (3 matchs)
+ 
+
+ 
+Session	VBV15
+ 
+Début :	20:00 Fin :	23:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (3 matchs)
+ 
+
+JOUR	6		Jeudi	1	Août		
+Session		VBV16	Début :	09:00	Fin :	13:00	Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (4 matchs)
+
+ 
+Session	VBV17
+ 
+Début :	15:00 Fin :	18:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (3 matchs)
+ 
+
+ 
+Session	VBV18
+ 
+Début :	20:00 Fin :	23:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (3 matchs)
+ 
+
+JOUR	7		Vendredi	2	Août	
+Session		VBV19	Début :	09:00	Fin :	13:00	Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (4 matchs)
+
+ 
+Session	VBV20
+ 
+Début :	15:00 Fin :	18:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (3 matchs)
+ 
+
+ 
+Session	VBV21
+ 
+Début :	20:00 Fin :	23:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (3 matchs)
+ 
+
+JOUR	8		Samedi	3	Août	
+Session		VBV22	Début :	09:00	Fin :	13:00	Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (4 matchs)
+
+ 
+Session	VBV23
+ 
+Début :	16:00 Fin :	19:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Tour préliminaire - Femmes et hommes (2 matchs) Lucky Loser - Femmes ou hommes (1 match)
+ 
+
+ 
+Session	VBV24
+ 
+Début :	21:00 Fin :	00:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Lucky Losers - Femmes et hommes (3 matchs)
+ 
+
+JOUR	9		Dimanch	4	Août	
+Session		VBV25	Début :	09:00	Fin :	11:00	Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+8e de finale - Femmes et hommes (2 matchs)
+
+ 
+Session	VBV26
+ 
+Début :	13:00 Fin :	15:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+8e de finale - Femmes et hommes (2 matchs)
+ 
+
+ 
+Session	VBV27
+ 
+Début :	17:00 Fin :	19:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+8e de finale - Femmes et hommes (2 matchs)
+ 
+
+ 
+Session	VBV28
+ 
+Début :	21:00 Fin :	23:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+8e de finale - Femmes et hommes (2 matchs)
+ 
+
+JOUR	10		Lundi	5	Août	
+Session		VBV29	Début :	09:00	Fin :	11:00	Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+8e de finale - Femmes et hommes (2 matchs)
+ 
+Session	VBV30
+ 
+Début :	13:00 Fin :	15:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+8e de finale - Femmes et hommes (2 matchs)
+ 
+
+ 
+Session	VBV31
+ 
+Début :	17:00 Fin :	19:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+8e de finale - Femmes et hommes (2 matchs)
+ 
+
+ 
+Session	VBV32
+ 
+Début :	21:00 Fin :	23:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+8e de finale - Femmes et hommes (2 matchs)
+ 
+
+JOUR	11		Mardi	6	Août	
+Session		VBV33	Début :	17:00	Fin :	19:00	Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Quarts de finales - Femmes et hommes (2 matchs)
+
+ 
+Session	VBV34
+ 
+Début :	21:00 Fin :	23:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Quarts de finales - Femmes et hommes (2 matchs)
+ 
+
+JOUR	12		Mercredi	7	Août	
+Session		VBV35	Début :	17:00	Fin :	19:00	Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Quarts de finales - Femmes et hommes (2 matchs)
+
+ 
+Session	VBV36
+ 
+Début :	21:00 Fin :	23:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Quarts de finales - Femmes et hommes (2 matchs)
+ 
+
+JOUR	13		Jeudi	8	Août	
+Session		VBV37	Début :	17:00	Fin :	19:00	Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Demi-finales - Femmes et hommes (2 matchs)
+
+ 
+Session	VBV38
+ 
+Début :	21:00 Fin :	23:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Demi-finales - Femmes et hommes (2 matchs)
+ 
+
+JOUR	14	Vendredi	9	Août	
+Session		 VBV39	 Début :	21:00	Fin :	00:00	Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Match pour la médaille de bronze - Femmes
+Match pour la médaille d'or - Femmes	
+
+Session	 VBV40	 Début :	21:00 Fin :	00:00 Stade Tour Eiffel
+Nom de l'épreuve/des épreuves
+Match pour la médaille de bronze - Hommes
+ Match pour la médaille d'or - Hommes	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+VOLLEYBALL
+Calendrier par épreuves
+ 
+Version :
+
+JOUR 1 Samedi 27 Juillet
+
+Session	VVO01
+
+Début :	09:00 Fin :	11:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+ 
+
+ 
+Session	VVO02
+ 
+Début :	13:00 Fin :	15:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+ 
+
+ 
+Session	VVO03
+ 
+Début :	17:00 Fin :	19:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+ 
+
+ 
+Session	VVO04
+ 
+Début :	21:00 Fin :	23:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+ 
+
+JOUR	2		Dimanch	28	Juillet	
+Session		VVO05	Début :	09:00	Fin :	11:30	Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+
+ 
+Session	VVO06
+ 
+Début :	13:00 Fin :	15:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+ 
+
+ 
+Session	VVO07
+ 
+Début :	17:00 Fin :	19:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+ 
+
+ 
+Session	VVO08
+ 
+Début :	21:00 Fin :	23:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+ 
+
+JOUR	3		Lundi	29	Juillet	
+Session		VVO09	Début :	09:00	Fin :	11:30	Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+
+ 
+Session	VVO10
+ 
+Début :	13:00 Fin :	15:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+ 
+
+ 
+Session	VVO11
+ 
+Début :	17:00 Fin :	19:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+ 
+
+ 
+Session	VVO12
+ 
+Début :	21:00 Fin :	23:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+ 
+
+JOUR	4		Mardi	30	Juillet	
+Session		VVO13	Début :	09:00	Fin :	11:30	Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+
+ 
+Session	VVO14
+ 
+Début :	13:00 Fin :	15:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+ 
+
+ 
+Session	VVO15
+ 
+Début :	17:00 Fin :	19:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+ 
+
+ 
+Session	VVO16
+ 
+Début :	21:00 Fin :	23:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+ 
+JOUR	5		Mercredi	31	Juillet		
+Session		VVO17	Début :	09:00	Fin :	11:30	Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+
+ 
+Session	VVO18
+ 
+Début :	13:00 Fin :	15:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+ 
+
+ 
+Session	VVO19
+ 
+Début :	17:00 Fin :	19:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+ 
+
+ 
+Session	VVO20
+ 
+Début :	21:00 Fin :	23:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+ 
+
+JOUR	6		Jeudi	1	Août	
+Session		VVO21	Début :	09:00	Fin :	11:30	Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+
+ 
+Session	VVO22
+ 
+Début :	13:00 Fin :	15:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+ 
+
+ 
+Session	VVO23
+ 
+Début :	17:00 Fin :	19:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+ 
+
+ 
+Session	VVO24
+ 
+Début :	21:00 Fin :	23:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+ 
+
+JOUR	7		Vendredi	2	Août	
+Session		VVO25	Début :	09:00	Fin :	11:30	Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+
+ 
+Session	VVO26
+ 
+Début :	13:00 Fin :	15:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+ 
+
+ 
+Session	VVO27
+ 
+Début :	17:00 Fin :	19:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+ 
+
+ 
+Session	VVO28
+ 
+Début :	21:00 Fin :	23:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+ 
+
+JOUR	8		Samedi	3	Août	
+Session		VVO29	Début :	09:00	Fin :	11:30	Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+
+ 
+Session	VVO30
+ 
+Début :	13:00 Fin :	15:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+ 
+
+ 
+Session	VVO31
+ 
+Début :	17:00 Fin :	19:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+ 
+
+ 
+Session	VVO32
+ 
+Début :	21:00 Fin :	23:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Eliminatoires
+ 
+
+JOUR	9		Dimanch	4	Août	
+Session		VVO33	Début :	09:00	Fin :	11:30	Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+ 
+Session	VVO34
+ 
+Début :	13:00 Fin :	15:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+ 
+
+ 
+Session	VVO35
+ 
+Début :	17:00 Fin :	19:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+ 
+
+ 
+Session	VVO36
+ 
+Début :	21:00 Fin :	23:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Eliminatoires
+ 
+
+JOUR	10		Lundi	5	Août		
+Session		VVO37	Début :	09:00	Fin :	11:30	Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Quart de finale
+
+ 
+Session	VVO38
+ 
+Début :	13:00 Fin :	15:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Quart de finale
+ 
+
+ 
+Session	VVO39
+ 
+Début :	17:00 Fin :	19:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Quart de finale
+ 
+
+ 
+Session	VVO40
+ 
+Début :	21:00 Fin :	23:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Quart de finale
+ 
+
+JOUR	11		Mardi	6	Août	
+Session		VVO41	Début :	09:00	Fin :	11:30	Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Quart de finale
+
+ 
+Session	VVO42
+ 
+Début :	13:00 Fin :	15:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Quart de finale
+ 
+
+ 
+Session	VVO43
+ 
+Début :	17:00 Fin :	19:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Quart de finale
+ 
+
+ 
+Session	VVO44
+ 
+Début :	21:00 Fin :	23:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Quart de finale
+ 
+
+JOUR	12		Mercredi	7	Août	
+Session		VVO45	Début :	16:00	Fin :	18:30	Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Demi-finale
+
+ 
+Session	VVO46
+ 
+Début :	20:00 Fin :	22:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Demi-finale
+ 
+
+
+JOUR	13		Jeudi	8	Août	
+Session		VVO47	Début :	16:00	Fin :	18:30	Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Demi-finale
+
+ 
+Session	VVO48
+ 
+Début :	20:00 Fin :	22:30 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Demi-finale
+ 
+
+JOUR	14		Vendredi	9	Août	
+Session		VVO49	Début :	16:00	Fin :	18:30	Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Hommes, Match pour la médaille de bronze
+
+JOUR	15	Samedi	10	Août	
+Session		 VVO50	 Début :	13:00	Fin :	15:45	Arena Paris Sud 1
+ 
+Nom de l'épreuve/des épreuves
+ Hommes, Match pour la médaille d'or	
+
+ 
+Session	VVO51
+ 
+Début :	17:15 Fin :	19:45 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+Femmes, Match pour la médaille de bronze
+ 
+
+ 
+Session	 VVO52	 Début :	13:00 Fin :	15:45 Arena Paris Sud 1
+Nom de l'épreuve/des épreuves
+ Femmes, Match pour la médaille d'or	
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+VTT
+Calendrier par épreuves
+Version :	1
+
+JOUR 2 Dim 28 Juil
+Session MTB01
+
+Début : 14:00 Fin :	16:30	Colline d'Elancourt
+Nom de l'épreuve/des épreuves
+Cross-country - femmes	
+ 
+
+
+
+ 
+Session	 MTB02	 Début : 14:00 Fin :	16:30	Colline d'Elancourt
+Nom de l'épreuve/des épreuves
+Cross-country - hommes	
+
+
+
+
+
+ 
+Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
+WATER POLO
+Calendrier par épreuves
+Version :	1
+JOUR 1 Samedi 27 Juillet
+Session WPO01
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+Session	WPO02
+ 
+
+Début :	18:30 Fin :	21:30 Centre aquatique
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+
+JOUR	2		Dimanche	28	Juillet	
+Session		WPO03	Début :	10:30	Fin :	13:30	Centre aquatique
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+
+ 
+Session	WPO04
+ 
+Début :	15:00 Fin :	18:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+ 
+Session	WPO05
+ 
+Début :	19:30 Fin :	22:30 Centre aquatique
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+JOUR	3		Lundi	29	Juillet	
+Session		WPO06	Début :	14:00	Fin :	17:00	Centre aquatique
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+
+ 
+Session	WPO07
+ 
+Début :	18:30 Fin :	21:30 Centre aquatique
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+
+JOUR	4		Mardi	30	Juillet	
+Session		WPO08	Début :	10:30	Fin :	13:30	Centre aquatique
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+
+ 
+Session	WPO09
+ 
+Début :	15:00 Fin :	18:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+ 
+Session	WPO10
+ 
+Début :	19:30 Fin :	22:30 Centre aquatique
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+JOUR	5		Mercredi	31	Juillet	
+Session		WPO11	Début :	14:00	Fin :	17:00	Centre aquatique
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+
+ 
+Session	WPO12
+ 
+Début :	18:30 Fin :	21:30 Centre aquatique
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+
+JOUR	6		Jeudi	1	Août	
+Session		WPO13	Début :	10:30	Fin :	13:30	Centre aquatique
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+
+ 
+Session	WPO14
+ 
+Début :	15:00 Fin :	18:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+ 
+Session	WPO15
+ 
+Début :	19:30 Fin :	22:30 Centre aquatique
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+JOUR	7		Vendredi	2	Août	
+Session		WPO16	Début :	14:00	Fin :	17:00	Centre aquatique
+Nom de l'épreuve/des épreuves
+ 
+Femmes, tour préliminaire (2 matchs)
+
+ 
+Session	WPO17
+ 
+Début :	18:30 Fin :	21:30 Centre aquatique
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+
+JOUR	8		Samedi	3	Août		
+Session		WPO18	Début :	10:30	Fin :	13:30	Centre aquatique
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+
+ 
+Session	WPO19
+ 
+Début :	15:00 Fin :	18:00 Centre aquatique
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+ 
+Session	WPO20
+ 
+Début :	19:30 Fin :	22:30 Centre aquatique
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (2 matchs)
+ 
+
+JOUR	9		Dimanche	4	Août	
+Session		WPO21	Début :	14:00	Fin :	17:00	Centre aquatique
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+
+ 
+Session	WPO22
+ 
+Début :	18:30 Fin :	21:30 Centre aquatique
+Nom de l'épreuve/des épreuves
+Femmes, tour préliminaire (2 matchs)
+ 
+
+JOUR	10		Lundi	5	Août	
+Session		WPO23	Début :	12:00	Fin :	16:30	Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (3 matchs)
+
+ 
+Session	WPO24
+ 
+Début :	18:30 Fin :	23:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+Hommes, tour préliminaire (3 matchs)
+ 
+
+
+JOUR	11		Mardi	6	Août	
+Session		WPO25	Début :	14:00	Fin :	17:00	Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+Femmes, quarts de finale (2 matchs)
+
+ 
+Session	WPO26
+ 
+Début :	19:00 Fin :	22:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+Femmes, quarts de finale (2 matchs)
+ 
+
+JOUR	12		Mercredi	7	Août	
+Session		WPO27	Début :	14:00	Fin :	17:00	Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+Hommes, quarts de finale (2 matchs)
+
+ 
+Session	WPO28
+ 
+Début :	19:00 Fin :	22:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+Hommes, quarts de finale (2 matchs)
+ 
+
+JOUR	13		Jeudi	8	Août	
+Session		WPO29	Début :	13:00	Fin :	16:00	Paris La Défense Arena
+Nom de l'épreuve/des épreuves Femmes, match de classement Femmes, demi-finale
+
+ 
+Session	WPO30
+ 
+Début :	18:00 Fin :	21:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves Femmes, match de classement Femmes, demi-finale
+ 
+
+JOUR	14		Vendredi	9	Août	
+Session		WPO31	Début :	13:00	Fin :	16:00	Paris La Défense Arena
+Nom de l'épreuve/des épreuves Hommes, match de classement Hommes, demi-finale
+
+ 
+Session	WPO32
+ 
+Début :	18:00 Fin :	21:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+Hommes, match de classement
+ 
+Hommes, demi-finale
+
+ 
+JOUR 15 Samedi 10 Août
+Session	WPO33
+ 
+Début :	09:00 Fin :	12:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+Femmes, match de classement
+Femmes, match pour la médaille de bronze
+ 
+
+Session	 WPO34	 Début :	14:00 Fin :	21:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+Femmes, match de classement
+ Femmes, match pour la médaille d'or	 Hommes, match de classement
+
+JOUR	16		Dimanche	11	Août	
+Session		WPO35	Début :	09:00	Fin :	12:00 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+Hommes, match de classement
+Hommes, match pour la médaille de bronze
+
+Session	 WPO36	 Début :	14:00 Fin :	15:50 Paris La Défense Arena
+Nom de l'épreuve/des épreuves
+ Hommes, match pour la médaille d'or
