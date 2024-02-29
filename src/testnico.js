@@ -7,9 +7,34 @@
  */
 // Set the dimensions and margins
 
-const margin = { top: 10, right: 10, bottom: 45, left: 10 }
-const window_width = window.innerWidth - margin.left - margin.right
-const window_height = window.innerHeight - margin.top - margin.bottom
+var margin = { top: 10, right: 10, bottom: 45, left: 10 }
+var window_width = window.innerWidth - margin.left - margin.right
+var window_height = window.innerHeight - margin.top - margin.bottom
+
+// Initialisation de la carte
+
+d3.select('body').append('div')
+  // .attr('style', `width:${map_width}px; height:${map_height}px`)
+  .attr('id', 'map')
+var map = L.map('map')// Did not set view because we are using "fit bounds" to get the polygons to determine this
+var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map)
+
+createMap()
+
+var Tooltip = d3.select('body')
+  .append('div')
+  .style('z-index', 3000)
+  .style('opacity', 0)
+  .attr('class', 'tooltip')
+  .style('background-color', 'white')
+  .style('border', 'solid')
+  .style('border-width', '2px')
+  .style('border-radius', '5px')
+  .style('padding', '5px')
+
+main()
 
 async function main() {
   const locParsed = await loadLoc()
@@ -86,7 +111,7 @@ async function main() {
         d3.select(this)
           .select('circle')
           .attr('cx', (d.x = xAxisValue))
-        // move the blue line
+        // move the dark line
         g.select('.darkline')
           .attr('d', d3.line()(dateBalls.map((d) => [d.x, d.y])))
         // change the text
@@ -94,16 +119,23 @@ async function main() {
           .select('text')
           .attr('x', (d) => xAxisValue)
           .text((d) => d3.utcFormat('%a %e %b')(date))
+
+        const SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
+
+        // Filter data based in slider value
+        const planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
+        // Update the map with the new domain
+        updateMap(planningfiltered)
       })
 
       .on('end', () => {
-        const SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
-        console.log(SelectedDates)
-        // Filter data based in slider value
-        const planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
-        console.log(planningfiltered);
-        // Update the map with the new domain
-        // interactive_map()
+        // const SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
+        // console.log(SelectedDates)
+        // // Filter data based in slider value
+        // const planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
+        // console.log(planningfiltered);
+        // // Update the map with the new domain
+        // updateMap(planningfiltered)
       })
   )
 
@@ -128,25 +160,14 @@ async function main() {
     .text((d) => d3.utcFormat('%a %e %b')(scaleBalls(d.x)))
 
   // ______________________________________________________________________________//
-  await interactive_map()
+
+  updateMap(planningParsed)
   // _____________________________________________________________________________//
 }
 
-async function interactive_map() {
-  // CARTE INTERACTIVE
-  const planningParsed = await loadJOData()
+async function createMap() {
+
   const idfArr = await loadArr()
-  const map_width = window_width * 0.75
-  const map_height = map_width / 1.6
-  d3.select('body').append('div')
-    // .attr('style', `width:${map_width}px; height:${map_height}px`)
-    .attr('id', 'map')
-
-  const map = L.map('map')// Did not set view because we are using "fit bounds" to get the polygons to determine this
-  const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map)
-
   const idfLayer = L.geoJson(idfArr, { // instantiates a new geoJson layer using built in geoJson handling
     weight: 2, // Attributes of polygons including the weight of boundaries and colors of map.
     color: '#432',
@@ -156,26 +177,19 @@ async function interactive_map() {
   }).addTo(map) // Adds the layer to the map.
 
   map.fitBounds(idfLayer.getBounds()) // finds bounds of polygon and automatically gets map view to fit (useful for interaction and not having to 'cook' the map zoom and coordinates as in map instantiation
-
   L.svg({ clickable: true }).addTo(map)
-  const overlay = d3.select(map.getPanes().overlayPane)
-  const svg_map = overlay.select('svg').attr('pointer-events', 'auto')
-  const bigg = d3.select("#map").select("svg").select("g")
+  var overlay = d3.select(map.getPanes().overlayPane)
+  var svg_map = overlay.select('svg').attr('pointer-events', 'auto')
+  var bigg = d3.select("#map").select("svg").select("g")
   bigg.attr("class", "leaflet-zoom-hide")
+} // Fin fonction createMap
 
-  const Tooltip = d3.select('body')
-    .append('div')
-    .style('z-index', 3000)
-    .style('opacity', 0)
-    .attr('class', 'tooltip')
-    .style('background-color', 'white')
-    .style('border', 'solid')
-    .style('border-width', '2px')
-    .style('border-radius', '5px')
-    .style('padding', '5px')
 
-  const Dots = svg_map.selectAll('points')
-    .data(planningParsed)
+async function updateMap(filteredData) {
+
+  const bigg = d3.select("#map").select("svg").select("g")
+  const Dots = bigg.selectAll('points')
+    .data(filteredData)
     .join('circle')
     .attr('class', 'circle')
     .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
@@ -214,7 +228,29 @@ async function interactive_map() {
     .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
 
   map.on('zoomend', update)
-}
+
+  const dots_unbinded = bigg.selectAll("circle")
+    .data(filteredData, d => {
+      return d.index;
+    });
+  // remove unbinded elements
+  dots_unbinded.exit()
+    .transition().duration(0)
+    .attr("r", 1)
+    .remove();
+
+  // console.log(dots_unbinded)
+
+} // Fin fonction updateMap
+
+
+// Fonction pour maj les données du slider et les cercles de la map en conséquence:
+// function sliderupdate() {
+//   const SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)));
+//   // Filter data based in slider value
+//   const planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0]);
+//   console.log(SelectedDates)
+// }
 
 // Fonctions de chargement et parsing des données
 async function loadArr() {
