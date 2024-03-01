@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-async function main () {
+async function main() {
   const france = await getFrance()
   const covidData = await loadCovidData()
   const departements = [...new Set(covidData.map(d => d.dep))]
@@ -31,7 +31,7 @@ async function main () {
 
 const parseDate = d3.timeParse('%Y-%m-%d')
 
-async function loadCovidData () {
+async function loadCovidData() {
   const covidData = await (d3.csv('covid-06-11-2021.csv').then(function (data) {
     // console.log('data : ', data)
     data.forEach(d => {
@@ -43,7 +43,7 @@ async function loadCovidData () {
   return covidData
 }
 
-async function getFrance () {
+async function getFrance() {
   const france = (await fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson')).json()
   return france
 }

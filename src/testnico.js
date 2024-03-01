@@ -5,13 +5,16 @@
  * Cartographie qui trace les POI sur un fond de carte Openstreetmap
  * @returns none
  */
-// Set the dimensions and margins
+
+//__________________________________________________________________________________________________________________________//
+
+// Initialisation dimensions
 
 var margin = { top: 10, right: 10, bottom: 45, left: 10 }
 var window_width = window.innerWidth - margin.left - margin.right
 var window_height = window.innerHeight - margin.top - margin.bottom
 
-// Initialisation de la carte
+// Initialisation Map
 
 d3.select('body').append('div')
   // .attr('style', `width:${map_width}px; height:${map_height}px`)
@@ -21,7 +24,7 @@ var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map)
 
-createMap()
+// Initialisation Tooltip
 
 var Tooltip = d3.select('body')
   .append('div')
@@ -34,20 +37,25 @@ var Tooltip = d3.select('body')
   .style('border-radius', '5px')
   .style('padding', '5px')
 
-main()
+// Création de la carte
+createMap()
 
-async function main() {
-  const locParsed = await loadLoc()
+// Création du slider de date interactif
+slider()
+
+
+//__________________________________________________________________________________________________________________________//
+// Fonctions utilisées //
+
+async function slider() {
   // Data
+  const locParsed = await loadLoc()
   const planningParsed = await loadJOData()
   // Variables de Dates
   const dates_str = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates uniques sans formatter en str bizarre !
   console.log(planningParsed)
   const dates = d3.sort(d3.map(dates_str, d => d3.utcParse('%A %e %B %Y')(d)))
   const SelectedDates = [dates[0], dates[dates.length - 1]]
-  // _______________________________________________________________________________//
-
-  // SLIDER DE DATES
 
   // Couleurs et dimensions
   const colours = {
@@ -129,13 +137,9 @@ async function main() {
       })
 
       .on('end', () => {
-        // const SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
-        // console.log(SelectedDates)
-        // // Filter data based in slider value
-        // const planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
-        // console.log(planningfiltered);
-        // // Update the map with the new domain
-        // updateMap(planningfiltered)
+        const SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
+        const planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
+        console.log(planningfiltered)
       })
   )
 
@@ -159,19 +163,17 @@ async function main() {
     .attr('fill', colours.accent)
     .text((d) => d3.utcFormat('%a %e %b')(scaleBalls(d.x)))
 
-  // ______________________________________________________________________________//
+} // Fin fonction slider()
 
-  updateMap(planningParsed)
-  // _____________________________________________________________________________//
-}
+//__________________________________________________________________________________________________________________________//
 
 async function createMap() {
-
+  const planningParsed = await loadJOData()
   const idfArr = await loadArr()
   const idfLayer = L.geoJson(idfArr, { // instantiates a new geoJson layer using built in geoJson handling
     weight: 2, // Attributes of polygons including the weight of boundaries and colors of map.
     color: '#432',
-    opacity: 0.2
+    opacity: 0.15
   }).bindPopup(function (Layer) { // binds a popup when clicking on each polygon to access underlying data
     return Layer.feature.properties.NAME
   }).addTo(map) // Adds the layer to the map.
@@ -182,8 +184,11 @@ async function createMap() {
   var svg_map = overlay.select('svg').attr('pointer-events', 'auto')
   var bigg = d3.select("#map").select("svg").select("g")
   bigg.attr("class", "leaflet-zoom-hide")
+
+  updateMap(planningParsed)
 } // Fin fonction createMap
 
+//__________________________________________________________________________________________________________________________//
 
 async function updateMap(filteredData) {
 
@@ -233,6 +238,7 @@ async function updateMap(filteredData) {
     .data(filteredData, d => {
       return d.index;
     });
+
   // remove unbinded elements
   dots_unbinded.exit()
     .transition().duration(0)
@@ -243,14 +249,7 @@ async function updateMap(filteredData) {
 
 } // Fin fonction updateMap
 
-
-// Fonction pour maj les données du slider et les cercles de la map en conséquence:
-// function sliderupdate() {
-//   const SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)));
-//   // Filter data based in slider value
-//   const planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0]);
-//   console.log(SelectedDates)
-// }
+//__________________________________________________________________________________________________________________________//
 
 // Fonctions de chargement et parsing des données
 async function loadArr() {
@@ -300,3 +299,5 @@ async function loadJOData() {
     }))
   return planningParsed
 }
+
+//__________________________________________________________________________________________________________________________//
