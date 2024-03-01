@@ -143,9 +143,9 @@ async function main() {
   d3.select('body').append('div')
     .attr('style', `width:${map_width}px; height:${map_height}px`)
     .attr('id', 'map')
-  
+
   // PLANNING INFRAS
-  const timeTableHeight =  window_height //- margin.top - margin.bottom
+  const timeTableHeight = window_height //- margin.top - margin.bottom
   const timeTableWidth = window_width / 2
   const xInitTT = map_width + margin.left
   const yInitTT = map_height / 2
@@ -158,9 +158,9 @@ async function main() {
   d3.select('body').append('div')
     .attr('style', `width:${timeTableWidth}px; height:${timeTableHeight}px`)
     .attr('id', 'timeTable')
-  
+
   d3.select('body').append('div')
-    .attr('style', `width:${timeTableWidth/2}px; height:${timeTableHeight/2}px`)
+    .attr('style', `width:${timeTableWidth / 2}px; height:${timeTableHeight / 2}px`)
     .attr('id', 'infoSession')
 
   const gridSession = new gridjs.Grid({
@@ -175,8 +175,8 @@ async function main() {
     resizable: true,
     pagination: true,
     fixedHeader: true,
-    height: timeTableHeight/2+'px',
-    width: timeTableWidth/2 +'px',
+    height: timeTableHeight / 2 + 'px',
+    width: timeTableWidth / 2 + 'px',
     style: {
       td: {
         border: '1px solid #ccc'
@@ -186,16 +186,16 @@ async function main() {
       }
     }
   });
-  
+
   gridSession.render(document.getElementById('infoSession'));
-  
+
   const grid = new gridjs.Grid({
     columns: [
       'Discipline',
       'Jour',
       'Début',
       'Fin',
-      { 
+      {
         name: 'infosEpreuves',
         hidden: true
       }],
@@ -205,8 +205,8 @@ async function main() {
     resizable: true,
     pagination: true,
     fixedHeader: true,
-    height: timeTableHeight+'px',
-    width: timeTableWidth +'px',
+    height: timeTableHeight + 'px',
+    width: timeTableWidth + 'px',
     style: {
       td: {
         border: '1px solid #ccc'
@@ -217,22 +217,22 @@ async function main() {
     }
   });
   grid.render(document.getElementById('timeTable'));
-  
+
   grid.on('rowClick', (...args) => updateSession(args))
   // console.log('row: ' + JSON.stringify(args), args));
-  
+
   function updateSession(args) {
     dataSession = args[1]._cells[4].data.content
     // .epreuve, args[1]._cells[4].data.content.genre, args[1]._cells[4].data.content.etape]
     console.log(dataSession)//[dataSession.epreuve, dataSession.genre, dataSession.etape])
     gridSession.updateConfig({
-      data : dataSession // [dataSession.epreuve, dataSession.genre, dataSession.etape]
+      data: dataSession // [dataSession.epreuve, dataSession.genre, dataSession.etape]
     }).forceRender();
   }
   // gridSession.updateConfig({
   //   data : dataSelectedSessions
   // }).forceRender();
-  
+
 
   const map = L.map('map')// Did not set view because we are using "fit bounds" to get the polygons to determine this
   const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -304,7 +304,7 @@ async function main() {
       document.getElementById("timeTable").innerHTML = "";
       selectedPlace = d.lieu_epreuve
       document.getElementById("dayTimeTable").innerHTML = selectedPlace
-      selectedSessions= d3.filter(planningfiltered, d => d.lieu_epreuve === selectedPlace)
+      selectedSessions = d3.filter(planningfiltered, d => d.lieu_epreuve === selectedPlace)
       console.log(selectedPlace)
 
 
@@ -322,18 +322,18 @@ async function main() {
       // grid.render(document.getElementById('timeTable'));
 
       grid.updateConfig({
-        data : dataSelectedSessions
+        data: dataSelectedSessions
       }).forceRender();
 
       // for (var i = 0; i < selectedSessions.length; i++){
       //   console.log(selectedSessions[i].discipline)
       //   console.log(selectedSessions[i].date, selectedSessions[i].debut_epreuve, selectedSessions[i].fin_epreuve)
-        
+
       //   const grid = new gridjs.Grid({
       //     columns: ['Discipline', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
       //     data: dataSelectedSessions
       //   });
-        
+
       //   obj = JSON.parse(selectedSessions[i].parsing_epreuve)
       //   infosEpreuve = obj.content
       //   console.log(infosEpreuve)
@@ -346,7 +346,7 @@ async function main() {
       // isJsonString('{ "Id": 1, "Name": "Coke" }')
       // planningfiltered = d3.filter(planningfiltered, d => d.lieu_epreuve <= SelectedDates[1] )
     })
-  
+
 
   const update = () => Dots
     .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
@@ -362,8 +362,8 @@ async function main() {
   //   .attr("width", timeTableWidth)
   //   .attr("height", timeTableHeight)
 
-    // .attr('x', xInitTT)
-    // .attr('y', yInitTT)
+  // .attr('x', xInitTT)
+  // .attr('y', yInitTT)
 
   // Add the path using this helper function
   // timeTable.append('rect')
@@ -377,13 +377,13 @@ async function main() {
   // const timeTable = d3.select('body')
   //   .append('div')
   //   .attr('class', 'rect')
-    // .attr("x", x_init)
-    // .attr("y", y_init)
-    // .attr("width", timeTableWidth)
-    // .attr("height", timeTableHeight)
-    // .attr("fill", "red")
-    // .attr("stroke-width", 3)
-    // .attr("stroke", "black")
+  // .attr("x", x_init)
+  // .attr("y", y_init)
+  // .attr("width", timeTableWidth)
+  // .attr("height", timeTableHeight)
+  // .attr("fill", "red")
+  // .attr("stroke-width", 3)
+  // .attr("stroke", "black")
 }
 
 
@@ -431,27 +431,27 @@ async function loadLoc() {
 
 function isJsonString(str) {
   try {
-      JSON.parse(str);
+    JSON.parse(str);
   } catch (e) {
-      return false;
+    return false;
   }
   return true;
 }
 
 
-function customJSONParsing(x){
+function customJSONParsing(x) {
   try {
-      return JSON.parse(x);
+    return JSON.parse(x);
   } catch (e) {
-      return {"content" : []};
+    return { "content": [] };
   }
-// return true;
-//   if(isJsonString(x)){
-//     return JSON.parse(x)
-//   }
-//   else {
-//     return {}
-//   }
+  // return true;
+  //   if(isJsonString(x)){
+  //     return JSON.parse(x)
+  //   }
+  //   else {
+  //     return {}
+  //   }
 }
 
 async function loadJOData() {
