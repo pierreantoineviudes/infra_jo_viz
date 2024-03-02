@@ -49,11 +49,14 @@ async function slider() {
   // Data
   const locParsed = await loadLoc()
   const planningParsed = await loadJOData()
+  var planningfiltered;
+  var lieux_uniques;
+  var Tab_lieux_uniques;
+
   // Variables de Dates
   const dates_str = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates uniques sans formatter en str bizarre !
-  console.log(planningParsed)
   const dates = d3.sort(d3.map(dates_str, d => d3.utcParse('%A %e %B %Y')(d)))
-  const SelectedDates = [dates[0], dates[dates.length - 1]]
+  var SelectedDates;
 
   // Couleurs et dimensions
   const colours = {
@@ -126,18 +129,22 @@ async function slider() {
           .attr('x', (d) => xAxisValue)
           .text((d) => d3.utcFormat('%a %e %b')(date))
 
-        const SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
+        SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
 
         // Filter data based in slider value
-        const planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
+        planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
+        lieux_uniques = [...new Set(planningfiltered.map(d => d.lieu_epreuve))]
+        // Création du nouveau tableau contenant les valeurs uniques des lieu_epreuve
+        Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
+          return planningfiltered.find(obj => obj.lieu_epreuve === lieu);
+        })
         // Update the map with the new domain
-        updateMap(planningfiltered)
+        updateMap(Tab_lieux_uniques)
       })
 
       .on('end', () => {
-        const SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
-        const planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
-        console.log(planningfiltered)
+
+        console.log(Tab_lieux_uniques)
 
       })
   )
@@ -168,6 +175,10 @@ async function slider() {
 
 async function createMap() {
   const planningParsed = await loadJOData()
+  const lieux_uniques = [...new Set(planningParsed.map(d => d.lieu_epreuve))]
+  const Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
+    return planningParsed.find(obj => obj.lieu_epreuve === lieu);
+  })
   const idfArr = await loadArr()
   const idfLayer = L.geoJson(idfArr, { // instantiates a new geoJson layer using built in geoJson handling
     weight: 2, // Attributes of polygons including the weight of boundaries and colors of map.
@@ -184,7 +195,7 @@ async function createMap() {
   var bigg = d3.select("#map").select("svg").select("g")
   bigg.attr("class", "leaflet-zoom-hide")
 
-  updateMap(planningParsed)
+  updateMap(Tab_lieux_uniques)
 } // Fin fonction createMap
 
 //__________________________________________________________________________________________________________________________//
@@ -206,7 +217,7 @@ async function updateMap(filteredData) {
     .on('mousemove', function (e, d) { // function to add mouseover event
       Tooltip
         .style('opacity', 0.9)
-        .style('top', (e.pageY - 40) + 'px')
+        .style('top', (e.pageY - 20) + 'px')
         .style('left', (e.pageX + 30) + 'px')
         .html(d.lieu_epreuve)
 
@@ -223,7 +234,7 @@ async function updateMap(filteredData) {
       d3.select(this).transition()
         .duration('100')
         .style('fill', 'steelblue')
-        .style('opacity', 0.05)
+        .style('opacity', 0.8)
         .attr('r', 5)
     })
 
