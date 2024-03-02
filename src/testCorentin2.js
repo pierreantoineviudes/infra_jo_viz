@@ -23,6 +23,11 @@ async function main() {
     var locParsed = await loadLoc()
     var planningParsed = await loadJOData()
     var planningfiltered = planningParsed
+    var lieux_uniques = [...new Set(planningParsed.map(d => d.lieu_epreuve))]
+    var Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
+        return planningParsed.find(obj => obj.lieu_epreuve === lieu);
+    })
+    
     // Variables de Dates
     var dates_str = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates uniques sans formatter en str bizarre !
     var dates = d3.sort(d3.map(dates_str, d => d3.utcParse('%A %e %B %Y')(d)))
@@ -267,7 +272,7 @@ async function main() {
         var bigg = d3.select("#map").select("svg").select("g")
         bigg.attr("class", "leaflet-zoom-hide")
 
-        updateMap(planningParsed)
+        updateMap(Tab_lieux_uniques)
     } // Fin fonction createMap
 
     //__________________________________________________________________________________________________________________________//
