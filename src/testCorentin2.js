@@ -22,7 +22,7 @@ async function main() {
     // Data
     var locParsed = await loadLoc()
     var planningParsed = await loadJOData()
-    var planningfiltered;
+    var planningfiltered = planningParsed;
     var lieux_uniques = [...new Set(planningParsed.map(d => d.lieu_epreuve))]
     var Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
         return planningParsed.find(obj => obj.lieu_epreuve === lieu);
@@ -31,7 +31,7 @@ async function main() {
     // Variables de Dates
     var dates_str = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates uniques sans formatter en str bizarre !
     var dates = d3.sort(d3.map(dates_str, d => d3.utcParse('%A %e %B %Y')(d)))
-    var SelectedDates;
+    var SelectedDates = dates;
 
     // Initialisation Map
 
@@ -58,6 +58,10 @@ async function main() {
 
     // Création des tableaux
     // Infos sessions
+    var titleInfoSessions = d3.select('body').append('div')
+        .attr('style', `width:${timeTableWidth / 2}px; height:${timeTableHeight / 2}px`)
+        .attr('id', 'headInfoSession')
+
     var sessionTable = d3.select('body').append('div')
         .attr('style', `width:${timeTableWidth / 2}px; height:${timeTableHeight / 2}px`)
         .attr('id', 'infoSession')
@@ -92,7 +96,7 @@ async function main() {
 
     // Planning infras
     var selectedPlace = ""
-    var TitlePlanning = d3.select('body').append('div')
+    var titlePlanning = d3.select('body').append('div')
         .attr('style', `width:${timeTableWidth}px; height:80px`)
         .attr('id', 'dayTimeTable')
 
@@ -104,13 +108,12 @@ async function main() {
         columns: [
             'Discipline',
             'Jour',
-            'Début',
-            'Fin',
+            'Heure',
             {
                 name: 'infosEpreuves',
                 hidden: true
             }],
-        data: [["", "", "", ""]],
+        data: [["", "", ""]],
         // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
         // data: [["", "", "", ""]],
         resizable: true,
@@ -432,25 +435,29 @@ async function main() {
     //__________________________________________________________________________________________________________________________//
 
     function updateSession(args) {
-        dataSession = args[1]._cells[4].data.content
+        sessionString = selectedPlace + "|" + args[1]._cells[0].data + "|" + args[1]._cells[1].data + "|" + args[1]._cells[2].data
+        console.log(sessionString)
+        titleInfoSessions.html("Session : " + sessionString)
+        dataSession = args[1]._cells[3].data.content
         // .epreuve, args[1]._cells[4].data.content.genre, args[1]._cells[4].data.content.etape]
         console.log(dataSession)//[dataSession.epreuve, dataSession.genre, dataSession.etape])
         gridSession.updateConfig({
             data: dataSession // [dataSession.epreuve, dataSession.genre, dataSession.etape]
         }).forceRender();
         sessionTable.style('opacity', 0.9)
+        titleInfoSessions.style('opacity', 1)
     } // Fin fonction updateSession
 
     //__________________________________________________________________________________________________________________________//
 
     function updateTimeTable() {
         document.getElementById("timeTable").innerHTML = "";
-        document.getElementById("dayTimeTable").innerHTML = selectedPlace
+        titlePlanning.html(selectedPlace)
         selectedSessions = d3.filter(planningfiltered, d => d.lieu_epreuve === selectedPlace)
         console.log(selectedPlace)
 
 
-        dataSelectedSessions = selectedSessions.map(d => [d.discipline, d.jour, d.debut_epreuve, d.fin_epreuve, customJSONParsing(d.parsing_epreuve)])
+        dataSelectedSessions = selectedSessions.map(d => [d.discipline, d.jour, d.plage, customJSONParsing(d.parsing_epreuve)])
         console.log(dataSelectedSessions)
 
         console.log(gridTimeTable)
@@ -459,6 +466,7 @@ async function main() {
         }).forceRender();
         planningInfras.style('opacity', 0.9)
         sessionTable.style('opacity', 0)
+        titleInfoSessions.style('opacity', 0)
         // document.getElementById("timeTable").style('opacity', 0.9)
     } // Fin fonction updateTimeTable
 
@@ -513,6 +521,7 @@ async function main() {
                 return data.map((d, i) => {
                     const r = d
                     r.jour = d.date
+                    r.plage = d.debut_epreuve + " : " + d.fin_epreuve
                     r.time = parseDateHour(d.date + ' ' + '2024' + ' ' + d.debut_epreuve)
                     r.date = parseDate(d.date + ' ' + '2024')
                     r.num_jour = +r.num_jour
