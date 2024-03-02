@@ -28,6 +28,12 @@ async function main() {
     return planningParsed.find(obj => obj.lieu_epreuve === lieu);
   })
 
+  //Echelles
+
+  var RadiusScale = d3.scaleLinear()
+    .domain(d3.extent(planningParsed, d => +d.capacite))
+    .range([10, 30])
+
   // Variables de Dates
   var dates_str = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates uniques sans formatter en str bizarre !
   var dates = d3.sort(d3.map(dates_str, d => d3.utcParse('%A %e %B %Y')(d)))
@@ -292,23 +298,23 @@ async function main() {
       .attr('class', 'circle')
       .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
       .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
-      .attr('r', 5)
+      .attr('r', d => RadiusScale(d.capacite))
       .style('fill', 'steelblue')
       .style('stroke', 'black')
-      .style('opacity', 0.8)
+      .style('opacity', 0.5)
 
       .on('mousemove', function (e, d) { // function to add mouseover event
         Tooltip
           .style('opacity', 0.9)
-          .style('top', (e.pageY - 30) + 'px')
-          .style('left', (e.pageX + 30) + 'px')
-          .html(d.lieu_epreuve)
+          .style('top', (e.pageY - 40) + 'px')
+          .style('left', (e.pageX + 15) + 'px')
+          .html(d.lieu_epreuve + " - " + d.capacite)
 
         d3.select(this).transition() // D3 selects the object we have moused over in order to perform operations on it
           .duration('100') // how long we are transitioning between the two states (works like keyframes)
           .style('fill', 'red') // change the fill
-          .attr('r', 7)
-          .style('opacity', 1)
+        // .attr('r', 7)
+        // .style('opacity', 1)
       })
 
       .on('mouseleave', function () {
@@ -319,7 +325,7 @@ async function main() {
           .duration('100')
           .style('fill', 'steelblue')
           .style('opacity', 0.8)
-          .attr('r', 5)
+          .attr('r', d => RadiusScale(d.capacite))
       })
 
       .on('click', function (e, d) {
@@ -495,7 +501,7 @@ async function main() {
   }
 
   async function loadJOData() {
-    const frFR = d3.timeFormatDefaultLocale({
+    const frFR1 = d3.timeFormatDefaultLocale({
       dateTime: '%A %e %B %Y à %X',
       date: '%d/%m/%Y',
       time: '%H:%M:%S',
@@ -505,10 +511,19 @@ async function main() {
       months: ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
       shortMonths: ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.']
     })
+
+    const frFR2 = d3.formatDefaultLocale({
+      decimal: ",",
+      thousands: "\u00a0",
+      grouping: [3],
+      currency: ["", "\u00a0€"],
+      percent: "\u202f%"
+    });
+
     const parseDateHour = d3.timeParse('%A %e %B %Y %H:%M')// https://d3js.org/d3-time-format
     const parseDate = d3.utcParse('%A %e %B %Y')
 
-    const planningParsed = await (d3.csv('../session_planning_pars_with_loc_v12.csv')
+    const planningParsed = await (d3.csv('../session_planning_with_loc_v3.csv')
       .then(data => {
         return data.map((d, i) => {
           const r = d
@@ -518,6 +533,7 @@ async function main() {
           r.num_jour = +r.num_jour
           r.latitude = +r.latitude
           r.longitude = +r.longitude
+          r.capacite = (+r.capacite) // d3.format("\u00a0")?
           r.index = i
           return r
         })
