@@ -22,7 +22,7 @@ async function main() {
     // Data
     var locParsed = await loadLoc()
     var planningParsed = await loadJOData()
-    var planningfiltered = planningParsed
+    var planningfiltered;
     var lieux_uniques = [...new Set(planningParsed.map(d => d.lieu_epreuve))]
     var Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
         return planningParsed.find(obj => obj.lieu_epreuve === lieu);
@@ -31,7 +31,7 @@ async function main() {
     // Variables de Dates
     var dates_str = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates uniques sans formatter en str bizarre !
     var dates = d3.sort(d3.map(dates_str, d => d3.utcParse('%A %e %B %Y')(d)))
-    var SelectedDates = [dates[0], dates[dates.length - 1]]
+    var SelectedDates;
 
     // Initialisation Map
 
@@ -158,7 +158,7 @@ async function main() {
         // Echelles dediees
         const scaleBand = d3.scaleBand()
             .domain(dates)
-            .range([0, sliderWidth])
+            .range([20, sliderWidth]) // Légère marge gauche de 20 px
             .paddingInner(0.17)
             .paddingOuter(1)
 
@@ -221,15 +221,19 @@ async function main() {
 
                     // Filter data based in slider value
                     planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
+                    lieux_uniques = [...new Set(planningfiltered.map(d => d.lieu_epreuve))]
+                    // Création du nouveau tableau contenant les valeurs uniques des lieu_epreuve
+                    Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
+                        return planningfiltered.find(obj => obj.lieu_epreuve === lieu);
+                    })
                     // Update the map with the new domain
-                    updateMap(planningfiltered)
+                    updateMap(Tab_lieux_uniques)
                 })
 
                 .on('end', () => {
-                    SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
-                    planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
-                    console.log(planningfiltered)
-                    updateTimeTable()
+
+                    console.log(Tab_lieux_uniques)
+
                 })
         )
 
@@ -296,7 +300,7 @@ async function main() {
             .on('mousemove', function (e, d) { // function to add mouseover event
                 Tooltip
                     .style('opacity', 0.9)
-                    .style('top', (e.pageY - 40) + 'px')
+                    .style('top', (e.pageY - 30) + 'px')
                     .style('left', (e.pageX + 30) + 'px')
                     .html(d.lieu_epreuve)
 
@@ -310,10 +314,11 @@ async function main() {
             .on('mouseleave', function () {
                 Tooltip
                     .style('opacity', 0)
+
                 d3.select(this).transition()
                     .duration('100')
                     .style('fill', 'steelblue')
-                    .style('opacity', 0.05)
+                    .style('opacity', 0.8)
                     .attr('r', 5)
             })
 
@@ -328,18 +333,17 @@ async function main() {
 
         map.on('zoomend', update)
 
+        // Cette partie du code sert à supprimer les éléments de la map après chaque update (i.e après le 'map.on()') 
         const dots_unbinded = bigg.selectAll("circle")
             .data(filteredData, d => {
                 return d.index;
             });
-
-        // remove unbinded elements
         dots_unbinded.exit()
             .transition().duration(0)
             .attr("r", 1)
             .remove();
 
-        // console.log(dots_unbinded)
+        // -> Au prochain update de la map l'ajout des éléments se fera donc sur un carte vierge
 
     } // Fin fonction updateMap
 

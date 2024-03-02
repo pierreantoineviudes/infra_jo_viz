@@ -70,7 +70,7 @@ async function slider() {
   // Echelles dediees
   const scaleBand = d3.scaleBand()
     .domain(dates)
-    .range([10, sliderWidth]) // Légère marge gauche de 10 px
+    .range([20, sliderWidth]) // Légère marge gauche de 20 px
     .paddingInner(0.17)
     .paddingOuter(1)
 
@@ -217,7 +217,7 @@ async function updateMap(filteredData) {
     .on('mousemove', function (e, d) { // function to add mouseover event
       Tooltip
         .style('opacity', 0.9)
-        .style('top', (e.pageY - 20) + 'px')
+        .style('top', (e.pageY - 30) + 'px')
         .style('left', (e.pageX + 30) + 'px')
         .html(d.lieu_epreuve)
 
