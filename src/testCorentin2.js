@@ -27,7 +27,7 @@ async function main() {
     var Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
         return planningParsed.find(obj => obj.lieu_epreuve === lieu);
     })
-    
+
     // Variables de Dates
     var dates_str = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates uniques sans formatter en str bizarre !
     var dates = d3.sort(d3.map(dates_str, d => d3.utcParse('%A %e %B %Y')(d)))
@@ -36,41 +36,37 @@ async function main() {
     // Initialisation Map
 
     d3.select('body').append('div')
-    // .attr('style', `width:${map_width}px; height:${map_height}px`)
-    .attr('id', 'map')
+        // .attr('style', `width:${map_width}px; height:${map_height}px`)
+        .attr('id', 'map')
     var map = L.map('map')// Did not set view because we are using "fit bounds" to get the polygons to determine this
     var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map)
 
     // Initialisation Tooltip
 
     var Tooltip = d3.select('body')
-    .append('div')
-    .style('z-index', 3000)
-    .style('opacity', 0)
-    .attr('class', 'tooltip')
-    .style('background-color', 'white')
-    .style('border', 'solid')
-    .style('border-width', '2px')
-    .style('border-radius', '5px')
-    .style('padding', '5px')
+        .append('div')
+        .style('z-index', 3000)
+        .style('opacity', 0)
+        .attr('class', 'tooltip')
+        .style('background-color', 'white')
+        .style('border', 'solid')
+        .style('border-width', '2px')
+        .style('border-radius', '5px')
+        .style('padding', '5px')
 
     // Création des tableaux
     // Infos sessions
-    var titleInfoSessions = d3.select('body').append('div')
-        .attr('style', `width:${timeTableWidth / 2}px; height:${timeTableHeight / 2}px`)
-        .attr('id', 'headInfoSession')
-    
     var sessionTable = d3.select('body').append('div')
         .attr('style', `width:${timeTableWidth / 2}px; height:${timeTableHeight / 2}px`)
         .attr('id', 'infoSession')
 
     const gridSession = new gridjs.Grid({
         columns: [
-        'Epreuve',
-        'Genre',
-        'Etape'
+            'Epreuve',
+            'Genre',
+            'Etape'
         ],
         data: [["", "", ""]],
         // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
@@ -81,12 +77,12 @@ async function main() {
         height: timeTableHeight / 2 + 'px',
         width: timeTableWidth / 2 + 'px',
         style: {
-        td: {
-            border: '1px solid #ccc'
-        },
-        table: {
-            'font-size': '15px'
-        }
+            td: {
+                border: '1px solid #ccc'
+            },
+            table: {
+                'font-size': '15px'
+            }
         }
     });
 
@@ -96,7 +92,7 @@ async function main() {
 
     // Planning infras
     var selectedPlace = ""
-    var titlePlanning = d3.select('body').append('div')
+    var TitlePlanning = d3.select('body').append('div')
         .attr('style', `width:${timeTableWidth}px; height:80px`)
         .attr('id', 'dayTimeTable')
 
@@ -108,12 +104,13 @@ async function main() {
         columns: [
             'Discipline',
             'Jour',
-            'Heure',
+            'Début',
+            'Fin',
             {
-            name: 'infosEpreuves',
-            hidden: true
+                name: 'infosEpreuves',
+                hidden: true
             }],
-        data: [["", "", ""]],
+        data: [["", "", "", ""]],
         // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
         // data: [["", "", "", ""]],
         resizable: true,
@@ -123,17 +120,17 @@ async function main() {
         width: timeTableWidth + 'px',
         style: {
             td: {
-            border: '1px solid #ccc'
+                border: '1px solid #ccc'
             },
             table: {
-            'font-size': '15px'
+                'font-size': '15px'
             }
         }
     });
 
     gridTimeTable.render(document.getElementById('timeTable'))
     gridTimeTable.on('rowClick', (...args) => updateSession(args))
-    
+
     // var gridTimeTable = createTimeTable()
     // console.log(gridTimeTable)
 
@@ -149,112 +146,112 @@ async function main() {
     // Fonctions utilisées //
 
     async function slider() {
-    // Couleurs et dimensions
-    const colours = {
-        top: '#37474f',
-        bottom: '#546e7a',
-        accent: '#263238'
-    }
-    const sliderWidth = 400
-    const sliderHeight = 50
+        // Couleurs et dimensions
+        const colours = {
+            top: '#37474f',
+            bottom: '#546e7a',
+            accent: '#263238'
+        }
+        const sliderWidth = 400
+        const sliderHeight = 50
 
-    // Echelles dediees
-    const scaleBand = d3.scaleBand()
-        .domain(dates)
-        .range([0, sliderWidth])
-        .paddingInner(0.17)
-        .paddingOuter(1)
+        // Echelles dediees
+        const scaleBand = d3.scaleBand()
+            .domain(dates)
+            .range([0, sliderWidth])
+            .paddingInner(0.17)
+            .paddingOuter(1)
 
-    const scaleBalls = d3.scaleQuantize()
-        .domain([0 + scaleBand.bandwidth(), sliderWidth - scaleBand.bandwidth()])
-        .range(dates)
+        const scaleBalls = d3.scaleQuantize()
+            .domain([0 + scaleBand.bandwidth(), sliderWidth - scaleBand.bandwidth()])
+            .range(dates)
 
-    // Creation du slider
-    const dateBalls = // Elements date
-        d3.extent(dates, d => d)
-        .map((d) => ({ x: scaleBand(d), y: sliderHeight - 30 }))
+        // Creation du slider
+        const dateBalls = // Elements date
+            d3.extent(dates, d => d)
+                .map((d) => ({ x: scaleBand(d), y: sliderHeight - 30 }))
 
-    const g = d3.select('body').append('svg')
-        .attr('width', sliderWidth)
-        .attr('height', sliderHeight)
-        .attr('class', 'slider')
+        const g = d3.select('body').append('svg')
+            .attr('width', sliderWidth)
+            .attr('height', sliderHeight)
+            .attr('class', 'slider')
 
-    const grayLine = g
-        .append('path')
-        .attr(
-        'd',
-        d3.line()([
-            [scaleBand(dates[0]), sliderHeight - 30],
-            [scaleBand(dates[dates.length - 1]), sliderHeight - 30]
-        ])
-        )
-        .attr('stroke-width', 2)
-        .attr('opacity', 1)
-        .attr('stroke', '#C1C5C7')
+        const grayLine = g
+            .append('path')
+            .attr(
+                'd',
+                d3.line()([
+                    [scaleBand(dates[0]), sliderHeight - 30],
+                    [scaleBand(dates[dates.length - 1]), sliderHeight - 30]
+                ])
+            )
+            .attr('stroke-width', 2)
+            .attr('opacity', 1)
+            .attr('stroke', '#C1C5C7')
 
-    const darkLine = g
-        .append('path')
-        .attr('class', 'darkline')
-        .attr('d', d3.line()(dateBalls.map((d) => [d.x, d.y])))
-        .attr('stroke-width', 2)
-        .attr('stroke', colours.accent)
-
-    const datePicker = g.selectAll('g').data(dateBalls).join('g')
-
-    datePicker.call(
-        d3.drag()
-        .on('drag', function dragged(event, d) {
-            const date = scaleBalls(event.x)
-
-            const xAxisValue = scaleBand(date)
-            // move the circle
-            d3.select(this)
-            .select('circle')
-            .attr('cx', (d.x = xAxisValue))
-            // move the dark line
-            g.select('.darkline')
+        const darkLine = g
+            .append('path')
+            .attr('class', 'darkline')
             .attr('d', d3.line()(dateBalls.map((d) => [d.x, d.y])))
-            // change the text
-            d3.select(this)
-            .select('text')
-            .attr('x', (d) => xAxisValue)
-            .text((d) => d3.utcFormat('%a %e %b')(date))
+            .attr('stroke-width', 2)
+            .attr('stroke', colours.accent)
 
-            SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
+        const datePicker = g.selectAll('g').data(dateBalls).join('g')
 
-            // Filter data based in slider value
-            planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
-            // Update the map with the new domain
-            updateMap(planningfiltered)
-        })
+        datePicker.call(
+            d3.drag()
+                .on('drag', function dragged(event, d) {
+                    const date = scaleBalls(event.x)
 
-        .on('end', () => {
-            SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
-            planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
-            console.log(planningfiltered)
-            updateTimeTable()
-        })
-    )
+                    const xAxisValue = scaleBand(date)
+                    // move the circle
+                    d3.select(this)
+                        .select('circle')
+                        .attr('cx', (d.x = xAxisValue))
+                    // move the dark line
+                    g.select('.darkline')
+                        .attr('d', d3.line()(dateBalls.map((d) => [d.x, d.y])))
+                    // change the text
+                    d3.select(this)
+                        .select('text')
+                        .attr('x', (d) => xAxisValue)
+                        .text((d) => d3.utcFormat('%a %e %b')(date))
 
-    datePicker
-        .append('circle')
-        .attr('cx', (d) => d.x)
-        .attr('cy', (d) => d.y)
-        .attr('r', 9)
-        .attr('fill', 'white')
-        .attr('stroke-width', 2)
-        .attr('stroke', colours.accent)
-        .attr('style', 'cursor: pointer')
+                    SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
 
-    datePicker
-        .attr('text-anchor', 'middle')
-        .attr('font-family', 'Roboto, Arial, sans-serif')
-        .attr('font-size', '12px')
-        .append('text')
-        .attr('y', (d) => d.y + 20)
-        .attr('x', (d) => d.x)
-        .attr('fill', colours.accent)
-        .text((d) => d3.utcFormat('%a %e %b')(scaleBalls(d.x)))
+                    // Filter data based in slider value
+                    planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
+                    // Update the map with the new domain
+                    updateMap(planningfiltered)
+                })
+
+                .on('end', () => {
+                    SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
+                    planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
+                    console.log(planningfiltered)
+                    updateTimeTable()
+                })
+        )
+
+        datePicker
+            .append('circle')
+            .attr('cx', (d) => d.x)
+            .attr('cy', (d) => d.y)
+            .attr('r', 9)
+            .attr('fill', 'white')
+            .attr('stroke-width', 2)
+            .attr('stroke', colours.accent)
+            .attr('style', 'cursor: pointer')
+
+        datePicker
+            .attr('text-anchor', 'middle')
+            .attr('font-family', 'Roboto, Arial, sans-serif')
+            .attr('font-size', '12px')
+            .append('text')
+            .attr('y', (d) => d.y + 20)
+            .attr('x', (d) => d.x)
+            .attr('fill', colours.accent)
+            .text((d) => d3.utcFormat('%a %e %b')(scaleBalls(d.x)))
 
     } // Fin fonction slider()
 
@@ -284,65 +281,65 @@ async function main() {
 
     async function updateMap(filteredData) {
 
-    const bigg = d3.select("#map").select("svg").select("g")
-    const Dots = bigg.selectAll('points')
-        .data(filteredData)
-        .join('circle')
-        .attr('class', 'circle')
-        .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
-        .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
-        .attr('r', 5)
-        .style('fill', 'steelblue')
-        .style('stroke', 'black')
-        .style('opacity', 0.8)
-
-        .on('mousemove', function (e, d) { // function to add mouseover event
-        Tooltip
-            .style('opacity', 0.9)
-            .style('top', (e.pageY - 40) + 'px')
-            .style('left', (e.pageX + 30) + 'px')
-            .html(d.lieu_epreuve)
-
-        d3.select(this).transition() // D3 selects the object we have moused over in order to perform operations on it
-            .duration('100') // how long we are transitioning between the two states (works like keyframes)
-            .style('fill', 'red') // change the fill
-            .attr('r', 7)
-            .style('opacity', 1)
-        })
-
-        .on('mouseleave', function () {
-        Tooltip
-            .style('opacity', 0)
-        d3.select(this).transition()
-            .duration('100')
-            .style('fill', 'steelblue')
-            .style('opacity', 0.05)
+        const bigg = d3.select("#map").select("svg").select("g")
+        const Dots = bigg.selectAll('points')
+            .data(filteredData)
+            .join('circle')
+            .attr('class', 'circle')
+            .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
+            .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
             .attr('r', 5)
-        })
+            .style('fill', 'steelblue')
+            .style('stroke', 'black')
+            .style('opacity', 0.8)
 
-        .on('click', function (e, d) {
-            selectedPlace = d.lieu_epreuve
-            updateTimeTable()
-        })
+            .on('mousemove', function (e, d) { // function to add mouseover event
+                Tooltip
+                    .style('opacity', 0.9)
+                    .style('top', (e.pageY - 40) + 'px')
+                    .style('left', (e.pageX + 30) + 'px')
+                    .html(d.lieu_epreuve)
 
-    const update = () => Dots
-        .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
-        .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
+                d3.select(this).transition() // D3 selects the object we have moused over in order to perform operations on it
+                    .duration('100') // how long we are transitioning between the two states (works like keyframes)
+                    .style('fill', 'red') // change the fill
+                    .attr('r', 7)
+                    .style('opacity', 1)
+            })
 
-    map.on('zoomend', update)
+            .on('mouseleave', function () {
+                Tooltip
+                    .style('opacity', 0)
+                d3.select(this).transition()
+                    .duration('100')
+                    .style('fill', 'steelblue')
+                    .style('opacity', 0.05)
+                    .attr('r', 5)
+            })
 
-    const dots_unbinded = bigg.selectAll("circle")
-        .data(filteredData, d => {
-        return d.index;
-        });
+            .on('click', function (e, d) {
+                selectedPlace = d.lieu_epreuve
+                updateTimeTable()
+            })
 
-    // remove unbinded elements
-    dots_unbinded.exit()
-        .transition().duration(0)
-        .attr("r", 1)
-        .remove();
+        const update = () => Dots
+            .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
+            .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
 
-    // console.log(dots_unbinded)
+        map.on('zoomend', update)
+
+        const dots_unbinded = bigg.selectAll("circle")
+            .data(filteredData, d => {
+                return d.index;
+            });
+
+        // remove unbinded elements
+        dots_unbinded.exit()
+            .transition().duration(0)
+            .attr("r", 1)
+            .remove();
+
+        // console.log(dots_unbinded)
 
     } // Fin fonction updateMap
 
@@ -357,9 +354,9 @@ async function main() {
 
         const gridSession = new gridjs.Grid({
             columns: [
-            'Epreuve',
-            'Genre',
-            'Etape'
+                'Epreuve',
+                'Genre',
+                'Etape'
             ],
             data: [["", "", ""]],
             // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
@@ -370,12 +367,12 @@ async function main() {
             height: timeTableHeight / 2 + 'px',
             width: timeTableWidth / 2 + 'px',
             style: {
-            td: {
-                border: '1px solid #ccc'
-            },
-            table: {
-                'font-size': '15px'
-            }
+                td: {
+                    border: '1px solid #ccc'
+                },
+                table: {
+                    'font-size': '15px'
+                }
             }
         });
 
@@ -387,7 +384,7 @@ async function main() {
 
 
     async function createTimeTable() {
-                
+
         d3.select('body').append('div')
             .attr('style', `width:${timeTableWidth}px; height:80px`)
             .attr('id', 'dayTimeTable')
@@ -403,8 +400,8 @@ async function main() {
                 'Début',
                 'Fin',
                 {
-                name: 'infosEpreuves',
-                hidden: true
+                    name: 'infosEpreuves',
+                    hidden: true
                 }],
             data: [["", "", "", ""]],
             // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
@@ -416,10 +413,10 @@ async function main() {
             width: timeTableWidth + 'px',
             style: {
                 td: {
-                border: '1px solid #ccc'
+                    border: '1px solid #ccc'
                 },
                 table: {
-                'font-size': '15px'
+                    'font-size': '15px'
                 }
             }
         });
@@ -430,31 +427,26 @@ async function main() {
 
     //__________________________________________________________________________________________________________________________//
 
-    function updateSession(args){
-        sessionString = selectedPlace + "|" + args[1]._cells[0].data + "|" + args[1]._cells[1].data + "|" + args[1]._cells[2].data
-        console.log(sessionString)
-        titleInfoSessions.html("Session : " + sessionString)
-        dataSession = args[1]._cells[3].data.content
+    function updateSession(args) {
+        dataSession = args[1]._cells[4].data.content
         // .epreuve, args[1]._cells[4].data.content.genre, args[1]._cells[4].data.content.etape]
         console.log(dataSession)//[dataSession.epreuve, dataSession.genre, dataSession.etape])
         gridSession.updateConfig({
             data: dataSession // [dataSession.epreuve, dataSession.genre, dataSession.etape]
         }).forceRender();
         sessionTable.style('opacity', 0.9)
-        titleInfoSessions.style('opacity', 0.9)
     } // Fin fonction updateSession
 
     //__________________________________________________________________________________________________________________________//
 
-    function updateTimeTable(){
+    function updateTimeTable() {
         document.getElementById("timeTable").innerHTML = "";
-        titlePlanning.html(selectedPlace)
-        // document.getElementById("dayTimeTable").innerHTML = selectedPlace
+        document.getElementById("dayTimeTable").innerHTML = selectedPlace
         selectedSessions = d3.filter(planningfiltered, d => d.lieu_epreuve === selectedPlace)
         console.log(selectedPlace)
 
 
-        dataSelectedSessions = selectedSessions.map(d => [d.discipline, d.jour, d.plage, customJSONParsing(d.parsing_epreuve)])
+        dataSelectedSessions = selectedSessions.map(d => [d.discipline, d.jour, d.debut_epreuve, d.fin_epreuve, customJSONParsing(d.parsing_epreuve)])
         console.log(dataSelectedSessions)
 
         console.log(gridTimeTable)
@@ -463,7 +455,6 @@ async function main() {
         }).forceRender();
         planningInfras.style('opacity', 0.9)
         sessionTable.style('opacity', 0)
-        titleInfoSessions.style('opacity', 0)
         // document.getElementById("timeTable").style('opacity', 0.9)
     } // Fin fonction updateTimeTable
 
@@ -472,9 +463,9 @@ async function main() {
 
     function customJSONParsing(x) {
         try {
-          return JSON.parse(x);
+            return JSON.parse(x);
         } catch (e) {
-          return { "content": [] };
+            return { "content": [] };
         }
     } // Fin fonction customJSONParsing
 
@@ -482,53 +473,52 @@ async function main() {
 
     // Fonctions de chargement et parsing des données
     async function loadArr() {
-    const idfArr = (await fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/ile-de-france/arrondissements-ile-de-france.geojson')).json()
-    return idfArr
+        const idfArr = (await fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/ile-de-france/arrondissements-ile-de-france.geojson')).json()
+        return idfArr
     }
 
     async function loadLoc() {
-    const locParsed = await (d3.csv('../loc_epreuves.csv')
-        .then(data => {
-        return data.map((d, i) => {
-            const r = d
-            r.latitude = +d.latitude
-            r.longitude = +d.longitude
-            return r
-        })
-        }))
-    return locParsed
+        const locParsed = await (d3.csv('../loc_epreuves.csv')
+            .then(data => {
+                return data.map((d, i) => {
+                    const r = d
+                    r.latitude = +d.latitude
+                    r.longitude = +d.longitude
+                    return r
+                })
+            }))
+        return locParsed
     }
 
     async function loadJOData() {
-    const frFR = d3.timeFormatDefaultLocale({
-        dateTime: '%A %e %B %Y à %X',
-        date: '%d/%m/%Y',
-        time: '%H:%M:%S',
-        periods: ['AM', 'PM'],
-        days: ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'],
-        shortDays: ['dim.', 'lun.', 'mar.', 'mer.', 'jeu.', 'ven.', 'sam.'],
-        months: ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
-        shortMonths: ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.']
-    })
-    const parseDateHour = d3.timeParse('%A %e %B %Y %H:%M')// https://d3js.org/d3-time-format
-    const parseDate = d3.utcParse('%A %e %B %Y')
-
-    const planningParsed = await (d3.csv('../session_planning_pars_with_loc_v12.csv')
-        .then(data => {
-        return data.map((d, i) => {
-            const r = d
-            r.jour = d.date
-            r.plage = d.debut_epreuve + " : " + d.fin_epreuve
-            r.time = parseDateHour(d.date + ' ' + '2024' + ' ' + d.debut_epreuve)
-            r.date = parseDate(d.date + ' ' + '2024')
-            r.num_jour = +r.num_jour
-            r.latitude = +r.latitude
-            r.longitude = +r.longitude
-            r.index = i
-            return r
+        const frFR = d3.timeFormatDefaultLocale({
+            dateTime: '%A %e %B %Y à %X',
+            date: '%d/%m/%Y',
+            time: '%H:%M:%S',
+            periods: ['AM', 'PM'],
+            days: ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'],
+            shortDays: ['dim.', 'lun.', 'mar.', 'mer.', 'jeu.', 'ven.', 'sam.'],
+            months: ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
+            shortMonths: ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.']
         })
-        }))
-    return planningParsed
+        const parseDateHour = d3.timeParse('%A %e %B %Y %H:%M')// https://d3js.org/d3-time-format
+        const parseDate = d3.utcParse('%A %e %B %Y')
+
+        const planningParsed = await (d3.csv('../session_planning_pars_with_loc_v12.csv')
+            .then(data => {
+                return data.map((d, i) => {
+                    const r = d
+                    r.jour = d.date
+                    r.time = parseDateHour(d.date + ' ' + '2024' + ' ' + d.debut_epreuve)
+                    r.date = parseDate(d.date + ' ' + '2024')
+                    r.num_jour = +r.num_jour
+                    r.latitude = +r.latitude
+                    r.longitude = +r.longitude
+                    r.index = i
+                    return r
+                })
+            }))
+        return planningParsed
     }
 
     //__________________________________________________________________________________________________________________________//
