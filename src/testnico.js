@@ -7,7 +7,6 @@
  */
 
 //__________________________________________________________________________________________________________________________//
-
 // Initialisation dimensions
 
 var margin = { top: 10, right: 10, bottom: 45, left: 10 }
@@ -43,7 +42,6 @@ createMap()
 // Création du slider de date interactif
 slider()
 
-
 //__________________________________________________________________________________________________________________________//
 // Fonctions utilisées //
 
@@ -69,7 +67,7 @@ async function slider() {
   // Echelles dediees
   const scaleBand = d3.scaleBand()
     .domain(dates)
-    .range([0, sliderWidth])
+    .range([10, sliderWidth]) // Légère marge gauche de 10 px
     .paddingInner(0.17)
     .paddingOuter(1)
 
@@ -140,6 +138,7 @@ async function slider() {
         const SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
         const planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
         console.log(planningfiltered)
+
       })
   )
 
@@ -234,20 +233,20 @@ async function updateMap(filteredData) {
 
   map.on('zoomend', update)
 
+  // Cette partie du code sert à supprimer les éléments de la map après chaque update (i.e après le 'map.on()') 
   const dots_unbinded = bigg.selectAll("circle")
     .data(filteredData, d => {
       return d.index;
     });
 
-  // remove unbinded elements
   dots_unbinded.exit()
     .transition().duration(0)
     .attr("r", 1)
     .remove();
 
-  // console.log(dots_unbinded)
+  // -> Au prochain update de la map l'ajout des éléments se fera donc sur un carte vierge
 
-} // Fin fonction updateMap
+} // Fin fonction updateMap()
 
 //__________________________________________________________________________________________________________________________//
 
