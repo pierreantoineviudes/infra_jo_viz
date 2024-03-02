@@ -66,6 +66,13 @@ div.tooltip {
     position: absolute; */
 }
 
+#headInfoSession {
+    z-index: 9000;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
 #infoSession {
     opacity: 0;
     z-index: 9000;
