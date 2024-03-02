@@ -58,7 +58,7 @@ async function main() {
 
     // Création des tableaux
     // Infos sessions
-    d3.select('body').append('div')
+    var sessionTable = d3.select('body').append('div')
         .attr('style', `width:${timeTableWidth / 2}px; height:${timeTableHeight / 2}px`)
         .attr('id', 'infoSession')
 
@@ -91,11 +91,12 @@ async function main() {
     // console.log(gridSession)
 
     // Planning infras
-    d3.select('body').append('div')
+    var selectedPlace = ""
+    var TitlePlanning =d3.select('body').append('div')
         .attr('style', `width:${timeTableWidth}px; height:80px`)
         .attr('id', 'dayTimeTable')
 
-    d3.select('body').append('div')
+    var planningInfras = d3.select('body').append('div')
         .attr('style', `width:${timeTableWidth}px; height:${timeTableHeight}px`)
         .attr('id', 'timeTable')
 
@@ -228,6 +229,7 @@ async function main() {
             SelectedDates = d3.sort(dateBalls.map((d) => scaleBalls(d.x)))
             planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
             console.log(planningfiltered)
+            updateTimeTable()
         })
     )
 
@@ -316,7 +318,8 @@ async function main() {
         })
 
         .on('click', function (e, d) {
-            updateTimeTable(d)
+            selectedPlace = d.lieu_epreuve
+            updateTimeTable()
         })
 
     const update = () => Dots
@@ -431,13 +434,13 @@ async function main() {
         gridSession.updateConfig({
             data: dataSession // [dataSession.epreuve, dataSession.genre, dataSession.etape]
         }).forceRender();
+        sessionTable.style('opacity', 0.9)
     } // Fin fonction updateSession
 
     //__________________________________________________________________________________________________________________________//
 
-    function updateTimeTable(d){
+    function updateTimeTable(){
         document.getElementById("timeTable").innerHTML = "";
-        selectedPlace = d.lieu_epreuve
         document.getElementById("dayTimeTable").innerHTML = selectedPlace
         selectedSessions = d3.filter(planningfiltered, d => d.lieu_epreuve === selectedPlace)
         console.log(selectedPlace)
@@ -450,6 +453,9 @@ async function main() {
         gridTimeTable.updateConfig({
             data: dataSelectedSessions
         }).forceRender();
+        planningInfras.style('opacity', 0.9)
+        sessionTable.style('opacity', 0)
+        // document.getElementById("timeTable").style('opacity', 0.9)
     } // Fin fonction updateTimeTable
 
     //__________________________________________________________________________________________________________________________//
