@@ -41,15 +41,15 @@ div.tooltip {
 }
 
 #dayTimeTable {
-    z-index: 9000;
+    z-index: 0;
     position: absolute;
     top: 0;
     right: 0
 }
 
 #timeTable {
-    opacity: 0;
-    z-index: 9000;
+    opacity: 1;
+    z-index: 0;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -67,15 +67,15 @@ div.tooltip {
 }
 
 #headInfoSession {
-    z-index: 9000;
+    z-index: 0;
     position: absolute;
     top: 0;
     left: 0
 }
 
 #infoSession {
-    opacity: 0;
-    z-index: 9000;
+    opacity: 1;
+    z-index: 0;
     position: absolute;
     bottom: 0;
     left: 0;

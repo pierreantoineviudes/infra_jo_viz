@@ -444,8 +444,8 @@ async function main() {
         gridSession.updateConfig({
             data: dataSession // [dataSession.epreuve, dataSession.genre, dataSession.etape]
         }).forceRender();
-        sessionTable.style('opacity', 0.9)
-        titleInfoSessions.style('opacity', 1)
+        sessionTable.style('z-index', 9000)
+        titleInfoSessions.style('z-index', 9000)
     } // Fin fonction updateSession
 
     //__________________________________________________________________________________________________________________________//
@@ -464,9 +464,9 @@ async function main() {
         gridTimeTable.updateConfig({
             data: dataSelectedSessions
         }).forceRender();
-        planningInfras.style('opacity', 0.9)
-        sessionTable.style('opacity', 0)
-        titleInfoSessions.style('opacity', 0)
+        planningInfras.style('z-index', 9000)
+        sessionTable.style('z-index', 0)
+        titleInfoSessions.style('z-index', 0)
         // document.getElementById("timeTable").style('opacity', 0.9)
     } // Fin fonction updateTimeTable
 
