@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* 
+create div style
+*/
+
+#div1 {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+#div2 {
+    background-color: red;
+}
+#div3 {
+    background-color: pink;
+}
+/* 
+.page {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+    transition: width 0.3s height = 0.3s;
+}
+
+.selectedPage {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s height = 0.3s;
+} */

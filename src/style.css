@@ -42,14 +42,15 @@ div.tooltip {
 }
 
 #dayTimeTable {
-    z-index: 9000;
+    z-index: 0;
     position: absolute;
     top: 0;
     right: 0
 }
 
 #timeTable {
-    z-index: 9000;
+    opacity: 1;
+    z-index: 0;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -66,8 +67,16 @@ div.tooltip {
     position: absolute; */
 }
 
+#headInfoSession {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
 #infoSession {
-    z-index: 9000;
+    opacity: 1;
+    z-index: 0;
     position: absolute;
     bottom: 0;
     left: 0;
