@@ -41,7 +41,7 @@ async function main () {
   console.log('min : ', d3.min(rolledupdata, d => d[1]))
   console.log('max : ', d3.max(rolledupdata, d => d[1]))
 
-  const wordCloudScale = d3.scaleLinear()
+  const wordCloudScale = d3.scaleLog()
     .domain([d3.min(rolledupdata, d => d[1]), d3.max(rolledupdata, d => d[1])])
     .range([0, 50])
 
