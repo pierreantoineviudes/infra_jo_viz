@@ -1,6 +1,8 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
+const { pointer } = require('d3-selection')
+
 /**
  * Cartographie qui trace les POI sur un fond de carte Openstreetmap
  * @returns none
@@ -23,6 +25,7 @@ async function main () {
   const locParsed = await loadLoc()
   const planningParsed = await loadJOData()
   let planningfiltered = planningParsed
+  let datacloud = planningParsed
   let lieux_uniques = [...new Set(planningParsed.map(d => d.lieu_epreuve))]
   let Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
     return planningParsed.find(obj => obj.lieu_epreuve === lieu)
@@ -148,8 +151,8 @@ async function main () {
   // Création du slider de date interactif
   slider()
 
-  // Création du wordcloud
-  drawCloud()
+  // Création du wordcloud container
+  createCloud()
 
   // __________________________________________________________________________________________________________________________//
   // Fonctions utilisées //
@@ -230,6 +233,7 @@ async function main () {
 
           // Filter data based in slider value
           planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
+          datacloud = planningfiltered
           lieux_uniques = [...new Set(planningfiltered.map(d => d.lieu_epreuve))]
           // Création du nouveau tableau contenant les valeurs uniques des lieu_epreuve
           Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
@@ -240,7 +244,9 @@ async function main () {
         })
 
         .on('end', () => {
+          console.log('end')
           console.log(Tab_lieux_uniques)
+          updateCloud(datacloud)
         })
     )
 
@@ -543,8 +549,8 @@ async function main () {
   // __________________________________________________________________________________________________________________________//
 
   // functions for wordcloud
-
-  async function drawCloud () {
+  // create wordcloud
+  async function createCloud () {
     // set the dimensions for wordcloud
     const width = timeTableWidth
     const height = timeTableHeight
@@ -557,8 +563,15 @@ async function main () {
       .style('position', 'absolute')
       .attr('class', 'wordcloudContainer')
       .append('g')
+    updateCloud(planningfiltered)
+  }
 
-    const data = planningfiltered
+  async function updateCloud (data) {
+    // set the dimensions for wordcloud
+    const width = timeTableWidth
+    const height = timeTableHeight
+    const svg = d3.select('.wordcloudContainer')
+    svg.selectAll('*').remove()
     const dataClean = data.map(e => {
       const r = {
         sport: e.SPORTS,
@@ -569,7 +582,7 @@ async function main () {
     const rolledupdata = [...d3.rollup(dataClean, v => d3.sum(v, e => e.capacite), d => d.sport)]
     const wordCloudScale = d3.scaleLog()
       .domain([d3.min(rolledupdata, d => d[1]), d3.max(rolledupdata, d => d[1])])
-      .range([0, 50])
+      .range([10, 50])
       // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
     const layout = d3.layout.cloud()
       .size([width, height])
@@ -582,7 +595,7 @@ async function main () {
       .padding(10)
       .rotate(0)
       .fontSize(function (d) {
-        console.log('d : fontsize', d)
+        // console.log('d : fontsize', d)
         return d.size
       })
       .on('end', draw)
@@ -591,8 +604,10 @@ async function main () {
     // This function takes the output of 'layout' above and draw the words
     // Better not to touch it. To change parameters, play with the 'layout' variable above
     function draw (words) {
+      console.log('in ddraw')
       svg
         .append('g')
+        .attr('class', 'groupclass')
         .attr('transform', 'translate(' + layout.size()[0] / 2 + ',' + layout.size()[1] / 2 + ')')
         .selectAll('text')
         .data(words)

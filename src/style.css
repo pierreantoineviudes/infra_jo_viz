@@ -2,12 +2,18 @@
 
 body {
     margin: 0;
-    font-family: 'Paris2024';
+    font-family: "Roboto";
+    padding: 0;
 }
 
-p {
-    font-family: 'Courier New', Courier, monospace;
+body, html, #map {
+    height: 100%;
+    width: 100%;
 }
+
+/* p {
+    font-family: 'Courier New', Courier, monospace;
+} */
 
 .hidden {
     display: none;
@@ -29,10 +35,6 @@ div.tooltip {
 
 #map {
     position: absolute;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    bottom: 0;
 }
 
 .slider {
@@ -56,7 +58,7 @@ div.tooltip {
     opacity: 1;
     z-index: 0;
     position: absolute;
-    bottom: 0;
+    bottom: 100px;
     right: 0;
     /* top: 0; */
     /* bottom: 200; */
@@ -88,7 +90,7 @@ div.tooltip {
     opacity: 1;
     z-index: 0;
     position: absolute;
-    bottom: 0;
+    bottom: 100px;
     left: 0;
 }
 
@@ -120,4 +122,15 @@ div.tooltip {
     position: absolute;
     right: 0;
     top: 0;
+    background-color: white;
+}
+
+
+/* style td */
+#timeTable td.gridjs-td {
+    cursor: pointer;
+}
+
+#timeTable td.gridjs-td:hover {
+    opacity: 0.5;
 }
