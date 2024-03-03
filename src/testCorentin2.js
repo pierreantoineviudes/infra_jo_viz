@@ -527,6 +527,7 @@ async function main () {
         return data.map((d, i) => {
           const r = d
           r.jour = d.date
+          r.plage = d.debut_epreuve + " : " + d.fin_epreuve
           r.time = parseDateHour(d.date + ' ' + '2024' + ' ' + d.debut_epreuve)
           r.date = parseDate(d.date + ' ' + '2024')
           r.num_jour = +r.num_jour
