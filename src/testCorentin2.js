@@ -326,7 +326,7 @@ async function main() {
                 d3.select(this).transition()
                     .duration('100')
                     .style('fill', 'steelblue')
-                    .style('opacity', 0.8)
+                    .style('opacity', 0.5)
                     .attr('r', d => RadiusScale(d.capacite))
             })
 
