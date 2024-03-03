@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    font-family: 'Roboto';
+    font-family: 'Paris2024';
 }
 
 p {
@@ -38,10 +38,12 @@ div.tooltip {
 .slider {
     z-index: 10000;
     position: absolute;
-    bottom: 0;
+    top: 0;
+    right: 50vw;
 }
 
 #dayTimeTable {
+    /* here to modify right table title */
     z-index: 0;
     position: absolute;
     top: 0;
@@ -49,6 +51,8 @@ div.tooltip {
 }
 
 #timeTable {
+    /* here to modify right table */
+
     opacity: 1;
     z-index: 0;
     position: absolute;
@@ -65,9 +69,14 @@ div.tooltip {
     border-radius: 2px;
     opacity: 0.9;
     position: absolute; */
+
+    /* changes from PA */
+    /* width: 100px;
+    height: 100px; */
 }
 
 #headInfoSession {
+    /* here to modify style on title of infosession */
     z-index: 0;
     position: absolute;
     top: 0;
@@ -75,6 +84,7 @@ div.tooltip {
 }
 
 #infoSession {
+    /* here to modify style on left table */
     opacity: 1;
     z-index: 0;
     position: absolute;
@@ -102,4 +112,12 @@ div.tooltip {
     to {
         opacity: 1;
     }
+}
+
+
+.wordcloudContainer {
+    z-index: 9000;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
