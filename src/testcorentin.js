@@ -282,6 +282,7 @@ async function main() {
         .style('top', (e.pageY - 40) + 'px')
         .style('left', (e.pageX + 30) + 'px')
         .html(d.lieu_epreuve)
+        .style('animation', 'fadeIn 0.3s ease-in-out')
 
       d3.select(this).transition() // D3 selects the object we have moused over in order to perform operations on it
         .duration('100') // how long we are transitioning between the two states (works like keyframes)

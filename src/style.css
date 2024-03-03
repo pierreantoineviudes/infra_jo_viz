@@ -2,6 +2,7 @@
 
 body {
     margin: 0;
+    font-family: 'Roboto';
 }
 
 p {
@@ -37,7 +38,7 @@ div.tooltip {
 .slider {
     z-index: 10000;
     position: absolute;
-    bottom: 0;    
+    bottom: 0;
 }
 
 #dayTimeTable {
@@ -70,4 +71,26 @@ div.tooltip {
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+/* Style for tooltip */
+.tooltip {
+    background-color: rgba(200, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 14px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animation for tooltip */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

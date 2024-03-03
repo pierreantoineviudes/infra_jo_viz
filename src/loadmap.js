@@ -2,39 +2,39 @@ const idfArr = await loadArr()
 const map_width = window_width * 0.75
 const map_height = map_width / 1.6
 d3.select('body').append('div')
-    // .attr('style', `width:${map_width}px; height:${map_height}px`)
-    .attr('id', 'map')
-var map = L.map('map')// Did not set view because we are using "fit bounds" to get the polygons to determine this
-var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+// .attr('style', `width:${map_width}px; height:${map_height}px`)
+  .attr('id', 'map')
+const map = L.map('map')// Did not set view because we are using "fit bounds" to get the polygons to determine this
+const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map)
 
-var idfLayer = L.geoJson(idfArr, { // instantiates a new geoJson layer using built in geoJson handling
-    weight: 2, // Attributes of polygons including the weight of boundaries and colors of map.
-    color: '#432',
-    opacity: 0.2
+const idfLayer = L.geoJson(idfArr, { // instantiates a new geoJson layer using built in geoJson handling
+  weight: 2, // Attributes of polygons including the weight of boundaries and colors of map.
+  color: '#432',
+  opacity: 0.2
 }).bindPopup(function (Layer) { // binds a popup when clicking on each polygon to access underlying data
-    return Layer.feature.properties.NAME
+  return Layer.feature.properties.NAME
 }).addTo(map) // Adds the layer to the map.
 
 map.fitBounds(idfLayer.getBounds()) // finds bounds of polygon and automatically gets map view to fit (useful for interaction and not having to 'cook' the map zoom and coordinates as in map instantiation
 
 L.svg({ clickable: true }).addTo(map)
-var overlay = d3.select(map.getPanes().overlayPane)
-var svg_map = overlay.select('svg').attr('pointer-events', 'auto')
-var bigg = d3.select("#map").select("svg").select("g")
-bigg.attr("class", "leaflet-zoom-hide")
+const overlay = d3.select(map.getPanes().overlayPane)
+const svg_map = overlay.select('svg').attr('pointer-events', 'auto')
+const bigg = d3.select('#map').select('svg').select('g')
+bigg.attr('class', 'leaflet-zoom-hide')
 
-var Tooltip = d3.select('body')
-    .append('div')
-    .style('z-index', 3000)
-    .style('opacity', 0)
-    .attr('class', 'tooltip')
-    .style('background-color', 'white')
-    .style('border', 'solid')
-    .style('border-width', '2px')
-    .style('border-radius', '5px')
-    .style('padding', '5px')
+const Tooltip = d3.select('body')
+  .append('div')
+  .style('z-index', 3000)
+  .style('opacity', 0)
+  .attr('class', 'tooltip')
+  .style('background-color', 'white')
+  .style('border', 'solid')
+  .style('border-width', '2px')
+  .style('border-radius', '5px')
+  .style('padding', '5px')
 
 // var Dots = svg_map.selectAll('points')
 //     .data(planningParsed)
