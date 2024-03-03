@@ -1,9 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 async function main () {
-// List of words
-  const myWords = ['Hello', 'Everybody', 'How', 'Are', 'You']
-
   // set the dimensions and margins of the graph
   const margin = { top: 10, right: 10, bottom: 10, left: 10 }
   const width = window.innerWidth - margin.left - margin.right
@@ -83,7 +80,7 @@ async function main () {
   }
 
   async function loadData () {
-    const planningParsed = await (d3.csv('session_planning_with_loc_v3.csv')
+    const planningParsed = await (d3.csv('session_planning_with_loc_v13.csv')
       .then(data => {
         // console.log(data)
         return data.map((d, i) => {
