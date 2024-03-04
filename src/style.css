@@ -182,3 +182,19 @@ div.slider {
     margin: 10px;
     padding: 5px;
 }
+
+
+/* test style wordcloud */
+.wordcloudContainer text {
+    opacity: 0; /* Initially set the opacity to 0 */
+    transition: opacity 0.5s ease; /* Define the transition property */
+  }
+  
+  .wordcloudContainer text.fade-in {
+    opacity: 1; /* Set opacity to 1 for fade-in effect */
+  }
+  
+  .wordcloudContainer text.fade-out {
+    opacity: 0; /* Set opacity to 0 for fade-out effect */
+  }
+  

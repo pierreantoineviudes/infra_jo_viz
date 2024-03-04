@@ -574,7 +574,11 @@ async function main() {
     const width = timeTableWidth
     const height = timeTableHeight
     const svg = d3.select('.wordcloudContainer')
-    svg.selectAll('*').remove()
+    svg.selectAll('*')
+    .transition()
+    .duration(500)
+    .style('opacity', 0)
+    .remove()
     const dataClean = data.map(e => {
       const r = {
         sport: e.discipline,
@@ -606,9 +610,8 @@ async function main() {
 
     // This function takes the output of 'layout' above and draw the words
     // Better not to touch it. To change parameters, play with the 'layout' variable above
-    function draw(words) {
-      console.log('in ddraw')
-      svg
+    function draw (words) {
+      const textGroup = svg
         .append('g')
         .attr('class', 'groupclass')
         .attr('transform', 'translate(' + layout.size()[0] / 2 + ',' + layout.size()[1] / 2 + ')')
@@ -622,6 +625,10 @@ async function main() {
           return 'translate(' + [d.x, d.y] + ')rotate(' + d.rotate + ')'
         })
         .text(function (d) { return d.text })
+        .style('opacity', 0)
+        .transition()
+        .duration(500)
+        .style('opacity', 1)
     }
   }
 }
