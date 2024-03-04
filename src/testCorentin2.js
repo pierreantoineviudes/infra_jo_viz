@@ -264,7 +264,7 @@ async function main() {
 
     datePicker
       .attr('text-anchor', 'middle')
-      .attr('font-family', 'Roboto, Arial, sans-serif')
+      // .attr('font-family', 'Roboto, Arial, sans-serif')
       .attr('font-size', '12px')
       .append('text')
       .attr('y', (d) => d.y + 20)
@@ -617,7 +617,7 @@ async function main() {
         .data(words)
         .enter().append('text')
         .style('font-size', function (d) { return d.size + 'px' })
-        .style('font-family', 'Roboto')
+        // .style('font-family', 'Roboto')
         .attr('text-anchor', 'middle')
         .attr('transform', function (d) {
           return 'translate(' + [d.x, d.y] + ')rotate(' + d.rotate + ')'

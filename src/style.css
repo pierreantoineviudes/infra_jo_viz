@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    font-family: "Roboto";
+    font-family: Paris2024, "Roboto";
     padding: 0;
 }
 
@@ -168,4 +168,23 @@ div.slider {
 
 #timeTable td.gridjs-td:hover {
     opacity: 0.5;
+}
+
+/* change font */
+@font-face {
+    font-family: 'Paris2024';
+    src: url('https://www.paris2024.org/app/themes/2024-reveal/dist/fonts/Paris2024-Variable_03cd1b21.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* logoparis */
+
+.logoparis {
+    position: absolute;
+    z-index: 3000;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
 }
