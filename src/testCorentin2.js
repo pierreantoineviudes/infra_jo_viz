@@ -58,7 +58,7 @@ async function main() {
     .style('z-index', 3000)
     .style('opacity', 0)
     .attr('class', 'tooltip')
-  // .style('border-width', '2px')
+    .style('border-width', '2px')
 
   // Initialisation div slider
 
@@ -107,7 +107,7 @@ async function main() {
   // Planning infras
   let selectedPlace = ''
   const titlePlanning = d3.select('body').append('div')
-    .attr('style', `width:${timeTableWidth}px; height:80px`)
+    .attr('style', `left:${window.innerWidth - timeTableWidth}px`)
     .attr('id', 'dayTimeTable')
 
   const planningInfras = d3.select('body').append('div')
@@ -470,6 +470,7 @@ async function main() {
     gridTimeTable.updateConfig({
       data: dataSelectedSessions
     }).forceRender()
+    titlePlanning.style('z-index', 10000)
     planningInfras.style('z-index', 9000)
     sessionTable.style('z-index', 0)
     titleInfoSessions.style('z-index', 0)
