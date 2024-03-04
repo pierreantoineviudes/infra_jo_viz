@@ -1,20 +1,22 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
+const { pointer } = require('d3-selection')
+
 /**
  * Cartographie qui trace les POI sur un fond de carte Openstreetmap
  * @returns none
  */
 
 // __________________________________________________________________________________________________________________________//
-async function main () {
+async function main() {
   // Initialisation dimensions
 
   const margin = { top: 10, right: 10, bottom: 45, left: 10 }
   const window_width = window.innerWidth - margin.left - margin.right
   const window_height = window.innerHeight - margin.top - margin.bottom
   // dimensions time tables
-  const timeTableHeight = window_height / 2 // - margin.top - margin.bottom
+  const timeTableHeight = window_height / 2.2 // - margin.top - margin.bottom
   const timeTableWidth = window_width / 3
   // const xInitTT = map_width + margin.left
   // const yInitTT = map_height / 2
@@ -23,6 +25,7 @@ async function main () {
   const locParsed = await loadLoc()
   const planningParsed = await loadJOData()
   let planningfiltered = planningParsed
+  let datacloud = planningParsed
   let lieux_uniques = [...new Set(planningParsed.map(d => d.lieu_epreuve))]
   let Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
     return planningParsed.find(obj => obj.lieu_epreuve === lieu)
@@ -41,7 +44,7 @@ async function main () {
   // Initialisation Map
 
   d3.select('body').append('div')
-  // .attr('style', `width:${map_width}px; height:${map_height}px`)
+    // .attr('style', `width:${map_width}px; height:${map_height}px`)
     .attr('id', 'map')
   const map = L.map('map', { zoomControl: false })// Did not set view because we are using "fit bounds" to get the polygons to determine this
   const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -55,16 +58,19 @@ async function main () {
     .style('z-index', 3000)
     .style('opacity', 0)
     .attr('class', 'tooltip')
-    .style('background-color', 'white')
-    .style('border', 'solid')
-    .style('border-width', '2px')
-    .style('border-radius', '5px')
-    .style('padding', '5px')
+    .style('border-width', '1px')
+
+  // Initialisation div slider
+
+  const slider_div = d3.select('body')
+    .append('div')
+    .attr('class', 'slider')
+    .style('border-width', '1px')
 
   // Création des tableaux
   // Infos sessions
   const titleInfoSessions = d3.select('body').append('div')
-    .attr('style', `width:${timeTableWidth}px; height:${timeTableHeight}px`)
+    // .attr('style', `width:${timeTableWidth}px; height:${timeTableHeight}px`)
     .attr('id', 'headInfoSession')
 
   const sessionTable = d3.select('body').append('div')
@@ -81,7 +87,7 @@ async function main () {
     // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
     // data: [["", "", "", ""]],
     resizable: true,
-    pagination: true,
+    // pagination: true,
     fixedHeader: true,
     height: timeTableHeight + 'px',
     width: timeTableWidth + 'px',
@@ -102,7 +108,7 @@ async function main () {
   // Planning infras
   let selectedPlace = ''
   const titlePlanning = d3.select('body').append('div')
-    .attr('style', `width:${timeTableWidth}px; height:80px`)
+    .attr('style', `left:${window.innerWidth - timeTableWidth - 10}px`)
     .attr('id', 'dayTimeTable')
 
   const planningInfras = d3.select('body').append('div')
@@ -122,7 +128,7 @@ async function main () {
     // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
     // data: [["", "", "", ""]],
     resizable: true,
-    pagination: true,
+    // pagination: true,
     fixedHeader: true,
     height: timeTableHeight + 'px',
     width: timeTableWidth + 'px',
@@ -148,13 +154,13 @@ async function main () {
   // Création du slider de date interactif
   slider()
 
-  // Création du wordcloud
-  drawCloud()
+  // Création du wordcloud container
+  createCloud()
 
   // __________________________________________________________________________________________________________________________//
   // Fonctions utilisées //
 
-  async function slider () {
+  async function slider() {
     // Couleurs et dimensions
     const colours = {
       top: '#37474f',
@@ -162,7 +168,7 @@ async function main () {
       accent: '#263238'
     }
     const sliderWidth = 400
-    const sliderHeight = 50
+    const sliderHeight = 40
 
     // Echelles dediees
     const scaleBand = d3.scaleBand()
@@ -177,10 +183,10 @@ async function main () {
 
     // Creation du slider
     const dateBalls = // Elements date
-            d3.extent(dates, d => d)
-              .map((d) => ({ x: scaleBand(d), y: sliderHeight - 30 }))
+      d3.extent(dates, d => d)
+        .map((d) => ({ x: scaleBand(d), y: sliderHeight - 30 }))
 
-    const g = d3.select('body').append('svg')
+    const g = slider_div.append('svg')
       .attr('width', sliderWidth)
       .attr('height', sliderHeight)
       .attr('class', 'slider')
@@ -209,7 +215,7 @@ async function main () {
 
     datePicker.call(
       d3.drag()
-        .on('drag', function dragged (event, d) {
+        .on('drag', function dragged(event, d) {
           const date = scaleBalls(event.x)
 
           const xAxisValue = scaleBand(date)
@@ -230,6 +236,7 @@ async function main () {
 
           // Filter data based in slider value
           planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
+          datacloud = planningfiltered
           lieux_uniques = [...new Set(planningfiltered.map(d => d.lieu_epreuve))]
           // Création du nouveau tableau contenant les valeurs uniques des lieu_epreuve
           Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
@@ -240,7 +247,8 @@ async function main () {
         })
 
         .on('end', () => {
-          console.log(Tab_lieux_uniques)
+          updateCloud(datacloud)
+          // updateTimeTable()
         })
     )
 
@@ -256,7 +264,7 @@ async function main () {
 
     datePicker
       .attr('text-anchor', 'middle')
-      .attr('font-family', 'Roboto, Arial, sans-serif')
+      // .attr('font-family', 'Roboto, Arial, sans-serif')
       .attr('font-size', '12px')
       .append('text')
       .attr('y', (d) => d.y + 20)
@@ -267,7 +275,7 @@ async function main () {
 
   // __________________________________________________________________________________________________________________________//
 
-  async function createMap () {
+  async function createMap() {
     const idfArr = await loadArr()
     const idfLayer = L.geoJson(idfArr, { // instantiates a new geoJson layer using built in geoJson handling
       weight: 2, // Attributes of polygons including the weight of boundaries and colors of map.
@@ -289,9 +297,9 @@ async function main () {
 
   // __________________________________________________________________________________________________________________________//
 
-  async function updateMap (filteredData) {
+  async function updateMap(filteredData) {
     const bigg = d3.select('#map').select('svg').select('g')
-    const Dots = bigg.selectAll('points')
+    const Dots = bigg.selectAll('circle')
       .data(filteredData)
       .join('circle')
       .attr('class', 'circle')
@@ -307,28 +315,37 @@ async function main () {
           .style('opacity', 0.9)
           .style('top', (e.pageY - 40) + 'px')
           .style('left', (e.pageX + 15) + 'px')
-          .html(d.lieu_epreuve + ' - ' + d.capacite)
+          .html(d.lieu_epreuve + ' - ' + `<b>${d.capacite}<b>`)
+
 
         d3.select(this).transition() // D3 selects the object we have moused over in order to perform operations on it
-          .duration('100') // how long we are transitioning between the two states (works like keyframes)
+          .duration('0') // how long we are transitioning between the two states (works like keyframes)
           .style('fill', 'red') // change the fill
-        // .attr('r', 7)
-        // .style('opacity', 1)
+          .style('opacity', 0.8)
+
+        bigg.selectAll('circle')
+          .style("opacity", .2)
       })
 
       .on('mouseleave', function () {
         Tooltip
           .style('opacity', 0)
 
-        d3.select(this).transition()
+        bigg.selectAll('circle').transition()
           .duration('100')
           .style('fill', 'steelblue')
           .style('opacity', 0.5)
-          .attr('r', d => RadiusScale(d.capacite))
       })
 
       .on('click', function (e, d) {
+        // d.__selected = true
+        // d3.select(this).transition()
+        //   .duration('50')
+        //   .style('fill', 'red')
+
         selectedPlace = d.lieu_epreuve
+        infra_selec = d3.filter(datacloud, d => d.lieu_epreuve == selectedPlace)
+        updateCloud(infra_selec)
         updateTimeTable()
       })
 
@@ -355,7 +372,7 @@ async function main () {
 
   // Création des tableaux planning infras & infos sessions
 
-  async function createSessionTable () {
+  async function createSessionTable() {
     d3.select('body').append('div')
       .attr('style', `width:${timeTableWidth / 2}px; height:${timeTableHeight / 2}px`)
       .attr('id', 'infoSession')
@@ -370,7 +387,7 @@ async function main () {
       // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
       // data: [["", "", "", ""]],
       resizable: true,
-      pagination: true,
+      // pagination: true,
       fixedHeader: true,
       height: timeTableHeight + 'px',
       width: timeTableWidth + 'px',
@@ -390,7 +407,7 @@ async function main () {
 
   // __________________________________________________________________________________________________________________________//
 
-  async function createTimeTable () {
+  async function createTimeTable() {
     d3.select('body').append('div')
       .attr('style', `width:${timeTableWidth}px; height:80px`)
       .attr('id', 'dayTimeTable')
@@ -413,7 +430,7 @@ async function main () {
       // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
       // data: [["", "", "", ""]],
       resizable: true,
-      pagination: true,
+      // pagination: true,
       fixedHeader: true,
       height: timeTableHeight + 'px',
       width: timeTableWidth + 'px',
@@ -433,8 +450,8 @@ async function main () {
 
   // __________________________________________________________________________________________________________________________//
 
-  function updateSession (args) {
-    sessionString = selectedPlace + '|' + args[1]._cells[0].data + '|' + args[1]._cells[1].data + '|' + args[1]._cells[2].data
+  function updateSession(args) {
+    sessionString = selectedPlace + ' | ' + args[1]._cells[0].data + ' | ' + args[1]._cells[1].data + ' | ' + args[1]._cells[2].data
     console.log(sessionString)
     titleInfoSessions.html('Session : ' + sessionString)
     dataSession = args[1]._cells[3].data.content
@@ -449,7 +466,7 @@ async function main () {
 
   // __________________________________________________________________________________________________________________________//
 
-  function updateTimeTable () {
+  function updateTimeTable() {
     document.getElementById('timeTable').innerHTML = ''
     titlePlanning.html(selectedPlace)
     selectedSessions = d3.filter(planningfiltered, d => d.lieu_epreuve === selectedPlace)
@@ -462,6 +479,7 @@ async function main () {
     gridTimeTable.updateConfig({
       data: dataSelectedSessions
     }).forceRender()
+    titlePlanning.style('z-index', 10000)
     planningInfras.style('z-index', 9000)
     sessionTable.style('z-index', 0)
     titleInfoSessions.style('z-index', 0)
@@ -470,7 +488,7 @@ async function main () {
 
   // __________________________________________________________________________________________________________________________//
 
-  function customJSONParsing (x) {
+  function customJSONParsing(x) {
     try {
       return JSON.parse(x)
     } catch (e) {
@@ -481,12 +499,12 @@ async function main () {
   // __________________________________________________________________________________________________________________________//
 
   // Fonctions de chargement et parsing des données
-  async function loadArr () {
+  async function loadArr() {
     const idfArr = (await fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/ile-de-france/arrondissements-ile-de-france.geojson')).json()
     return idfArr
   }
 
-  async function loadLoc () {
+  async function loadLoc() {
     const locParsed = await (d3.csv('../loc_epreuves.csv')
       .then(data => {
         return data.map((d, i) => {
@@ -499,7 +517,7 @@ async function main () {
     return locParsed
   }
 
-  async function loadJOData () {
+  async function loadJOData() {
     const frFR1 = d3.timeFormatDefaultLocale({
       dateTime: '%A %e %B %Y à %X',
       date: '%d/%m/%Y',
@@ -527,7 +545,7 @@ async function main () {
         return data.map((d, i) => {
           const r = d
           r.jour = d.date
-          r.plage = d.debut_epreuve + " : " + d.fin_epreuve
+          r.plage = d.debut_epreuve + ' : ' + d.fin_epreuve
           r.time = parseDateHour(d.date + ' ' + '2024' + ' ' + d.debut_epreuve)
           r.date = parseDate(d.date + ' ' + '2024')
           r.num_jour = +r.num_jour
@@ -544,8 +562,8 @@ async function main () {
   // __________________________________________________________________________________________________________________________//
 
   // functions for wordcloud
-
-  async function drawCloud () {
+  // create wordcloud
+  async function createCloud() {
     // set the dimensions for wordcloud
     const width = timeTableWidth
     const height = timeTableHeight
@@ -558,11 +576,22 @@ async function main () {
       .style('position', 'absolute')
       .attr('class', 'wordcloudContainer')
       .append('g')
+    updateCloud(planningfiltered)
+  }
 
-    const data = planningfiltered
+  async function updateCloud(data) {
+    // set the dimensions for wordcloud
+    const width = timeTableWidth
+    const height = timeTableHeight
+    const svg = d3.select('.wordcloudContainer')
+    svg.selectAll('*')
+      .transition()
+      .duration(500)
+      .style('opacity', 0)
+      .remove()
     const dataClean = data.map(e => {
       const r = {
-        sport: e.SPORTS,
+        sport: e.discipline,
         capacite: e.capacite
       }
       return r
@@ -570,8 +599,8 @@ async function main () {
     const rolledupdata = [...d3.rollup(dataClean, v => d3.sum(v, e => e.capacite), d => d.sport)]
     const wordCloudScale = d3.scaleLog()
       .domain([d3.min(rolledupdata, d => d[1]), d3.max(rolledupdata, d => d[1])])
-      .range([0, 50])
-      // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
+      .range([10, 50])
+    // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
     const layout = d3.layout.cloud()
       .size([width, height])
       .words(rolledupdata.map(function (d) {
@@ -583,7 +612,7 @@ async function main () {
       .padding(10)
       .rotate(0)
       .fontSize(function (d) {
-        console.log('d : fontsize', d)
+        // console.log('d : fontsize', d)
         return d.size
       })
       .on('end', draw)
@@ -591,20 +620,31 @@ async function main () {
 
     // This function takes the output of 'layout' above and draw the words
     // Better not to touch it. To change parameters, play with the 'layout' variable above
-    function draw (words) {
-      svg
+    function draw(words) {
+      const textGroup = svg
         .append('g')
+        .attr('class', 'groupclass')
         .attr('transform', 'translate(' + layout.size()[0] / 2 + ',' + layout.size()[1] / 2 + ')')
-        .selectAll('text')
+
+      const words_map = textGroup.selectAll('text')
         .data(words)
         .enter().append('text')
         .style('font-size', function (d) { return d.size + 'px' })
-        .style('font-family', 'Roboto')
+        // .style('font-family', 'Roboto')
         .attr('text-anchor', 'middle')
         .attr('transform', function (d) {
           return 'translate(' + [d.x, d.y] + ')rotate(' + d.rotate + ')'
         })
         .text(function (d) { return d.text })
+        // .style('opacity', 0)
+        .transition()
+        .duration(500)
+        .style('opacity', 1)
+      // .on('mousemove', function (d) {
+      //   d3.select(this).transition()
+      //     .duration('0')
+      //     .style('opacity', 0)
+      // })
     }
   }
 }
