@@ -67,7 +67,7 @@ async function main () {
   // Création des tableaux
   // Infos sessions
   const titleInfoSessions = d3.select('body').append('div')
-    .attr('style', `width:${timeTableWidth}px; height:${timeTableHeight}px`)
+    // .attr('style', `width:${timeTableWidth}px; height:${timeTableHeight}px`)
     .attr('id', 'headInfoSession')
 
   const sessionTable = d3.select('body').append('div')
@@ -84,7 +84,7 @@ async function main () {
     // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
     // data: [["", "", "", ""]],
     resizable: true,
-    pagination: true,
+    // pagination: true,
     fixedHeader: true,
     height: timeTableHeight + 'px',
     width: timeTableWidth + 'px',
@@ -125,7 +125,7 @@ async function main () {
     // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
     // data: [["", "", "", ""]],
     resizable: true,
-    pagination: true,
+    // pagination: true,
     fixedHeader: true,
     height: timeTableHeight + 'px',
     width: timeTableWidth + 'px',
@@ -376,7 +376,7 @@ async function main () {
       // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
       // data: [["", "", "", ""]],
       resizable: true,
-      pagination: true,
+      // pagination: true,
       fixedHeader: true,
       height: timeTableHeight + 'px',
       width: timeTableWidth + 'px',
@@ -419,7 +419,7 @@ async function main () {
       // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
       // data: [["", "", "", ""]],
       resizable: true,
-      pagination: true,
+      // pagination: true,
       fixedHeader: true,
       height: timeTableHeight + 'px',
       width: timeTableWidth + 'px',
@@ -533,7 +533,7 @@ async function main () {
         return data.map((d, i) => {
           const r = d
           r.jour = d.date
-          r.plage = d.debut_epreuve + " : " + d.fin_epreuve
+          r.plage = d.debut_epreuve + ' : ' + d.fin_epreuve
           r.time = parseDateHour(d.date + ' ' + '2024' + ' ' + d.debut_epreuve)
           r.date = parseDate(d.date + ' ' + '2024')
           r.num_jour = +r.num_jour
