@@ -493,7 +493,7 @@ async function main () {
   }
 
   async function loadLoc () {
-    const locParsed = await (d3.csv('./infra_jo_viz/loc_epreuves.csv')
+    const locParsed = await (d3.csv('../loc_epreuves.csv')
       .then(data => {
         return data.map((d, i) => {
           const r = d
