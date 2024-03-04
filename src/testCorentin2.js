@@ -315,7 +315,7 @@ async function main() {
           .style('opacity', 0.9)
           .style('top', (e.pageY - 40) + 'px')
           .style('left', (e.pageX + 15) + 'px')
-          .html(d.lieu_epreuve + ' - ' + d.capacite)
+          .html(d.lieu_epreuve + ' - ' + `<b>${d.capacite}<b>`)
 
         d3.select(this).transition() // D3 selects the object we have moused over in order to perform operations on it
           .duration('100') // how long we are transitioning between the two states (works like keyframes)
