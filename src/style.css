@@ -51,8 +51,8 @@ div.slider {
     border: solid;
     opacity: 0.9;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 30px;
+    left: 150px;
     height: 35px;
 }
 
@@ -67,7 +67,7 @@ div.slider {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 0;
     position: absolute;
-    bottom: 380px;
+    bottom: 355px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -106,8 +106,8 @@ div.slider {
     /* here to modify style on title of infosession */
     z-index: 0;
     position: absolute;
-    bottom: 380px;
-    left: 0;
+    bottom: 355px;
+    left: 10px;
     background-color: white;
     width: fit-content;
     height: fit-content;
@@ -122,8 +122,8 @@ div.slider {
     opacity: 1;
     z-index: 0;
     position: absolute;
-    bottom: 3px;
-    left: 0;
+    bottom: 10px;
+    left: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -192,15 +192,18 @@ div.slider {
 
 /* test style wordcloud */
 .wordcloudContainer text {
-    opacity: 0; /* Initially set the opacity to 0 */
-    transition: opacity 0.5s ease; /* Define the transition property */
-  }
-  
-  .wordcloudContainer text.fade-in {
-    opacity: 1; /* Set opacity to 1 for fade-in effect */
-  }
-  
-  .wordcloudContainer text.fade-out {
-    opacity: 0; /* Set opacity to 0 for fade-out effect */
-  }
-  
+    opacity: 0;
+    /* Initially set the opacity to 0 */
+    transition: opacity 0.5s ease;
+    /* Define the transition property */
+}
+
+.wordcloudContainer text.fade-in {
+    opacity: 1;
+    /* Set opacity to 1 for fade-in effect */
+}
+
+.wordcloudContainer text.fade-out {
+    opacity: 0;
+    /* Set opacity to 0 for fade-out effect */
+}
