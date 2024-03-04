@@ -6,7 +6,9 @@ body {
     padding: 0;
 }
 
-body, html, #map {
+body,
+html,
+#map {
     height: 100%;
     width: 100%;
 }
@@ -24,7 +26,9 @@ div.tooltip {
     background-color: #fff;
     padding: .5em;
     text-shadow: #f5f5f5 0 1px 0;
-    border-radius: 2px;
+    /* border-width: 1px; fonctionne pas*/
+    border-radius: 5px;
+    border: solid;
     opacity: 0.9;
     position: absolute;
 }
@@ -37,11 +41,19 @@ div.tooltip {
     position: absolute;
 }
 
-.slider {
+div.slider {
     z-index: 10000;
+    color: #222;
+    background-color: #fff;
+    padding: .5em;
+    text-shadow: #f5f5f5 0 1px 0;
+    border-radius: 10px;
+    border: solid;
+    opacity: 0.9;
     position: absolute;
-    top: 0;
+    top: 1vw;
     right: 50vw;
+    height: 35px;
 }
 
 #dayTimeTable {
@@ -77,11 +89,11 @@ div.tooltip {
     /* changes from PA */
     /* width: 100px;
     height: 100px; */
-    transition: width 0.5s ease; 
+    transition: width 0.5s ease;
 }
 
 #timeTable.hidden {
-    width: 0    ;
+    width: 0;
 }
 
 #headInfoSession {
