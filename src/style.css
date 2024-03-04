@@ -27,7 +27,7 @@ div.tooltip {
     padding: .5em;
     text-shadow: #f5f5f5 0 1px 0;
     /* border-width: 1px; fonctionne pas*/
-    border-radius: 5px;
+    border-radius: 7px;
     border: solid;
     opacity: 0.9;
     position: absolute;
@@ -51,17 +51,23 @@ div.slider {
     border: solid;
     opacity: 0.9;
     position: absolute;
-    top: 1vw;
-    right: 50vw;
+    top: 10px;
+    left: 10px;
     height: 35px;
 }
 
 #dayTimeTable {
     /* here to modify right table title */
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 0;
     position: absolute;
-    top: 0;
-    right: 0;
+    bottom: 380px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -100,7 +106,7 @@ div.slider {
     /* here to modify style on title of infosession */
     z-index: 0;
     position: absolute;
-    top: 50px;
+    bottom: 380px;
     left: 0;
     background-color: white;
     width: fit-content;
