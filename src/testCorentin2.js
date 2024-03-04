@@ -493,7 +493,7 @@ async function main () {
   }
 
   async function loadLoc () {
-    const locParsed = await (d3.csv('../loc_epreuves.csv')
+    const locParsed = await (d3.csv('./loc_epreuves.csv')
       .then(data => {
         return data.map((d, i) => {
           const r = d
@@ -528,7 +528,7 @@ async function main () {
     const parseDateHour = d3.timeParse('%A %e %B %Y %H:%M')// https://d3js.org/d3-time-format
     const parseDate = d3.utcParse('%A %e %B %Y')
 
-    const planningParsed = await (d3.csv('../session_planning_with_loc_v13.csv')
+    const planningParsed = await (d3.csv('./session_planning_with_loc_v13.csv')
       .then(data => {
         return data.map((d, i) => {
           const r = d
