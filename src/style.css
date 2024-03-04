@@ -2,12 +2,18 @@
 
 body {
     margin: 0;
-    font-family: 'Roboto';
+    font-family: "Roboto";
+    padding: 0;
 }
 
-p {
-    font-family: 'Courier New', Courier, monospace;
+body, html, #map {
+    height: 100%;
+    width: 100%;
 }
+
+/* p {
+    font-family: 'Courier New', Courier, monospace;
+} */
 
 .hidden {
     display: none;
@@ -29,30 +35,32 @@ div.tooltip {
 
 #map {
     position: absolute;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    bottom: 0;
 }
 
 .slider {
     z-index: 10000;
     position: absolute;
-    bottom: 0;
+    top: 0;
+    right: 50vw;
 }
 
 #dayTimeTable {
+    /* here to modify right table title */
     z-index: 0;
     position: absolute;
     top: 0;
-    right: 0
+    right: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #timeTable {
+    /* here to modify right table */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
     opacity: 1;
     z-index: 0;
     position: absolute;
-    bottom: 0;
+    bottom: 3px;
     right: 0;
     /* top: 0; */
     /* bottom: 200; */
@@ -65,21 +73,40 @@ div.tooltip {
     border-radius: 2px;
     opacity: 0.9;
     position: absolute; */
+
+    /* changes from PA */
+    /* width: 100px;
+    height: 100px; */
+    transition: width 0.5s ease; 
+}
+
+#timeTable.hidden {
+    width: 0    ;
 }
 
 #headInfoSession {
+    /* here to modify style on title of infosession */
     z-index: 0;
     position: absolute;
-    top: 0;
-    left: 0
+    top: 50px;
+    left: 0;
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #infoSession {
+    /* here to modify style on left table */
     opacity: 1;
     z-index: 0;
     position: absolute;
-    bottom: 0;
+    bottom: 3px;
     left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Style for tooltip */
@@ -102,4 +129,25 @@ div.tooltip {
     to {
         opacity: 1;
     }
+}
+
+
+.wordcloudContainer {
+    z-index: 9000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* style td */
+#timeTable td.gridjs-td {
+    cursor: pointer;
+}
+
+#timeTable td.gridjs-td:hover {
+    opacity: 0.5;
 }

@@ -2,26 +2,17 @@
 /* eslint-disable no-undef */
 async function main () {
   // set the dimensions and margins of the graph
-  const margin = { top: 10, right: 10, bottom: 10, left: 10 }
-  const width = window.innerWidth - margin.left - margin.right
-  const height = window.innerHeight - margin.top - margin.bottom
+  const width = window.innerWidth
+  const height = window.innerHeight
 
   // append the svg object to the body of the page
   const svg = d3.select('body').append('svg')
-    .attr('width', width + margin.left + margin.right)
-    .attr('height', height + margin.top + margin.bottom)
+    .attr('width', width)
+    .attr('height', height)
     .append('g')
-    .attr('transform',
-      'translate(' + margin.left + ',' + margin.top + ')')
 
   const data = await loadData()
-  // console.log('data : ', data.map(e => {
-  //   const r = {
-  //     sport: e.SPORTS,
-  //     capacite: e.capacite
-  //   }
-  //   return r
-  // }))
+
   const dataClean = data.map(e => {
     const r = {
       sport: e.SPORTS,
@@ -29,11 +20,7 @@ async function main () {
     }
     return r
   })
-  // console.log('data clean : ', dataClean)
   const rolledupdata = [...d3.rollup(dataClean, v => d3.sum(v, e => e.capacite), d => d.sport)]
-  // console.log('rolledupdata : ', rolledupdata)
-  // const words = data.map(d => { return (d.SPORTS, d.capacite) })
-  // console.log('words : ', words)
 
   console.log('min : ', d3.min(rolledupdata, d => d[1]))
   console.log('max : ', d3.max(rolledupdata, d => d[1]))
@@ -46,7 +33,6 @@ async function main () {
   const layout = d3.layout.cloud()
     .size([width, height])
     .words(rolledupdata.map(function (d) {
-      // console.log('d : ', d)
       return {
         text: d[0],
         size: wordCloudScale(d[1])
@@ -82,7 +68,6 @@ async function main () {
   async function loadData () {
     const planningParsed = await (d3.csv('session_planning_with_loc_v13.csv')
       .then(data => {
-        // console.log(data)
         return data.map((d, i) => {
           const r = d
           r.capacite = +r.capacite
