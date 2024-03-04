@@ -248,7 +248,7 @@ async function main() {
 
         .on('end', () => {
           updateCloud(datacloud)
-          // updateTimeTable()
+          updateTimeTable()
         })
     )
 
