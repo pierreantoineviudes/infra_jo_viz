@@ -58,14 +58,14 @@ async function main() {
     .style('z-index', 3000)
     .style('opacity', 0)
     .attr('class', 'tooltip')
-    .style('border-width', '2px')
+    .style('border-width', '1px')
 
   // Initialisation div slider
 
   const slider_div = d3.select('body')
     .append('div')
     .attr('class', 'slider')
-    .style('border-width', '2px')
+    .style('border-width', '1px')
 
   // Création des tableaux
   // Infos sessions
@@ -625,7 +625,8 @@ async function main() {
         .append('g')
         .attr('class', 'groupclass')
         .attr('transform', 'translate(' + layout.size()[0] / 2 + ',' + layout.size()[1] / 2 + ')')
-        .selectAll('text')
+
+      const words_map = textGroup.selectAll('text')
         .data(words)
         .enter().append('text')
         .style('font-size', function (d) { return d.size + 'px' })
@@ -635,10 +636,15 @@ async function main() {
           return 'translate(' + [d.x, d.y] + ')rotate(' + d.rotate + ')'
         })
         .text(function (d) { return d.text })
-        .style('opacity', 0)
+        // .style('opacity', 0)
         .transition()
         .duration(500)
         .style('opacity', 1)
+      // .on('mousemove', function (d) {
+      //   d3.select(this).transition()
+      //     .duration('0')
+      //     .style('opacity', 0)
+      // })
     }
   }
 }
