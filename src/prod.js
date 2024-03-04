@@ -575,7 +575,7 @@ async function main () {
     svg.selectAll('*').remove()
     const dataClean = data.map(e => {
       const r = {
-        sport: e.SPORTS,
+        sport: e.discipline,
         capacite: e.capacite
       }
       return r
