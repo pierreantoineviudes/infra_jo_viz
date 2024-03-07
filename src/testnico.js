@@ -122,11 +122,12 @@ async function main() {
       'Discipline',
       'Jour',
       'Heure',
+      'URL',
       {
         name: 'infosEpreuves',
         hidden: true
       }],
-    data: [['', '', '']],
+    data: [['', '', '', '']],
     // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
     // data: [["", "", "", ""]],
     resizable: true,
