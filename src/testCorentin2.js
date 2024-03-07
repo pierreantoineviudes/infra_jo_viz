@@ -22,7 +22,6 @@ async function main() {
   // const yInitTT = map_height / 2
 
   // Data
-  const locParsed = await loadLoc()
   const planningParsed = await loadJOData()
   let planningfiltered = planningParsed
   let datacloud = planningParsed
@@ -502,19 +501,6 @@ async function main() {
   async function loadArr() {
     const idfArr = (await fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/ile-de-france/arrondissements-ile-de-france.geojson')).json()
     return idfArr
-  }
-
-  async function loadLoc() {
-    const locParsed = await (d3.csv('../loc_epreuves.csv')
-      .then(data => {
-        return data.map((d, i) => {
-          const r = d
-          r.latitude = +d.latitude
-          r.longitude = +d.longitude
-          return r
-        })
-      }))
-    return locParsed
   }
 
   async function loadJOData() {
