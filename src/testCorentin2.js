@@ -307,10 +307,9 @@ async function main() {
   async function updateMap(filteredData) {
     const bigg = d3.select('#map').select('svg').select('g')
 
-    const fond_cliquable = bigg.selectAll('path') //le click réinitialise la vue
+    const fond_cliquable = bigg.selectAll('path') //le click réinitialise la vue et déselectionne les cercles sélectionnés
       .on('click', () => {
-        HideSession()
-        HideTimeTable()
+        resetView()
       })
 
     const Dots = bigg.selectAll('circle')
@@ -323,7 +322,7 @@ async function main() {
       .style('fill', 'steelblue')
       .style('stroke', 'black')
       .style('opacity', .5)
-      .attr('clicked', 'False')
+      // .attr('clicked', 'False')
 
       .on('mouseenter', function (e, d) { // function to add mouseover event
         Tooltip
@@ -346,13 +345,9 @@ async function main() {
       })
 
       .on('click', function (e, d) {
-        // d.__selected = true
-        // d3.select(this).transition()
-        //   .duration('50')
-        //   .style('fill', 'red')
         selection = d3.select(this)
-        // isclicked = selection._groups[0][0].getAttribute('clicked')
         isclicked = d.__selected
+
         if (!isclicked) {
           d.__selected = true
           selection.style('opacity', 0.9)
@@ -362,20 +357,25 @@ async function main() {
           selection.style('opacity', .5)
         }
 
-        lieux_uniques = [...new Set(datacloud.filter(f => f.__selected).map(d => d.lieu_epreuve))] //Liste des infra sélectionnées
-        console.log(lieux_uniques)
-        if (lieux_uniques.length > 0) {
+        selectedPlace = d.lieu_epreuve
+        updateTimeTable()
+        displayTimeTable()
+
+        datacloud = planningfiltered.filter(f => f.__selected)
+        lieux_uniques = [...new Set(datacloud.map(d => d.lieu_epreuve))] //Liste des infra sélectionnées
+
+        if (lieux_uniques.length > 0) { //If one ore more circles are selected reduce opacity of unselected ones
           bigg.selectAll('circle').filter(f => !f.__selected)
             .style('opacity', .2)
         }
-        else { //All has been unselected, reset global opacity
+        else {      //If all has been unselected, reset global opacitys, DataCloud and PlaningInfra
           bigg.selectAll('circle').filter(f => !f.__selected)
             .style('opacity', .5)
+          datacloud = planningfiltered //wordcloud réinit. sur les données globales
+          HideTimeTable()
         }
-        datacloud = planningfiltered.filter(f => f.__selected)
+
         updateCloud()
-        updateTimeTable()
-        displayTimeTable()
 
       })
 
@@ -520,6 +520,18 @@ async function main() {
     }).forceRender()
     // document.getElementById("timeTable").style('opacity', 0.9)
   } // Fin fonction updateTimeTable
+
+  function resetView() {
+    HideTimeTable()
+    HideSession()
+    // bigg.selectAll('circle').filter(f => f.__selected) //déselectionne et réinit. les cercles sélectionnés. 
+    //   .style('opacity', .5)
+    //   .attr('selected')
+
+    // bigg.selectAll('circle').filter(f => !f.__selected) //éinit. les cercles non-sélectionnés. 
+    //   .style('opacity', .5)
+
+  }
 
   function displayTimeTable() {
     titlePlanning.style('z-index', 10000)
