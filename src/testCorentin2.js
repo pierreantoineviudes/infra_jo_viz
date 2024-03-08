@@ -33,7 +33,7 @@ async function main() {
   // Echelle
   const RadiusScale = d3.scaleLinear()
     .domain(d3.extent(planningParsed, d => +d.capacite))
-    .range([10, 30])
+    .range([10, 40])
 
   // Variables de Dates
   const dates_str = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates uniques sans formatter en str bizarre !
@@ -279,17 +279,25 @@ async function main() {
     const idfLayer = L.geoJson(idfArr, { // instantiates a new geoJson layer using built in geoJson handling
       weight: 2, // Attributes of polygons including the weight of boundaries and colors of map.
       color: '#432',
-      opacity: 0.15
+      opacity: 0.07
     }).bindPopup(function (Layer) { // binds a popup when clicking on each polygon to access underlying data
       return Layer.feature.properties.NAME
-    }).addTo(map) // Adds the layer to the map.
+    })
+      .addTo(map) // Adds the layer to the map.
+
 
     map.fitBounds(idfLayer.getBounds()) // finds bounds of polygon and automatically gets map view to fit (useful for interaction and not having to 'cook' the map zoom and coordinates as in map instantiation
     L.svg({ clickable: true }).addTo(map)
+
     const overlay = d3.select(map.getPanes().overlayPane)
     const svg_map = overlay.select('svg').attr('pointer-events', 'auto')
     const bigg = d3.select('#map').select('svg').select('g')
     bigg.attr('class', 'leaflet-zoom-hide')
+
+    // clickable_background = overlay.append('svg')
+    //   .attr('class', 'clickable-background')
+    //   .attr('width', window.innerWidth)
+    //   .attr('height', window.innerHeight)
 
     updateMap(Tab_lieux_uniques)
   } // Fin fonction createMap
@@ -298,6 +306,13 @@ async function main() {
 
   async function updateMap(filteredData) {
     const bigg = d3.select('#map').select('svg').select('g')
+
+    const fond_cliquable = bigg.selectAll('path') //le click réinitialise la vue
+      .on('click', () => {
+        HideSession()
+        HideTimeTable()
+      })
+
     const Dots = bigg.selectAll('circle')
       .data(filteredData)
       .join('circle')
@@ -322,6 +337,7 @@ async function main() {
           .duration('0') // how long we are transitioning between the two states (works like keyframes)
           .style('fill', 'red') // change the fill
           .style('opacity', 0.8)
+          .style('cursor', 'pointer')
 
         bigg.selectAll('circle')
           .style("opacity", .2)
@@ -347,6 +363,7 @@ async function main() {
         infra_selec = d3.filter(datacloud, d => d.lieu_epreuve == selectedPlace)
         updateCloud(infra_selec)
         updateTimeTable()
+        displayTimeTable()
       })
 
     const update = () => Dots
@@ -464,6 +481,10 @@ async function main() {
     titleInfoSessions.style('z-index', 9000)
   } // Fin fonction updateSession
 
+  function HideSession() {
+    sessionTable.style('z-index', 0)
+    titleInfoSessions.style('z-index', 0)
+  }
   // __________________________________________________________________________________________________________________________//
 
   function updateTimeTable() {
@@ -479,13 +500,19 @@ async function main() {
     gridTimeTable.updateConfig({
       data: dataSelectedSessions
     }).forceRender()
-    titlePlanning.style('z-index', 10000)
-    planningInfras.style('z-index', 9000)
-    sessionTable.style('z-index', 0)
-    titleInfoSessions.style('z-index', 0)
     // document.getElementById("timeTable").style('opacity', 0.9)
   } // Fin fonction updateTimeTable
 
+  function displayTimeTable() {
+    titlePlanning.style('z-index', 10000)
+    planningInfras.style('z-index', 9000)
+    HideSession()
+  }
+
+  function HideTimeTable() {
+    titlePlanning.style('z-index', 0)
+    planningInfras.style('z-index', 0)
+  }
   // __________________________________________________________________________________________________________________________//
 
   function customJSONParsing(x) {
@@ -624,6 +651,18 @@ async function main() {
         })
         .text(function (d) { return d.text })
         // .style('opacity', 0)
+        .on('mouseenter', function (d) {
+          textGroup.selectAll('text')
+            .style("opacity", .2)
+
+          d3.select(this)
+            .style('opacity', 1)
+            .style("cursor", "pointer")
+        })
+        .on('mouseleave', function (d) {
+          textGroup.selectAll('text')
+            .style("opacity", 1)
+        })
         .transition()
         .duration(500)
         .style('opacity', 1)
