@@ -9,15 +9,17 @@ const { pointer } = require('d3-selection')
  */
 
 // __________________________________________________________________________________________________________________________//
-async function main() {
+async function main () {
+  let windowWidth = window.innerWidth
+  let windowHeight = window.innerHeight
   // Initialisation dimensions
 
   const margin = { top: 10, right: 10, bottom: 45, left: 10 }
-  const window_width = window.innerWidth - margin.left - margin.right
-  const window_height = window.innerHeight - margin.top - margin.bottom
+  let window_width = windowWidth - margin.left - margin.right
+  let window_height = windowHeight - margin.top - margin.bottom
   // dimensions time tables
-  const timeTableHeight = window_height / 2.2 // - margin.top - margin.bottom
-  const timeTableWidth = window_width / 3
+  let timeTableHeight = window_height / 2.2 // - margin.top - margin.bottom
+  let timeTableWidth = window_width / 3
   // const xInitTT = map_width + margin.left
   // const yInitTT = map_height / 2
 
@@ -107,7 +109,7 @@ async function main() {
   // Planning infras
   let selectedPlace = ''
   const titlePlanning = d3.select('body').append('div')
-    .attr('style', `left:${window.innerWidth - timeTableWidth - 10}px`)
+    .attr('style', `left:${windowWidth - timeTableWidth - 10}px`)
     .attr('id', 'dayTimeTable')
 
   const planningInfras = d3.select('body').append('div')
@@ -159,14 +161,14 @@ async function main() {
   // __________________________________________________________________________________________________________________________//
   // Fonctions utilisées //
 
-  async function slider() {
+  async function slider () {
     // Couleurs et dimensions
     const colours = {
       top: '#37474f',
       bottom: '#546e7a',
       accent: '#263238'
     }
-    const sliderWidth = 400
+    const sliderWidth = windowWidth * 0.70
     const sliderHeight = 40
 
     // Echelles dediees
@@ -235,7 +237,7 @@ async function main() {
 
           // Filter data based in slider value
           planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
-          datacloud = planningfiltered
+          // datacloud = planningfiltered
           lieux_uniques = [...new Set(planningfiltered.map(d => d.lieu_epreuve))]
           // Création du nouveau tableau contenant les valeurs uniques des lieu_epreuve
           Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
@@ -246,7 +248,8 @@ async function main() {
         })
 
         .on('end', () => {
-          updateCloud(datacloud)
+          // updateCloud(datacloud)
+          updateCloud()
           updateTimeTable()
         })
     )
@@ -361,7 +364,8 @@ async function main() {
 
         selectedPlace = d.lieu_epreuve
         infra_selec = d3.filter(datacloud, d => d.lieu_epreuve == selectedPlace)
-        updateCloud(infra_selec)
+        // updateCloud(infra_selec)
+        updateCloud()
         updateTimeTable()
         displayTimeTable()
       })
@@ -590,10 +594,14 @@ async function main() {
       .style('position', 'absolute')
       .attr('class', 'wordcloudContainer')
       .append('g')
-    updateCloud(planningfiltered)
+    updateCloud()
   }
 
   async function updateCloud(data) {
+    // trouver ce qu'il faut en data (enlever l'argument à la fonction)
+    // mettre une variable globale
+    data = d3.filter(planningfiltered, d => d.lieu_epreuve === selectedPlace)
+
     // set the dimensions for wordcloud
     const width = timeTableWidth
     const height = timeTableHeight
@@ -675,5 +683,27 @@ async function main() {
 
     //add tooltip on wordcloud
 
+  }
+
+  window.addEventListener('resize', updateWindowSize)
+  function updateWindowSize () {
+    windowHeight = window.innerHeight
+    windowWidth = window.innerWidth
+    window_width = windowWidth - margin.left - margin.right
+    window_height = windowHeight - margin.top - margin.bottom
+    // dimensions time tables
+    timeTableHeight = window_height / 2.2 // - margin.top - margin.bottom
+    timeTableWidth = window_width / 3
+
+    // update slider height and width
+    // delete slider and re-create it
+    d3.select('svg.slider').remove()
+    slider()
+
+    // update wordcloud
+    d3.select('.wordcloudContainer').remove()
+    createCloud()
+
+    // console.log('window_width : ', window_width)
   }
 }
