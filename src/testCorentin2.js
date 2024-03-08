@@ -26,7 +26,7 @@ async function main() {
   // Data
   const planningParsed = await loadJOData()
   let planningfiltered = planningParsed
-  let datacloud = planningParsed
+  let datacloud = planningfiltered
   let lieux_uniques = [...new Set(planningParsed.map(d => d.lieu_epreuve))]
   let Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
     return planningParsed.find(obj => obj.lieu_epreuve === lieu)
@@ -242,7 +242,7 @@ async function main() {
             return planningfiltered.find(obj => obj.lieu_epreuve === lieu)
           })
           // Update the map with the new domain
-          updateMap(Tab_lieux_uniques)
+          updateMap()
         })
 
         .on('end', () => {
@@ -299,12 +299,12 @@ async function main() {
     //   .attr('width', window.innerWidth)
     //   .attr('height', window.innerHeight)
 
-    updateMap(Tab_lieux_uniques)
+    updateMap()
   } // Fin fonction createMap
 
   // __________________________________________________________________________________________________________________________//
 
-  async function updateMap(filteredData) {
+  async function updateMap() {
     const bigg = d3.select('#map').select('svg').select('g')
 
     const fond_cliquable = bigg.selectAll('path') //le click réinitialise la vue et déselectionne les cercles sélectionnés
@@ -313,7 +313,7 @@ async function main() {
       })
 
     const Dots = bigg.selectAll('circle')
-      .data(filteredData)
+      .data(Tab_lieux_uniques)
       .join('circle')
       .attr('class', 'circle')
       .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
@@ -345,9 +345,9 @@ async function main() {
       })
 
       .on('click', function (e, d) {
+
         selection = d3.select(this)
         isclicked = d.__selected
-
         if (!isclicked) {
           d.__selected = true
           selection.style('opacity', 0.9)
@@ -362,17 +362,18 @@ async function main() {
         displayTimeTable()
 
         datacloud = planningfiltered.filter(f => f.__selected)
+        console.log(datacloud)
         lieux_uniques = [...new Set(datacloud.map(d => d.lieu_epreuve))] //Liste des infra sélectionnées
 
-        if (lieux_uniques.length > 0) { //If one ore more circles are selected reduce opacity of unselected ones
+        if (lieux_uniques.length > 0) {
           bigg.selectAll('circle').filter(f => !f.__selected)
             .style('opacity', .2)
         }
-        else {      //If all has been unselected, reset global opacitys, DataCloud and PlaningInfra
+        else { //All has been unselected, reset global opacitys, DataCloud and PlaningInfra
           bigg.selectAll('circle').filter(f => !f.__selected)
             .style('opacity', .5)
           datacloud = planningfiltered //wordcloud réinit. sur les données globales
-          HideTimeTable()
+
         }
 
         updateCloud()
@@ -396,7 +397,7 @@ async function main() {
 
     // Cette partie du code sert à supprimer les éléments de la map après chaque update (i.e après le 'map.on()')
     const dots_unbinded = bigg.selectAll('circle')
-      .data(filteredData, d => {
+      .data(datacloud, d => {
         return d.index
       })
     dots_unbinded.exit()
@@ -640,6 +641,7 @@ async function main() {
       }
       return r
     })
+
     const rolledupdata = [...d3.rollup(dataClean, v => d3.sum(v, e => e.capacite), d => d.sport)]
     const wordCloudScale = d3.scaleLog()
       .domain([d3.min(rolledupdata, d => d[1]), d3.max(rolledupdata, d => d[1])])
@@ -679,14 +681,45 @@ async function main() {
           return 'translate(' + [d.x, d.y] + ')rotate(' + d.rotate + ')'
         })
         .text(function (d) { return d.text })
-        // .style('opacity', 0)
+
         .on('mouseenter', function (d) {
           textGroup.selectAll('text')
             .style("opacity", .2)
-
           d3.select(this)
             .style('opacity', 1)
             .style("cursor", "pointer")
+        })
+
+        .on('click', function (e, d) {
+          selection = d3.select(this)
+          // textGroup.selectAll('text')
+          //   .style("opacity", .2)
+          // click
+          //   .style('opacity', 1)
+
+          isclicked = d.__selected
+          if (!isclicked) {
+            d.__selected = true
+            selection.style('opacity', 1)
+            selection.style('fill', 'steelblue')
+          }
+          else {
+            d.__selected = false
+            selection.style('fill', 'black')
+          }
+
+          sport = selection._groups[0][0].__data__.text //Accéder au texte cliqué
+          tab_test = Tab_lieux_uniques.filter(f => f.__selected)
+          console.log(tab_test)
+          Tab_lieux_uniques = d3.filter(Tab_lieux_uniques, f => f.discipline == sport) //Nouveau tableau filtré par la sélection
+          tab_test = d3.filter(Tab_lieux_uniques, f => f.__selected)
+          console.log(Tab_lieux_uniques)
+          updateMap()
+          //Réinitialisation des données de la carte après maj de cette dernière
+          Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
+            return planningfiltered.find(obj => obj.lieu_epreuve === lieu)
+          })
+          console.log(Tab_lieux_uniques)
         })
         .on('mouseleave', function (d) {
           textGroup.selectAll('text')
