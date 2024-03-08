@@ -31,6 +31,7 @@ div.tooltip {
     border: solid;
     opacity: 0.9;
     position: absolute;
+    z-index: 3000;
 }
 
 .leaflet-overlay-pane svg path {

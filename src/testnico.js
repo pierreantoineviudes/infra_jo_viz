@@ -315,6 +315,7 @@ async function main() {
 
       .on('mousemove', function (e, d) { // function to add mouseover event
         Tooltip
+          .style('z-index', 3000)
           .style('opacity', 0.9)
           .style('top', (e.pageY - 40) + 'px')
           .style('left', (e.pageX + 15) + 'px')
@@ -332,7 +333,7 @@ async function main() {
 
       .on('mouseleave', function () {
         Tooltip
-          .style('opacity', 0)
+          .style('z-index', 0)
 
         bigg.selectAll('circle').transition()
           .duration('100')
@@ -619,6 +620,7 @@ async function main() {
         return d.size
       })
       .on('end', draw)
+
     layout.start()
 
     // This function takes the output of 'layout' above and draw the words
@@ -640,14 +642,23 @@ async function main() {
         })
         .text(function (d) { return d.text })
         // .style('opacity', 0)
+        .on('mouseenter', function (d) {
+          textGroup.selectAll('text')
+            .style("opacity", .2)
+
+          d3.select(this)
+            .style('opacity', 1)
+        })
+        .on('mouseleave', function (d) {
+          textGroup.selectAll('text')
+            .style("opacity", 1)
+        })
+
         .transition()
         .duration(500)
         .style('opacity', 1)
-      // .on('mousemove', function (d) {
-      //   d3.select(this).transition()
-      //     .duration('0')
-      //     .style('opacity', 0)
-      // })
+
+
     }
   }
 }
