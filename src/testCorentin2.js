@@ -311,6 +311,7 @@ async function main() {
 
       .on('mousemove', function (e, d) { // function to add mouseover event
         Tooltip
+          .style('z-index', 3000)
           .style('opacity', 0.9)
           .style('top', (e.pageY - 40) + 'px')
           .style('left', (e.pageX + 15) + 'px')
@@ -328,7 +329,7 @@ async function main() {
 
       .on('mouseleave', function () {
         Tooltip
-          .style('opacity', 0)
+          .style('z-index', 0)
 
         bigg.selectAll('circle').transition()
           .duration('100')
@@ -586,7 +587,7 @@ async function main() {
     const wordCloudScale = d3.scaleLog()
       .domain([d3.min(rolledupdata, d => d[1]), d3.max(rolledupdata, d => d[1])])
       .range([10, 50])
-    // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
+    // Constructs a new cloud layout instance. It runs an algorithm to find the position of words that suits your requirements
     const layout = d3.layout.cloud()
       .size([width, height])
       .words(rolledupdata.map(function (d) {
@@ -632,5 +633,8 @@ async function main() {
       //     .style('opacity', 0)
       // })
     }
+
+    //add tooltip on wordcloud
+
   }
 }

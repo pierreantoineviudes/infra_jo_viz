@@ -216,6 +216,7 @@ async function updateMap(filteredData) {
 
         .on('mousemove', function (e, d) { // function to add mouseover event
             Tooltip
+                .style('z-index', 3000)
                 .style('opacity', 0.9)
                 .style('top', (e.pageY - 30) + 'px')
                 .style('left', (e.pageX + 30) + 'px')
@@ -230,7 +231,7 @@ async function updateMap(filteredData) {
 
         .on('mouseleave', function () {
             Tooltip
-                .style('opacity', 0)
+                .style('z-index', 0)
             d3.select(this).transition()
                 .duration('100')
                 .style('fill', 'steelblue')
