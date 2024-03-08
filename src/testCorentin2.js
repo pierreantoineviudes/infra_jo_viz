@@ -9,7 +9,7 @@ const { pointer } = require('d3-selection')
  */
 
 // __________________________________________________________________________________________________________________________//
-async function main () {
+async function main() {
   let windowWidth = window.innerWidth
   let windowHeight = window.innerHeight
   // Initialisation dimensions
@@ -104,7 +104,6 @@ async function main () {
 
   gridSession.render(document.getElementById('infoSession'))
   // var gridSession = createSessionTable()
-  // console.log(gridSession)
 
   // Planning infras
   let selectedPlace = ''
@@ -147,7 +146,6 @@ async function main () {
   gridTimeTable.on('rowClick', (...args) => updateSession(args))
 
   // var gridTimeTable = createTimeTable()
-  // console.log(gridTimeTable)
 
   // Création de la carte
   createMap()
@@ -161,7 +159,7 @@ async function main () {
   // __________________________________________________________________________________________________________________________//
   // Fonctions utilisées //
 
-  async function slider () {
+  async function slider() {
     // Couleurs et dimensions
     const colours = {
       top: '#37474f',
@@ -237,7 +235,7 @@ async function main () {
 
           // Filter data based in slider value
           planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
-          // datacloud = planningfiltered
+          datacloud = planningfiltered
           lieux_uniques = [...new Set(planningfiltered.map(d => d.lieu_epreuve))]
           // Création du nouveau tableau contenant les valeurs uniques des lieu_epreuve
           Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
@@ -364,20 +362,17 @@ async function main () {
           selection.style('opacity', .5)
         }
 
-        lieux_selec = [...new Set(datacloud.filter(f => f.__selected).map(d => d.lieu_epreuve))] //Liste des infra sélectionnées
-        console.log(lieux_selec)
-        if (lieux_selec.length > 0) {
+        lieux_uniques = [...new Set(datacloud.filter(f => f.__selected).map(d => d.lieu_epreuve))] //Liste des infra sélectionnées
+        console.log(lieux_uniques)
+        if (lieux_uniques.length > 0) {
           bigg.selectAll('circle').filter(f => !f.__selected)
             .style('opacity', .2)
         }
-        else { //All has been unselected
+        else { //All has been unselected, reset global opacity
           bigg.selectAll('circle').filter(f => !f.__selected)
             .style('opacity', .5)
         }
-
-        selectedPlace = d.lieu_epreuve
-        infra_selec = d3.filter(datacloud, d => d.lieu_epreuve == selectedPlace)
-        datacloud = d3.filter(planningfiltered, d => d.lieu_epreuve == selectedPlace)
+        datacloud = planningfiltered.filter(f => f.__selected)
         updateCloud()
         updateTimeTable()
         displayTimeTable()
@@ -496,11 +491,10 @@ async function main () {
 
   function updateSession(args) {
     sessionString = selectedPlace + ' | ' + args[1]._cells[0].data + ' | ' + args[1]._cells[1].data + ' | ' + args[1]._cells[2].data
-    console.log(sessionString)
     titleInfoSessions.html('Session : ' + sessionString)
     dataSession = args[1]._cells[3].data.content
     // .epreuve, args[1]._cells[4].data.content.genre, args[1]._cells[4].data.content.etape]
-    console.log(dataSession)// [dataSession.epreuve, dataSession.genre, dataSession.etape])
+    // console.log(dataSession)// [dataSession.epreuve, dataSession.genre, dataSession.etape])
     gridSession.updateConfig({
       data: dataSession // [dataSession.epreuve, dataSession.genre, dataSession.etape]
     }).forceRender()
@@ -518,12 +512,9 @@ async function main () {
     document.getElementById('timeTable').innerHTML = ''
     titlePlanning.html(selectedPlace)
     selectedSessions = d3.filter(planningfiltered, d => d.lieu_epreuve === selectedPlace)
-    console.log(selectedPlace)
 
     dataSelectedSessions = selectedSessions.map(d => [d.discipline, d.jour, d.plage, customJSONParsing(d.parsing_epreuve)])
-    console.log(dataSelectedSessions)
 
-    console.log(gridTimeTable)
     gridTimeTable.updateConfig({
       data: dataSelectedSessions
     }).forceRender()
@@ -653,7 +644,6 @@ async function main () {
       .padding(10)
       .rotate(0)
       .fontSize(function (d) {
-        // console.log('d : fontsize', d)
         return d.size
       })
       .on('end', draw)
@@ -705,7 +695,7 @@ async function main () {
   }
 
   window.addEventListener('resize', updateWindowSize)
-  function updateWindowSize () {
+  function updateWindowSize() {
     windowHeight = window.innerHeight
     windowWidth = window.innerWidth
     window_width = windowWidth - margin.left - margin.right
@@ -723,6 +713,5 @@ async function main () {
     d3.select('.wordcloudContainer').remove()
     createCloud()
 
-    // console.log('window_width : ', window_width)
   }
 }
