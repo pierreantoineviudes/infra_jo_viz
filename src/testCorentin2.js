@@ -246,7 +246,7 @@ async function main() {
         })
 
         .on('end', () => {
-          updateCloud(datacloud)
+          updateCloud()
           updateTimeTable()
         })
     )
@@ -322,9 +322,10 @@ async function main() {
       .attr('r', d => RadiusScale(d.capacite))
       .style('fill', 'steelblue')
       .style('stroke', 'black')
-      .style('opacity', 0.5)
+      .style('opacity', .5)
+      .attr('clicked', 'False')
 
-      .on('mousemove', function (e, d) { // function to add mouseover event
+      .on('mouseenter', function (e, d) { // function to add mouseover event
         Tooltip
           .style('z-index', 3000)
           .style('opacity', 0.9)
@@ -332,25 +333,16 @@ async function main() {
           .style('left', (e.pageX + 15) + 'px')
           .html(d.lieu_epreuve + ' - ' + `<b>${d.capacite}<b>`)
 
+        isclicked = d.__selected
+        if (!isclicked) {
+          d3.select(this).transition()
+            .duration('0')
+            .style('fill', 'red')
+            .style('cursor', 'pointer')
+        }
+        else {
+        }
 
-        d3.select(this).transition() // D3 selects the object we have moused over in order to perform operations on it
-          .duration('0') // how long we are transitioning between the two states (works like keyframes)
-          .style('fill', 'red') // change the fill
-          .style('opacity', 0.8)
-          .style('cursor', 'pointer')
-
-        bigg.selectAll('circle')
-          .style("opacity", .2)
-      })
-
-      .on('mouseleave', function () {
-        Tooltip
-          .style('z-index', 0)
-
-        bigg.selectAll('circle').transition()
-          .duration('100')
-          .style('fill', 'steelblue')
-          .style('opacity', 0.5)
       })
 
       .on('click', function (e, d) {
@@ -358,12 +350,45 @@ async function main() {
         // d3.select(this).transition()
         //   .duration('50')
         //   .style('fill', 'red')
+        selection = d3.select(this)
+        // isclicked = selection._groups[0][0].getAttribute('clicked')
+        isclicked = d.__selected
+        if (!isclicked) {
+          d.__selected = true
+          selection.style('opacity', 0.9)
+        }
+        else {
+          d.__selected = false
+          selection.style('opacity', .5)
+        }
+
+        lieux_selec = [...new Set(datacloud.filter(f => f.__selected).map(d => d.lieu_epreuve))] //Liste des infra sélectionnées
+        console.log(lieux_selec)
+        if (lieux_selec.length > 0) {
+          bigg.selectAll('circle').filter(f => !f.__selected)
+            .style('opacity', .2)
+        }
+        else { //All has been unselected
+          bigg.selectAll('circle').filter(f => !f.__selected)
+            .style('opacity', .5)
+        }
 
         selectedPlace = d.lieu_epreuve
         infra_selec = d3.filter(datacloud, d => d.lieu_epreuve == selectedPlace)
-        updateCloud(infra_selec)
+        datacloud = d3.filter(planningfiltered, d => d.lieu_epreuve == selectedPlace)
+        updateCloud()
         updateTimeTable()
         displayTimeTable()
+
+      })
+
+      .on('mouseleave', function () {
+        Tooltip
+          .style('z-index', 0)
+
+        bigg.selectAll('circle').filter(f => !f.__selected).transition()
+          .duration('100')
+          .style('fill', 'steelblue')
       })
 
     const update = () => Dots
@@ -590,10 +615,10 @@ async function main() {
       .style('position', 'absolute')
       .attr('class', 'wordcloudContainer')
       .append('g')
-    updateCloud(planningfiltered)
+    updateCloud()
   }
 
-  async function updateCloud(data) {
+  async function updateCloud() {
     // set the dimensions for wordcloud
     const width = timeTableWidth
     const height = timeTableHeight
@@ -603,7 +628,7 @@ async function main() {
       .duration(500)
       .style('opacity', 0)
       .remove()
-    const dataClean = data.map(e => {
+    const dataClean = datacloud.map(e => {
       const r = {
         sport: e.discipline,
         capacite: e.capacite
