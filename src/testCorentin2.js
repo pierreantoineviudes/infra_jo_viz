@@ -1,15 +1,21 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
-const { pointer } = require('d3-selection')
+const { pointer, create } = require('d3-selection')
 
 /**
  * Cartographie qui trace les POI sur un fond de carte Openstreetmap
+ *
+ * La cartographie utilise les données préprocessées en python "output.csv"
+ * des variables de data globales sont créées
+ * elles sont ensuites modifiées et filtrées par les différents callbacks qui exsitent
+ * à chaque intéraction avec un widget, les variables globales sont updatées et les visualisations
+ * sont recréées
  * @returns none
  */
 
 // __________________________________________________________________________________________________________________________//
-async function main() {
+async function main () {
   let windowWidth = window.innerWidth
   let windowHeight = window.innerHeight
   // Initialisation dimensions
@@ -30,6 +36,58 @@ async function main() {
   let lieux_uniques = [...new Set(planningParsed.map(d => d.lieu_epreuve))]
   let Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
     return planningParsed.find(obj => obj.lieu_epreuve === lieu)
+  })
+  let selectedPlace = ''
+  const gridSession = new gridjs.Grid({
+    columns: [
+      'Epreuve',
+      'Genre',
+      'Etape'
+    ],
+    data: [['', '', '']],
+    // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
+    // data: [["", "", "", ""]],
+    resizable: true,
+    // pagination: true,
+    fixedHeader: true,
+    height: timeTableHeight + 'px',
+    width: timeTableWidth + 'px',
+    style: {
+      td: {
+        border: '1px solid #ccc'
+      },
+      table: {
+        'font-size': '15px'
+      }
+    }
+  })
+
+  const gridTimeTable = new gridjs.Grid({
+    columns: [
+      'Discipline',
+      'Jour',
+      'Heure',
+      {
+        name: 'infosEpreuves',
+        hidden: true
+      }],
+    data: [['', '', '']],
+    // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
+    // data: [["", "", "", ""]],
+    resizable: true,
+    // pagination: true,
+    fixedHeader: true,
+    height: timeTableHeight + 'px',
+    width: timeTableWidth + 'px',
+    style: {
+      td: {
+        border: '1px solid #ccc'
+      },
+      table: {
+        'font-size': '15px'
+      }
+    }
+
   })
 
   // Echelle
@@ -68,85 +126,6 @@ async function main() {
     .attr('class', 'slider')
     .style('border-width', '1px')
 
-  // Création des tableaux
-  // Infos sessions
-  const titleInfoSessions = d3.select('body').append('div')
-    // .attr('style', `width:${timeTableWidth}px; height:${timeTableHeight}px`)
-    .attr('id', 'headInfoSession')
-
-  const sessionTable = d3.select('body').append('div')
-    .attr('style', `width:${timeTableWidth}px; height:${timeTableHeight}px`)
-    .attr('id', 'infoSession')
-
-  const gridSession = new gridjs.Grid({
-    columns: [
-      'Epreuve',
-      'Genre',
-      'Etape'
-    ],
-    data: [['', '', '']],
-    // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
-    // data: [["", "", "", ""]],
-    resizable: true,
-    // pagination: true,
-    fixedHeader: true,
-    height: timeTableHeight + 'px',
-    width: timeTableWidth + 'px',
-    style: {
-      td: {
-        border: '1px solid #ccc'
-      },
-      table: {
-        'font-size': '15px'
-      }
-    }
-  })
-
-  gridSession.render(document.getElementById('infoSession'))
-  // var gridSession = createSessionTable()
-
-  // Planning infras
-  let selectedPlace = ''
-  const titlePlanning = d3.select('body').append('div')
-    .attr('style', `left:${windowWidth - timeTableWidth - 10}px`)
-    .attr('id', 'dayTimeTable')
-
-  const planningInfras = d3.select('body').append('div')
-    .attr('style', `width:${timeTableWidth}px; height:${timeTableHeight}px`)
-    .attr('id', 'timeTable')
-
-  const gridTimeTable = new gridjs.Grid({
-    columns: [
-      'Discipline',
-      'Jour',
-      'Heure',
-      {
-        name: 'infosEpreuves',
-        hidden: true
-      }],
-    data: [['', '', '']],
-    // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
-    // data: [["", "", "", ""]],
-    resizable: true,
-    // pagination: true,
-    fixedHeader: true,
-    height: timeTableHeight + 'px',
-    width: timeTableWidth + 'px',
-    style: {
-      td: {
-        border: '1px solid #ccc'
-      },
-      table: {
-        'font-size': '15px'
-      }
-    }
-  })
-
-  gridTimeTable.render(document.getElementById('timeTable'))
-  gridTimeTable.on('rowClick', (...args) => updateSession(args))
-
-  // var gridTimeTable = createTimeTable()
-
   // Création de la carte
   createMap()
 
@@ -155,11 +134,10 @@ async function main() {
 
   // Création du wordcloud container
   createCloud()
-
   // __________________________________________________________________________________________________________________________//
   // Fonctions utilisées //
 
-  async function slider() {
+  async function slider () {
     // Couleurs et dimensions
     const colours = {
       top: '#37474f',
@@ -214,7 +192,7 @@ async function main() {
 
     datePicker.call(
       d3.drag()
-        .on('drag', function dragged(event, d) {
+        .on('drag', function dragged (event, d) {
           const date = scaleBalls(event.x)
 
           const xAxisValue = scaleBand(date)
@@ -274,7 +252,7 @@ async function main() {
 
   // __________________________________________________________________________________________________________________________//
 
-  async function createMap() {
+  async function createMap () {
     const idfArr = await loadArr()
     const idfLayer = L.geoJson(idfArr, { // instantiates a new geoJson layer using built in geoJson handling
       weight: 2, // Attributes of polygons including the weight of boundaries and colors of map.
@@ -284,7 +262,6 @@ async function main() {
       return Layer.feature.properties.NAME
     })
       .addTo(map) // Adds the layer to the map.
-
 
     map.fitBounds(idfLayer.getBounds()) // finds bounds of polygon and automatically gets map view to fit (useful for interaction and not having to 'cook' the map zoom and coordinates as in map instantiation
     L.svg({ clickable: true }).addTo(map)
@@ -304,10 +281,10 @@ async function main() {
 
   // __________________________________________________________________________________________________________________________//
 
-  async function updateMap() {
+  async function updateMap () {
     const bigg = d3.select('#map').select('svg').select('g')
 
-    const fond_cliquable = bigg.selectAll('path') //le click réinitialise la vue et déselectionne les cercles sélectionnés
+    const fond_cliquable = bigg.selectAll('path') // le click réinitialise la vue et déselectionne les cercles sélectionnés
       .on('click', () => {
         resetView()
       })
@@ -321,7 +298,7 @@ async function main() {
       .attr('r', d => RadiusScale(d.capacite))
       .style('fill', 'steelblue')
       .style('stroke', 'black')
-      .style('opacity', .5)
+      .style('opacity', 0.5)
       // .attr('clicked', 'False')
 
       .on('mouseenter', function (e, d) { // function to add mouseover event
@@ -338,46 +315,41 @@ async function main() {
             .duration('0')
             .style('fill', 'red')
             .style('cursor', 'pointer')
+        } else {
         }
-        else {
-        }
-
       })
 
       .on('click', function (e, d) {
-
         selection = d3.select(this)
         isclicked = d.__selected
         if (!isclicked) {
           d.__selected = true
           selection.style('opacity', 0.9)
-        }
-        else {
+        } else {
           d.__selected = false
-          selection.style('opacity', .5)
+          selection.style('opacity', 0.5)
         }
 
         selectedPlace = d.lieu_epreuve
-        updateTimeTable()
-        displayTimeTable()
+        // console.log('selectedPLace click pa  : ', selectedPlace)
+        createTimeTable()
+        // updateTimeTable()
+        // displayTimeTable()
 
         datacloud = planningfiltered.filter(f => f.__selected)
         console.log(datacloud)
-        lieux_uniques = [...new Set(datacloud.map(d => d.lieu_epreuve))] //Liste des infra sélectionnées
+        lieux_uniques = [...new Set(datacloud.map(d => d.lieu_epreuve))] // Liste des infra sélectionnées
 
         if (lieux_uniques.length > 0) {
           bigg.selectAll('circle').filter(f => !f.__selected)
-            .style('opacity', .2)
-        }
-        else { //All has been unselected, reset global opacitys, DataCloud and PlaningInfra
+            .style('opacity', 0.2)
+        } else { // All has been unselected, reset global opacitys, DataCloud and PlaningInfra
           bigg.selectAll('circle').filter(f => !f.__selected)
-            .style('opacity', .5)
-          datacloud = planningfiltered //wordcloud réinit. sur les données globales
-
+            .style('opacity', 0.5)
+          datacloud = planningfiltered // wordcloud réinit. sur les données globales
         }
 
         updateCloud()
-
       })
 
       .on('mouseleave', function () {
@@ -412,85 +384,88 @@ async function main() {
 
   // Création des tableaux planning infras & infos sessions
 
-  async function createSessionTable() {
+  async function createSessionTable () {
     d3.select('body').append('div')
       .attr('style', `width:${timeTableWidth / 2}px; height:${timeTableHeight / 2}px`)
       .attr('id', 'infoSession')
 
-    const gridSession = new gridjs.Grid({
-      columns: [
-        'Epreuve',
-        'Genre',
-        'Etape'
-      ],
-      data: [['', '', '']],
-      // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
-      // data: [["", "", "", ""]],
-      resizable: true,
-      // pagination: true,
-      fixedHeader: true,
-      height: timeTableHeight + 'px',
-      width: timeTableWidth + 'px',
-      style: {
-        td: {
-          border: '1px solid #ccc'
-        },
-        table: {
-          'font-size': '15px'
-        }
-      }
-    })
+    // const gridSession = new gridjs.Grid({
+    //   columns: [
+    //     'Epreuve',
+    //     'Genre',
+    //     'Etape'
+    //   ],
+    //   data: [['', '', '']],
+    //   // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
+    //   // data: [["", "", "", ""]],
+    //   resizable: true,
+    //   // pagination: true,
+    //   fixedHeader: true,
+    //   height: timeTableHeight + 'px',
+    //   width: timeTableWidth + 'px',
+    //   style: {
+    //     td: {
+    //       border: '1px solid #ccc'
+    //     },
+    //     table: {
+    //       'font-size': '15px'
+    //     }
+    //   }
+    // })
 
     gridSession.render(document.getElementById('infoSession'))
-    return gridSession
   } // Fin fonction createSessionTable
 
   // __________________________________________________________________________________________________________________________//
 
-  async function createTimeTable() {
-    d3.select('body').append('div')
-      .attr('style', `width:${timeTableWidth}px; height:80px`)
+  async function createTimeTable () {
+    // remove the old timetable if exists
+    d3.select('#timeTable').remove()
+    // Planning infras
+    const titlePlanning = d3.select('body').append('div')
+      .attr('style', `left:${windowWidth - timeTableWidth - 10}px`)
       .attr('id', 'dayTimeTable')
 
-    d3.select('body').append('div')
+    const planningInfras = d3.select('body').append('div')
       .attr('style', `width:${timeTableWidth}px; height:${timeTableHeight}px`)
       .attr('id', 'timeTable')
 
-    const grid = new gridjs.Grid({
-      columns: [
-        'Discipline',
-        'Jour',
-        'Début',
-        'Fin',
-        {
-          name: 'infosEpreuves',
-          hidden: true
-        }],
-      data: [['', '', '', '']],
-      // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
-      // data: [["", "", "", ""]],
-      resizable: true,
-      // pagination: true,
-      fixedHeader: true,
-      height: timeTableHeight + 'px',
-      width: timeTableWidth + 'px',
-      style: {
-        td: {
-          border: '1px solid #ccc'
-        },
-        table: {
-          'font-size': '15px'
-        }
-      }
-    })
+    gridTimeTable.render(document.getElementById('timeTable'))
 
-    grid.on('rowClick', (...args) => updateSession(args))
-    return grid.render(document.getElementById('timeTable'))
+    // gestion de l'intéraction avec les lignes
+    gridTimeTable.on('rowClick', (...args) => {
+      createInfoSession()
+      updateSession(args)
+    })
+    document.getElementById('timeTable').innerHTML = ''
+    titlePlanning.html(selectedPlace)
+    selectedSessions = d3.filter(planningfiltered, d => d.lieu_epreuve === selectedPlace)
+    dataSelectedSessions = selectedSessions.map(d => [d.discipline, d.jour, d.plage, customJSONParsing(d.parsing_epreuve)])
+    gridTimeTable.updateConfig({
+      data: dataSelectedSessions
+    }).forceRender()
   } // Fin fonction createTimeTable
+
+  async function createInfoSession () {
+    d3.select('#infoSession').remove()
+    d3.select('#headInfoSession').remove()
+    // Infos sessions
+    const titleInfoSessions = d3.select('body').append('div')
+    // .attr('style', `width:${timeTableWidth}px; height:${timeTableHeight}px`)
+      .attr('id', 'headInfoSession')
+
+    const sessionTable = d3.select('body').append('div')
+      .attr('style', `width:${timeTableWidth}px; height:${timeTableHeight}px`)
+      .attr('id', 'infoSession')
+
+    gridSession.render(document.getElementById('infoSession'))
+  } // fin function createInfoSession
 
   // __________________________________________________________________________________________________________________________//
 
-  function updateSession(args) {
+  function updateSession (args) {
+    const titleInfoSessions = d3.select('#titleInfoSession')
+    const sessionTable = d3.select('#sessionTable')
     sessionString = selectedPlace + ' | ' + args[1]._cells[0].data + ' | ' + args[1]._cells[1].data + ' | ' + args[1]._cells[2].data
     titleInfoSessions.html('Session : ' + sessionString)
     dataSession = args[1]._cells[3].data.content
@@ -503,13 +478,16 @@ async function main() {
     titleInfoSessions.style('z-index', 9000)
   } // Fin fonction updateSession
 
-  function HideSession() {
+  function HideSession () {
+    // d3.select('#timeTable').remove()
+    d3.select('#infoSession').remove()
     sessionTable.style('z-index', 0)
     titleInfoSessions.style('z-index', 0)
   }
   // __________________________________________________________________________________________________________________________//
 
-  function updateTimeTable() {
+  function updateTimeTable () {
+    titlePlanning = d3.select('#titlePlanning')
     document.getElementById('timeTable').innerHTML = ''
     titlePlanning.html(selectedPlace)
     selectedSessions = d3.filter(planningfiltered, d => d.lieu_epreuve === selectedPlace)
@@ -522,31 +500,34 @@ async function main() {
     // document.getElementById("timeTable").style('opacity', 0.9)
   } // Fin fonction updateTimeTable
 
-  function resetView() {
+  function resetView () {
     HideTimeTable()
     HideSession()
-    // bigg.selectAll('circle').filter(f => f.__selected) //déselectionne et réinit. les cercles sélectionnés. 
+    // bigg.selectAll('circle').filter(f => f.__selected) //déselectionne et réinit. les cercles sélectionnés.
     //   .style('opacity', .5)
     //   .attr('selected')
 
-    // bigg.selectAll('circle').filter(f => !f.__selected) //éinit. les cercles non-sélectionnés. 
+    // bigg.selectAll('circle').filter(f => !f.__selected) //éinit. les cercles non-sélectionnés.
     //   .style('opacity', .5)
-
   }
 
-  function displayTimeTable() {
+  function displayTimeTable () {
+    const titlePlanning = d3.select('#titlePlanning')
+    const planningInfras = d3.select('#timeTable')
     titlePlanning.style('z-index', 10000)
     planningInfras.style('z-index', 9000)
     HideSession()
   }
 
-  function HideTimeTable() {
+  function HideTimeTable () {
+    const titlePlanning = d3.select('#titlePlanning')
+    const planningInfras = d3.select('#timeTable')
     titlePlanning.style('z-index', 0)
     planningInfras.style('z-index', 0)
   }
   // __________________________________________________________________________________________________________________________//
 
-  function customJSONParsing(x) {
+  function customJSONParsing (x) {
     try {
       return JSON.parse(x)
     } catch (e) {
@@ -557,12 +538,12 @@ async function main() {
   // __________________________________________________________________________________________________________________________//
 
   // Fonctions de chargement et parsing des données
-  async function loadArr() {
+  async function loadArr () {
     const idfArr = (await fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/ile-de-france/arrondissements-ile-de-france.geojson')).json()
     return idfArr
   }
 
-  async function loadJOData() {
+  async function loadJOData () {
     const frFR1 = d3.timeFormatDefaultLocale({
       dateTime: '%A %e %B %Y à %X',
       date: '%d/%m/%Y',
@@ -608,7 +589,7 @@ async function main() {
 
   // functions for wordcloud
   // create wordcloud
-  async function createCloud() {
+  async function createCloud () {
     // set the dimensions for wordcloud
     const width = timeTableWidth
     const height = timeTableHeight
@@ -624,7 +605,7 @@ async function main() {
     updateCloud()
   }
 
-  async function updateCloud() {
+  async function updateCloud () {
     // set the dimensions for wordcloud
     const width = timeTableWidth
     const height = timeTableHeight
@@ -665,7 +646,7 @@ async function main() {
 
     // This function takes the output of 'layout' above and draw the words
     // Better not to touch it. To change parameters, play with the 'layout' variable above
-    function draw(words) {
+    function draw (words) {
       const textGroup = svg
         .append('g')
         .attr('class', 'groupclass')
@@ -684,16 +665,15 @@ async function main() {
         .style('fill', 'midnightblue')
 
         .on('mouseenter', function (e, d) {
-          nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length //Nb de textes cliqués(sélectionnés)
+          nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length // Nb de textes cliqués(sélectionnés)
 
           if (nb_clicked == 0) {
             textGroup.selectAll('text')
-              .style("opacity", .2)
+              .style('opacity', 0.2)
             d3.select(this)
               .style('opacity', 1)
-              .style("cursor", "pointer")
-          }
-          else {
+              .style('cursor', 'pointer')
+          } else {
 
           }
         })
@@ -701,26 +681,22 @@ async function main() {
         .on('click', function (e, d) {
           selection = d3.select(this)
           isclicked = d.__clicked
-          nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length //Nb de textes cliqués(sélectionnés)
+          nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length // Nb de textes cliqués(sélectionnés)
           if (!isclicked) {
-            if (nb_clicked == 0) { //Si encore aucun texte n'est cliqué, alors autoriser la sélection
+            if (nb_clicked == 0) { // Si encore aucun texte n'est cliqué, alors autoriser la sélection
               d.__clicked = true
               selection.style('opacity', 1)
 
               textGroup.selectAll('text').filter(f => !f.__clicked)
-                .style('opacity', .2)
+                .style('opacity', 0.2)
                 .style('fill', 'grey')
 
-              sport = selection._groups[0][0].__data__.text //Accéder au texte cliqué
-              Tab_lieux_uniques = d3.filter(Tab_lieux_uniques, f => f.discipline == sport) //Nouveau tableau filtré par la sélection
+              sport = selection._groups[0][0].__data__.text // Accéder au texte cliqué
+              Tab_lieux_uniques = d3.filter(Tab_lieux_uniques, f => f.discipline == sport) // Nouveau tableau filtré par la sélection
               updateMap()
+            } else { // Si nb_clicked>0, un texte est déjà sélectionné donc on empêche une sélection supplémentaire
             }
-
-            else { //Si nb_clicked>0, un texte est déjà sélectionné donc on empêche une sélection supplémentaire
-            }
-          }
-
-          else {
+          } else {
             d.__clicked = false
             textGroup.selectAll('text').filter(f => !f.__clicked)
               .style('fill', 'midnightblue')
@@ -730,7 +706,7 @@ async function main() {
             updateMap()
           }
 
-          //Réinitialisation des données de la carte après maj de cette dernière
+          // Réinitialisation des données de la carte après maj de cette dernière
           Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
             return planningfiltered.find(obj => obj.lieu_epreuve === lieu)
           })
@@ -740,12 +716,11 @@ async function main() {
 
         .on('mouseleave', function (e, d) {
           isclicked = d.__clicked
-          nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length //Nb de textes cliqués(sélectionnés)
+          nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length // Nb de textes cliqués(sélectionnés)
           if (nb_clicked == 0) {
             textGroup.selectAll('text')
-              .style("opacity", 1)
-          }
-          else { //Si mot cliqué, alors le mouseleave ne doit rien faire
+              .style('opacity', 1)
+          } else { // Si mot cliqué, alors le mouseleave ne doit rien faire
           }
         })
         .transition()
@@ -758,12 +733,12 @@ async function main() {
       // })
     }
 
-    //add tooltip on wordcloud
-
+    // add tooltip on wordcloud
   }
 
+  // functions to maje the application responsive
   window.addEventListener('resize', updateWindowSize)
-  function updateWindowSize() {
+  function updateWindowSize () {
     windowHeight = window.innerHeight
     windowWidth = window.innerWidth
     window_width = windowWidth - margin.left - margin.right
@@ -773,7 +748,6 @@ async function main() {
     timeTableWidth = window_width / 3
 
     // update slider height and width
-    // delete slider and re-create it
     d3.select('svg.slider').remove()
     slider()
 
@@ -781,5 +755,6 @@ async function main() {
     d3.select('.wordcloudContainer').remove()
     createCloud()
 
+    // update tables?
   }
 }
