@@ -681,49 +681,72 @@ async function main() {
           return 'translate(' + [d.x, d.y] + ')rotate(' + d.rotate + ')'
         })
         .text(function (d) { return d.text })
+        .style('fill', 'midnightblue')
 
-        .on('mouseenter', function (d) {
-          textGroup.selectAll('text')
-            .style("opacity", .2)
-          d3.select(this)
-            .style('opacity', 1)
-            .style("cursor", "pointer")
+        .on('mouseenter', function (e, d) {
+          nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length //Nb de textes cliqués(sélectionnés)
+
+          if (nb_clicked == 0) {
+            textGroup.selectAll('text')
+              .style("opacity", .2)
+            d3.select(this)
+              .style('opacity', 1)
+              .style("cursor", "pointer")
+          }
+          else {
+
+          }
         })
 
         .on('click', function (e, d) {
           selection = d3.select(this)
-          // textGroup.selectAll('text')
-          //   .style("opacity", .2)
-          // click
-          //   .style('opacity', 1)
-
-          isclicked = d.__selected
+          isclicked = d.__clicked
+          nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length //Nb de textes cliqués(sélectionnés)
           if (!isclicked) {
-            d.__selected = true
-            selection.style('opacity', 1)
-            selection.style('fill', 'steelblue')
-          }
-          else {
-            d.__selected = false
-            selection.style('fill', 'black')
+            if (nb_clicked == 0) { //Si encore aucun texte n'est cliqué, alors autoriser la sélection
+              d.__clicked = true
+              selection.style('opacity', 1)
+
+              textGroup.selectAll('text').filter(f => !f.__clicked)
+                .style('opacity', .2)
+                .style('fill', 'grey')
+
+              sport = selection._groups[0][0].__data__.text //Accéder au texte cliqué
+              Tab_lieux_uniques = d3.filter(Tab_lieux_uniques, f => f.discipline == sport) //Nouveau tableau filtré par la sélection
+              updateMap()
+            }
+
+            else { //Si nb_clicked>0, un texte est déjà sélectionné donc on empêche une sélection supplémentaire
+            }
           }
 
-          sport = selection._groups[0][0].__data__.text //Accéder au texte cliqué
-          tab_test = Tab_lieux_uniques.filter(f => f.__selected)
-          console.log(tab_test)
-          Tab_lieux_uniques = d3.filter(Tab_lieux_uniques, f => f.discipline == sport) //Nouveau tableau filtré par la sélection
-          tab_test = d3.filter(Tab_lieux_uniques, f => f.__selected)
-          console.log(Tab_lieux_uniques)
-          updateMap()
+          else {
+            d.__clicked = false
+            textGroup.selectAll('text').filter(f => !f.__clicked)
+              .style('fill', 'midnightblue')
+            Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
+              return planningfiltered.find(obj => obj.lieu_epreuve === lieu)
+            })
+            updateMap()
+          }
+
           //Réinitialisation des données de la carte après maj de cette dernière
           Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
             return planningfiltered.find(obj => obj.lieu_epreuve === lieu)
           })
-          console.log(Tab_lieux_uniques)
+          // tab_test = d3.filter(Tab_lieux_uniques, f => f.__selected)
+          // console.log(Tab_lieux_uniques)
         })
-        .on('mouseleave', function (d) {
-          textGroup.selectAll('text')
-            .style("opacity", 1)
+
+        .on('mouseleave', function (e, d) {
+          isclicked = d.__clicked
+          nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length //Nb de textes cliqués(sélectionnés)
+          if (nb_clicked == 0) {
+            textGroup.selectAll('text')
+              .style("opacity", 1)
+          }
+          else { //Si mot cliqué, alors le mouseleave ne doit rien faire
+          }
         })
         .transition()
         .duration(500)
