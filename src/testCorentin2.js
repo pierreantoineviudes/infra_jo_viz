@@ -358,7 +358,7 @@ async function main () {
       resizable: true,
       // pagination: true,
       fixedHeader: true,
-      height: timeTableHeight + 'px',
+      // height: timeTableHeight + 'px',
       width: timeTableWidth + 'px',
       style: {
         td: {
