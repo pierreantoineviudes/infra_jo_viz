@@ -13,7 +13,7 @@
  */
 
 // __________________________________________________________________________________________________________________________//
-async function main () {
+async function main() {
   let windowWidth = window.innerWidth
   let windowHeight = window.innerHeight
   // Initialisation dimensions
@@ -37,8 +37,9 @@ async function main () {
     ConcatenatedDiscipline: [...new Set(group.map(d => d.discipline))].join(', '),
     ...group[0]
   }),
-  d => d.lieu_epreuve)]
+    d => d.lieu_epreuve)]
   let selectedPlace = ''
+  let url_root = "https://www.paris2024.org/fr/sport/"
   const gridSession = creategridSession()
   const gridTimeTable = creategridTimeTable()
 
@@ -62,13 +63,18 @@ async function main () {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map)
 
-  // Initialisation Tooltip
+  // Initialisation Tooltips
 
-  const Tooltip = d3.select('body')
+  const Tooltip_map = d3.select('body')
     .append('div')
-    .style('z-index', 3000)
     .style('opacity', 0)
-    .attr('class', 'tooltip')
+    .attr('class', 'maptooltip')
+    .style('border-width', '1px')
+
+  const Tooltip_cloud = d3.select('body')
+    .append('div')
+    .style('opacity', 0)
+    .attr('class', 'cloudtooltip')
     .style('border-width', '1px')
 
   // Initialisation div slider
@@ -89,7 +95,7 @@ async function main () {
   // __________________________________________________________________________________________________________________________//
   // Fonctions utilisées //
 
-  async function slider () {
+  async function slider() {
     // Couleurs et dimensions
     const colours = {
       top: '#37474f',
@@ -144,7 +150,7 @@ async function main () {
 
     datePicker.call(
       d3.drag()
-        .on('drag', function dragged (event, d) {
+        .on('drag', function dragged(event, d) {
           const date = scaleBalls(event.x)
 
           const xAxisValue = scaleBand(date)
@@ -170,7 +176,7 @@ async function main () {
             ConcatenatedDiscipline: [...new Set(group.map(d => d.discipline))].join(', '),
             ...group[0]
           }),
-          d => d.lieu_epreuve)]
+            d => d.lieu_epreuve)]
           // Update the map with the new domain
           updateMap()
         })
@@ -204,7 +210,7 @@ async function main () {
 
   // __________________________________________________________________________________________________________________________//
 
-  async function createMap () {
+  async function createMap() {
     const idfArr = await loadArr()
     const idfLayer = L.geoJson(idfArr, { // instantiates a new geoJson layer using built in geoJson handling
       weight: 2, // Attributes of polygons including the weight of boundaries and colors of map.
@@ -233,7 +239,7 @@ async function main () {
 
   // __________________________________________________________________________________________________________________________//
 
-  async function updateMap () {
+  async function updateMap() {
     const bigg = d3.select('#map').select('svg').select('g')
 
     const fond_cliquable = bigg.selectAll('path') // le click réinitialise la vue et déselectionne les cercles sélectionnés
@@ -255,8 +261,8 @@ async function main () {
       // .attr('clicked', 'False')
 
       .on('mouseenter', function (e, d) { // function to add mouseover event
-        Tooltip
-          .style('z-index', 3000)
+        Tooltip_map
+          .style('z-index', 10000)
           .style('opacity', 0.9)
           .style('top', (e.pageY - 40) + 'px')
           .style('left', (e.pageX + 15) + 'px')
@@ -305,7 +311,7 @@ async function main () {
             ConcatenatedDiscipline: [...new Set(group.map(d => d.discipline))].join(', '),
             ...group[0]
           }),
-          d => d.lieu_epreuve)]
+            d => d.lieu_epreuve)]
           updateMap()
         }
 
@@ -313,7 +319,7 @@ async function main () {
       })
 
       .on('mouseleave', function () {
-        Tooltip
+        Tooltip_map
           .style('z-index', 0)
 
         bigg.selectAll('circle').filter(f => !f.__selected).transition()
@@ -345,7 +351,7 @@ async function main () {
   // Création des tableaux planning infras & infos sessions
 
   // functions to create gridJS objects
-  function creategridSession () {
+  function creategridSession() {
     const gridSession = new gridjs.Grid({
       columns: [
         'Epreuve',
@@ -372,7 +378,7 @@ async function main () {
     return gridSession
   }
 
-  function creategridTimeTable () {
+  function creategridTimeTable() {
     const gridTimeTable = new gridjs.Grid({
       columns: [
         'Discipline',
@@ -404,7 +410,7 @@ async function main () {
 
   // __________________________________________________________________________________________________________________________//
 
-  async function createTimeTable () {
+  async function createTimeTable() {
     // remove the old timetable if exists
     d3.select('#timeTable').remove()
     // Planning infras
@@ -432,12 +438,12 @@ async function main () {
     }).forceRender()
   } // Fin fonction createTimeTable
 
-  async function createInfoSession () {
+  async function createInfoSession() {
     d3.select('#infoSession').remove()
     d3.select('#headInfoSession').remove()
     // Infos sessions
     const titleInfoSessions = d3.select('body').append('div')
-    // .attr('style', `width:${timeTableWidth}px; height:${timeTableHeight}px`)
+      // .attr('style', `width:${timeTableWidth}px; height:${timeTableHeight}px`)
       .attr('id', 'headInfoSession')
 
     const sessionTable = d3.select('body').append('div')
@@ -449,7 +455,7 @@ async function main () {
 
   // __________________________________________________________________________________________________________________________//
 
-  function updateSession (args) {
+  function updateSession(args) {
     const titleInfoSessions = d3.select('#titleInfoSession')
     const sessionTable = d3.select('#sessionTable')
     sessionString = selectedPlace + ' | ' + args[1]._cells[0].data + ' | ' + args[1]._cells[1].data + ' | ' + args[1]._cells[2].data
@@ -464,7 +470,7 @@ async function main () {
     titleInfoSessions.style('z-index', 9000)
   } // Fin fonction updateSession
 
-  function HideSession () {
+  function HideSession() {
     // d3.select('#timeTable').remove()
     d3.select('#infoSession').remove()
     sessionTable.style('z-index', 0)
@@ -472,7 +478,7 @@ async function main () {
   }
   // __________________________________________________________________________________________________________________________//
 
-  function updateTimeTable () {
+  function updateTimeTable() {
     // titlePlanning = d3.select('#titlePlanning')
     // document.getElementById('timeTable').innerHTML = ''
     titlePlanning.html(selectedPlace)
@@ -486,7 +492,7 @@ async function main () {
     // document.getElementById("timeTable").style('opacity', 0.9)
   } // Fin fonction updateTimeTable
 
-  function resetView () {
+  function resetView() {
     d3.select('#timeTable').remove()
     d3.select('#sessionTable').remove()
     // HideTimeTable()
@@ -499,7 +505,7 @@ async function main () {
     //   .style('opacity', .5)
   }
 
-  function displayTimeTable () {
+  function displayTimeTable() {
     // const titlePlanning = d3.select('#titlePlanning')
     // const planningInfras = d3.select('#timeTable')
     titlePlanning.style('z-index', 10000)
@@ -507,7 +513,7 @@ async function main () {
     HideSession()
   }
 
-  function HideTimeTable () {
+  function HideTimeTable() {
     // const titlePlanning = d3.select('#titlePlanning')
     // const planningInfras = d3.select('#timeTable')
     titlePlanning.style('z-index', 0)
@@ -515,7 +521,7 @@ async function main () {
   }
   // __________________________________________________________________________________________________________________________//
 
-  function customJSONParsing (x) {
+  function customJSONParsing(x) {
     try {
       return JSON.parse(x)
     } catch (e) {
@@ -526,12 +532,12 @@ async function main () {
   // __________________________________________________________________________________________________________________________//
 
   // Fonctions de chargement et parsing des données
-  async function loadArr () {
+  async function loadArr() {
     const idfArr = (await fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/ile-de-france/arrondissements-ile-de-france.geojson')).json()
     return idfArr
   }
 
-  async function loadJOData () {
+  async function loadJOData() {
     const frFR1 = d3.timeFormatDefaultLocale({
       dateTime: '%A %e %B %Y à %X',
       date: '%d/%m/%Y',
@@ -579,7 +585,7 @@ async function main () {
 
   // functions for wordcloud
   // create wordcloud
-  async function createCloud () {
+  async function createCloud() {
     // set the dimensions for wordcloud
     const width = timeTableWidth
     const height = timeTableHeight
@@ -595,7 +601,7 @@ async function main () {
     updateCloud()
   }
 
-  async function updateCloud () {
+  async function updateCloud() {
     // set the dimensions for wordcloud
     const width = timeTableWidth
     const height = timeTableHeight
@@ -636,7 +642,9 @@ async function main () {
 
     // This function takes the output of 'layout' above and draw the words
     // Better not to touch it. To change parameters, play with the 'layout' variable above
-    function draw (words) {
+    function draw(words) {
+      Tooltip_cloud
+        .style('z-index', 0)
       const textGroup = svg
         .append('g')
         .attr('class', 'groupclass')
@@ -655,6 +663,7 @@ async function main () {
         .style('fill', 'midnightblue')
 
         .on('mouseenter', function (e, d) {
+
           nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length // Nb de textes cliqués(sélectionnés)
 
           if (nb_clicked == 0) {
@@ -685,6 +694,16 @@ async function main () {
               regex = new RegExp(sport)
               newtab = d3.filter(newtab, f => regex.test(f[1].ConcatenatedDiscipline))// Nouveau tableau filtré par la sélection
               updateMap()
+
+              sport = sport.replace(/ /g, "-") //Remplace les espaces par des tirets (sinon lien invalide)
+
+              url = new URL(sport, url_root)
+              Tooltip_cloud
+                .style('z-index', 10000)
+                .style('opacity', 0.9)
+                .style('top', (e.pageY - 40) + 'px')
+                .style('left', (e.pageX + 15) + 'px')
+                .html(`<a href=${url}>Page JO dédiée <a>`)
             } else { // Si nb_clicked>0, un texte est déjà sélectionné donc on empêche une sélection supplémentaire
             }
           } else {
@@ -696,12 +715,26 @@ async function main () {
               ConcatenatedDiscipline: [...new Set(group.map(d => d.discipline))].join(', '),
               ...group[0]
             }),
-            d => d.lieu_epreuve)]
+              d => d.lieu_epreuve)]
             updateMap()
+
+            Tooltip_cloud
+              .style('z-index', 0)
           }
         })
 
+        // .on('dblclick', function (e, d) {
+        //   selection = d3.select(this)
+        //   sport = selection._groups[0][0].__data__.text //récupération du texte double-cliqué
+        //   sport = sport.replace(/ /g, "-") //Remplace les espaces par des tirets (sinon lien invalide)
+        //   url_root = "https://www.paris2024.org/fr/sport/"
+        //   url = new URL(sport, url_root)
+        //   console.log(url)
+        //   window.open(url.href, '_blank')
+        // })
+
         .on('mouseleave', function (e, d) {
+
           isclicked = d.__clicked
           nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length // Nb de textes cliqués(sélectionnés)
           if (nb_clicked == 0) {
@@ -725,7 +758,7 @@ async function main () {
 
   // functions to maje the application responsive
   window.addEventListener('resize', updateWindowSize)
-  function updateWindowSize () {
+  function updateWindowSize() {
     windowHeight = window.innerHeight
     windowWidth = window.innerWidth
     window_width = windowWidth - margin.left - margin.right
