@@ -13,7 +13,7 @@
  */
 
 // __________________________________________________________________________________________________________________________//
-async function main() {
+async function main () {
   let windowWidth = window.innerWidth
   let windowHeight = window.innerHeight
   // Initialisation dimensions
@@ -37,11 +37,11 @@ async function main() {
     ConcatenatedDiscipline: [...new Set(group.map(d => d.discipline))].join(', '),
     ...group[0]
   }),
-    d => d.lieu_epreuve)]
+  d => d.lieu_epreuve)]
   let selectedPlace = ''
-  let url_root = "https://www.paris2024.org/fr/sport/"
-  const gridSession = creategridSession()
-  const gridTimeTable = creategridTimeTable()
+  const url_root = 'https://www.paris2024.org/fr/sport/'
+  let gridSession = creategridSession()
+  let gridTimeTable = creategridTimeTable()
 
   // Echelle
   const RadiusScale = d3.scaleLinear()
@@ -95,7 +95,7 @@ async function main() {
   // __________________________________________________________________________________________________________________________//
   // Fonctions utilisées //
 
-  async function slider() {
+  async function slider () {
     // Couleurs et dimensions
     const colours = {
       top: '#37474f',
@@ -150,7 +150,7 @@ async function main() {
 
     datePicker.call(
       d3.drag()
-        .on('drag', function dragged(event, d) {
+        .on('drag', function dragged (event, d) {
           const date = scaleBalls(event.x)
 
           const xAxisValue = scaleBand(date)
@@ -176,7 +176,7 @@ async function main() {
             ConcatenatedDiscipline: [...new Set(group.map(d => d.discipline))].join(', '),
             ...group[0]
           }),
-            d => d.lieu_epreuve)]
+          d => d.lieu_epreuve)]
           // Update the map with the new domain
           updateMap()
         })
@@ -210,7 +210,7 @@ async function main() {
 
   // __________________________________________________________________________________________________________________________//
 
-  async function createMap() {
+  async function createMap () {
     const idfArr = await loadArr()
     const idfLayer = L.geoJson(idfArr, { // instantiates a new geoJson layer using built in geoJson handling
       weight: 2, // Attributes of polygons including the weight of boundaries and colors of map.
@@ -239,7 +239,7 @@ async function main() {
 
   // __________________________________________________________________________________________________________________________//
 
-  async function updateMap() {
+  async function updateMap () {
     const bigg = d3.select('#map').select('svg').select('g')
 
     const fond_cliquable = bigg.selectAll('path') // le click réinitialise la vue et déselectionne les cercles sélectionnés
@@ -311,7 +311,7 @@ async function main() {
             ConcatenatedDiscipline: [...new Set(group.map(d => d.discipline))].join(', '),
             ...group[0]
           }),
-            d => d.lieu_epreuve)]
+          d => d.lieu_epreuve)]
           updateMap()
         }
 
@@ -351,7 +351,7 @@ async function main() {
   // Création des tableaux planning infras & infos sessions
 
   // functions to create gridJS objects
-  function creategridSession() {
+  function creategridSession () {
     const gridSession = new gridjs.Grid({
       columns: [
         'Epreuve',
@@ -364,11 +364,12 @@ async function main() {
       resizable: true,
       // pagination: true,
       fixedHeader: true,
-      // height: timeTableHeight + 'px',
+      height: timeTableHeight + 'px',
       width: timeTableWidth + 'px',
       style: {
         td: {
-          border: '1px solid #ccc'
+          border: '1px solid #ccc',
+          padding: '10px'
         },
         table: {
           'font-size': '15px'
@@ -378,7 +379,7 @@ async function main() {
     return gridSession
   }
 
-  function creategridTimeTable() {
+  function creategridTimeTable () {
     const gridTimeTable = new gridjs.Grid({
       columns: [
         'Discipline',
@@ -397,8 +398,12 @@ async function main() {
       height: timeTableHeight + 'px',
       width: timeTableWidth + 'px',
       style: {
+        th: {
+          padding: '10px'
+        },
         td: {
-          border: '1px solid #ccc'
+          border: '1px solid #ccc',
+          padding: '10px'
         },
         table: {
           'font-size': '15px'
@@ -410,7 +415,7 @@ async function main() {
 
   // __________________________________________________________________________________________________________________________//
 
-  async function createTimeTable() {
+  async function createTimeTable () {
     // remove the old timetable if exists
     d3.select('#timeTable').remove()
     // Planning infras
@@ -438,7 +443,7 @@ async function main() {
     }).forceRender()
   } // Fin fonction createTimeTable
 
-  async function createInfoSession() {
+  async function createInfoSession () {
     d3.select('#infoSession').remove()
     d3.select('#headInfoSession').remove()
     // Infos sessions
@@ -455,7 +460,7 @@ async function main() {
 
   // __________________________________________________________________________________________________________________________//
 
-  function updateSession(args) {
+  function updateSession (args) {
     const titleInfoSessions = d3.select('#titleInfoSession')
     const sessionTable = d3.select('#sessionTable')
     sessionString = selectedPlace + ' | ' + args[1]._cells[0].data + ' | ' + args[1]._cells[1].data + ' | ' + args[1]._cells[2].data
@@ -470,7 +475,7 @@ async function main() {
     titleInfoSessions.style('z-index', 9000)
   } // Fin fonction updateSession
 
-  function HideSession() {
+  function HideSession () {
     // d3.select('#timeTable').remove()
     d3.select('#infoSession').remove()
     sessionTable.style('z-index', 0)
@@ -478,7 +483,7 @@ async function main() {
   }
   // __________________________________________________________________________________________________________________________//
 
-  function updateTimeTable() {
+  function updateTimeTable () {
     // titlePlanning = d3.select('#titlePlanning')
     // document.getElementById('timeTable').innerHTML = ''
     titlePlanning.html(selectedPlace)
@@ -492,9 +497,9 @@ async function main() {
     // document.getElementById("timeTable").style('opacity', 0.9)
   } // Fin fonction updateTimeTable
 
-  function resetView() {
+  function resetView () {
     d3.select('#timeTable').remove()
-    d3.select('#sessionTable').remove()
+    d3.select('#infoSession').remove()
     // HideTimeTable()
     // HideSession()
     // bigg.selectAll('circle').filter(f => f.__selected) //déselectionne et réinit. les cercles sélectionnés.
@@ -505,7 +510,7 @@ async function main() {
     //   .style('opacity', .5)
   }
 
-  function displayTimeTable() {
+  function displayTimeTable () {
     // const titlePlanning = d3.select('#titlePlanning')
     // const planningInfras = d3.select('#timeTable')
     titlePlanning.style('z-index', 10000)
@@ -513,7 +518,7 @@ async function main() {
     HideSession()
   }
 
-  function HideTimeTable() {
+  function HideTimeTable () {
     // const titlePlanning = d3.select('#titlePlanning')
     // const planningInfras = d3.select('#timeTable')
     titlePlanning.style('z-index', 0)
@@ -521,7 +526,7 @@ async function main() {
   }
   // __________________________________________________________________________________________________________________________//
 
-  function customJSONParsing(x) {
+  function customJSONParsing (x) {
     try {
       return JSON.parse(x)
     } catch (e) {
@@ -532,12 +537,12 @@ async function main() {
   // __________________________________________________________________________________________________________________________//
 
   // Fonctions de chargement et parsing des données
-  async function loadArr() {
+  async function loadArr () {
     const idfArr = (await fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/ile-de-france/arrondissements-ile-de-france.geojson')).json()
     return idfArr
   }
 
-  async function loadJOData() {
+  async function loadJOData () {
     const frFR1 = d3.timeFormatDefaultLocale({
       dateTime: '%A %e %B %Y à %X',
       date: '%d/%m/%Y',
@@ -585,7 +590,7 @@ async function main() {
 
   // functions for wordcloud
   // create wordcloud
-  async function createCloud() {
+  async function createCloud () {
     // set the dimensions for wordcloud
     const width = timeTableWidth
     const height = timeTableHeight
@@ -601,7 +606,7 @@ async function main() {
     updateCloud()
   }
 
-  async function updateCloud() {
+  async function updateCloud () {
     // set the dimensions for wordcloud
     const width = timeTableWidth
     const height = timeTableHeight
@@ -642,7 +647,7 @@ async function main() {
 
     // This function takes the output of 'layout' above and draw the words
     // Better not to touch it. To change parameters, play with the 'layout' variable above
-    function draw(words) {
+    function draw (words) {
       Tooltip_cloud
         .style('z-index', 0)
       const textGroup = svg
@@ -663,7 +668,6 @@ async function main() {
         .style('fill', 'midnightblue')
 
         .on('mouseenter', function (e, d) {
-
           nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length // Nb de textes cliqués(sélectionnés)
 
           if (nb_clicked == 0) {
@@ -695,7 +699,7 @@ async function main() {
               newtab = d3.filter(newtab, f => regex.test(f[1].ConcatenatedDiscipline))// Nouveau tableau filtré par la sélection
               updateMap()
 
-              sport = sport.replace(/ /g, "-") //Remplace les espaces par des tirets (sinon lien invalide)
+              sport = sport.replace(/ /g, '-') // Remplace les espaces par des tirets (sinon lien invalide)
 
               url = new URL(sport, url_root)
               Tooltip_cloud
@@ -715,7 +719,7 @@ async function main() {
               ConcatenatedDiscipline: [...new Set(group.map(d => d.discipline))].join(', '),
               ...group[0]
             }),
-              d => d.lieu_epreuve)]
+            d => d.lieu_epreuve)]
             updateMap()
 
             Tooltip_cloud
@@ -723,18 +727,17 @@ async function main() {
           }
         })
 
-        // .on('dblclick', function (e, d) {
-        //   selection = d3.select(this)
-        //   sport = selection._groups[0][0].__data__.text //récupération du texte double-cliqué
-        //   sport = sport.replace(/ /g, "-") //Remplace les espaces par des tirets (sinon lien invalide)
-        //   url_root = "https://www.paris2024.org/fr/sport/"
-        //   url = new URL(sport, url_root)
-        //   console.log(url)
-        //   window.open(url.href, '_blank')
-        // })
+      // .on('dblclick', function (e, d) {
+      //   selection = d3.select(this)
+      //   sport = selection._groups[0][0].__data__.text //récupération du texte double-cliqué
+      //   sport = sport.replace(/ /g, "-") //Remplace les espaces par des tirets (sinon lien invalide)
+      //   url_root = "https://www.paris2024.org/fr/sport/"
+      //   url = new URL(sport, url_root)
+      //   console.log(url)
+      //   window.open(url.href, '_blank')
+      // })
 
         .on('mouseleave', function (e, d) {
-
           isclicked = d.__clicked
           nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length // Nb de textes cliqués(sélectionnés)
           if (nb_clicked == 0) {
@@ -758,7 +761,7 @@ async function main() {
 
   // functions to maje the application responsive
   window.addEventListener('resize', updateWindowSize)
-  function updateWindowSize() {
+  function updateWindowSize () {
     windowHeight = window.innerHeight
     windowWidth = window.innerWidth
     window_width = windowWidth - margin.left - margin.right
@@ -776,7 +779,11 @@ async function main() {
     createCloud()
 
     // update tables?
+    gridSession = creategridSession()
+    gridTimeTable = creategridTimeTable()
     d3.select('#timeTable').remove()
     createTimeTable()
+    d3.select('#sessionTable').remove()
+    createInfoSession()
   }
 }
