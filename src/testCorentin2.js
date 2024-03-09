@@ -597,11 +597,13 @@ async function main() {
     const parseDateHour = d3.timeParse('%A %e %B %Y %H:%M')// https://d3js.org/d3-time-format
     const parseDate = d3.utcParse('%A %e %B %Y')
 
-    const planningParsed = await (d3.csv('../session_planning_with_loc_v13.csv')
+    const planningParsed = await (d3.csv('../session_planning_v15.csv')
       .then(data => {
         return data.map((d, i) => {
           const r = d
           r.jour = d.date
+          r.lieu_epreuve = d.NOM
+          r.NOM = d.lieu_epreuve
           r.plage = d.debut_epreuve + ' : ' + d.fin_epreuve
           r.time = parseDateHour(d.date + ' ' + '2024' + ' ' + d.debut_epreuve)
           r.date = parseDate(d.date + ' ' + '2024')
