@@ -33,62 +33,14 @@ async function main () {
   const planningParsed = await loadJOData()
   let planningfiltered = planningParsed
   let datacloud = planningfiltered
-  let lieux_uniques = [...new Set(planningParsed.map(d => d.lieu_epreuve))]
-  let Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
-    return planningParsed.find(obj => obj.lieu_epreuve === lieu)
-  })
-  let selectedPlace = ''
-  const gridSession = new gridjs.Grid({
-    columns: [
-      'Epreuve',
-      'Genre',
-      'Etape'
-    ],
-    data: [['', '', '']],
-    // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
-    // data: [["", "", "", ""]],
-    resizable: true,
-    // pagination: true,
-    fixedHeader: true,
-    height: timeTableHeight + 'px',
-    width: timeTableWidth + 'px',
-    style: {
-      td: {
-        border: '1px solid #ccc'
-      },
-      table: {
-        'font-size': '15px'
-      }
-    }
-  })
+  let lieux = [...new Set(planningParsed.map(d => d.lieu_epreuve))]
 
-  const gridTimeTable = new gridjs.Grid({
-    columns: [
-      'Discipline',
-      'Jour',
-      'Heure',
-      {
-        name: 'infosEpreuves',
-        hidden: true
-      }],
-    data: [['', '', '']],
-    // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
-    // data: [["", "", "", ""]],
-    resizable: true,
-    // pagination: true,
-    fixedHeader: true,
-    height: timeTableHeight + 'px',
-    width: timeTableWidth + 'px',
-    style: {
-      td: {
-        border: '1px solid #ccc'
-      },
-      table: {
-        'font-size': '15px'
-      }
-    }
+  let newtab = [...d3.rollup(planningfiltered, group => ({
+    ConcatenatedDiscipline: [... new Set(group.map(d => d.discipline))].join(', '),
+    ...group[0]
+  }),
+    d => d.lieu_epreuve)]
 
-  })
 
   // Echelle
   const RadiusScale = d3.scaleLinear()
@@ -214,11 +166,11 @@ async function main () {
           // Filter data based in slider value
           planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
           datacloud = planningfiltered
-          lieux_uniques = [...new Set(planningfiltered.map(d => d.lieu_epreuve))]
-          // Création du nouveau tableau contenant les valeurs uniques des lieu_epreuve
-          Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
-            return planningfiltered.find(obj => obj.lieu_epreuve === lieu)
-          })
+          newtab = [...d3.rollup(planningfiltered, group => ({
+            ConcatenatedDiscipline: [... new Set(group.map(d => d.discipline))].join(', '),
+            ...group[0]
+          }),
+            d => d.lieu_epreuve)]
           // Update the map with the new domain
           updateMap()
         })
@@ -290,12 +242,13 @@ async function main () {
       })
 
     const Dots = bigg.selectAll('circle')
-      .data(Tab_lieux_uniques)
+      // .data(Tab_lieux)
+      .data(newtab)
       .join('circle')
       .attr('class', 'circle')
-      .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
-      .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
-      .attr('r', d => RadiusScale(d.capacite))
+      .attr('cx', d => map.latLngToLayerPoint([d[1].latitude, d[1].longitude]).x)
+      .attr('cy', d => map.latLngToLayerPoint([d[1].latitude, d[1].longitude]).y)
+      .attr('r', d => RadiusScale(d[1].capacite))
       .style('fill', 'steelblue')
       .style('stroke', 'black')
       .style('opacity', 0.5)
@@ -307,7 +260,7 @@ async function main () {
           .style('opacity', 0.9)
           .style('top', (e.pageY - 40) + 'px')
           .style('left', (e.pageX + 15) + 'px')
-          .html(d.lieu_epreuve + ' - ' + `<b>${d.capacite}<b>`)
+          .html(d[1].lieu_epreuve + ' - ' + `<b>${d[1].capacite}<b>`)
 
         isclicked = d.__selected
         if (!isclicked) {
@@ -330,23 +283,30 @@ async function main () {
           selection.style('opacity', 0.5)
         }
 
-        selectedPlace = d.lieu_epreuve
-        // console.log('selectedPLace click pa  : ', selectedPlace)
-        createTimeTable()
-        // updateTimeTable()
-        // displayTimeTable()
+        selectedPlace = d[1].lieu_epreuve
+        updateTimeTable()
+        displayTimeTable()
+        console.log(newtab)
+        lieux = newtab.filter(d => d.__selected).map(d => d[0])//Liste des infra sélectionnées
+        console.log(lieux)
 
-        datacloud = planningfiltered.filter(f => f.__selected)
-        console.log(datacloud)
-        lieux_uniques = [...new Set(datacloud.map(d => d.lieu_epreuve))] // Liste des infra sélectionnées
+        datacloud = planningfiltered.filter(f => lieux.includes(f.lieu_epreuve))
+        console.log("Datacloud :", datacloud)
 
-        if (lieux_uniques.length > 0) {
+        if (lieux.length > 0) {
           bigg.selectAll('circle').filter(f => !f.__selected)
-            .style('opacity', 0.2)
-        } else { // All has been unselected, reset global opacitys, DataCloud and PlaningInfra
+            .style('opacity', .2)
+        }
+        else { //All has been unselected, reset global opacitys, DataCloud, PlaningInfra and Map
           bigg.selectAll('circle').filter(f => !f.__selected)
-            .style('opacity', 0.5)
-          datacloud = planningfiltered // wordcloud réinit. sur les données globales
+            .style('opacity', .5)
+          datacloud = planningfiltered //wordcloud réinit. sur les données globales
+          newtab = [...d3.rollup(planningfiltered, group => ({
+            ConcatenatedDiscipline: [... new Set(group.map(d => d.discipline))].join(', '),
+            ...group[0]
+          }),
+            d => d.lieu_epreuve)]
+          updateMap()
         }
 
         updateCloud()
@@ -362,20 +322,20 @@ async function main () {
       })
 
     const update = () => Dots
-      .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
-      .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
+      .attr('cx', d => map.latLngToLayerPoint([d[1].latitude, d[1].longitude]).x)
+      .attr('cy', d => map.latLngToLayerPoint([d[1].latitude, d[1].longitude]).y)
 
     map.on('zoomend', update)
 
     // Cette partie du code sert à supprimer les éléments de la map après chaque update (i.e après le 'map.on()')
-    const dots_unbinded = bigg.selectAll('circle')
-      .data(datacloud, d => {
-        return d.index
-      })
-    dots_unbinded.exit()
-      .transition().duration(0)
-      .attr('r', 1)
-      .remove()
+    // const dots_unbinded = bigg.selectAll('circle')
+    //   .data(datacloud, d => {
+    //     return d.index
+    //   })
+    // dots_unbinded.exit()
+    //   .transition().duration(0)
+    //   .attr('r', 1)
+    //   .remove()
 
     // -> Au prochain update de la map l'ajout des éléments se fera donc sur un carte vierge
   } // Fin fonction updateMap
@@ -571,6 +531,8 @@ async function main () {
         return data.map((d, i) => {
           const r = d
           r.jour = d.date
+          r.lieu_epreuve = d.NOM
+          r.NOM = d.lieu_epreuve
           r.plage = d.debut_epreuve + ' : ' + d.fin_epreuve
           r.time = parseDateHour(d.date + ' ' + '2024' + ' ' + d.debut_epreuve)
           r.date = parseDate(d.date + ' ' + '2024')
@@ -691,8 +653,10 @@ async function main () {
                 .style('opacity', 0.2)
                 .style('fill', 'grey')
 
-              sport = selection._groups[0][0].__data__.text // Accéder au texte cliqué
-              Tab_lieux_uniques = d3.filter(Tab_lieux_uniques, f => f.discipline == sport) // Nouveau tableau filtré par la sélection
+              sport = selection._groups[0][0].__data__.text //Accéder au texte cliqué
+              regex = new RegExp(sport)
+              newtab = d3.filter(newtab, f => regex.test(f[1].ConcatenatedDiscipline))//Nouveau tableau filtré par la sélection
+              console.log(newtab)
               updateMap()
             } else { // Si nb_clicked>0, un texte est déjà sélectionné donc on empêche une sélection supplémentaire
             }
@@ -700,18 +664,14 @@ async function main () {
             d.__clicked = false
             textGroup.selectAll('text').filter(f => !f.__clicked)
               .style('fill', 'midnightblue')
-            Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
-              return planningfiltered.find(obj => obj.lieu_epreuve === lieu)
-            })
+
+            newtab = [...d3.rollup(planningfiltered, group => ({
+              ConcatenatedDiscipline: [... new Set(group.map(d => d.discipline))].join(', '),
+              ...group[0]
+            }),
+              d => d.lieu_epreuve)]
             updateMap()
           }
-
-          // Réinitialisation des données de la carte après maj de cette dernière
-          Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
-            return planningfiltered.find(obj => obj.lieu_epreuve === lieu)
-          })
-          // tab_test = d3.filter(Tab_lieux_uniques, f => f.__selected)
-          // console.log(Tab_lieux_uniques)
         })
 
         .on('mouseleave', function (e, d) {
