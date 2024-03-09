@@ -26,7 +26,7 @@ async function main() {
   // Data
   const planningParsed = await loadJOData()
   let planningfiltered = planningParsed
-  let datacloud = planningParsed
+  let datacloud = planningfiltered
   let lieux_uniques = [...new Set(planningParsed.map(d => d.lieu_epreuve))]
   let Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
     return planningParsed.find(obj => obj.lieu_epreuve === lieu)
@@ -242,7 +242,7 @@ async function main() {
             return planningfiltered.find(obj => obj.lieu_epreuve === lieu)
           })
           // Update the map with the new domain
-          updateMap(Tab_lieux_uniques)
+          updateMap()
         })
 
         .on('end', () => {
@@ -299,22 +299,21 @@ async function main() {
     //   .attr('width', window.innerWidth)
     //   .attr('height', window.innerHeight)
 
-    updateMap(Tab_lieux_uniques)
+    updateMap()
   } // Fin fonction createMap
 
   // __________________________________________________________________________________________________________________________//
 
-  async function updateMap(filteredData) {
+  async function updateMap() {
     const bigg = d3.select('#map').select('svg').select('g')
 
-    const fond_cliquable = bigg.selectAll('path') //le click réinitialise la vue
+    const fond_cliquable = bigg.selectAll('path') //le click réinitialise la vue et déselectionne les cercles sélectionnés
       .on('click', () => {
-        HideSession()
-        HideTimeTable()
+        resetView()
       })
 
     const Dots = bigg.selectAll('circle')
-      .data(filteredData)
+      .data(Tab_lieux_uniques)
       .join('circle')
       .attr('class', 'circle')
       .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
@@ -323,7 +322,7 @@ async function main() {
       .style('fill', 'steelblue')
       .style('stroke', 'black')
       .style('opacity', .5)
-      .attr('clicked', 'False')
+      // .attr('clicked', 'False')
 
       .on('mouseenter', function (e, d) { // function to add mouseover event
         Tooltip
@@ -346,12 +345,8 @@ async function main() {
       })
 
       .on('click', function (e, d) {
-        // d.__selected = true
-        // d3.select(this).transition()
-        //   .duration('50')
-        //   .style('fill', 'red')
+
         selection = d3.select(this)
-        // isclicked = selection._groups[0][0].getAttribute('clicked')
         isclicked = d.__selected
         if (!isclicked) {
           d.__selected = true
@@ -362,20 +357,26 @@ async function main() {
           selection.style('opacity', .5)
         }
 
-        lieux_uniques = [...new Set(datacloud.filter(f => f.__selected).map(d => d.lieu_epreuve))] //Liste des infra sélectionnées
-        console.log(lieux_uniques)
+        selectedPlace = d.lieu_epreuve
+        updateTimeTable()
+        displayTimeTable()
+
+        datacloud = planningfiltered.filter(f => f.__selected)
+        console.log(datacloud)
+        lieux_uniques = [...new Set(datacloud.map(d => d.lieu_epreuve))] //Liste des infra sélectionnées
+
         if (lieux_uniques.length > 0) {
           bigg.selectAll('circle').filter(f => !f.__selected)
             .style('opacity', .2)
         }
-        else { //All has been unselected, reset global opacity
+        else { //All has been unselected, reset global opacitys, DataCloud and PlaningInfra
           bigg.selectAll('circle').filter(f => !f.__selected)
             .style('opacity', .5)
+          datacloud = planningfiltered //wordcloud réinit. sur les données globales
+
         }
-        datacloud = planningfiltered.filter(f => f.__selected)
+
         updateCloud()
-        updateTimeTable()
-        displayTimeTable()
 
       })
 
@@ -396,7 +397,7 @@ async function main() {
 
     // Cette partie du code sert à supprimer les éléments de la map après chaque update (i.e après le 'map.on()')
     const dots_unbinded = bigg.selectAll('circle')
-      .data(filteredData, d => {
+      .data(datacloud, d => {
         return d.index
       })
     dots_unbinded.exit()
@@ -521,6 +522,18 @@ async function main() {
     // document.getElementById("timeTable").style('opacity', 0.9)
   } // Fin fonction updateTimeTable
 
+  function resetView() {
+    HideTimeTable()
+    HideSession()
+    // bigg.selectAll('circle').filter(f => f.__selected) //déselectionne et réinit. les cercles sélectionnés. 
+    //   .style('opacity', .5)
+    //   .attr('selected')
+
+    // bigg.selectAll('circle').filter(f => !f.__selected) //éinit. les cercles non-sélectionnés. 
+    //   .style('opacity', .5)
+
+  }
+
   function displayTimeTable() {
     titlePlanning.style('z-index', 10000)
     planningInfras.style('z-index', 9000)
@@ -628,6 +641,7 @@ async function main() {
       }
       return r
     })
+
     const rolledupdata = [...d3.rollup(dataClean, v => d3.sum(v, e => e.capacite), d => d.sport)]
     const wordCloudScale = d3.scaleLog()
       .domain([d3.min(rolledupdata, d => d[1]), d3.max(rolledupdata, d => d[1])])
@@ -667,18 +681,72 @@ async function main() {
           return 'translate(' + [d.x, d.y] + ')rotate(' + d.rotate + ')'
         })
         .text(function (d) { return d.text })
-        // .style('opacity', 0)
-        .on('mouseenter', function (d) {
-          textGroup.selectAll('text')
-            .style("opacity", .2)
+        .style('fill', 'midnightblue')
 
-          d3.select(this)
-            .style('opacity', 1)
-            .style("cursor", "pointer")
+        .on('mouseenter', function (e, d) {
+          nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length //Nb de textes cliqués(sélectionnés)
+
+          if (nb_clicked == 0) {
+            textGroup.selectAll('text')
+              .style("opacity", .2)
+            d3.select(this)
+              .style('opacity', 1)
+              .style("cursor", "pointer")
+          }
+          else {
+
+          }
         })
-        .on('mouseleave', function (d) {
-          textGroup.selectAll('text')
-            .style("opacity", 1)
+
+        .on('click', function (e, d) {
+          selection = d3.select(this)
+          isclicked = d.__clicked
+          nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length //Nb de textes cliqués(sélectionnés)
+          if (!isclicked) {
+            if (nb_clicked == 0) { //Si encore aucun texte n'est cliqué, alors autoriser la sélection
+              d.__clicked = true
+              selection.style('opacity', 1)
+
+              textGroup.selectAll('text').filter(f => !f.__clicked)
+                .style('opacity', .2)
+                .style('fill', 'grey')
+
+              sport = selection._groups[0][0].__data__.text //Accéder au texte cliqué
+              Tab_lieux_uniques = d3.filter(Tab_lieux_uniques, f => f.discipline == sport) //Nouveau tableau filtré par la sélection
+              updateMap()
+            }
+
+            else { //Si nb_clicked>0, un texte est déjà sélectionné donc on empêche une sélection supplémentaire
+            }
+          }
+
+          else {
+            d.__clicked = false
+            textGroup.selectAll('text').filter(f => !f.__clicked)
+              .style('fill', 'midnightblue')
+            Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
+              return planningfiltered.find(obj => obj.lieu_epreuve === lieu)
+            })
+            updateMap()
+          }
+
+          //Réinitialisation des données de la carte après maj de cette dernière
+          Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
+            return planningfiltered.find(obj => obj.lieu_epreuve === lieu)
+          })
+          // tab_test = d3.filter(Tab_lieux_uniques, f => f.__selected)
+          // console.log(Tab_lieux_uniques)
+        })
+
+        .on('mouseleave', function (e, d) {
+          isclicked = d.__clicked
+          nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length //Nb de textes cliqués(sélectionnés)
+          if (nb_clicked == 0) {
+            textGroup.selectAll('text')
+              .style("opacity", 1)
+          }
+          else { //Si mot cliqué, alors le mouseleave ne doit rien faire
+          }
         })
         .transition()
         .duration(500)
