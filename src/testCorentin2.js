@@ -643,6 +643,8 @@ async function main() {
     // This function takes the output of 'layout' above and draw the words
     // Better not to touch it. To change parameters, play with the 'layout' variable above
     function draw(words) {
+      Tooltip_cloud
+        .style('z-index', 0)
       const textGroup = svg
         .append('g')
         .attr('class', 'groupclass')
