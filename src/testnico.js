@@ -10,33 +10,36 @@ const { pointer } = require('d3-selection')
 
 // __________________________________________________________________________________________________________________________//
 async function main() {
+  let windowWidth = window.innerWidth
+  let windowHeight = window.innerHeight
   // Initialisation dimensions
-  // var data_test = d3.range(5)
-  // console.log(data_test)
 
   const margin = { top: 10, right: 10, bottom: 45, left: 10 }
-  const window_width = window.innerWidth - margin.left - margin.right
-  const window_height = window.innerHeight - margin.top - margin.bottom
+  let window_width = windowWidth - margin.left - margin.right
+  let window_height = windowHeight - margin.top - margin.bottom
   // dimensions time tables
-  const timeTableHeight = window_height / 2.2 // - margin.top - margin.bottom
-  const timeTableWidth = window_width / 3
+  let timeTableHeight = window_height / 2.2 // - margin.top - margin.bottom
+  let timeTableWidth = window_width / 3
   // const xInitTT = map_width + margin.left
   // const yInitTT = map_height / 2
 
   // Data
-  const locParsed = await loadLoc()
   const planningParsed = await loadJOData()
   let planningfiltered = planningParsed
-  let datacloud = planningParsed
-  let lieux_uniques = [...new Set(planningParsed.map(d => d.lieu_epreuve))]
-  let Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
-    return planningParsed.find(obj => obj.lieu_epreuve === lieu)
-  })
+  let datacloud = planningfiltered
+  let lieux = [...new Set(planningParsed.map(d => d.lieu_epreuve))]
+
+  let newtab = [...d3.rollup(planningfiltered, group => ({
+    ConcatenatedDiscipline: [... new Set(group.map(d => d.discipline))].join(', '),
+    ...group[0]
+  }),
+    d => d.lieu_epreuve)]
+
 
   // Echelle
   const RadiusScale = d3.scaleLinear()
     .domain(d3.extent(planningParsed, d => +d.capacite))
-    .range([10, 30])
+    .range([10, 40])
 
   // Variables de Dates
   const dates_str = [...new Set(planningParsed.map(d => d3.utcFormat('%A %e %B %Y')(d.date)))] // Impossible d'avoir les dates uniques sans formatter en str bizarre !
@@ -105,12 +108,11 @@ async function main() {
 
   gridSession.render(document.getElementById('infoSession'))
   // var gridSession = createSessionTable()
-  // console.log(gridSession)
 
   // Planning infras
   let selectedPlace = ''
   const titlePlanning = d3.select('body').append('div')
-    .attr('style', `left:${window.innerWidth - timeTableWidth - 10}px`)
+    .attr('style', `left:${windowWidth - timeTableWidth - 10}px`)
     .attr('id', 'dayTimeTable')
 
   const planningInfras = d3.select('body').append('div')
@@ -122,12 +124,11 @@ async function main() {
       'Discipline',
       'Jour',
       'Heure',
-      'URL',
       {
         name: 'infosEpreuves',
         hidden: true
       }],
-    data: [['', '', '', '']],
+    data: [['', '', '']],
     // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
     // data: [["", "", "", ""]],
     resizable: true,
@@ -149,7 +150,6 @@ async function main() {
   gridTimeTable.on('rowClick', (...args) => updateSession(args))
 
   // var gridTimeTable = createTimeTable()
-  // console.log(gridTimeTable)
 
   // Création de la carte
   createMap()
@@ -170,7 +170,7 @@ async function main() {
       bottom: '#546e7a',
       accent: '#263238'
     }
-    const sliderWidth = 400
+    const sliderWidth = windowWidth * 0.70
     const sliderHeight = 40
 
     // Echelles dediees
@@ -240,17 +240,17 @@ async function main() {
           // Filter data based in slider value
           planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
           datacloud = planningfiltered
-          lieux_uniques = [...new Set(planningfiltered.map(d => d.lieu_epreuve))]
-          // Création du nouveau tableau contenant les valeurs uniques des lieu_epreuve
-          Tab_lieux_uniques = Array.from(lieux_uniques).map(lieu => {
-            return planningfiltered.find(obj => obj.lieu_epreuve === lieu)
-          })
+          newtab = [...d3.rollup(planningfiltered, group => ({
+            ConcatenatedDiscipline: [... new Set(group.map(d => d.discipline))].join(', '),
+            ...group[0]
+          }),
+            d => d.lieu_epreuve)]
           // Update the map with the new domain
-          updateMap(Tab_lieux_uniques)
+          updateMap()
         })
 
         .on('end', () => {
-          updateCloud(datacloud)
+          updateCloud()
           updateTimeTable()
         })
     )
@@ -283,91 +283,139 @@ async function main() {
     const idfLayer = L.geoJson(idfArr, { // instantiates a new geoJson layer using built in geoJson handling
       weight: 2, // Attributes of polygons including the weight of boundaries and colors of map.
       color: '#432',
-      opacity: 0.15
+      opacity: 0.07
     }).bindPopup(function (Layer) { // binds a popup when clicking on each polygon to access underlying data
       return Layer.feature.properties.NAME
-    }).addTo(map) // Adds the layer to the map.
+    })
+      .addTo(map) // Adds the layer to the map.
+
 
     map.fitBounds(idfLayer.getBounds()) // finds bounds of polygon and automatically gets map view to fit (useful for interaction and not having to 'cook' the map zoom and coordinates as in map instantiation
     L.svg({ clickable: true }).addTo(map)
+
     const overlay = d3.select(map.getPanes().overlayPane)
     const svg_map = overlay.select('svg').attr('pointer-events', 'auto')
     const bigg = d3.select('#map').select('svg').select('g')
     bigg.attr('class', 'leaflet-zoom-hide')
 
-    updateMap(Tab_lieux_uniques)
+    // clickable_background = overlay.append('svg')
+    //   .attr('class', 'clickable-background')
+    //   .attr('width', window.innerWidth)
+    //   .attr('height', window.innerHeight)
+
+    updateMap()
   } // Fin fonction createMap
 
   // __________________________________________________________________________________________________________________________//
 
-  async function updateMap(filteredData) {
+  async function updateMap() {
     const bigg = d3.select('#map').select('svg').select('g')
+
+    const fond_cliquable = bigg.selectAll('path') //le click réinitialise la vue et déselectionne les cercles sélectionnés
+      .on('click', () => {
+        resetView()
+      })
+
     const Dots = bigg.selectAll('circle')
-      .data(filteredData)
+      // .data(Tab_lieux)
+      .data(newtab)
       .join('circle')
       .attr('class', 'circle')
-      .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
-      .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
-      .attr('r', d => RadiusScale(d.capacite))
+      .attr('cx', d => map.latLngToLayerPoint([d[1].latitude, d[1].longitude]).x)
+      .attr('cy', d => map.latLngToLayerPoint([d[1].latitude, d[1].longitude]).y)
+      .attr('r', d => RadiusScale(d[1].capacite))
       .style('fill', 'steelblue')
       .style('stroke', 'black')
-      .style('opacity', 0.5)
+      .style('opacity', .5)
+      // .attr('clicked', 'False')
 
-      .on('mousemove', function (e, d) { // function to add mouseover event
+      .on('mouseenter', function (e, d) { // function to add mouseover event
         Tooltip
           .style('z-index', 3000)
           .style('opacity', 0.9)
           .style('top', (e.pageY - 40) + 'px')
           .style('left', (e.pageX + 15) + 'px')
-          .html(d.lieu_epreuve + ' - ' + `<b>${d.capacite}<b>`)
+          .html(d[1].lieu_epreuve + ' - ' + `<b>${d[1].capacite}<b>`)
 
+        isclicked = d.__selected
+        if (!isclicked) {
+          d3.select(this).transition()
+            .duration('0')
+            .style('fill', 'red')
+            .style('cursor', 'pointer')
+        }
+        else {
+        }
 
-        d3.select(this).transition() // D3 selects the object we have moused over in order to perform operations on it
-          .duration('0') // how long we are transitioning between the two states (works like keyframes)
-          .style('fill', 'red') // change the fill
-          .style('opacity', 0.8)
+      })
 
-        bigg.selectAll('circle')
-          .style("opacity", .2)
+      .on('click', function (e, d) {
+
+        selection = d3.select(this)
+        isclicked = d.__selected
+        if (!isclicked) {
+          d.__selected = true
+          selection.style('opacity', 0.9)
+        }
+        else {
+          d.__selected = false
+          selection.style('opacity', .5)
+        }
+
+        selectedPlace = d[1].lieu_epreuve
+        updateTimeTable()
+        displayTimeTable()
+        console.log(newtab)
+        lieux = newtab.filter(d => d.__selected).map(d => d[0])//Liste des infra sélectionnées
+        console.log(lieux)
+
+        datacloud = planningfiltered.filter(f => lieux.includes(f.lieu_epreuve))
+        console.log("Datacloud :", datacloud)
+
+        if (lieux.length > 0) {
+          bigg.selectAll('circle').filter(f => !f.__selected)
+            .style('opacity', .2)
+        }
+        else { //All has been unselected, reset global opacitys, DataCloud, PlaningInfra and Map
+          bigg.selectAll('circle').filter(f => !f.__selected)
+            .style('opacity', .5)
+          datacloud = planningfiltered //wordcloud réinit. sur les données globales
+          newtab = [...d3.rollup(planningfiltered, group => ({
+            ConcatenatedDiscipline: [... new Set(group.map(d => d.discipline))].join(', '),
+            ...group[0]
+          }),
+            d => d.lieu_epreuve)]
+          updateMap()
+        }
+
+        updateCloud()
+
       })
 
       .on('mouseleave', function () {
         Tooltip
           .style('z-index', 0)
 
-        bigg.selectAll('circle').transition()
+        bigg.selectAll('circle').filter(f => !f.__selected).transition()
           .duration('100')
           .style('fill', 'steelblue')
-          .style('opacity', 0.5)
-      })
-
-      .on('click', function (e, d) {
-        // d.__selected = true
-        // d3.select(this).transition()
-        //   .duration('50')
-        //   .style('fill', 'red')
-
-        selectedPlace = d.lieu_epreuve
-        infra_selec = d3.filter(datacloud, d => d.lieu_epreuve == selectedPlace)
-        updateCloud(infra_selec)
-        updateTimeTable()
       })
 
     const update = () => Dots
-      .attr('cx', d => map.latLngToLayerPoint([d.latitude, d.longitude]).x)
-      .attr('cy', d => map.latLngToLayerPoint([d.latitude, d.longitude]).y)
+      .attr('cx', d => map.latLngToLayerPoint([d[1].latitude, d[1].longitude]).x)
+      .attr('cy', d => map.latLngToLayerPoint([d[1].latitude, d[1].longitude]).y)
 
     map.on('zoomend', update)
 
     // Cette partie du code sert à supprimer les éléments de la map après chaque update (i.e après le 'map.on()')
-    const dots_unbinded = bigg.selectAll('circle')
-      .data(filteredData, d => {
-        return d.index
-      })
-    dots_unbinded.exit()
-      .transition().duration(0)
-      .attr('r', 1)
-      .remove()
+    // const dots_unbinded = bigg.selectAll('circle')
+    //   .data(datacloud, d => {
+    //     return d.index
+    //   })
+    // dots_unbinded.exit()
+    //   .transition().duration(0)
+    //   .attr('r', 1)
+    //   .remove()
 
     // -> Au prochain update de la map l'ajout des éléments se fera donc sur un carte vierge
   } // Fin fonction updateMap
@@ -456,11 +504,10 @@ async function main() {
 
   function updateSession(args) {
     sessionString = selectedPlace + ' | ' + args[1]._cells[0].data + ' | ' + args[1]._cells[1].data + ' | ' + args[1]._cells[2].data
-    console.log(sessionString)
     titleInfoSessions.html('Session : ' + sessionString)
     dataSession = args[1]._cells[3].data.content
     // .epreuve, args[1]._cells[4].data.content.genre, args[1]._cells[4].data.content.etape]
-    console.log(dataSession)// [dataSession.epreuve, dataSession.genre, dataSession.etape])
+    // console.log(dataSession)// [dataSession.epreuve, dataSession.genre, dataSession.etape])
     gridSession.updateConfig({
       data: dataSession // [dataSession.epreuve, dataSession.genre, dataSession.etape]
     }).forceRender()
@@ -468,28 +515,47 @@ async function main() {
     titleInfoSessions.style('z-index', 9000)
   } // Fin fonction updateSession
 
+  function HideSession() {
+    sessionTable.style('z-index', 0)
+    titleInfoSessions.style('z-index', 0)
+  }
   // __________________________________________________________________________________________________________________________//
 
   function updateTimeTable() {
     document.getElementById('timeTable').innerHTML = ''
     titlePlanning.html(selectedPlace)
     selectedSessions = d3.filter(planningfiltered, d => d.lieu_epreuve === selectedPlace)
-    console.log(selectedPlace)
 
     dataSelectedSessions = selectedSessions.map(d => [d.discipline, d.jour, d.plage, customJSONParsing(d.parsing_epreuve)])
-    console.log(dataSelectedSessions)
 
-    console.log(gridTimeTable)
     gridTimeTable.updateConfig({
       data: dataSelectedSessions
     }).forceRender()
-    titlePlanning.style('z-index', 10000)
-    planningInfras.style('z-index', 9000)
-    sessionTable.style('z-index', 0)
-    titleInfoSessions.style('z-index', 0)
     // document.getElementById("timeTable").style('opacity', 0.9)
   } // Fin fonction updateTimeTable
 
+  function resetView() {
+    HideTimeTable()
+    HideSession()
+    // bigg.selectAll('circle').filter(f => f.__selected) //déselectionne et réinit. les cercles sélectionnés. 
+    //   .style('opacity', .5)
+    //   .attr('selected')
+
+    // bigg.selectAll('circle').filter(f => !f.__selected) //éinit. les cercles non-sélectionnés. 
+    //   .style('opacity', .5)
+
+  }
+
+  function displayTimeTable() {
+    titlePlanning.style('z-index', 10000)
+    planningInfras.style('z-index', 9000)
+    HideSession()
+  }
+
+  function HideTimeTable() {
+    titlePlanning.style('z-index', 0)
+    planningInfras.style('z-index', 0)
+  }
   // __________________________________________________________________________________________________________________________//
 
   function customJSONParsing(x) {
@@ -506,19 +572,6 @@ async function main() {
   async function loadArr() {
     const idfArr = (await fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/ile-de-france/arrondissements-ile-de-france.geojson')).json()
     return idfArr
-  }
-
-  async function loadLoc() {
-    const locParsed = await (d3.csv('../loc_epreuves.csv')
-      .then(data => {
-        return data.map((d, i) => {
-          const r = d
-          r.latitude = +d.latitude
-          r.longitude = +d.longitude
-          return r
-        })
-      }))
-    return locParsed
   }
 
   async function loadJOData() {
@@ -580,10 +633,10 @@ async function main() {
       .style('position', 'absolute')
       .attr('class', 'wordcloudContainer')
       .append('g')
-    updateCloud(planningfiltered)
+    updateCloud()
   }
 
-  async function updateCloud(data) {
+  async function updateCloud() {
     // set the dimensions for wordcloud
     const width = timeTableWidth
     const height = timeTableHeight
@@ -593,18 +646,19 @@ async function main() {
       .duration(500)
       .style('opacity', 0)
       .remove()
-    const dataClean = data.map(e => {
+    const dataClean = datacloud.map(e => {
       const r = {
         sport: e.discipline,
         capacite: e.capacite
       }
       return r
     })
+
     const rolledupdata = [...d3.rollup(dataClean, v => d3.sum(v, e => e.capacite), d => d.sport)]
     const wordCloudScale = d3.scaleLog()
       .domain([d3.min(rolledupdata, d => d[1]), d3.max(rolledupdata, d => d[1])])
       .range([10, 50])
-    // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
+    // Constructs a new cloud layout instance. It runs an algorithm to find the position of words that suits your requirements
     const layout = d3.layout.cloud()
       .size([width, height])
       .words(rolledupdata.map(function (d) {
@@ -616,11 +670,9 @@ async function main() {
       .padding(10)
       .rotate(0)
       .fontSize(function (d) {
-        // console.log('d : fontsize', d)
         return d.size
       })
       .on('end', draw)
-
     layout.start()
 
     // This function takes the output of 'layout' above and draw the words
@@ -641,24 +693,103 @@ async function main() {
           return 'translate(' + [d.x, d.y] + ')rotate(' + d.rotate + ')'
         })
         .text(function (d) { return d.text })
-        // .style('opacity', 0)
-        .on('mouseenter', function (d) {
-          textGroup.selectAll('text')
-            .style("opacity", .2)
+        .style('fill', 'midnightblue')
 
-          d3.select(this)
-            .style('opacity', 1)
-        })
-        .on('mouseleave', function (d) {
-          textGroup.selectAll('text')
-            .style("opacity", 1)
+        .on('mouseenter', function (e, d) {
+          nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length //Nb de textes cliqués(sélectionnés)
+
+          if (nb_clicked == 0) {
+            textGroup.selectAll('text')
+              .style("opacity", .2)
+            d3.select(this)
+              .style('opacity', 1)
+              .style("cursor", "pointer")
+          }
+          else {
+
+          }
         })
 
+        .on('click', function (e, d) {
+          selection = d3.select(this)
+          isclicked = d.__clicked
+          nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length //Nb de textes cliqués(sélectionnés)
+          if (!isclicked) {
+            if (nb_clicked == 0) { //Si encore aucun texte n'est cliqué, alors autoriser la sélection
+              d.__clicked = true
+              selection.style('opacity', 1)
+
+              textGroup.selectAll('text').filter(f => !f.__clicked)
+                .style('opacity', .2)
+                .style('fill', 'grey')
+
+              sport = selection._groups[0][0].__data__.text //Accéder au texte cliqué
+              regex = new RegExp(sport)
+              newtab = d3.filter(newtab, f => regex.test(f[1].ConcatenatedDiscipline))//Nouveau tableau filtré par la sélection
+              console.log(newtab)
+              updateMap()
+            }
+
+            else { //Si nb_clicked>0, un texte est déjà sélectionné donc on empêche une sélection supplémentaire
+            }
+          }
+
+          else {
+            d.__clicked = false
+            textGroup.selectAll('text').filter(f => !f.__clicked)
+              .style('fill', 'midnightblue')
+
+            newtab = [...d3.rollup(planningfiltered, group => ({
+              ConcatenatedDiscipline: [... new Set(group.map(d => d.discipline))].join(', '),
+              ...group[0]
+            }),
+              d => d.lieu_epreuve)]
+            updateMap()
+          }
+        })
+
+        .on('mouseleave', function (e, d) {
+          isclicked = d.__clicked
+          nb_clicked = textGroup.selectAll('text').filter(f => f.__clicked)._groups[0].length //Nb de textes cliqués(sélectionnés)
+          if (nb_clicked == 0) {
+            textGroup.selectAll('text')
+              .style("opacity", 1)
+          }
+          else { //Si mot cliqué, alors le mouseleave ne doit rien faire
+          }
+        })
         .transition()
         .duration(500)
         .style('opacity', 1)
-
-
+      // .on('mousemove', function (d) {
+      //   d3.select(this).transition()
+      //     .duration('0')
+      //     .style('opacity', 0)
+      // })
     }
+
+    //add tooltip on wordcloud
+
+  }
+
+  window.addEventListener('resize', updateWindowSize)
+  function updateWindowSize() {
+    windowHeight = window.innerHeight
+    windowWidth = window.innerWidth
+    window_width = windowWidth - margin.left - margin.right
+    window_height = windowHeight - margin.top - margin.bottom
+    // dimensions time tables
+    timeTableHeight = window_height / 2.2 // - margin.top - margin.bottom
+    timeTableWidth = window_width / 3
+
+    // update slider height and width
+    // delete slider and re-create it
+    d3.select('svg.slider').remove()
+    slider()
+
+    // update wordcloud
+    d3.select('.wordcloudContainer').remove()
+    createCloud()
+
   }
 }
