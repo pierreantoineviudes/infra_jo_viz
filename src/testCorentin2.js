@@ -1,8 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
-const { pointer, create } = require('d3-selection')
-
 /**
  * Cartographie qui trace les POI sur un fond de carte Openstreetmap
  *
@@ -40,6 +38,9 @@ async function main () {
     ...group[0]
   }),
   d => d.lieu_epreuve)]
+  let selectedPlace = ''
+  const gridSession = creategridSession()
+  const gridTimeTable = creategridTimeTable()
 
   // Echelle
   const RadiusScale = d3.scaleLinear()
@@ -283,8 +284,9 @@ async function main () {
         }
 
         selectedPlace = d[1].lieu_epreuve
-        updateTimeTable()
-        displayTimeTable()
+        createTimeTable()
+        // updateTimeTable()
+        // displayTimeTable()
         console.log(newtab)
         lieux = newtab.filter(d => d.__selected).map(d => d[0])// Liste des infra sélectionnées
         console.log(lieux)
@@ -342,37 +344,63 @@ async function main () {
 
   // Création des tableaux planning infras & infos sessions
 
-  async function createSessionTable () {
-    d3.select('body').append('div')
-      .attr('style', `width:${timeTableWidth / 2}px; height:${timeTableHeight / 2}px`)
-      .attr('id', 'infoSession')
+  // functions to create gridJS objects
+  function creategridSession () {
+    const gridSession = new gridjs.Grid({
+      columns: [
+        'Epreuve',
+        'Genre',
+        'Etape'
+      ],
+      data: [['', '', '']],
+      // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
+      // data: [["", "", "", ""]],
+      resizable: true,
+      // pagination: true,
+      fixedHeader: true,
+      height: timeTableHeight + 'px',
+      width: timeTableWidth + 'px',
+      style: {
+        td: {
+          border: '1px solid #ccc'
+        },
+        table: {
+          'font-size': '15px'
+        }
+      }
+    })
+    return gridSession
+  }
 
-    // const gridSession = new gridjs.Grid({
-    //   columns: [
-    //     'Epreuve',
-    //     'Genre',
-    //     'Etape'
-    //   ],
-    //   data: [['', '', '']],
-    //   // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
-    //   // data: [["", "", "", ""]],
-    //   resizable: true,
-    //   // pagination: true,
-    //   fixedHeader: true,
-    //   height: timeTableHeight + 'px',
-    //   width: timeTableWidth + 'px',
-    //   style: {
-    //     td: {
-    //       border: '1px solid #ccc'
-    //     },
-    //     table: {
-    //       'font-size': '15px'
-    //     }
-    //   }
-    // })
-
-    gridSession.render(document.getElementById('infoSession'))
-  } // Fin fonction createSessionTable
+  function creategridTimeTable () {
+    const gridTimeTable = new gridjs.Grid({
+      columns: [
+        'Discipline',
+        'Jour',
+        'Heure',
+        {
+          name: 'infosEpreuves',
+          hidden: true
+        }],
+      data: [['', '', '']],
+      // columns: ['Discipline', 'Date', 'Début', 'Fin'], //, 'Epreuve', 'H/F', 'Genre'],
+      // data: [["", "", "", ""]],
+      resizable: true,
+      // pagination: true,
+      fixedHeader: true,
+      height: timeTableHeight + 'px',
+      width: timeTableWidth + 'px',
+      style: {
+        td: {
+          border: '1px solid #ccc'
+        },
+        table: {
+          'font-size': '15px'
+        }
+      }
+    })
+    return gridTimeTable
+  }
 
   // __________________________________________________________________________________________________________________________//
 
@@ -445,8 +473,8 @@ async function main () {
   // __________________________________________________________________________________________________________________________//
 
   function updateTimeTable () {
-    titlePlanning = d3.select('#titlePlanning')
-    document.getElementById('timeTable').innerHTML = ''
+    // titlePlanning = d3.select('#titlePlanning')
+    // document.getElementById('timeTable').innerHTML = ''
     titlePlanning.html(selectedPlace)
     selectedSessions = d3.filter(planningfiltered, d => d.lieu_epreuve === selectedPlace)
 
@@ -459,8 +487,10 @@ async function main () {
   } // Fin fonction updateTimeTable
 
   function resetView () {
-    HideTimeTable()
-    HideSession()
+    d3.select('#timeTable').remove()
+    d3.select('#sessionTable').remove()
+    // HideTimeTable()
+    // HideSession()
     // bigg.selectAll('circle').filter(f => f.__selected) //déselectionne et réinit. les cercles sélectionnés.
     //   .style('opacity', .5)
     //   .attr('selected')
@@ -470,16 +500,16 @@ async function main () {
   }
 
   function displayTimeTable () {
-    const titlePlanning = d3.select('#titlePlanning')
-    const planningInfras = d3.select('#timeTable')
+    // const titlePlanning = d3.select('#titlePlanning')
+    // const planningInfras = d3.select('#timeTable')
     titlePlanning.style('z-index', 10000)
     planningInfras.style('z-index', 9000)
     HideSession()
   }
 
   function HideTimeTable () {
-    const titlePlanning = d3.select('#titlePlanning')
-    const planningInfras = d3.select('#timeTable')
+    // const titlePlanning = d3.select('#titlePlanning')
+    // const planningInfras = d3.select('#timeTable')
     titlePlanning.style('z-index', 0)
     planningInfras.style('z-index', 0)
   }
@@ -654,7 +684,6 @@ async function main () {
               sport = selection._groups[0][0].__data__.text // Accéder au texte cliqué
               regex = new RegExp(sport)
               newtab = d3.filter(newtab, f => regex.test(f[1].ConcatenatedDiscipline))// Nouveau tableau filtré par la sélection
-              console.log(newtab)
               updateMap()
             } else { // Si nb_clicked>0, un texte est déjà sélectionné donc on empêche une sélection supplémentaire
             }
@@ -714,5 +743,7 @@ async function main () {
     createCloud()
 
     // update tables?
+    d3.select('#timeTable').remove()
+    createTimeTable()
   }
 }
