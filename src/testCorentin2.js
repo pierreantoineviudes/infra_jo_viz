@@ -36,11 +36,10 @@ async function main () {
   let lieux = [...new Set(planningParsed.map(d => d.lieu_epreuve))]
 
   let newtab = [...d3.rollup(planningfiltered, group => ({
-    ConcatenatedDiscipline: [... new Set(group.map(d => d.discipline))].join(', '),
+    ConcatenatedDiscipline: [...new Set(group.map(d => d.discipline))].join(', '),
     ...group[0]
   }),
-    d => d.lieu_epreuve)]
-
+  d => d.lieu_epreuve)]
 
   // Echelle
   const RadiusScale = d3.scaleLinear()
@@ -167,10 +166,10 @@ async function main () {
           planningfiltered = d3.filter(planningParsed, d => d.date <= SelectedDates[1] && d.date >= SelectedDates[0])
           datacloud = planningfiltered
           newtab = [...d3.rollup(planningfiltered, group => ({
-            ConcatenatedDiscipline: [... new Set(group.map(d => d.discipline))].join(', '),
+            ConcatenatedDiscipline: [...new Set(group.map(d => d.discipline))].join(', '),
             ...group[0]
           }),
-            d => d.lieu_epreuve)]
+          d => d.lieu_epreuve)]
           // Update the map with the new domain
           updateMap()
         })
@@ -287,25 +286,24 @@ async function main () {
         updateTimeTable()
         displayTimeTable()
         console.log(newtab)
-        lieux = newtab.filter(d => d.__selected).map(d => d[0])//Liste des infra sélectionnées
+        lieux = newtab.filter(d => d.__selected).map(d => d[0])// Liste des infra sélectionnées
         console.log(lieux)
 
         datacloud = planningfiltered.filter(f => lieux.includes(f.lieu_epreuve))
-        console.log("Datacloud :", datacloud)
+        console.log('Datacloud :', datacloud)
 
         if (lieux.length > 0) {
           bigg.selectAll('circle').filter(f => !f.__selected)
-            .style('opacity', .2)
-        }
-        else { //All has been unselected, reset global opacitys, DataCloud, PlaningInfra and Map
+            .style('opacity', 0.2)
+        } else { // All has been unselected, reset global opacitys, DataCloud, PlaningInfra and Map
           bigg.selectAll('circle').filter(f => !f.__selected)
-            .style('opacity', .5)
-          datacloud = planningfiltered //wordcloud réinit. sur les données globales
+            .style('opacity', 0.5)
+          datacloud = planningfiltered // wordcloud réinit. sur les données globales
           newtab = [...d3.rollup(planningfiltered, group => ({
-            ConcatenatedDiscipline: [... new Set(group.map(d => d.discipline))].join(', '),
+            ConcatenatedDiscipline: [...new Set(group.map(d => d.discipline))].join(', '),
             ...group[0]
           }),
-            d => d.lieu_epreuve)]
+          d => d.lieu_epreuve)]
           updateMap()
         }
 
@@ -653,9 +651,9 @@ async function main () {
                 .style('opacity', 0.2)
                 .style('fill', 'grey')
 
-              sport = selection._groups[0][0].__data__.text //Accéder au texte cliqué
+              sport = selection._groups[0][0].__data__.text // Accéder au texte cliqué
               regex = new RegExp(sport)
-              newtab = d3.filter(newtab, f => regex.test(f[1].ConcatenatedDiscipline))//Nouveau tableau filtré par la sélection
+              newtab = d3.filter(newtab, f => regex.test(f[1].ConcatenatedDiscipline))// Nouveau tableau filtré par la sélection
               console.log(newtab)
               updateMap()
             } else { // Si nb_clicked>0, un texte est déjà sélectionné donc on empêche une sélection supplémentaire
@@ -666,10 +664,10 @@ async function main () {
               .style('fill', 'midnightblue')
 
             newtab = [...d3.rollup(planningfiltered, group => ({
-              ConcatenatedDiscipline: [... new Set(group.map(d => d.discipline))].join(', '),
+              ConcatenatedDiscipline: [...new Set(group.map(d => d.discipline))].join(', '),
               ...group[0]
             }),
-              d => d.lieu_epreuve)]
+            d => d.lieu_epreuve)]
             updateMap()
           }
         })
