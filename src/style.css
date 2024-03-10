@@ -245,6 +245,6 @@ div.ongletsZoom {
 div.menuZoom {
     position: absolute;
     top : 0;
-    left : 150px;
+    left : 130px;
     display: flex;
 }
