@@ -92,8 +92,44 @@ async function main () {
 
   // Création du wordcloud container
   createCloud()
+
+  // Création des onglets de zoom
+  createZoomWidgets()
+  
+
   // __________________________________________________________________________________________________________________________//
   // Fonctions utilisées //
+
+  async function createZoomWidgets(){
+
+
+    const zoomParis = document.querySelector('#zoomParis');
+
+    zoomParis.addEventListener('click', function() {
+      map.setView([48.8588897,2.320041], 12)
+    });
+
+
+    const zoomIDF = document.querySelector('#zoomIDF');
+
+    zoomIDF.addEventListener('click', function() {
+      map.setView([48.8588897,2.320041], 10)
+    });
+
+
+    const zoomFranceEntiere = document.querySelector('#zoomFranceEntiere');
+
+    zoomFranceEntiere.addEventListener('click', function() {
+      map.setView([46.72883557434409,2.655154864086522], 5)
+    });
+
+
+    const zoomTahiti = document.querySelector('#zoomTahiti');
+
+    zoomTahiti.addEventListener('click', function() {
+      map.setView([-17.67610271839933,-149.40214815320098], 9)
+    });
+  }
 
   async function slider () {
     // Couleurs et dimensions
