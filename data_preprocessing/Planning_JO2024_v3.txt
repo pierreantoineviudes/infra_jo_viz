@@ -705,109 +705,109 @@ Version : 1
 
 JOUR	4		Mardi	30	Juillet	
 Session		BK301	Début :	17:30 Fin :	19:30	La Concorde 1
-Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+Nom de l'épreuve/des épreuves Femme, matches de poule (2 matchs) Homme, matches de poule (2 matchs)
 
  
 Session	BK302
  
 Début :	21:00 Fin :	23:00	La Concorde 1
-Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+Nom de l'épreuve/des épreuves Femme, matches de poule (2 matchs) Homme, matches de poule (2 matchs)
  
 
 JOUR	5		Mercredi	31	Juillet	
 Session		BK303	Début :	17:30 Fin :	19:30	La Concorde 1
-Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+Nom de l'épreuve/des épreuves Femme, matches de poule (2 matchs) Homme, matches de poule (2 matchs)
 
  
 Session	BK304
  
 Début :	21:00 Fin :	23:00	La Concorde 1
 Nom de l'épreuve/des épreuves
-Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+Femme, matches de poule (2 matchs) Homme, matches de poule (2 matchs)
  
 
 Jour	6		Jeudi	1	Août	
 Session		BK305	Début :	09:00	Fin :	11:00	La Concorde 1
-Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+Nom de l'épreuve/des épreuves Femme, matches de poule (2 matchs) Homme, matches de poule (2 matchs)
 
  
 Session	BK306
  
 Début :	12:30 Fin :	14:30	La Concorde 1
-Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+Nom de l'épreuve/des épreuves Femme, matches de poule (2 matchs) Homme, matches de poule (2 matchs)
  
 
  
 Session	BK307
  
 Début :	18:00 Fin :	20:00	La Concorde 1
-Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+Nom de l'épreuve/des épreuves Femme, matches de poule (2 matchs) Homme, matches de poule (2 matchs)
  
 
  
 Session	BK308
  
 Début :	21:30 Fin :	23:30	La Concorde 1
-Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+Nom de l'épreuve/des épreuves Femme, matches de poule (2 matchs) Homme, matches de poule (2 matchs)
  
 Jour	7		Vendredi	2	Août	
 Session		BK309	Début :	09:00	Fin :	11:00	La Concorde 1
-Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+Nom de l'épreuve/des épreuves Femme, matches de poule (2 matchs) Homme, matches de poule (2 matchs)
 
  
 Session	BK310
  
 Début :	12:30 Fin :	14:30	La Concorde 1
-Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+Nom de l'épreuve/des épreuves Femme, matches de poule (2 matchs) Homme, matches de poule (2 matchs)
  
 
  
 Session	BK311
  
 Début :	17:30 Fin :	19:30	La Concorde 1
-Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+Nom de l'épreuve/des épreuves Femme, matches de poule (2 matchs) Homme, matches de poule (2 matchs)
  
 
  
 Session	BK312
  
 Début :	21:00 Fin :	23:00	La Concorde 1
-Nom de l'épreuve/des épreuves Femmes, matches de poule (2 matchs) Hommes, matches de poule (2 matchs)
+Nom de l'épreuve/des épreuves Femme, matches de poule (2 matchs) Homme, matches de poule (2 matchs)
  
 
 Jour	8		Samedi	3	Août	
 Session		BK313	Début :	17:30	Fin :	19:30	La Concorde 1
 Nom de l'épreuve/des épreuves
-Femmes, matches de poule (4 matchs)
+Femme, matches de poule (4 matchs)
 
  
 Session	BK314
  
 Début :	21:30 Fin :	22:30	La Concorde 1
 Nom de l'épreuve/des épreuves
-Femmes, play in (2 matchs)
+Femme, play in (2 matchs)
  
 
 Jour	9		dimanche	4	Août	
 Session		BK315	Début :	17:30	Fin :	19:30	La Concorde 1
 Nom de l'épreuve/des épreuves
-Hommes, matches de poule (4 matches)
+Homme, matches de poule (4 matches)
 
  
 Session	BK316
  
 Début :	21:30 Fin :	22:30	La Concorde 1
 Nom de l'épreuve/des épreuves
-Hommes, play in (2 matchs)
+Homme, play in (2 matchs)
  
 
 Jour	10		Lundi	5	Août	
 Session		BK317	Début :	17:30	Fin :	19:30	La Concorde 1
 Nom de l'épreuve/des épreuves
-Femmes et hommes, demi-finales
+Femme et Homme, demi-finales
 
 Session	 BK318	 Début :	21:00 Fin :	23:20	La Concorde 1
-Nom de l'épreuve/des épreuves Femmes, match pour la médaille de bronze Hommes, match pour la médaille de bronze
+Nom de l'épreuve/des épreuves Femme, match pour la médaille de bronze Homme, match pour la médaille de bronze
  
  
 Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
