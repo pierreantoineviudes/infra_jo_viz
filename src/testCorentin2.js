@@ -102,7 +102,7 @@ async function main () {
       bottom: '#546e7a',
       accent: '#263238'
     }
-    const sliderWidth = windowWidth * 0.70
+    const sliderWidth = windowWidth * 0.6
     const sliderHeight = 40
 
     // Echelles dediees
@@ -366,10 +366,12 @@ async function main () {
       fixedHeader: true,
       height: timeTableHeight + 'px',
       width: timeTableWidth + 'px',
+      'max-width': '50px',
       style: {
         td: {
           border: '1px solid #ccc',
-          padding: '10px'
+          padding: '10px',
+          'max-width': '5px'
         },
         table: {
           'font-size': '15px'
@@ -782,8 +784,6 @@ async function main () {
     gridSession = creategridSession()
     gridTimeTable = creategridTimeTable()
     d3.select('#timeTable').remove()
-    createTimeTable()
-    d3.select('#sessionTable').remove()
-    createInfoSession()
+    d3.select('#infoSession').remove()
   }
 }

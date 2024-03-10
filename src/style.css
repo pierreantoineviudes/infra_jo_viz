@@ -72,7 +72,7 @@ div.slider {
     margin-bottom: 5px;
     margin-right: 15vw;
     margin-left: 15vw;
-    width: 70vw;
+    width: 60vw;
 }
 
 #dayTimeTable {
@@ -86,7 +86,7 @@ div.slider {
     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     z-index: 0;
     position: absolute;
-    bottom: 53px;
+    bottom: 65px;
 
 }
 
@@ -137,10 +137,10 @@ div.slider {
 
 #infoSession {
     /* here to modify style on left table */
-    opacity: 1;
+    opacity: 1; 
     z-index: 1000;
     position: absolute;
-    bottom: 10px;
+    bottom: 65px;
     left: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
