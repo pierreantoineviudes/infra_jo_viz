@@ -1009,16 +1009,16 @@ JOUR	7		Vendredi	2	Août
 Session		BOX18	Début :	15:30	Fin :	18:10 Arena Paris Nord
 Nom de l'épreuve/des épreuves 57kg - Femmes, 1/16 finale combat 7 57kg - Femmes, 1/16 finale combat 8 57kg - Femmes, 1/16 finale combat 9 57kg - Femmes, 1/16 finale combat 10
 51kg - Hommes quart de finale combat 9 51kg - Hommes quart de finale combat 10 80kg - Hommes quart de finale combat 11 80kg - Hommes quart de finale combat 12
-+92 kg- Hommes, quart de finale combat 9
-+92 kg- Hommes, quart de finale combat 10
++92kg- Hommes, quart de finale combat 9
++92kg- Hommes, quart de finale combat 10
  
 Session	BOX19
  
 Début :	20:00 Fin :	22:40 Arena Paris Nord
 Nom de l'épreuve/des épreuves 57kg - Femmes, 1/16 finale combat 11 57kg - Femmes, 1/16 finale combat 12 57kg - Femmes, 1/16 finale combat 13 57kg - Femmes, 1/16 finale combat 14
 51kg - Hommes quart de finale combat 11 51kg - Hommes quart de finale combat 12 80kg - Hommes quart de finale combat 13 80kg - Hommes quart de finale combat 14
-+92 kg- Hommes, quart de finale combat 11
-+92 kg- Hommes, quart de finale combat 12
++92kg- Hommes, quart de finale combat 11
++92kg- Hommes, quart de finale combat 12
  
 
 JOUR	8		Samedi	3	Août	
@@ -1060,36 +1060,36 @@ Nom de l'épreuve/des épreuves
  
 
 JOUR	11		Mardi	6	Août	
-Session		BOX24	Début :	21:30	Fin :	23:30 Stade Roland-Garros - P.Chatrier
+Session		BOX24	Début :	21:30	Fin :	23:30 Stade Roland-Garros - Court Philippe-Chatrier
 Nom de l'épreuve/des épreuves
-71kg - Hommes, demi-finale, combat 17 71kg - Hommes, demi-finale, combat 18 50 kg - Femmes, demi-finale, combat 19 50 kg - Femmes, demi-finale, combat 20 66 kg - Femmes, demi-finale, combat 17 66 kg - Femmes, demi-finale, combat 18
+71kg - Hommes, demi-finale, combat 17 71kg - Hommes, demi-finale, combat 18 50kg - Femmes, demi-finale, combat 19 50kg - Femmes, demi-finale, combat 20 66kg - Femmes, demi-finale, combat 17 66kg - Femmes, demi-finale, combat 18
  
 60kg - Femmes, cérémonie
  
 
 JOUR	12	Mercredi	7	Août	
-Session		 BOX25	 Début :	21:30	Fin :	23:30 Stade Roland-Garros - P.Chatrier
+Session		 BOX25	 Début :	21:30	Fin :	23:30 Stade Roland-Garros - Court Philippe-Chatrier
 Nom de l'épreuve/des épreuves 57kg - femmes, demi-finale combat 19 57kg - femmes, demi-finale combat 20
 +92kg - hommes, demi-finale combat 13
 +92kg - hommes, demi-finale combat 14
 63,5kg - hommes, cérémonie 80kg - hommes, cérémonie
 
 JOUR	13	Jeudi	8	Août	
-Session		 BOX26	 Début :	21:30	Fin :	23:30 Stade Roland-Garros - P.Chatrier
+Session		 BOX26	 Début :	21:30	Fin :	23:30 Stade Roland-Garros - Court Philippe-Chatrier
 Nom de l'épreuve/des épreuves 57kg - hommes, demi-finale combat 15 57kg - hommes, demi-finale combat 16 75kg - femmes, demi-finale combat 13 75kg - femmes, demi-finale combat 14
 
 
 
 
 JOUR	14	Vendredi	9	Août	
-Session		 BOX27	 Début :	21:30	Fin :	23:30 Stade Roland-Garros - P.Chatrier
+Session		 BOX27	 Début :	21:30	Fin :	23:30 Stade Roland-Garros - Court Philippe-Chatrier
 Nom de l'épreuve/des épreuves
 71kg - hommes, cérémonie
  92kg - hommes, finale combat 15	 50kg - femmes, cérémonie
  66kg - femmes, finale combat 19	 92kg - hommes, cérémonie
 66kg - femmes, cérémonie
 
-Session	 BOX28	 Début :	21:30 Fin :	23:30 Stade Roland-Garros - P.Chatrier
+Session	 BOX28	 Début :	21:30 Fin :	23:30 Stade Roland-Garros - Court Philippe-Chatrier
 Nom de l'épreuve/des épreuves
 57kg - femmes, cérémonie
  75kg - femmes, finale combat 15	 57kg - hommes, cérémonie
@@ -2128,7 +2128,7 @@ Session WLF01
  
 Début :	15:00 Fin :	17:30 Arena Paris Sud 6
 Nom de l'épreuve/des épreuves
-61 kg - hommes
+61kg - hommes
 
  
 
@@ -2137,46 +2137,46 @@ Session WLF02
  
 Début :	19:30 Fin :	22:00 Arena Paris Sud 6
 Nom de l'épreuve/des épreuves
-49 kg - femmes 
+49kg - femmes 
 
  
 
 JOUR	13		Jeudi	8	Août	
 Session		WLF03	Début :	15:00	Fin :	17:30	Arena Paris Sud 6
 Nom de l'épreuve/des épreuves
-59 kg - femmes
+59kg - femmes
  
 Session WLF04
  
 Début :	19:30 Fin :	22:00 Arena Paris Sud 6
 Nom de l'épreuve/des épreuves
-73 kg - hommes
+73kg - hommes
 
  
 
 JOUR	14		Vendredi	9	Août	
 Session		WLF05	Début :	15:00	Fin :	17:30	Arena Paris Sud 6
 Nom de l'épreuve/des épreuves
-89 kg - hommes
+89kg - hommes
  
 Session WLF06
  
 Début :	19:30 Fin :	22:00 Arena Paris Sud 6
 Nom de l'épreuve/des épreuves
-71 kg - femmes
+71kg - femmes
 
  
 
 JOUR	15		Samedi	10	Août	
 Session		WLF07	Début :	11:30	Fin :	14:00	Arena Paris Sud 6
 Nom de l'épreuve/des épreuves
-102 kg - hommes
+102kg - hommes
  
 Session WLF08
  
 Début :	16:00 Fin :	18:30 Arena Paris Sud 6
 Nom de l'épreuve/des épreuves
-81 kg - femmes
+81kg - femmes
 
  
 
@@ -2185,7 +2185,7 @@ Session WLF09
  
 Début :	20:30 Fin :	23:00 Arena Paris Sud 6
 Nom de l'épreuve/des épreuves
-+102 kg - hommes
++102kg - hommes
  
 
  
@@ -2193,7 +2193,7 @@ Nom de l'épreuve/des épreuves
 JOUR	16		Dim	11	Août	
 Session		WLF10	Début :	11:30 Fin :	14:00	Arena Paris Sud 6
 Nom de l'épreuve/des épreuves
-+81 kg - femmes
++81kg - femmes
 
 Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
 HANDBALL
@@ -2818,143 +2818,143 @@ Calendrier par épreuves Version : 1
 JOUR	1		Samedi	27	Juillet	
 Session		JUD01	Début :	10:00 Fin :	14:00	Arena Champ-de-Mars
 Nom de l'épreuve/des épreuves
--48 kg - femmes, éliminatoires
--60 kg - hommes, éliminatoires
+-48kg - femmes, éliminatoires
+-60kg - hommes, éliminatoires
 
  
 Session JUD02
  
 Début :	16:00 Fin :	19:00	Arena Champ-de-Mars
 Nom de l'épreuve/des épreuves
--48 kg - femmes, repêchages
--48 kg - femmes, demi-finales
--60 kg - hommes, repêchages
--60 kg - hommes, demi-finales
--48 kg - femmes, combats bronze
+-48kg - femmes, repêchages
+-48kg - femmes, demi-finales
+-60kg - hommes, repêchages
+-60kg - hommes, demi-finales
+-48kg - femmes, combats bronze
  
 
  
--60 kg - hommes, combats bronze
+-60kg - hommes, combats bronze
 
 JOUR	2		Dimanche	28	Juillet	
 Session		JUD03	Début :	10:00	Fin :	14:00	Arena Champ-de-Mars
 Nom de l'épreuve/des épreuves
--52 kg - femmes, éliminatoires
--66 kg - hommes, éliminatoires
+-52kg - femmes, éliminatoires
+-66kg - hommes, éliminatoires
 
  
 Session JUD04
  
 Début :	16:00 Fin :	19:00	Arena Champ-de-Mars
 Nom de l'épreuve/des épreuves
--66 kg - hommes, repêchages
--66 kg - hommes, demi-finales
--52 kg - femmes, repêchage
--52 kg - femmes, demi-finales
--66 kg - hommes, combats bronze
+-66kg - hommes, repêchages
+-66kg - hommes, demi-finales
+-52kg - femmes, repêchage
+-52kg - femmes, demi-finales
+-66kg - hommes, combats bronze
  
 
  
--52 kg - femmes, combats bronze
+-52kg - femmes, combats bronze
 
 JOUR	3		Lundi	29	Juillet	
 Session		JUD05	Début :	10:00 Fin :	14:00	Arena Champ-de-Mars
 Nom de l'épreuve/des épreuves
--57 kg - femmes, éliminatoires
--73 kg - hommes, éliminatoires
+-57kg - femmes, éliminatoires
+-73kg - hommes, éliminatoires
 
  
 Session JUD06
  
 Début :	16:00 Fin :	19:00	Arena Champ-de-Mars
 Nom de l'épreuve/des épreuves
--57 kg - femmes, repêchages
--57 kg - femmes, demi-finales
--73 kg - hommes, repêchages
--73 kg - hommes, demi-finales
--57 kg - femmes, combats bronze
+-57kg - femmes, repêchages
+-57kg - femmes, demi-finales
+-73kg - hommes, repêchages
+-73kg - hommes, demi-finales
+-57kg - femmes, combats bronze
  
 
  
--73 kg - hommes, combats bronze
+-73kg - hommes, combats bronze
 
 JOUR	4		Mardi	30	Juillet	
 Session		JUD07	Début :	10:00 Fin :	14:00	Arena Champ-de-Mars
 Nom de l'épreuve/des épreuves
--63 kg - femmes, éliminatoires
--81 kg - hommes, éliminatoires
+-63kg - femmes, éliminatoires
+-81kg - hommes, éliminatoires
 
  
 Session JUD08
  
 Début :	16:00 Fin :	19:00	Arena Champ-de-Mars
 Nom de l'épreuve/des épreuves
--81 kg - hommes, repêchages
--81 kg - hommes, demi-finales
--63 kg - femmes, repêchage
--63 kg - femmes, demi-finales
--81 kg - hommes, combats bronze
+-81kg - hommes, repêchages
+-81kg - hommes, demi-finales
+-63kg - femmes, repêchage
+-63kg - femmes, demi-finales
+-81kg - hommes, combats bronze
  
 
  
--63 kg - femmes, combats bronze
+-63kg - femmes, combats bronze
  
 
 JOUR	5		Mercredi	31	Juillet	
 Session		JUD09	Début :	10:00 Fin :	14:00	Arena Champ-de-Mars
 Nom de l'épreuve/des épreuves
--70 kg - femmes, éliminatoires
--90 kg - hommes, éliminatoires
+-70kg - femmes, éliminatoires
+-90kg - hommes, éliminatoires
 
  
 Session JUD10
  
 Début :	16:00 Fin :	19:00	Arena Champ-de-Mars
 Nom de l'épreuve/des épreuves
--70 kg - femmes, repêchages
--70 kg - femmes, demi-finales
--90 kg - hommes, repêchages
--90 kg - hommes, demi-finales
--70 kg - femmes, combats bronze
+-70kg - femmes, repêchages
+-70kg - femmes, demi-finales
+-90kg - hommes, repêchages
+-90kg - hommes, demi-finales
+-70kg - femmes, combats bronze
  
 
  
--90 kg - hommes, combats bronze
- -90 kg - hommes, finale	
+-90kg - hommes, combats bronze
+ -90kg - hommes, finale	
 
 JOUR	6		Jeudi	1 Août	
 Session		JUD11	Début :	10:00 Fin :	14:00	Arena Champ-de-Mars
 Nom de l'épreuve/des épreuves
--78 kg - femmes, éliminatoires
--100 kg - hommes, éliminatoires
+-78kg - femmes, éliminatoires
+-100kg - hommes, éliminatoires
 
 Session	 JUD12	 Début :	16:00 Fin :	19:00	Arena Champ-de-Mars
 Nom de l'épreuve/des épreuves
--100 kg - hommes, repêchages
--100 kg - hommes, demi-finales
--78 kg - femmes, repêchage
--78 kg - femmes, demi-finales
--100 kg - hommes, combats bronze
- -100 kg - hommes, finale	
--78 kg - femmes, combats bronze
- -78 kg - femmes, finale	
+-100kg - hommes, repêchages
+-100kg - hommes, demi-finales
+-78kg - femmes, repêchage
+-78kg - femmes, demi-finales
+-100kg - hommes, combats bronze
+ -100kg - hommes, finale	
+-78kg - femmes, combats bronze
+ -78kg - femmes, finale	
 
 JOUR	7		Vendredi	2	Août	
 Session		JUD13	Début :	10:00	Fin :	14:00	Arena Champ-de-Mars
 Nom de l'épreuve/des épreuves
-+78 kg - femmes, éliminatoires
-+100 kg - hommes, éliminatoires
++78kg - femmes, éliminatoires
++100kg - hommes, éliminatoires
 
 Session	 JUD14	 Début :	16:00 Fin :	19:00	Arena Champ-de-Mars
 Nom de l'épreuve/des épreuves
-+78 kg - femmes, repêchages
-+78 kg - femmes, demi-finales
-+100 kg - hommes, repêchages
-+100 kg - hommes, demi-finales
-+78 kg - femmes, combats bronze
- +78 kg - femmes, finale	
-+100 kg - hommes, combats bronze
- +100 kg - hommes, finale	
++78kg - femmes, repêchages
++78kg - femmes, demi-finales
++100kg - hommes, repêchages
++100kg - hommes, demi-finales
++78kg - femmes, combats bronze
+ +78kg - femmes, finale	
++100kg - hommes, combats bronze
+ +100kg - hommes, finale	
 
 JOUR	8		Samedi	3	Août	
 Session		JUD15	Début :	08:00	Fin :	14:00	Arena Champ-de-Mars
@@ -2977,9 +2977,9 @@ Session	WRE01
 
 Début	15:00 Fin :	17:00 Arena Champs de Mars
 Nom de l'épreuve/des épreuves
-Lutte gréco-romaine, 60 kg - hommes, 8e de finale Libre, 68 kg - femmes, 8e de finale
-Lutte gréco-romaine, 130 kg - hommes,8e de finale Lutte gréco-romaine, 60 kg - hommes, quarts de finale Libre, 68 kg - femmes, quarts de finale
-Lutte gréco-romaine, 130 kg - hommes, quarts de finale
+Lutte gréco-romaine, 60kg - hommes, 8e de finale Libre, 68kg - femmes, 8e de finale
+Lutte gréco-romaine, 130kg - hommes,8e de finale Lutte gréco-romaine, 60kg - hommes, quarts de finale Libre, 68kg - femmes, quarts de finale
+Lutte gréco-romaine, 130kg - hommes, quarts de finale
  
 
  
@@ -2987,89 +2987,89 @@ Session	WRE02
  
 Début	21:00 Fin :	22:00 Arena Champs de Mars
 Nom de l'épreuve/des épreuves
-Lutte gréco-romaine, 60 kg - hommes, demi-finales Lutte gréco-romaine, 130 kg - hommes, demi-finales Libre, 68 kg - femmes, demi-finales
+Lutte gréco-romaine, 60kg - hommes, demi-finales Lutte gréco-romaine, 130kg - hommes, demi-finales Libre, 68kg - femmes, demi-finales
  
 
 JOUR	11		Mardi	6	Août	
 Session		WRE03	Début	11:00	Fin :	13:30 Arena Champs de Mars
 Nom de l'épreuve/des épreuves
-Lutte gréco-romaine, 60 kg - hommes, repêchages Libre, 68 kg - femmes, repêchages
-Lutte gréco-romaine, 130 kg - hommes, repêchages Lutte gréco-romaine, 77 kg - hommes, 8e de finale Libre, 50 kg - femmes, 8e de finale
-Lutte gréco-romaine, 97 kg - hommes,8e de finale Lutte gréco-romaine, 77 kg - hommes, quarts de finale Libre, 50 kg - femmes, quarts de finale
-Lutte gréco-romaine, 97 kg - hommes, quarts de finale
+Lutte gréco-romaine, 60kg - hommes, repêchages Libre, 68kg - femmes, repêchages
+Lutte gréco-romaine, 130kg - hommes, repêchages Lutte gréco-romaine, 77kg - hommes, 8e de finale Libre, 50kg - femmes, 8e de finale
+Lutte gréco-romaine, 97kg - hommes,8e de finale Lutte gréco-romaine, 77kg - hommes, quarts de finale Libre, 50kg - femmes, quarts de finale
+Lutte gréco-romaine, 97kg - hommes, quarts de finale
 
  
 Session WRE04
  
 Début  18:15 Fin :   22:00 Arena Champs de Mars
 Nom de l'épreuve/des épreuves
-Lutte gréco-romaine, 77 kg - hommes, demi-finales Lutte gréco-romaine, 97 kg - hommes, demi-finales Libre, 50 kg - femmes, demi-finales
-Lutte gréco-romaine, 60 kg - hommes, match pour les médailles de bronze
+Lutte gréco-romaine, 77kg - hommes, demi-finales Lutte gréco-romaine, 97kg - hommes, demi-finales Libre, 50kg - femmes, demi-finales
+Lutte gréco-romaine, 60kg - hommes, match pour les médailles de bronze
  
 
  
-Lutte gréco-romaine, 130 kg - hommes, match pour les médailles de bronze
- Lutte gréco-romaine, 130 kg - hommes, match pour la médaille d'or	 Libre, 68 kg - femmes, match pour les médailles de bronze
- Libre, 68 kg - femmes, match pour la médaille d'or	
+Lutte gréco-romaine, 130kg - hommes, match pour les médailles de bronze
+ Lutte gréco-romaine, 130kg - hommes, match pour la médaille d'or	 Libre, 68kg - femmes, match pour les médailles de bronze
+ Libre, 68kg - femmes, match pour la médaille d'or	
  
 JOUR	12		Mercredi	7	Août	
 Session		WRE05	Début	11:00	Fin :	13:30 Arena Champs de Mars
 Nom de l'épreuve/des épreuves
-Lutte gréco-romaine, 77 kg - hommes, repêchages Libre, 50 kg - femmes, repêchages
-Lutte gréco-romaine, 97 kg - repêchages
-Lutte gréco-romaine, 67 kg - hommes, 8e de finale Libre, 53 kg - femmes, 8e de finale
-Lutte gréco-romaine, 87 kg - hommes,8e de finale Lutte gréco-romaine, 67 kg - hommes, quarts de finale Libre, 53 kg - femmes, quarts de finale
-Lutte gréco-romaine, 87 kg - hommes, quarts de finale
+Lutte gréco-romaine, 77kg - hommes, repêchages Libre, 50kg - femmes, repêchages
+Lutte gréco-romaine, 97kg - repêchages
+Lutte gréco-romaine, 67kg - hommes, 8e de finale Libre, 53kg - femmes, 8e de finale
+Lutte gréco-romaine, 87kg - hommes,8e de finale Lutte gréco-romaine, 67kg - hommes, quarts de finale Libre, 53kg - femmes, quarts de finale
+Lutte gréco-romaine, 87kg - hommes, quarts de finale
 
  
 Session WRE06
  
 Début  18:15 Fin :   22:00 Arena Champs de Mars
 Nom de l'épreuve/des épreuves
-Lutte gréco-romaine, 67 kg - hommes, demi-finales Lutte gréco-romaine, 87 kg - hommes, demi-finales Libre, 53 kg - femmes, demi-finales
-Lutte gréco-romaine, 77 kg - hommes, match pour les médailles de bronze
+Lutte gréco-romaine, 67kg - hommes, demi-finales Lutte gréco-romaine, 87kg - hommes, demi-finales Libre, 53kg - femmes, demi-finales
+Lutte gréco-romaine, 77kg - hommes, match pour les médailles de bronze
  
 
  
-Lutte gréco-romaine, 97 kg - hommes, match pour les médailles de bronze
- Lutte gréco-romaine, 97 kg - hommes, match pour la médaille d'or	 Libre, 50 kg - femmes, match pour les médailles de bronze
- Libre, 50 kg - femmes, match pour la médaille d'or	
+Lutte gréco-romaine, 97kg - hommes, match pour les médailles de bronze
+ Lutte gréco-romaine, 97kg - hommes, match pour la médaille d'or	 Libre, 50kg - femmes, match pour les médailles de bronze
+ Libre, 50kg - femmes, match pour la médaille d'or	
 
 
 JOUR	13		Jeudi	8	Août	
 Session		WRE07	Début	11:00	Fin :	13:30 Arena Champs de Mars
 Nom de l'épreuve/des épreuves
-Lutte gréco-romaine, 67 kg - hommes, repêchages Libre, 53 kg - femmes, repêchages
-Lutte gréco-romaine, 87 kg - repêchages Libre, 57 kg - hommes, 8e de finale Libre, 57 kg - femmes, 8e de finale Libre, 86 kg - hommes,8e de finale Libre, 57 kg - hommes, quarts de finale Libre, 57 kg - femmes, quarts de finale Libre, 86 kg - hommes, quarts de finale
+Lutte gréco-romaine, 67kg - hommes, repêchages Libre, 53kg - femmes, repêchages
+Lutte gréco-romaine, 87kg - repêchages Libre, 57kg - hommes, 8e de finale Libre, 57kg - femmes, 8e de finale Libre, 86kg - hommes,8e de finale Libre, 57kg - hommes, quarts de finale Libre, 57kg - femmes, quarts de finale Libre, 86kg - hommes, quarts de finale
 
 Session	 WRE08	 Début	18:15 Fin :	22:00 Arena Champs de Mars
-Nom de l'épreuve/des épreuves Libre, 57 kg - hommes, demi-finales Libre, 86 kg - hommes, demi-finales Libre, 57 kg - femmes, demi-finales
-Lutte gréco-romaine, 67 kg - hommes, match pour les médailles de bronze
- Lutte gréco-romaine, 67 kg - hommes, match pour la médaille d'or	 Lutte gréco-romaine, 87 kg - hommes, match pour les médailles de bronze
- Lutte gréco-romaine, 87 kg - hommes, match pour la médaille d'or	 Libre, 53 kg - femmes, match pour les médailles de bronze
- Libre, 53 kg - femmes, match pour la médaille d'or	
+Nom de l'épreuve/des épreuves Libre, 57kg - hommes, demi-finales Libre, 86kg - hommes, demi-finales Libre, 57kg - femmes, demi-finales
+Lutte gréco-romaine, 67kg - hommes, match pour les médailles de bronze
+ Lutte gréco-romaine, 67kg - hommes, match pour la médaille d'or	 Lutte gréco-romaine, 87kg - hommes, match pour les médailles de bronze
+ Lutte gréco-romaine, 87kg - hommes, match pour la médaille d'or	 Libre, 53kg - femmes, match pour les médailles de bronze
+ Libre, 53kg - femmes, match pour la médaille d'or	
  
  
  
 Session	WRE09
  
 Début	11:00 Fin :	13:30 Arena Champs de Mars
-Nom de l'épreuve/des épreuves Libre, 57 kg - hommes, repêchages Libre, 57 kg - femmes, repêchages Libre, 86 kg - hommes, repêchages Libre, 74 kg - hommes, 8e de finale Libre, 62 kg - femmes, 8e de finale Libre, 125 kg - hommes,8e de finale Libre, 74 kg - hommes, quarts de finale Libre, 62 kg - femmes, quarts de finale
-Libre, 125 kg - hommes, quarts de finale
+Nom de l'épreuve/des épreuves Libre, 57kg - hommes, repêchages Libre, 57kg - femmes, repêchages Libre, 86kg - hommes, repêchages Libre, 74kg - hommes, 8e de finale Libre, 62kg - femmes, 8e de finale Libre, 125kg - hommes,8e de finale Libre, 74kg - hommes, quarts de finale Libre, 62kg - femmes, quarts de finale
+Libre, 125kg - hommes, quarts de finale
  
 
  
 Session WRE10
  
 Début	18:15 Fin :	22:00 Arena Champs de Mars
-Nom de l'épreuve/des épreuves Libre, 74 kg - hommes, demi-finales Libre, 125 kg - hommes, demi-finales Libre, 62 kg - femmes, demi-finales
-Libre, 57 kg - hommes, match pour les médailles de bronze
+Nom de l'épreuve/des épreuves Libre, 74kg - hommes, demi-finales Libre, 125kg - hommes, demi-finales Libre, 62kg - femmes, demi-finales
+Libre, 57kg - hommes, match pour les médailles de bronze
  
 
  
-Libre, 86 kg - hommes, match pour les médailles de bronze
- Libre, 86 kg - hommes, match pour la médaille d'or	 Libre, 57 kg - femmes, match pour les médailles de bronze
- Libre, 57 kg - femmes, match pour la médaille d'or	
+Libre, 86kg - hommes, match pour les médailles de bronze
+ Libre, 86kg - hommes, match pour la médaille d'or	 Libre, 57kg - femmes, match pour les médailles de bronze
+ Libre, 57kg - femmes, match pour la médaille d'or	
 
 
 
@@ -3077,29 +3077,29 @@ Libre, 86 kg - hommes, match pour les médailles de bronze
 Session	WRE11
  
 Début	11:00 Fin :	13:30 Arena Champs de Mars
-Libre, 74 kg - hommes, repêchages Libre, 62 kg - femmes, repêchages Libre, 125 kg - hommes, repêchages Libre, 65 kg - hommes, 8e de finale Libre, 76 kg - femmes, 8e de finale Libre, 97 kg - hommes, 8e de finale Libre, 65 kg - hommes, quarts de finale Libre, 76 kg - femmes,quarts de finale Libre, 97 kg - hommes, quarts de finale
+Libre, 74kg - hommes, repêchages Libre, 62kg - femmes, repêchages Libre, 125kg - hommes, repêchages Libre, 65kg - hommes, 8e de finale Libre, 76kg - femmes, 8e de finale Libre, 97kg - hommes, 8e de finale Libre, 65kg - hommes, quarts de finale Libre, 76kg - femmes,quarts de finale Libre, 97kg - hommes, quarts de finale
  
 
 Session	 WRE12	 Début	18:15 Fin :	22:00 Arena Champs de Mars
-Nom de l'épreuve/des épreuves Libre, 65 kg - hommes, demi-finales Libre, 97 kg - hommes, demi-finales Libre, 76 kg - femmes, demi-finales
-Libre, 74 kg - hommes, match pour les médailles de bronze
- Libre, 74 kg - hommes, match pour la médaille d'or	 Libre, 125 kg - hommes, match pour les médailles de bronze
- Libre, 125 kg - hommes, match pour la médaille d'or	 Libre, 62 kg - femmes, match pour les médailles de bronze
- Libre, 62 kg - femmes, match pour la médaille d'or	
+Nom de l'épreuve/des épreuves Libre, 65kg - hommes, demi-finales Libre, 97kg - hommes, demi-finales Libre, 76kg - femmes, demi-finales
+Libre, 74kg - hommes, match pour les médailles de bronze
+ Libre, 74kg - hommes, match pour la médaille d'or	 Libre, 125kg - hommes, match pour les médailles de bronze
+ Libre, 125kg - hommes, match pour la médaille d'or	 Libre, 62kg - femmes, match pour les médailles de bronze
+ Libre, 62kg - femmes, match pour la médaille d'or	
  
 
  
 Session WRE13
  
 Début	11:00 Fin :	14:30 Arena Champs de Mars
-Nom de l'épreuve/des épreuves Libre, 65 kg - hommes, repêchages Libre, 76 kg - femmes, repêchages Libre, 97 kg - hommes, repêchages
-Libre, 65 kg - hommes, match pour les médailles de bronze
+Nom de l'épreuve/des épreuves Libre, 65kg - hommes, repêchages Libre, 76kg - femmes, repêchages Libre, 97kg - hommes, repêchages
+Libre, 65kg - hommes, match pour les médailles de bronze
  
 
  
-Libre, 97 kg - hommes, match pour les médailles de bronze
- Libre, 97 kg - hommes, match pour la médaille d'or	 Libre, 76 kg - femmes, match pour les médailles de bronze
- Libre, 76 kg - femmes, match pour la médaille d'or	
+Libre, 97kg - hommes, match pour les médailles de bronze
+ Libre, 97kg - hommes, match pour la médaille d'or	 Libre, 76kg - femmes, match pour les médailles de bronze
+ Libre, 76kg - femmes, match pour la médaille d'or	
  
 Le calendrier reste susceptible de modification jusqu'à la conclusion des Jeux Olympiques.
 Natation
@@ -3749,7 +3749,7 @@ JOUR 1 Samedi 27 Juillet
 Session	TEN01
  
 
-Début :	12:00 Fin :	19:00 Stade Roland-Garros - Court Suzanne-Lenglen
+Début :	12:00 Fin :	17:00 Stade Roland-Garros - Court Philippe-Chatrier
 Nom de l'épreuve/des épreuves
 Simple - hommes, 1er tour Simple - femmes, 1er tour
  
@@ -3998,9 +3998,7 @@ Calendrier par épreuves
 Version :	1
 
 JOUR	1		Samedi	27	Juillet
-Session	TTE01
-
-
+Session	TTE01 Début: 15:00 Fin: 18:00 Arena Paris Sud 4
 Nom de l'épreuve/des épreuves
 Simple - hommes et femmes, tour préliminaire Double - mixte, 1/8e finale
  
