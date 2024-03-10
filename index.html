@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <title>Infra data J.O.</title>
     <!-- Load d3.js -->
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
@@ -37,10 +42,25 @@
     <!-- <script src="src/testCloud.js"></script> -->
     <!-- <script src="src/testnico.js"></script> -->
     <!-- <script src="src/testcorentin.js"></script> -->
-    <link rel="preload" href="https://www.paris2024.org/app/themes/2024-reveal/dist/fonts/Paris2024-Variable_03cd1b21.woff2" as="font" type="font/woff2" crossorigin="">
+
+    <!-- load fonts -->
+    <link rel="preload"
+        href="https://www.paris2024.org/app/themes/2024-reveal/dist/fonts/Paris2024-Variable_03cd1b21.woff2" as="font"
+        type="font/woff2" crossorigin="">
 </head>
 
-<body onload="main()"></body>
+<body onload="main()">
+    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="logoparis">
+        <image xlink:href="https://upload.wikimedia.org/wikipedia/fr/6/68/Logo_JO_d%27%C3%A9t%C3%A9_-_Paris_2024.svg"
+            width="100" height="100" />
+    </svg>
+    <div class="menuZoom">
+        <div class="ongletsZoom" id="zoomParis">Paris</div>
+        <div class="ongletsZoom" id="zoomIDF">Île de France</div>
+        <div class="ongletsZoom" id="zoomFranceEntiere">France entière</div>
+        <div class="ongletsZoom" id="zoomTahiti">Tahiti</div>
+    </div>
+</body>
 
 <!-- <body>
 
