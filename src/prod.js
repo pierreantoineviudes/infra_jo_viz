@@ -739,7 +739,7 @@ async function main () {
                   .style('opacity', 0.9)
                   .style('top', (e.pageY - 40) + 'px')
                   .style('left', (e.pageX + 15) + 'px')
-                  .html(`<a href=${url}>Page JO dédiée <a>`)
+                  .html(`<a href=${url} target="_blank">Page JO dédiée <a>`)
               } else { // Si nb_clicked>0, un texte est déjà sélectionné donc on empêche une sélection supplémentaire
               }
             } else {
