@@ -66,7 +66,7 @@ async function main () {
   // Création du titre
   d3.select('body').append('div')
     .attr('class', 'titre')
-    .text('Epreuve des JO Paris 2024')
+    .text('Epreuves des JO Paris 2024')
     .style('left', '130px')
     .style('position', 'relative')
     .style('z-index', '3000')
@@ -222,7 +222,6 @@ async function main () {
 
         .on('end', () => {
           updateCloud()
-          
           updateTimeTable()
           // d3.select('#timeTable').remove()
           // createTimeTable()
@@ -332,6 +331,7 @@ async function main () {
 
         selectedPlace = d[1].lieu_epreuve
         
+        d3.select('#infoSession').remove()
         createTimeTable()
         updateTimeTable()
         // updateTimeTable()
