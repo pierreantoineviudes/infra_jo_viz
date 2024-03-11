@@ -219,7 +219,10 @@ async function main () {
 
         .on('end', () => {
           updateCloud()
+          
           updateTimeTable()
+          // d3.select('#timeTable').remove()
+          // createTimeTable()
         })
     )
 
@@ -326,7 +329,9 @@ async function main () {
         }
 
         selectedPlace = d[1].lieu_epreuve
+        
         createTimeTable()
+        updateTimeTable()
         // updateTimeTable()
         // displayTimeTable()
         console.log(newtab)
@@ -521,11 +526,16 @@ async function main () {
   }
   // __________________________________________________________________________________________________________________________//
 
+  function sortByDateAscending(a, b) {
+      // Dates will be cast to numbers automagically:
+      return a.time - b.time;
+  }
+
   function updateTimeTable () {
     // titlePlanning = d3.select('#titlePlanning')
     // document.getElementById('timeTable').innerHTML = ''
-    titlePlanning.html(selectedPlace)
-    selectedSessions = d3.filter(planningfiltered, d => d.lieu_epreuve === selectedPlace)
+    // titlePlanning.html(selectedPlace)
+    selectedSessions = d3.filter(planningfiltered, d => d.lieu_epreuve === selectedPlace).sort(sortByDateAscending);
 
     dataSelectedSessions = selectedSessions.map(d => [d.discipline, d.jour, d.plage, customJSONParsing(d.parsing_epreuve)])
 
